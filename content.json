@@ -1,0 +1,61 @@
+{
+  "site": {
+    "title": "Elias Marrow",
+    "author": "Elias Marrow",
+    "description": "Essays and analysis on power, incentives, constraint, and structural outcomes."
+  },
+  "essays": [
+  {
+    "id": "trump-structural-analysis",
+    "title": "Trump: Rhetoric, Incentives, and the Machinery Behind the Movement",
+    "subtitle": "Power, incentives, and institutional collapse",
+    "author": "Elias Marrow",
+    "date": "2026-01-18",
+    "summary": "A constraint-based analysis separating political rhetoric from material incentives, examining power, media dynamics, and institutional behavior.",
+    "category": "Applied Analysis",
+    "format": "pdf",
+    "file": "assets/essays/trump-essay.pdf",
+    "cover": "assets/essays/covers/trump-essay.jpg",
+    "tags": ["power", "politics", "incentives", "media"]
+  },
+  {
+    "id": "biden-illusion-of-restoration",
+    "title": "Joe Biden and the Illusion of Restoration",
+    "subtitle": "Power, normalcy, and the politics of managed decline",
+    "author": "Elias Marrow",
+    "date": "2026-01-18",
+    "summary": "Biden as caretaker: stabilizing institutions while structural decline continues—process over outcomes, continuity over confrontation.",
+    "category": "Applied Analysis",
+    "format": "pdf",
+    "file": "assets/essays/biden-essay.pdf",
+    "cover": "assets/essays/covers/biden-essay.jpg",
+    "tags": ["power", "institutions", "normalcy", "decline"]
+  },
+  {
+    "id": "constraint-awareness",
+    "title": "Constraint Awareness",
+    "subtitle": "A structural lens for seeing why outcomes harden",
+    "author": "Elias Marrow",
+    "date": "2026-01-17",
+    "summary": "A framework for analyzing behavior under scarcity: option sets, time horizon, proximity, certainty, friction, and how buffer expands agency.",
+    "category": "Pillars",
+    "format": "pdf",
+    "file": "assets/essays/constraint-awareness.pdf",
+    "cover": "assets/essays/covers/constraint-awareness.jpg",
+    "tags": ["constraint", "scarcity", "agency", "buffer"]
+  },
+  {
+    "id": "the-empire-that-feared-itself",
+    "title": "The Empire That Feared Itself",
+    "subtitle": "Fear as stabilizer, war as permanence",
+    "author": "Elias Marrow",
+    "date": "2026-01-18",
+    "summary": "A concise argument that fear compresses debate, justifies permanence, and sustains profit—when true existential threat is absent.",
+    "category": "Mechanisms",
+    "format": "pdf",
+    "file": "assets/essays/the-empire-that-feared-itself.pdf",
+    "cover": "assets/essays/covers/the-empire-that-feared-itself.jpg",
+    "tags": ["fear", "war", "propaganda", "power"]
+  }
+]
+

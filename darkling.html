@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Darkling — Book I</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="sigil">DARKLING</div>
+        <div class="motto">Book I — table of contents</div>
+      </div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="novels.html">Novels</a>
+        <a href="essays.html">Essays</a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h1>Darkling — Book I</h1>
+      <p class="muted">
+        Chapters are published individually. Each entry links to its current manuscript file.
+      </p>
+      <p class="small">
+        Note: Links can point to DOCX/PDF files now. Later, we can add HTML reading pages without changing the card layout.
+      </p>
+    </div>
+
+    <div class="panel soft">
+      <h2>Prologue & Chapters</h2>
+
+      <div class="grid">
+
+        <!-- PROLOGUE (DOCX EXAMPLE LINK) -->
+        <div class="ill-card" style="--bgimg:url('./assets/novels/darkling/prologue.jpg');">
+          <a href="assets/novels/darkling/text/prologue.pdf" target="_blank" rel="noopener">
+            <p class="ill-title">Prologue</p>
+            <div class="ill-meta">DOCX · opens in new tab</div>
+            <p class="ill-desc">The world before the fracture. Foundations, myth, and quiet violence.</p>
+          </a>
+        </div>
+
+        <!-- CHAPTER 1 -->
+        <div class="ill-card" style="--bgimg:url('./assets/novels/darkling/ch01.jpg');">
+          <a href="assets/novels/darkling/text/Darkling_Book1_Chapter1_The_Fire.pdf" target="_blank" rel="noopener">
+            <p class="ill-title">Chapter 1 — The Fire</p>
+            <div class="ill-meta">DOCX · opens in new tab</div>
+            <p class="ill-desc">Opening movement. Establishes tone, constraint, and the first fracture.</p>
+          </a>
+        </div>
+
+        <!-- CHAPTER 2 (placeholder) -->
+        <div class="ill-card" style="--bgimg:url('./assets/novels/darkling/ch02.jpg');">
+          <a href="assets/novels/darkling/text/ch02.docx" target="_blank" rel="noopener">
+            <p class="ill-title">Chapter 2 — The Passage</p>
+            <div class="ill-meta">DOCX · opens in new tab</div>
+            <p class="ill-desc">Placeholder: upload the file and the link becomes live.</p>
+          </a>
+        </div>
+
+        <!-- Add more chapters by duplicating a card and changing file + image + text -->
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Elias Marrow</div>
+      <div><a href="novels.html">Back to Novels</a></div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

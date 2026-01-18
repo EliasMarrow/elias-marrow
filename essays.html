@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Essays — Elias Marrow</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body class="page-essays">
+  <div class="container">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="sigil">ELIAS MARROW</div>
+        <div class="motto">Archive</div>
+      </div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="essays.html">Essays</a>
+        <a href="novels.html">Novels</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+
+    <div class="panel soft">
+      <h2>Essays</h2>
+      <p class="muted">
+        Evergreen work. Updated deliberately, not frequently.
+      </p>
+
+      <!-- RECENT ESSAYS -->
+      <div class="section-card">
+        <div class="section-title">Recent Essays</div>
+        <div class="muted">Last 3 publications</div>
+        <div id="recent-essays" class="cover-grid"></div>
+      </div>
+
+      <!-- ESSAY INDEX -->
+      <div class="section-card">
+        <div class="section-title">Essay Index</div>
+        <div class="muted">Browse by category</div>
+
+        <div class="cover-grid">
+
+          <div class="ill-card" style="--bgimg:url('assets/category-pillars.jpg')">
+            <a href="essays-pillars.html">
+              <h3 class="ill-title">Pillars</h3>
+              <p class="ill-meta">Foundational essays</p>
+            </a>
+          </div>
+
+          <div class="ill-card" style="--bgimg:url('assets/category-mechanisms.jpg')">
+            <a href="essays-mechanisms.html">
+              <h3 class="ill-title">Mechanisms</h3>
+              <p class="ill-meta">Incentives, extraction, enforcement</p>
+            </a>
+          </div>
+
+          <div class="ill-card" style="--bgimg:url('assets/category-applied.jpg')">
+            <a href="essays-applied.html">
+              <h3 class="ill-title">Applied Analysis</h3>
+              <p class="ill-meta">Case-based essays</p>
+            </a>
+          </div>
+
+          <div class="ill-card" style="--bgimg:url('assets/category-notes.jpg')">
+            <a href="essays-notes.html">
+              <h3 class="ill-title">Notes</h3>
+              <p class="ill-meta">Fragments & short-form</p>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div><a href="index.html">Back to Home</a></div>
+      <div>© <span id="year"></span> Elias Marrow</div>
+    </div>
+
+  </div>
+
+  <!-- RECENT ESSAYS SCRIPT -->
+  <script>
+    function parseDate(d){
+      return d ? new Date(d + 'T00:00:00') : new Date(0);
+    }
+
+    function renderCoverCard(essay){
+      const card = document.createElement('div');
+      card.className = 'ill-card';
+
+      if (essay.cover){
+        card.style.setProperty('--bgimg', `url("${essay.cover}")`);
+      }
+
+      card.innerHTML = `
+        <a href="${essay.file}" target="_blank" rel="noopener">
+          <h3 class="ill-title">${essay.title}</h3>
+          ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
+        </a>
+      `;
+      return card;
+    }
+
+    fetch('content.json')
+      .then(r => r.json())
+      .then(data => {
+        const recent = document.getElementById('recent-essays');
+        if (!recent || !Array.isArray(data.essays)) return;
+
+        data.essays
+          .sort((a,b) => parseDate(b.date) - parseDate(a.date))
+          .slice(0,3)
+          .forEach(e => recent.appendChild(renderCoverCard(e)));
+      });
+  </script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

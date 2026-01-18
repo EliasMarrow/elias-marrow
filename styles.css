@@ -1,0 +1,375 @@
+:root{
+  --bg:#0a0d12;
+  --ink:#e8edf6;
+  --muted:#a9b4c6;
+  --line:rgba(232,237,246,0.12);
+
+  /* Glass layers */
+  --panel:rgba(10,13,18,0.55);
+  --panel-soft:rgba(10,13,18,0.42);
+  --card:rgba(10,13,18,0.36);
+
+  --radius:18px;
+  --max:900px;
+  --shadow:0 16px 40px rgba(0,0,0,0.45);
+}
+
+/* Base */
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  color:var(--ink);
+  line-height:1.7;
+  background:var(--bg);
+}
+
+/* GLOBAL CANDLE BACKDROP */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:
+    linear-gradient(to bottom, rgba(10,13,18,0.72), rgba(10,13,18,0.94)),
+    url("./assets/candle.jpg") center / cover no-repeat;
+  filter: contrast(1.08) brightness(0.90) saturate(1.02);
+}
+
+/* Vignette */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(900px 600px at 50% 18%, transparent 35%, rgba(0,0,0,0.62) 100%);
+}
+
+/* Links */
+a{ color:#d7e6ff; text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* Layout */
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:28px 18px 64px;
+}
+
+/* Header */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:16px;
+  padding:12px 0 18px;
+  border-bottom:1px solid var(--line);
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  min-width:220px;
+}
+
+.brand .sigil{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  font-weight:700;
+  font-size:12px;
+  color:rgba(232,237,246,0.85);
+}
+
+.brand .motto{
+  font-size:14px;
+  color:var(--muted);
+  max-width:56ch;
+}
+
+/* Nav pills */
+.nav{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size:13px;
+}
+
+.nav a{
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,0.02);
+  text-decoration:none;
+  line-height:1;
+}
+
+.nav a:hover{
+  background:rgba(255,255,255,0.06);
+  text-decoration:none;
+}
+
+/* Headings & text */
+h1,h2,h3{ margin:0 0 10px; }
+h1{
+  font-size:34px;
+  line-height:1.15;
+  letter-spacing:-0.02em;
+}
+h2{ font-size:18px; }
+
+p{
+  margin:0 0 14px;
+  color:rgba(232,237,246,0.86);
+}
+
+.muted{ color:var(--muted); }
+
+.small{
+  font-size:13px;
+  color:rgba(232,237,246,0.62);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+/* Lists */
+ul{ margin:10px 0 0 18px; padding:0; }
+li{ margin:6px 0; color:rgba(232,237,246,0.82); }
+
+/* Panels (used for big blocks on non-home pages) */
+.panel{
+  margin-top:20px;
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--panel);
+  backdrop-filter: blur(2px);
+  box-shadow:var(--shadow);
+}
+.panel.soft{
+  background:var(--panel-soft);
+  box-shadow:none;
+}
+
+/* HOMEPAGE: altar card layout */
+.home-layout{
+  display:grid;
+  grid-template-columns: 0.95fr 1.25fr 0.85fr;
+  gap:18px;
+
+  max-width:760px;
+  margin:34px auto 0;
+  align-items:start;
+}
+
+/* Home cards (glass slabs) */
+.home-card{
+  padding:16px 18px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--card);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.42);
+}
+
+/* Stagger for composition */
+.home-layout .home-card:nth-child(1){ transform: translateY(8px); }
+.home-layout .home-card:nth-child(2){ transform: translateY(-14px); }
+.home-layout .home-card:nth-child(3){ transform: translateY(10px); }
+
+/* Home card typography tweaks */
+.home-card h1{ font-size:32px; margin-bottom:8px; }
+.home-card h2{ margin-bottom:8px; }
+.home-card p{ margin-bottom:12px; }
+
+/* Essay list cards */
+.cards{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin-top:14px;
+}
+
+.card{
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--card);
+  backdrop-filter: blur(2px);
+}
+
+.card .title{ margin:0; font-size:16px; font-weight:700; }
+
+.card .meta{
+  margin-top:4px;
+  font-size:13px;
+  color:var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+.card .desc{ margin-top:10px; color:rgba(232,237,246,0.78); }
+
+/* Article pages */
+.article{
+  margin-top:20px;
+  padding:26px 24px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--panel);
+  backdrop-filter: blur(2px);
+  box-shadow:var(--shadow);
+}
+
+.byline{
+  margin:0 0 18px;
+  font-size:13px;
+  color:var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+.article blockquote{
+  margin:16px 0;
+  padding:12px 14px;
+  border-left:3px solid rgba(255,225,160,0.35);
+  background:rgba(255,225,160,0.06);
+  border-radius:12px;
+  color:rgba(232,237,246,0.72);
+}
+
+/* Shared grid (Novels + Darkling) */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:12px;
+  margin-top:14px;
+}
+
+@media (max-width:700px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+/* Illustration-backed cards (book cover system) */
+.ill-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:14px;
+  min-height:170px;
+  background:rgba(10,13,18,0.34);
+  backdrop-filter: blur(2px);
+}
+
+.ill-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to bottom, rgba(10,13,18,0.30), rgba(10,13,18,0.90)),
+    var(--bgimg) center / cover no-repeat;
+  filter: contrast(1.06) brightness(0.92);
+}
+
+.ill-card > *{ position:relative; z-index:1; }
+
+.ill-card a{
+  display:block;
+  height:100%;
+  padding:14px 16px;
+  text-decoration:none;
+  color:var(--ink);
+}
+
+.ill-title{ margin:0; font-size:16px; font-weight:700; }
+
+.ill-meta{
+  margin-top:6px;
+  font-size:13px;
+  color:rgba(232,237,246,0.72);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+.ill-desc{ margin-top:10px; color:rgba(232,237,246,0.78); }
+
+.ill-card:hover{ border-color: rgba(232,237,246,0.22); }
+.ill-card:hover::before{ filter: contrast(1.08) brightness(0.98); }
+
+/* Footer */
+.footer{
+  margin-top:30px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  font-size:13px;
+  color:var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+/* ===== Essays page: lighter abstract gradient backdrop ===== */
+body.page-essays::before{
+  background:
+    radial-gradient(900px 600px at 50% 18%, rgba(255,255,255,0.08), transparent 60%),
+    linear-gradient(to bottom, rgba(10,13,18,0.35), rgba(10,13,18,0.80)),
+    linear-gradient(135deg,
+      rgba(120,140,255,0.14),
+      rgba(255,210,180,0.08),
+      rgba(120,255,210,0.06)
+    );
+  filter: contrast(1.02) brightness(1.08) saturate(1.06);
+}
+
+/* Section headers used on Essays page */
+.section-title{
+  margin-top:22px;
+  margin-bottom:10px;
+  font-size:13px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:rgba(232,237,246,0.72);
+}
+
+/* Essays: section cards + cover grid */
+.section-card{
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--card);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.30);
+  margin-top:14px;
+}
+
+.cover-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:12px;
+  margin-top:12px;
+}
+
+@media (max-width:700px){
+  .cover-grid{ grid-template-columns: 1fr; }
+}
+
+/* Mobile */
+@media (max-width:560px){
+  h1{ font-size:28px; }
+  .panel{ padding:18px; }
+  .article{ padding:20px 18px; }
+  .topbar{ align-items:flex-start; }
+  .nav{ justify-content:flex-start; }
+
+  .home-layout{
+    grid-template-columns:1fr;
+    max-width:520px;
+  }
+  .home-layout .home-card{ transform:none; }
+}
