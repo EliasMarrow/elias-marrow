@@ -67,8 +67,8 @@
       "category": "Pillars",
       "format": "pdf",
       "file": "assets/essays/the-lens-we-use.pdf",
-      "cover": "assets/essays/the-lens-we-use.jpg",
+      "cover": "assets/essays/the-lens-we-use-cover.jpg",
       "tags": ["method", "power", "constraint", "analysis"]
-    }
+    },
   ]
 }
