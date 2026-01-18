@@ -49,7 +49,6 @@
         <div class="muted">Browse by category</div>
 
         <div class="cover-grid">
-
           <div class="ill-card" style="--bgimg:url('assets/category-pillars.jpg')">
             <a href="essays-pillars.html">
               <h3 class="ill-title">Pillars</h3>
@@ -77,9 +76,16 @@
               <p class="ill-meta">Fragments & short-form</p>
             </a>
           </div>
-
         </div>
       </div>
+
+      <!-- DEBUG / ERROR AREA (hidden unless something fails) -->
+      <div id="essay-error" class="section-card" style="display:none;">
+        <div class="section-title">Error</div>
+        <p class="muted" id="essay-error-text"></p>
+        <p class="small muted" id="essay-error-hint"></p>
+      </div>
+
     </div>
 
     <div class="footer">
@@ -90,22 +96,41 @@
   </div>
 
   <script>
+    // --- helpers ---
     function parseDate(d){
-      return d ? new Date(d + 'T00:00:00') : new Date(0);
+      if (!d) return new Date(0);
+      const dt = new Date(d + 'T00:00:00');
+      return isNaN(dt.getTime()) ? new Date(0) : dt;
+    }
+
+    function showError(msg, hint){
+      const box = document.getElementById('essay-error');
+      const text = document.getElementById('essay-error-text');
+      const hintEl = document.getElementById('essay-error-hint');
+
+      if (!box || !text) return;
+      box.style.display = 'block';
+      text.textContent = msg;
+      if (hintEl) hintEl.textContent = hint || '';
     }
 
     function renderCoverCard(essay){
       const card = document.createElement('div');
       card.className = 'ill-card';
 
-      if (essay.cover){
+      if (essay && essay.cover){
         card.style.setProperty('--bgimg', `url("${essay.cover}")`);
       }
 
+      // Protect against missing file/title
+      const title = (essay && essay.title) ? essay.title : 'Untitled';
+      const subtitle = (essay && essay.subtitle) ? essay.subtitle : '';
+      const file = (essay && essay.file) ? essay.file : '#';
+
       card.innerHTML = `
-        <a href="${essay.file}" target="_blank" rel="noopener">
-          <h3 class="ill-title">${essay.title}</h3>
-          ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
+        <a href="${file}" target="_blank" rel="noopener">
+          <h3 class="ill-title">${title}</h3>
+          ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
         </a>
       `;
       return card;
@@ -118,56 +143,69 @@
       "the-empire-that-feared-itself"
     ];
 
-    fetch('content.json')
-      .then(r => r.json())
-      .then(data => {
-        if (!data || !Array.isArray(data.essays)) return;
+    // --- main ---
+    (function(){
+      const featuredWrap = document.getElementById('featured-essays');
+      const recentWrap = document.getElementById('recent-essays');
 
-        const byId = new Map(data.essays.map(e => [e.id, e]));
+      if (!featuredWrap || !recentWrap){
+        showError("Page is missing required containers (#featured-essays or #recent-essays).",
+                  "Confirm essays.html contains the divs with ids featured-essays and recent-essays.");
+        return;
+      }
 
-        // Featured
-        const featuredWrap = document.getElementById('featured-essays');
-        if (featuredWrap){
+      // Clear existing (prevents duplication if browser restores state)
+      featuredWrap.innerHTML = '';
+      recentWrap.innerHTML = '';
+
+      // Cache-bust to avoid GitHub Pages serving stale content.json
+      const url = 'content.json?v=' + Date.now();
+
+      fetch(url, { cache: 'no-store' })
+        .then(r => {
+          if (!r.ok) throw new Error(`HTTP ${r.status} loading ${url}`);
+          return r.json();
+        })
+        .then(data => {
+          if (!data || !Array.isArray(data.essays)){
+            throw new Error("content.json loaded, but data.essays is not an array.");
+          }
+
+          // Map by id
+          const byId = new Map();
+          data.essays.forEach(e => {
+            if (e && e.id) byId.set(e.id, e);
+          });
+
+          // Featured
           FEATURED_IDS
             .map(id => byId.get(id))
             .filter(Boolean)
             .forEach(e => featuredWrap.appendChild(renderCoverCard(e)));
-        }
 
-        // Recent (exclude Featured so no duplicates)
-        const recentWrap = document.getElementById('recent-essays');
-        if (recentWrap){
-          // Keep original order as a stable fallback
+          // Recent (exclude featured)
           const nonFeatured = data.essays
-            .map((e, idx) => ({ e, idx }))
-            .filter(x => !FEATURED_IDS.includes(x.e.id));
+            .filter(e => e && e.id && !FEATURED_IDS.includes(e.id))
+            .sort((a, b) => parseDate(b.date) - parseDate(a.date))
+            .slice(0, 3);
 
-          // Sort by date if valid; otherwise fall back to original order
-          nonFeatured
-            .sort((a, b) => {
-              const ad = parseDate(a.e.date);
-              const bd = parseDate(b.e.date);
+          nonFeatured.forEach(e => recentWrap.appendChild(renderCoverCard(e)));
 
-              const at = isNaN(ad.getTime()) ? null : ad.getTime();
-              const bt = isNaN(bd.getTime()) ? null : bd.getTime();
+          // If still empty, show diagnostic
+          if (featuredWrap.children.length === 0 && recentWrap.children.length === 0){
+            showError("Essays loaded but nothing rendered.",
+                      "Check that essay objects have id/title/file fields, and that FEATURED_IDS match real ids.");
+          }
+        })
+        .catch(err => {
+          console.error("Essays render error:", err);
+          showError("Failed to load or render essays from content.json.",
+                    "Open DevTools → Console. Most common causes: content.json not found at site root, or cached old file. The page is now logging the exact error.");
+        });
 
-              // Both valid dates: newest first
-              if (at !== null && bt !== null) return bt - at;
-
-              // One valid date wins
-              if (at !== null && bt === null) return -1;
-              if (at === null && bt !== null) return 1;
-
-              // Neither has a valid date: preserve content.json order
-              return a.idx - b.idx;
-            })
-            .slice(0, 3)
-            .forEach(x => recentWrap.appendChild(renderCoverCard(x.e)));
-        }
-      });
-
-    document.getElementById("year").textContent = new Date().getFullYear();
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+    })();
   </script>
-
 </body>
 </html>
