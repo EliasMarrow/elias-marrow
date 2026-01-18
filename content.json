@@ -56,16 +56,19 @@
       "file": "assets/essays/the-empire-that-feared-itself.pdf",
       "cover": "assets/essays/covers/the-empire-that-feared-itself.jpg",
       "tags": ["fear", "war", "propaganda", "power"]
-    }
+    },
     {
-  "id": "the-lens-we-use",
-  "title": "The Lens We Use",
-  "subtitle": "Method, probability, power, and constraint",
-  "category": "Pillars",
-  "date": "2026-01-18",
-  "file": "assets/essays/the-lens-we-use.pdf",
-  "cover": "assets/essays/the-lens-we-use-cover.jpg"
-}
-
+      "id": "the-lens-we-use",
+      "title": "The Lens We Use",
+      "subtitle": "Method, probability, power, and constraint",
+      "author": "Elias Marrow",
+      "date": "2026-01-18",
+      "summary": "An explanation of the analytical lens used across this archive: probability, constraint-based choice, incentive structures, proximity, and power.",
+      "category": "Pillars",
+      "format": "pdf",
+      "file": "assets/essays/the-lens-we-use.pdf",
+      "cover": "assets/essays/the-lens-we-use.jpg",
+      "tags": ["method", "power", "constraint", "analysis"]
+    }
   ]
 }
