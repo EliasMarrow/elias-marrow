@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Pillars — Elias Marrow</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body class="page-essays">
+  <div class="container">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="sigil">ELIAS MARROW</div>
+        <div class="motto">Essays · Pillars</div>
+      </div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="essays.html">Essays</a>
+        <a href="novels.html">Novels</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+
+    <div class="panel soft">
+      <h2>Pillars</h2>
+      <p class="muted">Foundational essays: the core lenses everything else uses.</p>
+
+      <div class="section-card">
+        <div class="section-title">Pillars</div>
+        <div class="muted">All essays categorized as Pillars</div>
+        <div id="essay-grid" class="cover-grid"></div>
+      </div>
+
+      <div class="section-card">
+        <div class="muted">
+          <a href="essays.html">← Back to Essay Index</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div><a href="index.html">Back to Home</a></div>
+      <div>© <span id="year"></span> Elias Marrow</div>
+    </div>
+
+  </div>
+
+  <script>
+    const CATEGORY = "Pillars";
+
+    function parseDate(d){
+      return d ? new Date(d + 'T00:00:00') : new Date(0);
+    }
+
+    function renderCoverCard(essay){
+      const card = document.createElement('div');
+      card.className = 'ill-card';
+
+      if (essay.cover){
+        card.style.setProperty('--bgimg', `url("${essay.cover}")`);
+      }
+
+      card.innerHTML = `
+        <a href="${essay.file}" target="_blank" rel="noopener">
+          <h3 class="ill-title">${essay.title}</h3>
+          ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
+        </a>
+      `;
+      return card;
+    }
+
+    fetch('content.json')
+      .then(r => r.json())
+      .then(data => {
+        const grid = document.getElementById('essay-grid');
+        if (!grid || !Array.isArray(data.essays)) return;
+
+        data.essays
+          .filter(e => (e.category || "").trim() === CATEGORY)
+          .sort((a,b) => parseDate(b.date) - parseDate(a.date))
+          .forEach(e => grid.appendChild(renderCoverCard(e)));
+      });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
