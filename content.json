@@ -57,5 +57,15 @@
       "cover": "assets/essays/covers/the-empire-that-feared-itself.jpg",
       "tags": ["fear", "war", "propaganda", "power"]
     }
+    {
+  "id": "the-lens-we-use",
+  "title": "The Lens We Use",
+  "subtitle": "Method, probability, power, and constraint",
+  "category": "Pillars",
+  "date": "2026-01-18",
+  "file": "assets/essays/the-lens-we-use.pdf",
+  "cover": "assets/essays/the-lens-we-use-cover.jpg"
+}
+
   ]
 }
