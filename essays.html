@@ -134,33 +134,40 @@
             .forEach(e => featuredWrap.appendChild(renderCoverCard(e)));
         }
 
-// Recent (exclude Featured so no duplicates)
-const recentWrap = document.getElementById('recent-essays');
-if (recentWrap){
-  // Keep original order as a stable fallback
-  const nonFeatured = data.essays
-    .map((e, idx) => ({ e, idx }))
-    .filter(x => !FEATURED_IDS.includes(x.e.id));
+        // Recent (exclude Featured so no duplicates)
+        const recentWrap = document.getElementById('recent-essays');
+        if (recentWrap){
+          // Keep original order as a stable fallback
+          const nonFeatured = data.essays
+            .map((e, idx) => ({ e, idx }))
+            .filter(x => !FEATURED_IDS.includes(x.e.id));
 
-  // Sort by date if valid; otherwise fall back to original order
-  nonFeatured
-    .sort((a, b) => {
-      const ad = parseDate(a.e.date);
-      const bd = parseDate(b.e.date);
+          // Sort by date if valid; otherwise fall back to original order
+          nonFeatured
+            .sort((a, b) => {
+              const ad = parseDate(a.e.date);
+              const bd = parseDate(b.e.date);
 
-      const at = isNaN(ad.getTime()) ? null : ad.getTime();
-      const bt = isNaN(bd.getTime()) ? null : bd.getTime();
+              const at = isNaN(ad.getTime()) ? null : ad.getTime();
+              const bt = isNaN(bd.getTime()) ? null : bd.getTime();
 
-      // Both valid dates: newest first
-      if (at !== null && bt !== null) return bt - at;
+              // Both valid dates: newest first
+              if (at !== null && bt !== null) return bt - at;
 
-      // One valid date wins
-      if (at !== null && bt === null) return -1;
-      if (at === null && bt !== null) return 1;
+              // One valid date wins
+              if (at !== null && bt === null) return -1;
+              if (at === null && bt !== null) return 1;
 
-      // Neither has a valid date: preserve content.json order (newer entries should be higher if you add to top)
-      return a.idx - b.idx;
-    })
-    .slice(0, 3)
-    .forEach(x => recentWrap.appendChild(renderCoverCard(x.e)));
-}
+              // Neither has a valid date: preserve content.json order
+              return a.idx - b.idx;
+            })
+            .slice(0, 3)
+            .forEach(x => recentWrap.appendChild(renderCoverCard(x.e)));
+        }
+      });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
