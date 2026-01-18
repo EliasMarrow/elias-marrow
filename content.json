@@ -63,12 +63,12 @@
       "subtitle": "Method, probability, power, and constraint",
       "author": "Elias Marrow",
       "date": "2026-01-18",
-      "summary": "An explanation of the analytical lens used across this archive: probability, constraint-based choice, incentive structures, proximity, and power.",
+      "summary": "An explanation of the analytical method used across this archive: outcomes-first reasoning, incentives, constraint, proximity, and power.",
       "category": "Pillars",
       "format": "pdf",
       "file": "assets/essays/the-lens-we-use.pdf",
-      "cover": "assets/essays/the-lens-we-use.jpg",
-      "tags": ["method", "power", "constraint", "analysis"]
-    },
+      "cover": "assets/essays/covers/the-lens-we-use.jpg",
+      "tags": ["method", "constraint", "power", "analysis"]
+    }
   ]
 }
