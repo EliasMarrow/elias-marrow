@@ -82,6 +82,19 @@
       "file": "assets/essays/the-silence-in-the-files.pdf",
       "cover": "assets/essays/covers/the-silence-in-the-files.jpg",
       "tags": ["power", "institutions", "records", "silence"]
-    }
+    },
+    {
+  "id": "the-environment-that-turned-against-us",
+  "title": "The Environment That Turned Against Us",
+  "subtitle": "Systems built for survival that outgrew the people inside them",
+  "author": "Elias Marrow",
+  "date": "2026-01-20",
+  "summary": "A structural argument that modern life was built from fear and efficiency—then scaled into systems that preserve function over human relief.",
+  "category": "Mechanisms",
+  "format": "pdf",
+  "file": "assets/essays/the-environment-that-turned-against-us.pdf",
+  "cover": "assets/essays/covers/the-environment-that-turned-against-us.png",
+  "tags": ["systems", "environment", "industry", "constraint", "survival"]
+}
   ]
 }
