@@ -68,3 +68,11 @@ p{
   font-size: 13px;
   opacity: 0.8;
 }
+
+.brand{
+  display: block;
+  max-width: 220px;
+  height: auto;
+  margin: 0 0 18px;
+  opacity: 0.95;
+}
