@@ -36,13 +36,6 @@
         <div id="featured-essays" class="cover-grid"></div>
       </div>
 
-      <!-- RECENT ESSAYS -->
-      <div class="section-card">
-        <div class="section-title">Recent Essays</div>
-        <div class="muted">Last 3 publications</div>
-        <div id="recent-essays" class="cover-grid"></div>
-      </div>
-
       <!-- ESSAY INDEX -->
       <div class="section-card">
         <div class="section-title">Essay Index</div>
@@ -77,6 +70,13 @@
             </a>
           </div>
         </div>
+      </div>
+
+      <!-- RECENT ESSAYS (moved to bottom) -->
+      <div class="section-card">
+        <div class="section-title">Recent Essays</div>
+        <div class="muted">Last 3 publications</div>
+        <div id="recent-essays" class="cover-grid"></div>
       </div>
 
       <!-- DEBUG / ERROR AREA (hidden unless something fails) -->
@@ -122,7 +122,6 @@
         card.style.setProperty('--bgimg', `url("${essay.cover}")`);
       }
 
-      // Protect against missing file/title
       const title = (essay && essay.title) ? essay.title : 'Untitled';
       const subtitle = (essay && essay.subtitle) ? essay.subtitle : '';
       const file = (essay && essay.file) ? essay.file : '#';
@@ -137,10 +136,11 @@
     }
 
     // IDs must match content.json exactly
+    // Featured order: Lens -> Environment -> Effort
     const FEATURED_IDS = [
-      "trump-structural-analysis",
-      "biden-illusion-of-restoration",
-      "the-empire-that-feared-itself"
+      "the-lens-we-use",
+      "the-environment-turned-against-us",
+      "effort-was-held-constant"
     ];
 
     // --- main ---
@@ -149,12 +149,13 @@
       const recentWrap = document.getElementById('recent-essays');
 
       if (!featuredWrap || !recentWrap){
-        showError("Page is missing required containers (#featured-essays or #recent-essays).",
-                  "Confirm essays.html contains the divs with ids featured-essays and recent-essays.");
+        showError(
+          "Page is missing required containers (#featured-essays or #recent-essays).",
+          "Confirm essays.html contains the divs with ids featured-essays and recent-essays."
+        );
         return;
       }
 
-      // Clear existing (prevents duplication if browser restores state)
       featuredWrap.innerHTML = '';
       recentWrap.innerHTML = '';
 
@@ -193,14 +194,18 @@
 
           // If still empty, show diagnostic
           if (featuredWrap.children.length === 0 && recentWrap.children.length === 0){
-            showError("Essays loaded but nothing rendered.",
-                      "Check that essay objects have id/title/file fields, and that FEATURED_IDS match real ids.");
+            showError(
+              "Essays loaded but nothing rendered.",
+              "Check that essay objects have id/title/file fields, and that FEATURED_IDS match real ids."
+            );
           }
         })
         .catch(err => {
           console.error("Essays render error:", err);
-          showError("Failed to load or render essays from content.json.",
-                    "Open DevTools → Console. Most common causes: content.json not found at site root, or cached old file. The page is now logging the exact error.");
+          showError(
+            "Failed to load or render essays from content.json.",
+            "Open DevTools → Console. Most common causes: content.json not found at site root, or cached old file."
+          );
         });
 
       const y = document.getElementById("year");
