@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="dark light" />
 
   <title>Clearframe</title>
-  <meta name="description" content="Websites built to be understood." />
+  <meta name="description" content="Fast, clean, static websites built to be understood." />
   <meta name="theme-color" content="#0a0d12" />
 
   <link rel="stylesheet" href="css/styles.css" />
@@ -14,41 +14,221 @@
 
 <body>
   <main class="wrap">
-    <img
-      class="brand"
-      src="assets/img/clearframe-logo.png"
-      alt="Clearframe logo"
-    />
+    <header class="hero">
+      <img class="brand" src="assets/img/clearframe-logo.png" alt="Clearframe logo" />
 
-    <h1>Clearframe</h1>
-    <p class="lead">Websites built to be understood.</p>
+      <h1>Clearframe</h1>
+      <p class="lead">Fast, clean websites built to be understood.</p>
+      <p class="sublead">
+        Clearframe builds simple, professional static sites that explain what you do, show credibility,
+        and make it easy to contact you. No platform lock-in. No bloat. You own the files.
+      </p>
 
-    <div class="card">
-      <h2>What Clearframe is</h2>
-      <p>Clearframe designs and installs simple websites for people who care more about clarity than noise. No funnels. No bloat. No optimization theater.</p>
-      <p>Just structure that holds meaning.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">Get a site</a>
+        <a class="btn" href="#examples">View examples</a>
+      </div>
+    </header>
 
-      <h2>If you already have a site</h2>
-      <p>Clearframe can restructure what exists. This is not a redesign. It is a correction.</p>
-      <p>This includes reorganizing content so it reads in the right order, reducing cognitive load, removing redundancy and ambiguity, and clarifying what matters and what does not.</p>
+    <nav class="mini-nav" aria-label="Clearframe sections">
+      <a href="#offer">What we offer</a>
+      <a href="#who">Who it’s for</a>
+      <a href="#process">Process</a>
+      <a href="#deliverables">Deliverables</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#examples">Examples</a>
+    </nav>
 
-      <h2>If you don’t have a site yet</h2>
-      <p>Clearframe installs a proven one-page structure and populates it with only what is necessary. You are not starting from a blank canvas. You are starting from a known, stable frame.</p>
-      <p>This keeps cost, time, and complexity low—while avoiding future rework.</p>
+    <section id="offer" class="section">
+      <h2>What we offer</h2>
+      <p>
+        Clearframe is a web design option for people who need a real site that does its job:
+        explain your offering clearly, establish trust, and make it easy to reach you.
+      </p>
 
-      <h2>What you receive</h2>
-      <p>A complete static website. Clean HTML and CSS. No platform lock-in. No maintenance dependency.</p>
-      <p>Sites are compatible with GitHub Pages and similar static hosting. You receive something you can keep.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>New site (from scratch)</h3>
+          <p>
+            If you don’t have a site yet, Clearframe installs a proven one-page structure and populates it
+            with only what’s necessary: what you do, proof, and contact.
+          </p>
+        </div>
 
-      <h2>What Clearframe is not</h2>
-      <p>Clearframe is not a marketing agency, a growth service, a funnel builder, or a content mill.</p>
-      <p>If you are optimizing for engagement, this is not the right tool. If you are optimizing for understanding, it is.</p>
+        <div class="card">
+          <h3>Rework (existing site)</h3>
+          <p>
+            If you already have a site, Clearframe restructures and tightens it:
+            clearer hierarchy, less noise, stronger flow, and a better first impression.
+          </p>
+        </div>
 
+        <div class="card">
+          <h3>Launch-ready setup</h3>
+          <p>
+            Static by default: fast, cheap to host, and simple to maintain.
+            GitHub Pages-friendly. Optional help with domain and deployment.
+          </p>
+        </div>
+      </div>
+
+      <div class="card note">
+        <h3>What you’re buying</h3>
+        <p>
+          You’re buying clarity and usability. A visitor should understand what you do within seconds,
+          and know exactly what to do next.
+        </p>
+      </div>
+    </section>
+
+    <section id="who" class="section">
+      <h2>Who it’s for</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Best fit</h3>
+          <ul class="bullets">
+            <li>Local services (contractors, trades, practices)</li>
+            <li>Small businesses that need a simple web presence</li>
+            <li>Creators, freelancers, consultants</li>
+            <li>Products or small teams that need a clean company page</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Not a fit</h3>
+          <ul class="bullets">
+            <li>Funnels, aggressive marketing systems, growth hacking</li>
+            <li>Complex web apps</li>
+            <li>Heavy CMS builds unless explicitly scoped</li>
+            <li>Endless aesthetic iteration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <h2>Process</h2>
+      <p class="muted">
+        Clearframe stays tight so delivery stays predictable. The goal is speed without sloppiness.
+      </p>
+
+      <ol class="steps">
+        <li><strong>Intake</strong><span>Business name, what you do, contact info, and any links/assets you already have.</span></li>
+        <li><strong>Structure</strong><span>We select the right one-page frame and organize the content in the correct reading order.</span></li>
+        <li><strong>Build</strong><span>We implement a fast, mobile-ready static site (clean HTML/CSS).</span></li>
+        <li><strong>Review</strong><span>One short revision pass for factual corrections and clarity improvements.</span></li>
+        <li><strong>Handoff</strong><span>You receive the site files. You own them. Deploy to your host of choice.</span></li>
+      </ol>
+    </section>
+
+    <section id="deliverables" class="section">
+      <h2>Deliverables</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Standard one-page site includes</h3>
+          <ul class="bullets">
+            <li>Hero + clear positioning</li>
+            <li>Services / offerings</li>
+            <li>Proof (reviews, credentials, or short credibility section)</li>
+            <li>Service area / hours (if relevant)</li>
+            <li>Clear contact block (email + optional phone)</li>
+            <li>Optional gallery or featured work</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Technical basics</h3>
+          <ul class="bullets">
+            <li>Fast static HTML + CSS</li>
+            <li>Mobile responsive layout</li>
+            <li>SEO basics (title/description + proper headings)</li>
+            <li>Accessible structure (semantic sections)</li>
+            <li>GitHub Pages compatible</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="muted small">
+        Multi-page builds and advanced features can be scoped separately. Clearframe stays minimal by default.
+      </p>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>FAQ</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Do you use WordPress / Wix / Squarespace?</h3>
+          <p>
+            By default, no. Clearframe sites are static so they load fast and cost little to host.
+            If you need a CMS, we can scope it—but we won’t force tools you don’t need.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Can you write the copy?</h3>
+          <p>
+            Yes—within scope. We can tighten what you already have, or draft clean homepage copy based on intake.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Can you use stock photos?</h3>
+          <p>
+            Yes. If you have real photos, those are best. If not, we can use stock photos to keep the site professional.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>How do revisions work?</h3>
+          <p>
+            One short revision pass is included for corrections and clarity improvements. Additional changes can be scoped.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:paynottamichael@gmail.com">paynottamichael@gmail.com</a></p>
-    </div>
+      <p>If you want a clean site built quickly, email:</p>
+      <p class="contact">
+        <a href="mailto:paynottamichael@gmail.com">paynottamichael@gmail.com</a>
+      </p>
+      <p class="muted small">Include: name, what you do, service area (if local), and any links/assets you already have.</p>
+    </section>
 
-    <p class="quiet"><a href="/">Back to eliasmarrow.org</a></p>
+    <section id="examples" class="section">
+      <h2>Examples</h2>
+      <p class="muted">
+        Three common Clearframe builds. These examples also represent the “end state” of a rework.
+      </p>
+
+      <div class="grid-3">
+        <a class="card linkcard" href="examples/local-service/">
+          <h3>Local service</h3>
+          <p>Contractors, trades, and small local businesses.</p>
+          <span class="link">View example →</span>
+        </a>
+
+        <a class="card linkcard" href="examples/creator-portfolio/">
+          <h3>Creator / portfolio</h3>
+          <p>Writers, freelancers, and independent creators.</p>
+          <span class="link">View example →</span>
+        </a>
+
+        <a class="card linkcard" href="examples/company-page/">
+          <h3>Company page</h3>
+          <p>Small teams, products, and service brands.</p>
+          <span class="link">View example →</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="quiet"><a href="/">Back to eliasmarrow.org</a></p>
+    </footer>
   </main>
 </body>
 </html>
