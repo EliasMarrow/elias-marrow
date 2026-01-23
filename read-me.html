@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Read — Elias Marrow</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Reader-only styles (local so we do not touch styles.css) */
+    body.page-read {
+      --cover: none;
+      background: #0b0c0f;
+    }
+    .read-shell{
+      position: relative;
+      overflow: hidden;
+    }
+    .read-shell::before{
+      content:"";
+      position:absolute;
+      inset:-40px;
+      background-image: var(--cover);
+      background-size: cover;
+      background-position: center;
+      filter: blur(18px);
+      opacity: 0.22;
+      transform: scale(1.08);
+      pointer-events:none;
+    }
+    .read-shell::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(11,12,15,0.82) 0%, rgba(11,12,15,0.92) 30%, rgba(11,12,15,0.98) 100%);
+      pointer-events:none;
+    }
+    .read-content{
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 14px;
+      border-radius: 16px;
+    }
+    @media (max-width: 900px){
+      .read-content{ grid-template-columns: 1fr; }
+    }
+    .read-cover{
+      position: sticky;
+      top: 14px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(8px);
+    }
+    .read-cover .cover-img{
+      width: 100%;
+      aspect-ratio: 3/4;
+      background-image: var(--cover);
+      background-size: cover;
+      background-position: center;
+    }
+    .read-cover .cover-meta{
+      padding: 12px 12px 14px;
+    }
+    .read-title{ margin: 0 0 6px; }
+    .read-subtitle{ margin: 0 0 10px; }
+    .read-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.06);
+      color: #e9e9ee;
+      text-decoration:none;
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .btn:hover{ background: rgba(255,255,255,0.10); }
+    .btn.primary{
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.16);
+    }
+    .read-frame{
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(8px);
+      min-height: 70vh;
+    }
+    .read-frame iframe{
+      width: 100%;
+      height: 80vh;
+      border: 0;
+      display:block;
+      background: transparent;
+    }
+    .read-error{
+      position: relative;
+      z-index: 1;
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+
+<body class="page-read">
+  <div class="container">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="sigil">ELIAS MARROW</div>
+        <div class="motto">Read</div>
+      </div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="essays.html">Essays</a>
+        <a href="novels.html">Novels</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+
+    <div class="panel soft read-shell">
+      <div id="read-root" class="read-content" style="display:none;">
+        <div class="read-cover">
+          <div class="cover-img" id="cover-box"></div>
+          <div class="cover-meta">
+            <h2 class="read-title" id="read-title"></h2>
+            <p class="muted read-subtitle" id="read-subtitle"></p>
+            <p class="muted" id="read-byline"></p>
+            <p id="read-summary"></p>
+
+            <div class="read-actions">
+              <a class="btn primary" id="open-pdf" href="#" target="_blank" rel="noopener">Open PDF</a>
+              <a class="btn" id="download-pdf" href="#" download>Download</a>
+              <a class="btn" id="back-link" href="essays.html">Back</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="read-frame">
+          <iframe id="pdf-frame" title="PDF reader"></iframe>
+        </div>
+      </div>
+
+      <div id="read-error" class="read-error" style="display:none;"></div>
+    </div>
+
+    <div class="footer">
+      <div><a href="index.html">Back to Home</a></div>
+      <div>© <span id="year"></span> Elias Marrow</div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function showError(msg){
+      const box = document.getElementById('read-error');
+      box.style.display = 'block';
+      box.innerHTML = '<div class="section-title">Not found</div><p class="muted">' + msg + '</p>';
+    }
+
+    function parseDate(d){
+      return d ? new Date(d + 'T00:00:00') : null;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const type = (params.get('type') || 'essay').toLowerCase();
+    const id = params.get('id');
+
+    if (!id){
+      showError('Missing id. Return to the archive and try again.');
+    } else {
+      fetch('content.json')
+        .then(r => r.json())
+        .then(data => {
+          const list = (type === 'book') ? (data && data.books) : (data && data.essays);
+          if (!Array.isArray(list)){
+            showError('Content index could not be loaded.');
+            return;
+          }
+
+          const item = list.find(x => x && x.id === id);
+          if (!item){
+            showError('No entry found for "' + id + '".');
+            return;
+          }
+
+          const title = item.title || 'Untitled';
+          const subtitle = item.subtitle || '';
+          const author = item.author || 'Elias Marrow';
+          const date = item.date ? parseDate(item.date) : null;
+          const summary = item.summary || '';
+          const file = item.file || '#';
+          const cover = item.cover || '';
+
+          // Cover grounding (both background + visible cover)
+          if (cover){
+            document.body.style.setProperty('--cover', 'url("' + cover + '")');
+          }
+
+          document.getElementById('read-title').textContent = title;
+          document.getElementById('read-subtitle').textContent = subtitle;
+
+          const bylineParts = [];
+          bylineParts.push(author);
+          if (date && !isNaN(date.getTime())){
+            bylineParts.push(date.toISOString().slice(0,10));
+          }
+          if (item.category){
+            bylineParts.push(item.category);
+          }
+          document.getElementById('read-byline').textContent = bylineParts.join(' · ');
+          document.getElementById('read-summary').textContent = summary;
+
+          const open = document.getElementById('open-pdf');
+          const dl = document.getElementById('download-pdf');
+          open.href = file;
+          dl.href = file;
+
+          const back = document.getElementById('back-link');
+          back.href = (type === 'book') ? 'novels.html' : 'essays.html';
+
+          const frame = document.getElementById('pdf-frame');
+          frame.src = file + '#view=FitH';
+
+          document.getElementById('read-root').style.display = 'grid';
+        })
+        .catch(() => showError('Content index could not be loaded.'));
+    }
+  </script>
+</body>
+</html>

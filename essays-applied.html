@@ -13,7 +13,7 @@
     <div class="topbar">
       <div class="brand">
         <div class="sigil">ELIAS MARROW</div>
-        <div class="motto">Essays · Applied Analysis</div>
+        <div class="motto">Applied</div>
       </div>
       <div class="nav">
         <a href="index.html">Home</a>
@@ -25,35 +25,23 @@
 
     <div class="panel soft">
       <h2>Applied Analysis</h2>
-      <p class="muted">Case-based essays applying the framework to real events and actors.</p>
+      <p class="muted">Case-based essays</p>
 
       <div class="section-card">
         <div class="section-title">Applied Analysis</div>
-        <div class="muted">All essays categorized as Applied Analysis</div>
-        <div id="essay-grid" class="cover-grid"></div>
-      </div>
-
-      <div class="section-card">
-        <div class="muted">
-          <a href="essays.html">← Back to Essay Index</a>
-        </div>
+        <div class="muted">Browse</div>
+        <div id="applied-grid" class="cover-grid"></div>
       </div>
     </div>
 
     <div class="footer">
-      <div><a href="index.html">Back to Home</a></div>
+      <div><a href="essays.html">Back to Essays</a></div>
       <div>© <span id="year"></span> Elias Marrow</div>
     </div>
 
   </div>
 
   <script>
-    const CATEGORY = "Applied Analysis";
-
-    function parseDate(d){
-      return d ? new Date(d + 'T00:00:00') : new Date(0);
-    }
-
     function renderCoverCard(essay){
       const card = document.createElement('div');
       card.className = 'ill-card';
@@ -63,7 +51,7 @@
       }
 
       card.innerHTML = `
-        <a href="${essay.file}" target="_blank" rel="noopener">
+        <a href="read-me.html?type=essay&id=${essay.id}" rel="noopener">
           <h3 class="ill-title">${essay.title}</h3>
           ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
         </a>
@@ -74,12 +62,12 @@
     fetch('content.json')
       .then(r => r.json())
       .then(data => {
-        const grid = document.getElementById('essay-grid');
-        if (!grid || !Array.isArray(data.essays)) return;
+        if (!data || !Array.isArray(data.essays)) return;
+        const grid = document.getElementById('applied-grid');
+        if (!grid) return;
 
         data.essays
-          .filter(e => (e.category || "").trim() === CATEGORY)
-          .sort((a,b) => parseDate(b.date) - parseDate(a.date))
+          .filter(e => e.category === 'Applied Analysis')
           .forEach(e => grid.appendChild(renderCoverCard(e)));
       });
 
