@@ -25,17 +25,19 @@
 
     <div class="panel soft">
       <h2>Novels</h2>
-      <p class="muted">Archive editions. Select a title.</p>
+      <p class="muted">
+        Archive editions. Published deliberately, not frequently.
+      </p>
 
       <div class="section-card">
         <div class="section-title">Books</div>
-        <div class="muted">PDF archive editions</div>
+        <div class="muted">Current archive editions</div>
         <div id="books-grid" class="cover-grid"></div>
       </div>
 
       <div id="book-error" class="section-card" style="display:none;">
-        <div class="section-title">Error</div>
-        <p class="muted" id="book-error-text"></p>
+        <div class="section-title">Loading error</div>
+        <div class="muted" id="book-error-text"></div>
       </div>
     </div>
 
@@ -48,11 +50,12 @@
 
   <script>
     function showBookError(msg){
-      const box = document.getElementById('book-error');
-      const text = document.getElementById('book-error-text');
-      if (!box || !text) return;
-      box.style.display = 'block';
-      text.textContent = msg;
+      const err = document.getElementById('book-error');
+      const txt = document.getElementById('book-error-text');
+      if (err && txt){
+        err.style.display = 'block';
+        txt.textContent = msg;
+      }
     }
 
     function renderBookCard(book){
@@ -65,10 +68,9 @@
 
       const title = (book && book.title) ? book.title : 'Untitled';
       const subtitle = (book && book.subtitle) ? book.subtitle : '';
-      const file = (book && book.file) ? book.file : '#';
 
       card.innerHTML = `
-        <a href="${file}" target="_blank" rel="noopener">
+        <a href="read-me.html?type=book&id=${book.id}" rel="noopener">
           <h3 class="ill-title">${title}</h3>
           ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
         </a>
@@ -76,35 +78,26 @@
       return card;
     }
 
-    (function(){
-      const grid = document.getElementById('books-grid');
-      if (!grid){
-        showBookError("Missing #books-grid container.");
-        return;
-      }
+    // cache-buster (kept as-is)
+    const url = 'content.json?v=' + Date.now();
 
-      const url = 'content.json?v=' + Date.now(); // cache bust
-      fetch(url, { cache: 'no-store' })
-        .then(r => {
-          if (!r.ok) throw new Error("HTTP " + r.status);
-          return r.json();
-        })
-        .then(data => {
-          if (!data || !Array.isArray(data.books)){
-            showBookError("content.json loaded, but no 'books' array found.");
-            return;
-          }
-          grid.innerHTML = '';
-          data.books.forEach(b => grid.appendChild(renderBookCard(b)));
-        })
-        .catch(err => {
-          console.error(err);
-          showBookError("Failed to load books from content.json.");
-        });
+    fetch(url, { cache: 'no-store' })
+      .then(r => r.json())
+      .then(data => {
+        if (!data || !Array.isArray(data.books)){
+          showBookError('books[] not found in content.json');
+          return;
+        }
 
-      const y = document.getElementById("year");
-      if (y) y.textContent = new Date().getFullYear();
-    })();
+        const grid = document.getElementById('books-grid');
+        if (!grid) return;
+
+        data.books.forEach(b => grid.appendChild(renderBookCard(b)));
+      })
+      .catch(() => showBookError('Could not load content.json'));
+
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
