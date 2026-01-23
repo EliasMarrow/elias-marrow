@@ -56,6 +56,32 @@
       "file": "assets/essays/the-empire-that-feared-itself.pdf",
       "cover": "assets/essays/covers/the-empire-that-feared-itself.jpg",
       "tags": ["fear", "war", "propaganda", "power"]
+    },
+    {
+      "id": "the-lens-we-use",
+      "title": "The Lens We Use",
+      "subtitle": "Method, probability, power, and constraint",
+      "author": "Elias Marrow",
+      "date": "2026-01-18",
+      "summary": "An explanation of the analytical method used across this archive: outcomes-first reasoning, incentives, constraint, proximity, and power.",
+      "category": "Pillars",
+      "format": "pdf",
+      "file": "assets/essays/the-lens-we-use.pdf",
+      "cover": "assets/essays/covers/the-lens-we-use.jpg",
+      "tags": ["method", "constraint", "power", "analysis"]
+    },
+    {
+      "id": "the-silence-in-the-files",
+      "title": "The Silence in the Files",
+      "subtitle": "What survives, what vanishes, and who gets to decide",
+      "author": "Elias Marrow",
+      "date": "2026-01-18",
+      "summary": "A structural essay on record, memory, and institutional silence—how omission becomes policy and how absence becomes a weapon.",
+      "category": "Mechanisms",
+      "format": "pdf",
+      "file": "assets/essays/the-silence-in-the-files.pdf",
+      "cover": "assets/essays/covers/the-silence-in-the-files.jpg",
+      "tags": ["power", "institutions", "records", "silence"]
     }
   ]
 }
