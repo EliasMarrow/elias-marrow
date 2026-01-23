@@ -6,7 +6,7 @@
   },
   "essays": [
     {
-      "id": "trump-structural-analysis",
+      "id": "trump-essay",
       "title": "Trump: Rhetoric, Incentives, and the Machinery Behind the Movement",
       "subtitle": "Power, incentives, and institutional collapse",
       "author": "Elias Marrow",
@@ -19,7 +19,7 @@
       "tags": ["power", "politics", "incentives", "media"]
     },
     {
-      "id": "biden-illusion-of-restoration",
+      "id": "biden-essay",
       "title": "Joe Biden and the Illusion of Restoration",
       "subtitle": "Power, normalcy, and the politics of managed decline",
       "author": "Elias Marrow",
@@ -82,6 +82,99 @@
       "file": "assets/essays/the-silence-in-the-files.pdf",
       "cover": "assets/essays/covers/the-silence-in-the-files.jpg",
       "tags": ["power", "institutions", "records", "silence"]
+    },
+    {
+      "id": "the-environment-turned-against-us",
+      "title": "The Environment Turned Against Us",
+      "subtitle": "Systems built for survival that outgrew the people inside them",
+      "author": "Elias Marrow",
+      "date": "2026-01-20",
+      "summary": "A structural argument that modern life was built from fear and efficiency—then scaled into systems that preserve function over human relief.",
+      "category": "Mechanisms",
+      "format": "pdf",
+      "file": "assets/essays/the-environment-turned-against-us.pdf",
+      "cover": "assets/essays/covers/the-environment-turned-against-us.jpg",
+      "tags": ["systems", "environment", "industry", "constraint", "survival"]
+    },
+    {
+      "id": "democracy-is-not-failing",
+      "title": "Democracy Is Not Failing",
+      "subtitle": "It is being managed",
+      "author": "Elias Marrow",
+      "date": "2026-01-21",
+      "summary": "A structural argument that what looks like democratic failure is often a designed outcome of incentives, containment, and controlled legitimacy.",
+      "category": "Applied Analysis",
+      "format": "pdf",
+      "file": "assets/essays/democracy-is-not-failing.pdf",
+      "cover": "assets/essays/covers/democracy-is-not-failing.jpg",
+      "tags": ["democracy", "power", "institutions", "legitimacy"]
+    },
+    {
+      "id": "effort-was-held-constant",
+      "title": "Effort Was Held Constant",
+      "subtitle": "Effort is necessary—never explanatory",
+      "author": "Elias Marrow",
+      "date": "2026-01-21",
+      "summary": "A short piece reframing effort as a baseline requirement, not the variable that explains success or failure under constraint.",
+      "category": "Notes",
+      "format": "pdf",
+      "file": "assets/essays/effort-was-held-constant.pdf",
+      "cover": "assets/essays/covers/effort-was-held-constant.jpg",
+      "tags": ["effort", "constraint", "scarcity", "outcomes"]
+    },
+    {
+      "id": "when-poverty-becomes-functional",
+      "title": "When Poverty Becomes Functional",
+      "subtitle": "Poverty as baseline output, not personal failure",
+      "author": "Elias Marrow",
+      "date": "2026-01-21",
+      "summary": "A simulation-informed structural argument: poverty emerges as a predictable system output when constraints and option sets are held constant.",
+      "category": "Pillars",
+      "format": "pdf",
+      "file": "assets/essays/when-poverty-becomes-functional.pdf",
+      "cover": "assets/essays/covers/when-poverty-becomes-functional.jpg",
+      "tags": ["poverty", "simulation", "constraint", "systems"]
     }
   ]
+  ,
+  "books": [
+  {
+    "id": "constraints_not_choices",
+    "title": "Constraints, Not Choices",
+    "subtitle": "A short book",
+    "author": "Elias Marrow",
+    "date": "2026-01-21",
+    "summary": "A structural argument that outcomes emerge from constrained option sets—not moral failure.",
+    "format": "pdf",
+    "file": "assets/novels/constraints_not_choices/constraints_not_choices.pdf",
+    "cover": "assets/novels/constraints_not_choices/constraints_not_choices.jpg",
+    "tags": ["constraint", "scarcity", "systems", "agency"]
+  },
+  {
+    "id": "darkling",
+    "title": "Darkling — Book I",
+    "subtitle": "A novel",
+    "author": "Elias Marrow",
+    "date": "2026-01-21",
+    "summary": "Book I archive edition. Chapters and supporting material are published as they are finalized.",
+    "format": "pdf",
+    "file": "assets/novels/darkling/darkling.pdf",
+    "cover": "assets/novels/darkling/darkling.jpg",
+    "tags": ["novel", "fantasy", "darkling", "everterra"]
+  },
+  {
+    "id": "the_weight_of_knowing",
+    "title": "The Weight of Knowing",
+    "subtitle": "A novel",
+    "author": "Elias Marrow",
+    "date": "2026-01-21",
+    "summary": "An archive edition. The work publishes in sections as canon is locked.",
+    "format": "pdf",
+    "file": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.pdf",
+    "cover": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.jpg",
+    "tags": ["novel", "systems", "gothic", "power"]
+  }
+]
+
+
 }
