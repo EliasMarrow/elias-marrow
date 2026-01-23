@@ -49,7 +49,6 @@
         <div class="muted">Browse by category</div>
 
         <div class="cover-grid">
-
           <div class="ill-card" style="--bgimg:url('assets/category-pillars.jpg')">
             <a href="essays-pillars.html">
               <h3 class="ill-title">Pillars</h3>
@@ -77,7 +76,6 @@
               <p class="ill-meta">Fragments & short-form</p>
             </a>
           </div>
-
         </div>
       </div>
     </div>
@@ -112,10 +110,10 @@
       return card;
     }
 
-    // Correct Featured Essays
+    // FIXED: IDs now match content.json exactly
     const FEATURED_IDS = [
-      "lens-we-use",
-      "environment-turned-against-us",
+      "the-lens-we-use",
+      "the-environment-turned-against-us",
       "effort-was-held-constant"
     ];
 
@@ -126,7 +124,6 @@
 
         const byId = new Map(data.essays.map(e => [e.id, e]));
 
-        // Render Featured
         const featuredWrap = document.getElementById('featured-essays');
         if (featuredWrap){
           FEATURED_IDS
@@ -135,7 +132,6 @@
             .forEach(e => featuredWrap.appendChild(renderCoverCard(e)));
         }
 
-        // Render Recent (excluding featured)
         const recentWrap = document.getElementById('recent-essays');
         if (recentWrap){
           data.essays
