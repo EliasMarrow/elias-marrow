@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Essay</title>
+
+  <style>
+    :root{
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.65);
+      --panel: rgba(10,12,16,.78);
+      --border: rgba(255,255,255,.10);
+      --maxw: 860px;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #0b0c10;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    /* Background cover image */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(.45) contrast(1.05);
+      z-index: -3;
+    }
+
+    /* Dark overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(1000px 700px at 50% 15%, rgba(0,0,0,.25), rgba(0,0,0,.85)),
+        linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.90));
+      z-index: -2;
+    }
+
+    header {
+      padding: 28px 18px 0;
+    }
+
+    .topbar {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: rgba(0,0,0,.35);
+    }
+
+    .back:hover {
+      color: var(--text);
+      border-color: rgba(255,255,255,.18);
+    }
+
+    main {
+      padding: 22px 18px 60px;
+    }
+
+    .reader {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .inner {
+      padding: 34px 30px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 3.4vw, 44px);
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .subtitle {
+      font-style: italic;
+      color: rgba(255,255,255,.80);
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
