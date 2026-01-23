@@ -112,14 +112,14 @@
       return card;
     }
 
-    // IDs must match content.json exactly
+    // Correct Featured Essays
     const FEATURED_IDS = [
-      "trump-structural-analysis",
-      "biden-illusion-of-restoration",
-      "the-empire-that-feared-itself"
+      "lens-we-use",
+      "environment-turned-against-us",
+      "effort-was-held-constant"
     ];
 
-    fetch('content.json')
+    fetch('/content.json')
       .then(r => r.json())
       .then(data => {
         if (!data || !Array.isArray(data.essays)) return;
