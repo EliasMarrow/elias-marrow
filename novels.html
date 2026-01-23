@@ -10,11 +10,10 @@
 <body class="page-novels">
   <div class="container">
 
-    <!-- Top bar -->
     <div class="topbar">
       <div class="brand">
         <div class="sigil">ELIAS MARROW</div>
-        <div class="motto">Novels</div>
+        <div class="motto">Archive</div>
       </div>
       <div class="nav">
         <a href="index.html">Home</a>
@@ -24,93 +23,44 @@
       </div>
     </div>
 
-    <!-- Main -->
     <main>
       <h2>Novels</h2>
       <p>Archive editions. Published deliberately, not frequently.</p>
 
-      <p id="novels-status" style="opacity:.75;"></p>
+      <!-- This is the render target. Keep the id. -->
+      <section id="novels" class="cards novels-grid"></section>
 
-      <div id="novels" class="novels-grid"></div>
-
-      <p style="margin-top:2rem;">
-        <a href="index.html">← Back to Home</a>
+      <p class="backlink">
+        <a href="index.html">Back to Home</a>
       </p>
     </main>
 
-    <!-- Footer -->
     <footer>
       <p>© Elias Marrow</p>
     </footer>
 
   </div>
 
-  <!-- Loader -->
   <script>
     const mount = document.getElementById("novels");
-    const statusEl = document.getElementById("novels-status");
 
     function esc(str) {
       return String(str ?? "")
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;")
-        .replaceAll('"',"&quot;")
-        .replaceAll("'","&#039;");
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
     }
 
     function renderBooks(books) {
       if (!Array.isArray(books) || books.length === 0) {
-        mount.innerHTML = "<p>No novels published yet.</p>";
+        mount.innerHTML = `<p>No novels published yet.</p>`;
         return;
       }
 
       mount.innerHTML = books.map(b => {
-        const title   = esc(b.title || "Untitled");
-        const subtitle= esc(b.subtitle || "");
+        const title = esc(b.title || b.id || "Untitled");
+        const subtitle = esc(b.subtitle || "");
         const summary = esc(b.summary || "");
-        const cover   = esc(b.cover || "");
-        const pdf     = esc(b.file || "");
-
-        return `
-          <article class="novel-card">
-            ${cover ? `
-              <a href="${pdf}" target="_blank" rel="noopener">
-                <img class="novel-cover" src="${cover}" alt="${title} cover">
-              </a>
-            ` : ``}
-
-            <div class="novel-meta">
-              <h3>${title}</h3>
-              ${subtitle ? `<p class="novel-subtitle">${subtitle}</p>` : ``}
-              ${summary ? `<p>${summary}</p>` : ``}
-              ${pdf ? `<a class="novel-link" href="${pdf}" target="_blank" rel="noopener">Read (PDF)</a>` : ``}
-            </div>
-          </article>
-        `;
-      }).join("");
-    }
-
-    (async function loadNovels() {
-      try {
-        if (statusEl) statusEl.textContent = "Loading…";
-
-        const res = await fetch("/content.json", { cache: "no-store" });
-        if (!res.ok) throw new Error("content.json not found");
-
-        const data = await res.json();
-        const books = data.books || [];
-
-        renderBooks(books);
-
-        if (statusEl) statusEl.textContent = "";
-      } catch (err) {
-        console.error("Novels load error:", err);
-        if (statusEl) statusEl.textContent = "Unable to load novels.";
-        mount.innerHTML = "<p>Novels are temporarily unavailable.</p>";
-      }
-    })();
-  </script>
-
-</body>
-</html>
+        const cover = esc(b.cover || "");
