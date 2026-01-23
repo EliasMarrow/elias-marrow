@@ -27,10 +27,9 @@
       <h2>Novels</h2>
       <p>Archive editions. Published deliberately, not frequently.</p>
 
-      <!-- This is the render target. Keep the id. -->
-      <section id="novels" class="cards novels-grid"></section>
+      <section id="novels"></section>
 
-      <p class="backlink">
+      <p>
         <a href="index.html">Back to Home</a>
       </p>
     </main>
@@ -42,9 +41,9 @@
   </div>
 
   <script>
-    const mount = document.getElementById("novels");
+    const novelsEl = document.getElementById("novels");
 
-    function esc(str) {
+    function escapeHTML(str) {
       return String(str ?? "")
         .replaceAll("&", "&amp;")
         .replaceAll("<", "&lt;")
@@ -53,14 +52,38 @@
         .replaceAll("'", "&#039;");
     }
 
-    function renderBooks(books) {
-      if (!Array.isArray(books) || books.length === 0) {
-        mount.innerHTML = `<p>No novels published yet.</p>`;
-        return;
-      }
+    fetch("content.json")
+      .then(res => res.json())
+      .then(data => {
+        const books = data.books || [];
 
-      mount.innerHTML = books.map(b => {
-        const title = esc(b.title || b.id || "Untitled");
-        const subtitle = esc(b.subtitle || "");
-        const summary = esc(b.summary || "");
-        const cover = esc(b.cover || "");
+        novelsEl.innerHTML = books.map(book => {
+          const title = escapeHTML(book.title);
+          const subtitle = escapeHTML(book.subtitle || "");
+          const summary = escapeHTML(book.summary || "");
+          const cover = escapeHTML(book.cover || "");
+          const file = escapeHTML(book.file || "");
+
+          return `
+            <article class="novel">
+              <a href="${file}" target="_blank">
+                <img src="${cover}" alt="${title} cover">
+              </a>
+
+              <h3>${title}</h3>
+              ${subtitle ? `<p><em>${subtitle}</em></p>` : ``}
+              ${summary ? `<p>${summary}</p>` : ``}
+
+              <a href="${file}" target="_blank">Read (PDF)</a>
+            </article>
+          `;
+        }).join("");
+      })
+      .catch(err => {
+        console.error(err);
+        novelsEl.innerHTML = "<p>Unable to load novels.</p>";
+      });
+  </script>
+
+</body>
+</html>
