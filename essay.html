@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Essay — Elias Marrow</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="sigil">ELIAS MARROW</div>
+        <div class="motto">Essay</div>
+      </div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="essays.html">Essays</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+
+    <div class="article">
+      <h1>Essay Title</h1>
+      <p class="byline">Published: YYYY-MM-DD · Reading time: X–Y minutes</p>
+
+      <p>
+        Write the opening paragraph here. Define the claim. Establish the terms. Explain the stakes.
+      </p>
+
+      <h2>Section Title</h2>
+      <p>
+        Write the argument in plain language. Be specific. Use examples. Name the mechanism.
+      </p>
+
+      <blockquote>
+        Use a quote block sparingly for a central line that deserves weight.
+      </blockquote>
+
+      <h2>What changes outcomes</h2>
+      <p>
+        End with grounded levers, real constraints, and honest tradeoffs.
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Elias Marrow</div>
+      <div><a href="essays.html">Archive</a></div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
