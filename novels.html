@@ -13,7 +13,7 @@
     <div class="topbar">
       <div class="brand">
         <div class="sigil">ELIAS MARROW</div>
-        <div class="motto">Archive</div>
+        <div class="motto">Novels</div>
       </div>
       <div class="nav">
         <a href="index.html">Home</a>
@@ -23,67 +23,88 @@
       </div>
     </div>
 
-    <main>
+    <div class="panel soft">
       <h2>Novels</h2>
-      <p>Archive editions. Published deliberately, not frequently.</p>
+      <p class="muted">Archive editions. Select a title.</p>
 
-      <section id="novels"></section>
+      <div class="section-card">
+        <div class="section-title">Books</div>
+        <div class="muted">PDF archive editions</div>
+        <div id="books-grid" class="cover-grid"></div>
+      </div>
 
-      <p>
-        <a href="index.html">Back to Home</a>
-      </p>
-    </main>
+      <div id="book-error" class="section-card" style="display:none;">
+        <div class="section-title">Error</div>
+        <p class="muted" id="book-error-text"></p>
+      </div>
+    </div>
 
-    <footer>
-      <p>© Elias Marrow</p>
-    </footer>
+    <div class="footer">
+      <div><a href="index.html">Back to Home</a></div>
+      <div>© <span id="year"></span> Elias Marrow</div>
+    </div>
 
   </div>
 
   <script>
-    const novelsEl = document.getElementById("novels");
-
-    function escapeHTML(str) {
-      return String(str ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
+    function showBookError(msg){
+      const box = document.getElementById('book-error');
+      const text = document.getElementById('book-error-text');
+      if (!box || !text) return;
+      box.style.display = 'block';
+      text.textContent = msg;
     }
 
-    fetch("content.json")
-      .then(res => res.json())
-      .then(data => {
-        const books = data.books || [];
+    function renderBookCard(book){
+      const card = document.createElement('div');
+      card.className = 'ill-card';
 
-        novelsEl.innerHTML = books.map(book => {
-          const title = escapeHTML(book.title);
-          const subtitle = escapeHTML(book.subtitle || "");
-          const summary = escapeHTML(book.summary || "");
-          const cover = escapeHTML(book.cover || "");
-          const file = escapeHTML(book.file || "");
+      if (book && book.cover){
+        card.style.setProperty('--bgimg', `url("${book.cover}")`);
+      }
 
-          return `
-            <article class="novel">
-              <a href="${file}" target="_blank">
-                <img src="${cover}" alt="${title} cover">
-              </a>
+      const title = (book && book.title) ? book.title : 'Untitled';
+      const subtitle = (book && book.subtitle) ? book.subtitle : '';
+      const file = (book && book.file) ? book.file : '#';
 
-              <h3>${title}</h3>
-              ${subtitle ? `<p><em>${subtitle}</em></p>` : ``}
-              ${summary ? `<p>${summary}</p>` : ``}
+      card.innerHTML = `
+        <a href="${file}" target="_blank" rel="noopener">
+          <h3 class="ill-title">${title}</h3>
+          ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
+        </a>
+      `;
+      return card;
+    }
 
-              <a href="${file}" target="_blank">Read (PDF)</a>
-            </article>
-          `;
-        }).join("");
-      })
-      .catch(err => {
-        console.error(err);
-        novelsEl.innerHTML = "<p>Unable to load novels.</p>";
-      });
+    (function(){
+      const grid = document.getElementById('books-grid');
+      if (!grid){
+        showBookError("Missing #books-grid container.");
+        return;
+      }
+
+      const url = 'content.json?v=' + Date.now(); // cache bust
+      fetch(url, { cache: 'no-store' })
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.json();
+        })
+        .then(data => {
+          if (!data || !Array.isArray(data.books)){
+            showBookError("content.json loaded, but no 'books' array found.");
+            return;
+          }
+          grid.innerHTML = '';
+          data.books.forEach(b => grid.appendChild(renderBookCard(b)));
+        })
+        .catch(err => {
+          console.error(err);
+          showBookError("Failed to load books from content.json.");
+        });
+
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+    })();
   </script>
-
 </body>
 </html>
