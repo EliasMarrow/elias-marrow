@@ -10,6 +10,7 @@
 <body class="page-novels">
   <div class="container">
 
+    <!-- Top bar -->
     <div class="topbar">
       <div class="brand">
         <div class="sigil">ELIAS MARROW</div>
@@ -23,80 +24,92 @@
       </div>
     </div>
 
-    <div class="panel soft">
+    <!-- Main -->
+    <main>
       <h2>Novels</h2>
-      <p class="muted">
-        Archive editions. Published deliberately, not frequently.
+      <p>Archive editions. Published deliberately, not frequently.</p>
+
+      <p id="novels-status" style="opacity:.75;"></p>
+
+      <div id="novels" class="novels-grid"></div>
+
+      <p style="margin-top:2rem;">
+        <a href="index.html">← Back to Home</a>
       </p>
+    </main>
 
-      <div class="section-card">
-        <div class="section-title">Books</div>
-        <div class="muted">Current archive editions</div>
-        <div id="books-grid" class="cover-grid"></div>
-      </div>
-
-      <div id="book-error" class="section-card" style="display:none;">
-        <div class="section-title">Loading error</div>
-        <div class="muted" id="book-error-text"></div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div><a href="index.html">Back to Home</a></div>
-      <div>© <span id="year"></span> Elias Marrow</div>
-    </div>
+    <!-- Footer -->
+    <footer>
+      <p>© Elias Marrow</p>
+    </footer>
 
   </div>
 
+  <!-- Loader -->
   <script>
-    function showBookError(msg){
-      const err = document.getElementById('book-error');
-      const txt = document.getElementById('book-error-text');
-      if (err && txt){
-        err.style.display = 'block';
-        txt.textContent = msg;
-      }
+    const mount = document.getElementById("novels");
+    const statusEl = document.getElementById("novels-status");
+
+    function esc(str) {
+      return String(str ?? "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
     }
 
-    function renderBookCard(book){
-      const card = document.createElement('div');
-      card.className = 'ill-card';
-
-      if (book && book.cover){
-        card.style.setProperty('--bgimg', `url("${book.cover}")`);
+    function renderBooks(books) {
+      if (!Array.isArray(books) || books.length === 0) {
+        mount.innerHTML = "<p>No novels published yet.</p>";
+        return;
       }
 
-      const title = (book && book.title) ? book.title : 'Untitled';
-      const subtitle = (book && book.subtitle) ? book.subtitle : '';
+      mount.innerHTML = books.map(b => {
+        const title   = esc(b.title || "Untitled");
+        const subtitle= esc(b.subtitle || "");
+        const summary = esc(b.summary || "");
+        const cover   = esc(b.cover || "");
+        const pdf     = esc(b.file || "");
 
-      card.innerHTML = `
-        <a href="read-me.html?type=book&id=${book.id}" rel="noopener">
-          <h3 class="ill-title">${title}</h3>
-          ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
-        </a>
-      `;
-      return card;
+        return `
+          <article class="novel-card">
+            ${cover ? `
+              <a href="${pdf}" target="_blank" rel="noopener">
+                <img class="novel-cover" src="${cover}" alt="${title} cover">
+              </a>
+            ` : ``}
+
+            <div class="novel-meta">
+              <h3>${title}</h3>
+              ${subtitle ? `<p class="novel-subtitle">${subtitle}</p>` : ``}
+              ${summary ? `<p>${summary}</p>` : ``}
+              ${pdf ? `<a class="novel-link" href="${pdf}" target="_blank" rel="noopener">Read (PDF)</a>` : ``}
+            </div>
+          </article>
+        `;
+      }).join("");
     }
 
-    // cache-buster (kept as-is)
-    const url = 'content.json?v=' + Date.now();
+    (async function loadNovels() {
+      try {
+        if (statusEl) statusEl.textContent = "Loading…";
 
-    fetch(url, { cache: 'no-store' })
-      .then(r => r.json())
-      .then(data => {
-        if (!data || !Array.isArray(data.books)){
-          showBookError('books[] not found in content.json');
-          return;
-        }
+        const res = await fetch("/content.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("content.json not found");
 
-        const grid = document.getElementById('books-grid');
-        if (!grid) return;
+        const data = await res.json();
+        const books = data.books || [];
 
-        data.books.forEach(b => grid.appendChild(renderBookCard(b)));
-      })
-      .catch(() => showBookError('Could not load content.json'));
+        renderBooks(books);
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+        if (statusEl) statusEl.textContent = "";
+      } catch (err) {
+        console.error("Novels load error:", err);
+        if (statusEl) statusEl.textContent = "Unable to load novels.";
+        mount.innerHTML = "<p>Novels are temporarily unavailable.</p>";
+      }
+    })();
   </script>
 
 </body>
