@@ -134,75 +134,57 @@
       "file": "assets/essays/when-poverty-becomes-functional.pdf",
       "cover": "assets/essays/covers/when-poverty-becomes-functional.jpg",
       "tags": ["poverty", "simulation", "constraint", "systems"]
+    },
+    {
+      "id": "complicit-by-silence",
+      "title": "Complicit by Silence",
+      "subtitle": "When silence becomes participation",
+      "author": "Elias Marrow",
+      "date": "2026-01-23",
+      "summary": "I avoid involvement where I can. But some forms of ignorance make silence a form of complicity.",
+      "category": "Applied Analysis",
+      "format": "pdf",
+      "file": "assets/essays/complicit-by-silence.pdf",
+      "cover": "assets/essays/covers/complicit-by-silence.png",
+      "tags": ["silence", "ethics", "complicity"]
+    }
+  ],
+  "books": [
+    {
+      "id": "constraints_not_choices",
+      "title": "Constraints, Not Choices",
+      "subtitle": "A short book",
+      "author": "Elias Marrow",
+      "date": "2026-01-21",
+      "summary": "A structural argument that outcomes emerge from constrained option sets—not moral failure.",
+      "format": "pdf",
+      "file": "assets/novels/constraints_not_choices/constraints_not_choices.pdf",
+      "cover": "assets/novels/constraints_not_choices/constraints_not_choices.jpg",
+      "tags": ["constraint", "scarcity", "systems", "agency"]
+    },
+    {
+      "id": "darkling",
+      "title": "Darkling — Book I",
+      "subtitle": "A novel",
+      "author": "Elias Marrow",
+      "date": "2026-01-21",
+      "summary": "Book I archive edition. Chapters and supporting material are published as they are finalized.",
+      "format": "pdf",
+      "file": "assets/novels/darkling/darkling.pdf",
+      "cover": "assets/novels/darkling/darkling.jpg",
+      "tags": ["novel", "fantasy", "darkling", "everterra"]
+    },
+    {
+      "id": "the_weight_of_knowing",
+      "title": "The Weight of Knowing",
+      "subtitle": "A novel",
+      "author": "Elias Marrow",
+      "date": "2026-01-21",
+      "summary": "An archive edition. The work publishes in sections as canon is locked.",
+      "format": "pdf",
+      "file": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.pdf",
+      "cover": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.jpg",
+      "tags": ["novel", "systems", "gothic", "power"]
     }
   ]
-  ,
-  "books": [
-  {
-    "id": "constraints_not_choices",
-    "title": "Constraints, Not Choices",
-    "subtitle": "A short book",
-    "author": "Elias Marrow",
-    "date": "2026-01-21",
-    "summary": "A structural argument that outcomes emerge from constrained option sets—not moral failure.",
-    "format": "pdf",
-    "file": "assets/novels/constraints_not_choices/constraints_not_choices.pdf",
-    "cover": "assets/novels/constraints_not_choices/constraints_not_choices.jpg",
-    "tags": ["constraint", "scarcity", "systems", "agency"]
-  },
-  {
-    "id": "darkling",
-    "title": "Darkling — Book I",
-    "subtitle": "A novel",
-    "author": "Elias Marrow",
-    "date": "2026-01-21",
-    "summary": "Book I archive edition. Chapters and supporting material are published as they are finalized.",
-    "format": "pdf",
-    "file": "assets/novels/darkling/darkling.pdf",
-    "cover": "assets/novels/darkling/darkling.jpg",
-    "tags": ["novel", "fantasy", "darkling", "everterra"]
-  },
-  {
-    "id": "the_weight_of_knowing",
-    "title": "The Weight of Knowing",
-    "subtitle": "A novel",
-    "author": "Elias Marrow",
-    "date": "2026-01-21",
-    "summary": "An archive edition. The work publishes in sections as canon is locked.",
-    "format": "pdf",
-    "file": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.pdf",
-    "cover": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.jpg",
-    "tags": ["novel", "systems", "gothic", "power"]
-  }
-  {
-  "id": "complicit-by-silence",
-  "title": "Complicit by Silence",
-  "subtitle": "When refusal to speak becomes participation",
-  "author": "Elias Marrow",
-  "date": "2026-01-23",
-  "summary": "A refusal to participate in noise—until silence itself becomes a form of consent.",
-  "category": "Ethics",
-  "format": "pdf",
-  "file": "assets/essays/complicit-by-silence.pdf",
-  "cover": "assets/essays/covers/complicit-by-silence.png",
-  "tags": ["silence", "complicity", "ethics", "speech", "responsibility"]
-}
-{
-  "id": "complicit-by-silence",
-  "title": "Complicit by Silence",
-  "subtitle": "When silence becomes participation",
-  "author": "Elias Marrow",
-  "date": "2026-01-23",
-  "summary": "I avoid involvement where I can. But some forms of ignorance make silence a form of complicity.",
-  "category": "Applied Analysis",
-  "format": "pdf",
-  "file": "assets/essays/complicit-by-silence.pdf",
-  "cover": "assets/essays/covers/complicit-by-silence.png",
-  "tags": ["silence", "ethics", "complicity"]
-}
-
-
-]
-
-
 }
