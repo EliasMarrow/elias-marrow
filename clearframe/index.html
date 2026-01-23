@@ -9,12 +9,9 @@
   <meta name="description" content="Clean, fast one-page websites built for clarity and speed." />
   <meta name="theme-color" content="#0a0d12" />
 
-  <!-- IMPORTANT: absolute path + cache-bust -->
   <link rel="stylesheet" href="/clearframe/css/styles.css?v=999" />
 
   <style>
-    /* Clearframe landing — locked */
-
     .hero {
       text-align: center;
       padding-top: 6px;
@@ -109,20 +106,7 @@
     }
 
     .ex-head {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    /* HARDEN LOGO RENDERING (prevents collapse / weird sizing in flex) */
-    .ex-logo {
       display: block;
-      width: 78px;
-      max-width: 78px;
-      height: 78px;
-      object-fit: contain;
-      opacity: .95;
-      flex-shrink: 0;
     }
 
     .ex-link {
@@ -142,7 +126,6 @@
 <body>
   <main class="wrap">
 
-    <!-- HERO -->
     <header class="hero">
       <img class="hero-logo" src="/clearframe/assets/img/clearframe-logo.png" alt="Clearframe logo" />
 
@@ -186,7 +169,7 @@
       </div>
     </section>
 
-    <!-- MIDDLE PART (RESTORED) -->
+    <!-- FIT -->
     <section class="section" id="fit">
       <h2>Who it’s for</h2>
 
@@ -215,6 +198,7 @@
       </div>
     </section>
 
+    <!-- PROCESS -->
     <section class="section" id="process">
       <h2>Process</h2>
 
@@ -239,6 +223,7 @@
       </div>
     </section>
 
+    <!-- DELIVERABLES -->
     <section class="section" id="deliverables">
       <h2>What you get</h2>
 
@@ -276,6 +261,7 @@
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section" id="faq">
       <h2>FAQ</h2>
 
@@ -301,7 +287,6 @@
         </div>
       </div>
     </section>
-    <!-- END MIDDLE PART -->
 
     <!-- EXAMPLES -->
     <section class="section examples" id="examples">
@@ -310,38 +295,26 @@
 
       <div class="grid-3" style="margin-top:14px;">
 
-        <!-- LOCAL SERVICE -->
         <a class="card ex-card" href="/clearframe/examples/local-service/">
           <div class="ex-head">
-            <img class="ex-logo" src="/clearframe/assets/img/riverbend-plumbing-logo.png" alt="Riverbend Plumbing" />
-            <div>
-              <h3>Local service</h3>
-              <p class="muted">Contractors and trades.</p>
-            </div>
+            <h3>Local service</h3>
+            <p class="muted">Contractors and trades.</p>
           </div>
           <span class="ex-link">View example →</span>
         </a>
 
-        <!-- CREATOR -->
         <a class="card ex-card" href="/clearframe/examples/creator-portfolio/">
           <div class="ex-head">
-            <img class="ex-logo" src="/clearframe/assets/img/vale-editorial-logo.png" alt="Vale Editorial" />
-            <div>
-              <h3>Creator / portfolio</h3>
-              <p class="muted">Writers and independent creators.</p>
-            </div>
+            <h3>Creator / portfolio</h3>
+            <p class="muted">Writers and independent creators.</p>
           </div>
           <span class="ex-link">View example →</span>
         </a>
 
-        <!-- COMPANY -->
         <a class="card ex-card" href="/clearframe/examples/company-page/">
           <div class="ex-head">
-            <img class="ex-logo" src="/clearframe/assets/img/northline-studio-logo.png" alt="Northline Studio" />
-            <div>
-              <h3>Company page</h3>
-              <p class="muted">Small teams and service brands.</p>
-            </div>
+            <h3>Company page</h3>
+            <p class="muted">Small teams and service brands.</p>
           </div>
           <span class="ex-link">View example →</span>
         </a>
