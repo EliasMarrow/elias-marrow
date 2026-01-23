@@ -6,7 +6,8 @@
   <title>Novels — Elias Marrow</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
-<body>
+
+<body class="page-novels">
   <div class="container">
 
     <div class="topbar">
@@ -22,13 +23,88 @@
       </div>
     </div>
 
-    <div class="panel">
-      <h1>Novels</h1>
-      <p class="muted">Select a book to open its table of contents.</p>
-      <p><a href="darkling.html">Darkling — Book I</a></p>
+    <div class="panel soft">
+      <h2>Novels</h2>
+      <p class="muted">Archive editions. Select a title.</p>
+
+      <div class="section-card">
+        <div class="section-title">Books</div>
+        <div class="muted">PDF archive editions</div>
+        <div id="books-grid" class="cover-grid"></div>
+      </div>
+
+      <div id="book-error" class="section-card" style="display:none;">
+        <div class="section-title">Error</div>
+        <p class="muted" id="book-error-text"></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div><a href="index.html">Back to Home</a></div>
+      <div>© <span id="year"></span> Elias Marrow</div>
     </div>
 
   </div>
+
+  <script>
+    function showBookError(msg){
+      const box = document.getElementById('book-error');
+      const text = document.getElementById('book-error-text');
+      if (!box || !text) return;
+      box.style.display = 'block';
+      text.textContent = msg;
+    }
+
+    function renderBookCard(book){
+      const card = document.createElement('div');
+      card.className = 'ill-card';
+
+      if (book && book.cover){
+        card.style.setProperty('--bgimg', `url("${book.cover}")`);
+      }
+
+      const title = (book && book.title) ? book.title : 'Untitled';
+      const subtitle = (book && book.subtitle) ? book.subtitle : '';
+      const file = (book && book.file) ? book.file : '#';
+
+      card.innerHTML = `
+        <a href="${file}" target="_blank" rel="noopener">
+          <h3 class="ill-title">${title}</h3>
+          ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
+        </a>
+      `;
+      return card;
+    }
+
+    (function(){
+      const grid = document.getElementById('books-grid');
+      if (!grid){
+        showBookError("Missing #books-grid container.");
+        return;
+      }
+
+      const url = 'content.json?v=' + Date.now(); // cache bust
+      fetch(url, { cache: 'no-store' })
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.json();
+        })
+        .then(data => {
+          if (!data || !Array.isArray(data.books)){
+            showBookError("content.json loaded, but no 'books' array found.");
+            return;
+          }
+          grid.innerHTML = '';
+          data.books.forEach(b => grid.appendChild(renderBookCard(b)));
+        })
+        .catch(err => {
+          console.error(err);
+          showBookError("Failed to load books from content.json.");
+        });
+
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
-
