@@ -51,27 +51,21 @@
     const CATEGORY = "Notes";
 
     function parseDate(d){
-      if (!d) return new Date(0);
-      const dt = new Date(d + 'T00:00:00');
-      return isNaN(dt.getTime()) ? new Date(0) : dt;
+      return d ? new Date(d + 'T00:00:00') : new Date(0);
     }
 
     function renderCoverCard(essay){
       const card = document.createElement('div');
       card.className = 'ill-card';
 
-      if (essay && essay.cover){
+      if (essay.cover){
         card.style.setProperty('--bgimg', `url("${essay.cover}")`);
       }
 
-      const title = (essay && essay.title) ? essay.title : "Untitled";
-      const subtitle = (essay && essay.subtitle) ? essay.subtitle : "";
-      const file = (essay && essay.file) ? essay.file : "#";
-
       card.innerHTML = `
-        <a href="${file}" target="_blank" rel="noopener">
-          <h3 class="ill-title">${title}</h3>
-          ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
+        <a href="${essay.file}" target="_blank" rel="noopener">
+          <h3 class="ill-title">${essay.title}</h3>
+          ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
         </a>
       `;
       return card;
@@ -81,7 +75,7 @@
       .then(r => r.json())
       .then(data => {
         const grid = document.getElementById('essay-grid');
-        if (!grid || !data || !Array.isArray(data.essays)) return;
+        if (!grid || !Array.isArray(data.essays)) return;
 
         data.essays
           .filter(e => (e.category || "").trim() === CATEGORY)

@@ -36,12 +36,20 @@
         <div id="featured-essays" class="cover-grid"></div>
       </div>
 
+      <!-- RECENT ESSAYS -->
+      <div class="section-card">
+        <div class="section-title">Recent Essays</div>
+        <div class="muted">Last 3 publications</div>
+        <div id="recent-essays" class="cover-grid"></div>
+      </div>
+
       <!-- ESSAY INDEX -->
       <div class="section-card">
         <div class="section-title">Essay Index</div>
         <div class="muted">Browse by category</div>
 
         <div class="cover-grid">
+
           <div class="ill-card" style="--bgimg:url('assets/category-pillars.jpg')">
             <a href="essays-pillars.html">
               <h3 class="ill-title">Pillars</h3>
@@ -69,23 +77,9 @@
               <p class="ill-meta">Fragments & short-form</p>
             </a>
           </div>
+
         </div>
       </div>
-
-      <!-- RECENT ESSAYS (moved to bottom) -->
-      <div class="section-card">
-        <div class="section-title">Recent Essays</div>
-        <div class="muted">Last 3 publications</div>
-        <div id="recent-essays" class="cover-grid"></div>
-      </div>
-
-      <!-- DEBUG / ERROR AREA (hidden unless something fails) -->
-      <div id="essay-error" class="section-card" style="display:none;">
-        <div class="section-title">Error</div>
-        <p class="muted" id="essay-error-text"></p>
-        <p class="small muted" id="essay-error-hint"></p>
-      </div>
-
     </div>
 
     <div class="footer">
@@ -95,122 +89,65 @@
 
   </div>
 
+  <!-- FEATURED + RECENT ESSAYS SCRIPT -->
   <script>
-    // --- helpers ---
     function parseDate(d){
-      if (!d) return new Date(0);
-      const dt = new Date(d + 'T00:00:00');
-      return isNaN(dt.getTime()) ? new Date(0) : dt;
-    }
-
-    function showError(msg, hint){
-      const box = document.getElementById('essay-error');
-      const text = document.getElementById('essay-error-text');
-      const hintEl = document.getElementById('essay-error-hint');
-
-      if (!box || !text) return;
-      box.style.display = 'block';
-      text.textContent = msg;
-      if (hintEl) hintEl.textContent = hint || '';
+      return d ? new Date(d + 'T00:00:00') : new Date(0);
     }
 
     function renderCoverCard(essay){
       const card = document.createElement('div');
       card.className = 'ill-card';
 
-      if (essay && essay.cover){
+      if (essay.cover){
         card.style.setProperty('--bgimg', `url("${essay.cover}")`);
       }
 
-      const title = (essay && essay.title) ? essay.title : 'Untitled';
-      const subtitle = (essay && essay.subtitle) ? essay.subtitle : '';
-      const file = (essay && essay.file) ? essay.file : '#';
-
       card.innerHTML = `
-        <a href="${file}" target="_blank" rel="noopener">
-          <h3 class="ill-title">${title}</h3>
-          ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
+        <a href="${essay.file}" target="_blank" rel="noopener">
+          <h3 class="ill-title">${essay.title}</h3>
+          ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
         </a>
       `;
       return card;
     }
 
     // IDs must match content.json exactly
-    // Featured order: Lens -> Environment -> Effort
     const FEATURED_IDS = [
-      "the-lens-we-use",
-      "the-environment-turned-against-us",
-      "effort-was-held-constant"
+      "trump-structural-analysis",
+      "biden-illusion-of-restoration",
+      "the-empire-that-feared-itself"
     ];
 
-    // --- main ---
-    (function(){
-      const featuredWrap = document.getElementById('featured-essays');
-      const recentWrap = document.getElementById('recent-essays');
+    fetch('content.json')
+      .then(r => r.json())
+      .then(data => {
+        if (!data || !Array.isArray(data.essays)) return;
 
-      if (!featuredWrap || !recentWrap){
-        showError(
-          "Page is missing required containers (#featured-essays or #recent-essays).",
-          "Confirm essays.html contains the divs with ids featured-essays and recent-essays."
-        );
-        return;
-      }
+        const byId = new Map(data.essays.map(e => [e.id, e]));
 
-      featuredWrap.innerHTML = '';
-      recentWrap.innerHTML = '';
-
-      // Cache-bust to avoid GitHub Pages serving stale content.json
-      const url = 'content.json?v=' + Date.now();
-
-      fetch(url, { cache: 'no-store' })
-        .then(r => {
-          if (!r.ok) throw new Error(`HTTP ${r.status} loading ${url}`);
-          return r.json();
-        })
-        .then(data => {
-          if (!data || !Array.isArray(data.essays)){
-            throw new Error("content.json loaded, but data.essays is not an array.");
-          }
-
-          // Map by id
-          const byId = new Map();
-          data.essays.forEach(e => {
-            if (e && e.id) byId.set(e.id, e);
-          });
-
-          // Featured
+        // Render Featured
+        const featuredWrap = document.getElementById('featured-essays');
+        if (featuredWrap){
           FEATURED_IDS
             .map(id => byId.get(id))
             .filter(Boolean)
             .forEach(e => featuredWrap.appendChild(renderCoverCard(e)));
+        }
 
-          // Recent (exclude featured)
-          const nonFeatured = data.essays
-            .filter(e => e && e.id && !FEATURED_IDS.includes(e.id))
-            .sort((a, b) => parseDate(b.date) - parseDate(a.date))
-            .slice(0, 3);
+        // Render Recent (excluding featured)
+        const recentWrap = document.getElementById('recent-essays');
+        if (recentWrap){
+          data.essays
+            .filter(e => !FEATURED_IDS.includes(e.id))
+            .sort((a,b) => parseDate(b.date) - parseDate(a.date))
+            .slice(0,3)
+            .forEach(e => recentWrap.appendChild(renderCoverCard(e)));
+        }
+      });
 
-          nonFeatured.forEach(e => recentWrap.appendChild(renderCoverCard(e)));
-
-          // If still empty, show diagnostic
-          if (featuredWrap.children.length === 0 && recentWrap.children.length === 0){
-            showError(
-              "Essays loaded but nothing rendered.",
-              "Check that essay objects have id/title/file fields, and that FEATURED_IDS match real ids."
-            );
-          }
-        })
-        .catch(err => {
-          console.error("Essays render error:", err);
-          showError(
-            "Failed to load or render essays from content.json.",
-            "Open DevTools → Console. Most common causes: content.json not found at site root, or cached old file."
-          );
-        });
-
-      const y = document.getElementById("year");
-      if (y) y.textContent = new Date().getFullYear();
-    })();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
