@@ -174,6 +174,20 @@
     "cover": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.jpg",
     "tags": ["novel", "systems", "gothic", "power"]
   }
+  {
+  "id": "complicit-by-silence",
+  "title": "Complicit by Silence",
+  "subtitle": "When refusal to speak becomes participation",
+  "author": "Elias Marrow",
+  "date": "2026-01-23",
+  "summary": "A refusal to participate in noise—until silence itself becomes a form of consent.",
+  "category": "Ethics",
+  "format": "pdf",
+  "file": "assets/essays/complicit-by-silence.pdf",
+  "cover": "assets/essays/covers/complicit-by-silence.png",
+  "tags": ["silence", "complicity", "ethics", "speech", "responsibility"]
+}
+
 ]
 
 
