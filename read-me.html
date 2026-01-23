@@ -189,7 +189,8 @@
     if (!id){
       showError('Missing id. Return to the archive and try again.');
     } else {
-      fetch('content.json')
+      // Cache-bust so books never "stick" to an older schema in the browser cache
+      fetch('content.json?v=' + Date.now(), { cache: 'no-store' })
         .then(r => r.json())
         .then(data => {
           const list = (type === 'book') ? (data && data.books) : (data && data.essays);
@@ -209,7 +210,9 @@
           const author = item.author || 'Elias Marrow';
           const date = item.date ? parseDate(item.date) : null;
           const summary = item.summary || '';
-          const file = item.file || '#';
+
+          // Critical fix: tolerate either key, so books never break again
+          const file = item.file || item.pdf || '';
           const cover = item.cover || '';
 
           // Cover grounding (both background + visible cover)
@@ -233,13 +236,28 @@
 
           const open = document.getElementById('open-pdf');
           const dl = document.getElementById('download-pdf');
+          const frame = document.getElementById('pdf-frame');
+
+          if (!file){
+            // If file is missing, don't "download read-me" or iframe the current page
+            open.style.display = 'none';
+            dl.style.display = 'none';
+            frame.removeAttribute('src');
+            showError('This entry has no PDF file path. Check content.json for "' + id + '".');
+            return;
+          }
+
           open.href = file;
           dl.href = file;
+
+          // Make download name match the actual PDF file (not the page)
+          const parts = file.split('/');
+          const filename = parts[parts.length - 1] || 'download.pdf';
+          dl.setAttribute('download', filename);
 
           const back = document.getElementById('back-link');
           back.href = (type === 'book') ? 'novels.html' : 'essays.html';
 
-          const frame = document.getElementById('pdf-frame');
           frame.src = file + '#view=FitH';
 
           document.getElementById('read-root').style.display = 'grid';
