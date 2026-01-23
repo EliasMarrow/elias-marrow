@@ -65,10 +65,10 @@
 
       const title = (book && book.title) ? book.title : 'Untitled';
       const subtitle = (book && book.subtitle) ? book.subtitle : '';
-      const file = (book && book.file) ? book.file : '#';
+      const id = (book && book.id) ? book.id : '';
 
       card.innerHTML = `
-        <a href="${file}" target="_blank" rel="noopener">
+        <a href="read-me.html?type=book&id=${encodeURIComponent(id)}">
           <h3 class="ill-title">${title}</h3>
           ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
         </a>
