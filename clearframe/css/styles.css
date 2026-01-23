@@ -1,209 +1,234 @@
-:root{
-  --bg:#0a0d12;
-  --ink:#e8edf6;
-  --muted:#a9b4c6;
-  --line:rgba(232,237,246,0.12);
+/* =========================================================
+   CLEARFRAME — CORE SYSTEM STYLES
+   Authoritative baseline
+   ========================================================= */
 
-  --max: 860px;
-  --pad: 20px;
+/* -------------------------
+   RESET / BASE
+-------------------------- */
 
-  --h1: clamp(34px, 4vw, 52px);
-  --h2: 18px;
-  --p:  16px;
-  --lh: 1.6;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-*{ box-sizing:border-box; }
-
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  background: var(--bg);
-  color: var(--ink);
-  line-height: var(--lh);
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
-a{ color:inherit; }
-
-.wrap{
-  max-width: var(--max);
-  margin:0 auto;
-  padding: 48px var(--pad) 64px;
-}
-
-h1{
-  font-size: var(--h1);
-  margin:0 0 10px;
-  letter-spacing:-0.04em;
-}
-
-.lead{
-  margin: 0 0 16px;
-  color: var(--muted);
-  font-size: var(--p);
-}
-
-h2{
-  margin: 22px 0 8px;
-  font-size: var(--h2);
-  color: var(--ink);
-}
-
-p{
-  margin: 0 0 14px;
-  font-size: var(--p);
-  color: var(--muted);
-}
-
-.card{
-  margin-top: 22px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(255,255,255,0.03);
-}
-
-.quiet{
-  margin-top: 22px;
-  font-size: 13px;
-  opacity: 0.8;
-}
-/* ==============================
-   Clearframe Example Card System
-   (Riverbend-standard surfaces)
-   Paste at END of styles.css
-   ============================== */
-
-:root{
-  --cf-bg: #070a10;
-  --cf-surface: rgba(255,255,255,.045);
-  --cf-surface-2: rgba(255,255,255,.03);
-  --cf-border: rgba(255,255,255,.10);
-  --cf-border-2: rgba(255,255,255,.075);
-  --cf-text: rgba(232,237,246,.96);
-  --cf-muted: rgba(169,180,198,.92);
-  --cf-shadow: 0 18px 50px rgba(0,0,0,.55);
-  --cf-shadow-soft: 0 10px 30px rgba(0,0,0,.38);
-  --cf-radius: 18px;
-}
-
-/* Ensure the example pages feel like the render (not flat black) */
-body{
-  background:
-    radial-gradient(1100px 700px at 50% 0%, rgba(43,211,200,.14), transparent 55%),
-    radial-gradient(900px 600px at 12% 32%, rgba(43,99,211,.16), transparent 56%),
-    radial-gradient(900px 600px at 88% 36%, rgba(43,99,211,.10), transparent 60%),
-    var(--cf-bg);
-  color: var(--cf-text);
-}
-
-/* Core card */
-.card{
-  position: relative;
-  border-radius: var(--cf-radius);
-  border: 1px solid var(--cf-border-2);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.03));
-  box-shadow: var(--cf-shadow-soft);
-  overflow: hidden;
-  padding: 22px;
-}
-
-/* Render-like inner glow + depth */
-.card::before{
-  content:"";
-  position:absolute;
-  inset: 0;
-  background:
-    radial-gradient(700px 260px at 18% 20%, rgba(43,211,200,.08), transparent 55%),
-    radial-gradient(600px 260px at 85% 30%, rgba(43,99,211,.09), transparent 58%);
-  opacity: .9;
-  pointer-events:none;
-}
-
-/* Consistent “watermark” treatment (not random decoration) */
-.card .card-decor{
-  position: absolute;
-  right: -22px;
-  top: -22px;
-  width: 320px;
-  height: auto;
-  opacity: .10;
-  pointer-events: none;
-  user-select: none;
-  filter: saturate(1.15) contrast(1.05);
-  transform: rotate(-6deg);
-}
-
-.card .card-decor.low{
-  top: auto;
-  bottom: -34px;
-  transform: rotate(6deg);
-}
-
-.card .card-decor.left{
-  right: auto;
-  left: -26px;
-}
-
-/* Typography inside cards */
-.card h3{
-  margin: 0 0 10px;
-  letter-spacing: .2px;
-}
-
-.card p{
-  margin: 0 0 10px;
-  color: var(--cf-muted);
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #070a10;
+  color: #e7edf5;
   line-height: 1.55;
 }
 
-.card p:last-child{ margin-bottom: 0; }
+/* -------------------------
+   TYPOGRAPHY
+-------------------------- */
 
-.card ul{
-  margin: 10px 0 0 18px;
-  color: var(--cf-muted);
+h1, h2, h3 {
+  margin: 0 0 .4em 0;
+  font-weight: 600;
+  letter-spacing: -.02em;
 }
 
-.card li{ margin: 6px 0; }
-
-/* Section headings spacing so it reads like a layout, not a dump */
-.section-title{
-  margin: 30px 0 12px;
-  letter-spacing: .3px;
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
 }
 
-/* Button + link polish to match render */
-a{ color: rgba(232,237,246,.95); }
-a:hover{ opacity: .92; }
+h2 {
+  font-size: 1.35rem;
+  opacity: .95;
+}
 
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding: 11px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
+h3 {
+  font-size: 1.05rem;
+}
+
+p {
+  margin: 0 0 .8em 0;
+  color: #cfd7e3;
+}
+
+a {
+  color: #9ddcff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------
+   LAYOUT
+-------------------------- */
+
+.section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.section h2 {
+  margin-bottom: 1.2rem;
+}
+
+/* -------------------------
+   HERO
+-------------------------- */
+
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1.2rem;
+}
+
+.hero-subtitle {
+  max-width: 520px;
+  margin: .6rem auto 1.6rem;
+  color: #b8c3d4;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* -------------------------
+   BUTTONS
+-------------------------- */
+
+.btn {
+  padding: .65rem 1.1rem;
+  border-radius: 8px;
+  font-size: .9rem;
+  border: 1px solid transparent;
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn.ghost {
+  border-color: rgba(255,255,255,.18);
+  color: #e7edf5;
+}
+
+.btn.ghost:hover {
   background: rgba(255,255,255,.05);
-  text-decoration:none;
-  box-shadow: 0 8px 22px rgba(0,0,0,.35);
 }
 
-.btn.primary{
-  border-color: rgba(43,211,200,.35);
+/* -------------------------
+   CARDS — CORE IDEA
+-------------------------- */
+
+.card {
+  position: relative;
   background:
-    linear-gradient(135deg, rgba(43,211,200,.24), rgba(43,99,211,.22));
+    linear-gradient(180deg,
+      rgba(255,255,255,.06),
+      rgba(255,255,255,.02)
+    );
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid rgba(255,255,255,.08);
+  overflow: hidden;
 }
 
-/* Grid spacing like the render */
-.grid-2{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+.card.wide {
+  padding: 1.6rem 1.8rem;
 }
-@media (max-width: 860px){
-  .grid-2{ grid-template-columns: 1fr; }
+
+.card-content {
+  position: relative;
+  z-index: 2;
 }
-/* TRIPWIRE: if you don't see a purple border around the page, the site is not loading this CSS */
-.wrap { outline: 6px solid #7c3aed !important; outline-offset: 8px !important; }
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* -------------------------
+   CARD DECOR (SUBTLE, NOT NOISE)
+-------------------------- */
+
+.card-decor {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 220px;
+  opacity: .12;
+  pointer-events: none;
+}
+
+.decor-grid {
+  background-image: url("/clearframe/assets/img/decor-grid.png");
+}
+
+.decor-feather {
+  background-image: url("/clearframe/assets/img/decor-feather.png");
+}
+
+/* -------------------------
+   CARD GRIDS
+-------------------------- */
+
+.card-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.card-grid.two {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card-grid.three {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+
+.footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem 3rem;
+  font-size: .85rem;
+  opacity: .7;
+}
+
+/* -------------------------
+   RESPONSIVE
+-------------------------- */
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero-logo {
+    width: 100px;
+  }
+
+  .section {
+    padding: 3rem 1.2rem;
+  }
+}
