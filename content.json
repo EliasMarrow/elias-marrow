@@ -150,6 +150,14 @@
     }
   ],
   "books": [
+{
+  "id": "what-was-required",
+  "title": "What Was Required",
+  "subtitle": "Archive edition",
+  "cover": "assets/novels/what-was-required/what-was-required.png",
+  "pdf": "assets/novels/what-was-required/what-was-required.pdf"
+},
+    
     {
       "id": "constraints_not_choices",
       "title": "Constraints, Not Choices",
