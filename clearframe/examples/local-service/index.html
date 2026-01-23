@@ -5,174 +5,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
 
-  <title>Riverbend Plumbing — Clearframe Example</title>
-  <meta name="description" content="Clearframe example site: Riverbend Plumbing." />
+  <title>Riverbend Plumbing</title>
+  <meta name="description" content="Fast, clean plumbing repairs — done right the first time." />
   <meta name="theme-color" content="#0a0d12" />
 
   <link rel="stylesheet" href="../../css/styles.css" />
 
   <style>
-    .brand-biz { max-width: 360px; margin: 0 auto 12px; display: block; }
-    .hero { text-align: center; }
-    .hero .sublead { max-width: 68ch; margin: 0.7rem auto 0; opacity: 0.9; }
-    .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+    /* Riverbend Plumbing — locked reference styling */
+    .hero { text-align:center; padding-top: 6px; }
+    .brand-biz { display:block; margin: 0 auto 14px; max-width: 520px; width:100%; height:auto; }
+    .hero h1 { margin: 10px 0 8px; }
+    .hero .sub { max-width: 70ch; margin: 0.8rem auto 0; opacity:.9; }
 
-    .card { position: relative; overflow: hidden; }
+    .cta { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top: 18px; }
+
+    .section-title { margin-top: 28px; }
+
+    .grid-2 { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    @media (max-width: 860px){ .grid-2{ grid-template-columns:1fr; } }
+
+    .card { position:relative; overflow:hidden; }
     .card-decor {
-      position: absolute;
-      right: -26px;
-      top: -26px;
-      width: 210px;
-      height: auto;
-      opacity: 0.12;
-      pointer-events: none;
-      user-select: none;
+      position:absolute;
+      right:-24px;
+      top:-28px;
+      width: 300px;
+      height:auto;
+      opacity:.14;
+      pointer-events:none;
+      user-select:none;
+      filter: blur(.0px);
     }
-    .card-decor.left { right: auto; left: -26px; }
-    .card-decor.low { top: auto; bottom: -30px; }
+    .card-decor.low { top:auto; bottom:-34px; }
+    .card-decor.left { right:auto; left:-28px; }
+
+    /* Make cards feel like the render: slightly roomier */
+    .card { padding: 22px; }
+    .card h3 { margin-top: 0; }
+
+    /* Small “pill” links that match the render feel */
+    .link-row { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top: 10px; }
+    .link-row a { opacity:.92; }
+
+    .muted { opacity:.86; }
+    .small { font-size: 13px; opacity:.9; }
+
+    /* Ensure page background stays aligned with Clearframe look */
+    body { background: radial-gradient(1200px 700px at 50% 0%, rgba(43,211,200,.14), transparent 55%),
+                   radial-gradient(900px 600px at 10% 30%, rgba(43,99,211,.16), transparent 55%),
+                   radial-gradient(900px 600px at 90% 35%, rgba(43,99,211,.10), transparent 60%),
+                   #070a10; }
   </style>
 </head>
 
 <body>
   <main class="wrap">
     <header class="hero">
-<!-- Riverbend business logo (inline) -->
-<svg class="brand brand-biz" viewBox="0 0 820 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Riverbend Plumbing logo">
-  <defs>
-    <linearGradient id="rb_g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2bd3c8"/>
-      <stop offset="1" stop-color="#2b63d3"/>
-    </linearGradient>
-  </defs>
-  <rect width="820" height="220" fill="none"/>
-  <g transform="translate(36,42)" fill="none" stroke="url(#rb_g)" stroke-width="10" stroke-linecap="round" opacity="0.95">
-    <path d="M18 120c46-88 122-132 228-132 78 0 130 22 158 62 30 44 16 96-36 142-58 52-142 78-252 78"/>
-    <path d="M120 140c92-22 168-64 228-126" opacity="0.55"/>
-    <circle cx="266" cy="28" r="8" fill="url(#rb_g)" stroke="none" opacity="0.95"/>
-  </g>
-  <text x="360" y="112" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="52" fill="#e8edf6" font-weight="800" letter-spacing="1">
-    RIVERBEND
-  </text>
-  <text x="362" y="156" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="18" fill="#a9b4c6" letter-spacing="4">
-    PLUMBING
-  </text>
-</svg>
+      <!-- Business logo (not Clearframe). Inline SVG so no missing assets. -->
+      <svg class="brand-biz" viewBox="0 0 980 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Riverbend Plumbing">
+        <defs>
+          <linearGradient id="rb_g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2bd3c8"/>
+            <stop offset="1" stop-color="#2b63d3"/>
+          </linearGradient>
+        </defs>
 
+        <!-- mark -->
+        <g transform="translate(70,44)">
+          <path d="M10 128c56-98 150-146 282-146 100 0 168 28 204 78 40 56 22 122-46 182-72 64-176 96-312 96"
+                fill="none" stroke="url(#rb_g)" stroke-width="12" stroke-linecap="round" opacity="0.95"/>
+          <path d="M140 152c112-26 204-76 276-150" fill="none" stroke="url(#rb_g)" stroke-width="9"
+                stroke-linecap="round" opacity="0.52"/>
+          <circle cx="330" cy="30" r="9" fill="url(#rb_g)" opacity="0.95"/>
+          <text x="420" y="76" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="30"
+                fill="#e8edf6" font-weight="800" letter-spacing="1.4">RIVERBEND</text>
+          <text x="422" y="112" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="12"
+                fill="#a9b4c6" letter-spacing="5">PLUMBING</text>
+        </g>
+      </svg>
 
       <h1>Riverbend Plumbing</h1>
       <p class="lead">Fast, clean plumbing repairs — done right the first time.</p>
-      <p class="sublead">Clear pricing, respectful service, and straightforward scheduling. Serving Riverbend and nearby neighborhoods.</p>
 
-      <div class="cta-row">
-        <a class="btn primary" href="#contact">Request service</a>
-        <a class="btn" href="#services">What we do</a>
+      <p class="sub">
+        Clear pricing, respectful service, and straightforward scheduling.
+        Serving Riverbend and nearby neighborhoods.
+      </p>
+
+      <div class="link-row">
+        <a href="#contact">Request service</a>
+        <a href="#services">What we do</a>
       </div>
     </header>
 
-    <section class="section">
-      <h2>Quick overview</h2>
-      <div class="card note">
-        <svg class="card-decor" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="rb_d1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#2bd3c8"/><stop offset="1" stop-color="#2b63d3"/>
-            </linearGradient>
-          </defs>
-          <g fill="none" stroke="url(#rb_d1)" stroke-width="8" opacity="0.8">
-            <path d="M110 360c90-40 170-120 210-210" opacity="0.35"/>
-            <path d="M150 410c110-30 210-130 250-250" opacity="0.35"/>
-            <rect x="120" y="120" width="280" height="280" rx="22" opacity="0.35"/>
-            <circle cx="160" cy="160" r="10" fill="url(#rb_d1)" opacity="0.9"/>
-            <circle cx="360" cy="360" r="10" fill="url(#rb_d1)" opacity="0.9"/>
-          </g>
-        </svg>
+    <h2 class="section-title">Quick overview</h2>
+    <div class="card">
+      <img class="card-decor low" src="../../assets/img/decor-feather.png" alt="" aria-hidden="true" />
+      <p>
+        We handle the common problems that disrupt your day: leaks, clogs, running toilets, low pressure, broken
+        fixtures, and water heater issues. We keep it simple — diagnose, explain, fix.
+      </p>
+      <p class="muted">
+        Same-day availability when possible. Clean work area. Clear communication.
+      </p>
+    </div>
 
-        <p>
-          We handle the common problems that disrupt your day: leaks, clogs, running toilets, low pressure,
-          broken fixtures, and water heater issues. We keep it simple — diagnose, explain, fix.
-        </p>
-        <p class="muted small">
-          Same-day availability when possible. Clean work area. Clear communication.
-        </p>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Services</h2>
-      <div class="grid-2">
-        <div class="card">
-          <svg class="card-decor left" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs><linearGradient id="rb_d2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2bd3c8"/><stop offset="1" stop-color="#2b63d3"/></linearGradient></defs>
-            <g fill="none" stroke="url(#rb_d2)" stroke-width="9" opacity="0.75">
-              <path d="M120 380c70-30 150-110 190-190" opacity="0.35"/>
-              <path d="M150 420c100-40 200-140 240-240" opacity="0.35"/>
-              <rect x="120" y="120" width="280" height="280" rx="26" opacity="0.35"/>
-            </g>
-          </svg>
-          <h3>Leak repair</h3>
-          <p>Faucets, supply lines, shutoff valves, under-sink leaks, visible pipe leaks.</p>
-          <p class="muted small">We confirm the source before we replace anything.</p>
-        </div>
-
-        <div class="card">
-          <svg class="card-decor low" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs><linearGradient id="rb_d3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2bd3c8"/><stop offset="1" stop-color="#2b63d3"/></linearGradient></defs>
-            <g fill="none" stroke="url(#rb_d3)" stroke-width="9" opacity="0.75">
-              <path d="M140 160h240v240H140z" opacity="0.35"/>
-              <path d="M140 240h240M140 320h240" opacity="0.25"/>
-              <path d="M220 160v240M300 160v240" opacity="0.25"/>
-              <circle cx="140" cy="160" r="10" fill="url(#rb_d3)" opacity="0.9"/>
-              <circle cx="380" cy="400" r="10" fill="url(#rb_d3)" opacity="0.9"/>
-            </g>
-          </svg>
-          <h3>Drain clogs</h3>
-          <p>Sinks, tubs, showers, and mainline troubleshooting when needed.</p>
-          <p class="muted small">We explain the cause and prevention, not just clear it.</p>
-        </div>
-
-        <div class="card">
-          <h3>Toilets & fixtures</h3>
-          <p>Running toilets, weak flush, new installs, and small bathroom repairs.</p>
-          <p class="muted small">Parts replacement when warranted — not automatically.</p>
-        </div>
-
-        <div class="card">
-          <h3>Water heaters</h3>
-          <p>Temperature issues, minor leaks, and replacement consultation.</p>
-          <p class="muted small">Practical recommendation first. No pressure.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Service area</h2>
+    <h2 class="section-title" id="services">Services</h2>
+    <div class="grid-2">
       <div class="card">
-        <p><strong>Primary:</strong> Riverbend</p>
-        <p><strong>Also serving:</strong> nearby neighborhoods within a short drive</p>
-        <p class="muted small">Not sure if you’re in range? Send your address and we’ll confirm.</p>
+        <img class="card-decor" src="../../assets/img/decor-grid.png" alt="" aria-hidden="true" />
+        <h3>Leak repair</h3>
+        <p>Faucets, supply lines, shutoff valves, under-sink leaks, visible pipe leaks.</p>
+        <p class="muted small">We confirm the source before we replace anything.</p>
       </div>
-    </section>
 
-    <section class="section">
-      <h2>How pricing works</h2>
-      <div class="card note">
-        <p>We give a clear explanation before work begins. For common repairs, we quote the fix. For unknowns, we quote diagnosis first.</p>
-        <p class="muted small">No vague “we’ll see” charges. You stay informed.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
       <div class="card">
-        <p><strong>Phone:</strong> <a href="tel:+15555551234">(555) 555-1234</a></p>
-        <p><strong>Email:</strong> <a href="mailto:service@riverbendplumbing.com">service@riverbendplumbing.com</a></p>
-        <p class="muted small">Include: the issue, your location, and best time to reach you.</p>
+        <img class="card-decor" src="../../assets/img/decor-grid.png" alt="" aria-hidden="true" />
+        <h3>Drain clogs</h3>
+        <p>Kitchen sinks, tubs, showers, slow drains, recurring clogs.</p>
+        <p class="muted small">We clear the clog and explain likely causes to prevent repeats.</p>
       </div>
-    </section>
 
-    <footer class="footer">
-      <p class="quiet"><a href="../../">Back to Clearframe</a></p>
-    </footer>
+      <div class="card">
+        <img class="card-decor low left" src="../../assets/img/decor-feather.png" alt="" aria-hidden="true" />
+        <h3>Fixture installs</h3>
+        <p>Faucets, toilets, disposals, basic replacements and upgrades.</p>
+        <p class="muted small">Clean install, tested, with simple handoff instructions.</p>
+      </div>
+
+      <div class="card">
+        <img class="card-decor low left" src="../../assets/img/decor-feather.png" alt="" aria-hidden="true" />
+        <h3>Water heaters</h3>
+        <p>Diagnosis, common repairs, and replacements when needed.</p>
+        <p class="muted small">We talk through options before any major spend.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Service area</h2>
+    <div class="card">
+      <img class="card-decor" src="../../assets/img/decor-grid.png" alt="" aria-hidden="true" />
+      <p><strong>Roanoke · Salem · Vinton · Botetourt</strong> · Nearby counties</p>
+      <p class="muted small">Hours: Mon–Sat 8am–5pm · Emergency calls available</p>
+    </div>
+
+    <h2 class="section-title">Proof</h2>
+    <div class="grid-2">
+      <div class="card">
+        <img class="card-decor low" src="../../assets/img/decor-feather.png" alt="" aria-hidden="true" />
+        <h3>Customer feedback</h3>
+        <p class="muted">“On time, explained everything clearly, and fixed it fast.”</p>
+        <p class="small">— verified customer</p>
+      </div>
+
+      <div class="card">
+        <img class="card-decor low" src="../../assets/img/decor-feather.png" alt="" aria-hidden="true" />
+        <h3>What to expect</h3>
+        <ul>
+          <li>Clear estimate before work starts</li>
+          <li>Clean finish and simple follow-up</li>
+          <li>Photos when useful (so you understand what changed)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-title" id="contact">Contact</h2>
+    <div class="card">
+      <img class="card-decor" src="../../assets/img/decor-grid.png" alt="" aria-hidden="true" />
+      <p><strong>Email:</strong> riverbend@example.com</p>
+      <p><strong>Phone:</strong> (539) 553-0123</p>
+      <p class="muted small">Include address/area and any timing constraints. Photos help when available.</p>
+    </div>
+
+    <p class="quiet" style="text-align:center; margin-top: 18px;">
+      <a href="../../">Back to Clearframe</a>
+    </p>
   </main>
 </body>
 </html>
