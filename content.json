@@ -187,6 +187,20 @@
   "cover": "assets/essays/covers/complicit-by-silence.png",
   "tags": ["silence", "complicity", "ethics", "speech", "responsibility"]
 }
+{
+  "id": "complicit-by-silence",
+  "title": "Complicit by Silence",
+  "subtitle": "When silence becomes participation",
+  "author": "Elias Marrow",
+  "date": "2026-01-23",
+  "summary": "I avoid involvement where I can. But some forms of ignorance make silence a form of complicity.",
+  "category": "Applied Analysis",
+  "format": "pdf",
+  "file": "assets/essays/complicit-by-silence.pdf",
+  "cover": "assets/essays/covers/complicit-by-silence.png",
+  "tags": ["silence", "ethics", "complicity"]
+}
+
 
 ]
 
