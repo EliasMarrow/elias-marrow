@@ -6,23 +6,111 @@
   <meta name="color-scheme" content="dark light" />
 
   <title>Clearframe</title>
-  <meta name="description" content="Fast, clean, static websites built to be understood." />
+  <meta name="description" content="Clean, fast one-page websites built for clarity and speed." />
   <meta name="theme-color" content="#0a0d12" />
 
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+  /* Clearframe landing page lock — Riverbend standard */
+
+  .hero {
+    text-align: center;
+    padding-top: 12px;
+  }
+
+  .hero-logo {
+    display: block;
+    margin: 0 auto 16px;
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+  }
+
+  .lead {
+    margin-top: 8px;
+  }
+
+  .sublead {
+    max-width: 70ch;
+    margin: 0.75rem auto 0;
+    opacity: 0.9;
+  }
+
+  .cta-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-decor {
+    position: absolute;
+    right: -28px;
+    top: -28px;
+    width: 220px;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  .card-decor.low {
+    top: auto;
+    bottom: -32px;
+  }
+
+  .examples .card img {
+    max-width: 80px;
+    height: auto;
+  }
+</style>
+
+
+  <style>
+    /* Landing-page-specific clamps so the logo/buttons/cards stay “Riverbend standard” */
+    .hero { text-align:center; padding-top: 6px; }
+    .hero-logo { display:block; margin: 0 auto 18px; max-width: 420px; width: 100%; height:auto; }
+    .hero h1 { margin-top: 6px; }
+    .sublead { max-width: 70ch; margin: 0.65rem auto 0; opacity: .92; }
+
+    .cta-row { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top: 18px; }
+    .pill-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin: 18px auto 0; }
+    .pill { padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.04); font-size: 13px; opacity: .95; }
+
+    .section { margin-top: 26px; }
+    .grid-2 { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .grid-3 { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    @media (max-width: 820px){ .grid-2{grid-template-columns:1fr;} .grid-3{grid-template-columns:1fr;} }
+
+    .card { position:relative; overflow:hidden; }
+    .card-decor {
+      position:absolute; right:-26px; top:-26px;
+      width: 210px; height:auto; opacity:.12;
+      pointer-events:none; user-select:none;
+    }
+    .card-decor.left { right:auto; left:-26px; }
+    .card-decor.low { top:auto; bottom:-30px; }
+
+    .examples .ex-card { display:block; text-decoration:none; }
+    .ex-head { display:flex; align-items:center; gap:12px; }
+    .ex-logo { width: 78px; height:auto; flex: 0 0 auto; opacity: .95; }
+    .ex-title { margin:0; }
+    .ex-kicker { margin: 6px 0 0; opacity: .88; }
+    .ex-link { margin-top: 10px; display:inline-block; opacity:.92; }
+
+    .footer { margin-top: 22px; text-align:center; opacity:.9; }
+  </style>
 </head>
 
 <body>
   <main class="wrap">
     <header class="hero">
-      <div class="hero-inner">
-      <!-- Uses PNG if you have it; otherwise falls back to SVG -->
-      <picture>
-        <source srcset="assets/img/clearframe-logo.png" type="image/png">
-        <img class="brand" src="assets/img/clearframe-logo.svg" alt="Clearframe logo" />
-      </picture>
+      <img class="hero-logo" src="assets/img/clearframe-logo.png" alt="Clearframe logo" />
 
-      <span class="badge">Web design • static sites • launch-ready</span>
       <h1>Clearframe</h1>
       <p class="lead">Fast, clean websites built to be understood.</p>
       <p class="sublead">
@@ -36,133 +124,74 @@
         <a class="btn" href="#examples">See examples</a>
       </div>
 
-      <div class="kpi" aria-label="Clearframe highlights">
-        <span class="badge">Mobile-first</span>
-        <span class="badge">Loads fast</span>
-        <span class="badge">You own the files</span>
-        <span class="badge">Cheap to host</span>
+      <div class="pill-row" aria-label="Key benefits">
+        <span class="pill">Mobile-first</span>
+        <span class="pill">Loads fast</span>
+        <span class="pill">You own the files</span>
+        <span class="pill">Cheap to host</span>
       </div>
-    
-      </div>
-</header>
+    </header>
 
-    <nav class="mini-nav" aria-label="Clearframe sections">
-      <a href="#offer">What we offer</a>
-      <a href="#who">Who it’s for</a>
-      <a href="#process">Process</a>
-      <a href="#deliverables">Deliverables</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-      <a href="#examples">Examples</a>
-    </nav>
-
-    <section id="offer" class="section">
+    <section class="section" id="offer">
       <h2>What we offer</h2>
-      <p>
-        Clearframe provides two core services: building a new site from scratch, and reworking an existing site.
-        In both cases, the deliverable is the same: a clean, readable website that does its job.
-      </p>
+      <div class="grid-2">
+        <div class="card">
+          <img class="card-decor" src="assets/img/decor-grid.png" alt="" aria-hidden="true" />
+          <h3>New site (from scratch)</h3>
+          <p>If you don’t have a website yet, Clearframe installs a proven one-page structure and fills it with only what matters: what you do, who it’s for, proof, and contact.</p>
+          <p class="muted small"><strong>Best for:</strong> local services, small businesses, new ventures, portfolios.</p>
+        </div>
 
+        <div class="card">
+          <img class="card-decor low" src="assets/img/decor-feather.png" alt="" aria-hidden="true" />
+          <h3>Rework (existing site)</h3>
+          <p>If you already have a site, Clearframe restructures and tightens it—clearer hierarchy, less redundancy, cleaner flow, and a stronger first impression.</p>
+          <p class="muted small"><strong>Best for:</strong> cluttered pages, unclear messaging, outdated layout, messy navigation.</p>
+        </div>
+      </div>
+
+      <div class="card note" style="margin-top:14px;">
+        <img class="card-decor left" src="assets/img/decor-grid.png" alt="" aria-hidden="true" />
+        <h3>Launch-ready setup</h3>
+        <p>Static by default: fast, secure, and inexpensive to host. GitHub Pages-friendly. If needed, we can provide simple guidance to connect a domain and publish.</p>
+        <p class="muted small">A stranger should understand what you do within seconds. They should see proof without hunting for it. And they should know exactly how to contact you.</p>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <h2>Process</h2>
       <div class="grid-3">
         <div class="card">
-          <h3>New site (from scratch)</h3>
-          <p>
-            If you don’t have a website yet, Clearframe installs a proven one-page structure and fills it with
-            only what matters: what you do, who it’s for, proof, and contact.
-          </p>
-          <hr class="divider" />
-          <p class="muted small">Best for: local services, small businesses, new ventures, portfolio starters.</p>
+          <h3>1) Intake</h3>
+          <p>You send: name, what you do, service area (if local), contact info, and any links/photos you have.</p>
         </div>
-
         <div class="card">
-          <h3>Rework (existing site)</h3>
-          <p>
-            If you already have a site, Clearframe restructures and tightens it—clearer hierarchy, less redundancy,
-            cleaner flow, and a stronger first impression.
-          </p>
-          <hr class="divider" />
-          <p class="muted small">Best for: cluttered pages, unclear messaging, outdated layout, messy navigation.</p>
+          <h3>2) Build</h3>
+          <p>We apply the correct one-page frame and implement it with clean HTML/CSS: fast, mobile-ready, minimal.</p>
         </div>
-
         <div class="card">
-          <h3>Launch-ready setup</h3>
-          <p>
-            Static by default: fast, secure, and inexpensive to host. GitHub Pages-friendly. If needed, we can provide
-            simple guidance to connect a domain and publish.
-          </p>
-          <hr class="divider" />
-          <p class="muted small">Best for: people who want ownership and low ongoing cost.</p>
-        </div>
-      </div>
-
-      <div class="card note">
-        <h3>What “good” means here</h3>
-        <p>
-          A stranger should understand what you do within seconds. They should see proof without hunting for it.
-          And they should know exactly how to contact you. Everything else is optional.
-        </p>
-      </div>
-    </section>
-
-    <section id="who" class="section">
-      <h2>Who it’s for</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Best fit</h3>
-          <ul class="bullets">
-            <li>Local services: contractors, trades, home services, small practices</li>
-            <li>Small businesses that need a clean, credible web presence</li>
-            <li>Creators, freelancers, consultants, and portfolios</li>
-            <li>Simple company pages for products or small teams</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Not a fit</h3>
-          <ul class="bullets">
-            <li>Funnels and aggressive marketing automation</li>
-            <li>Complex web applications</li>
-            <li>Heavy CMS builds unless explicitly scoped</li>
-            <li>Endless aesthetic iteration and feature creep</li>
-          </ul>
+          <h3>3) Review + handoff</h3>
+          <p>One short revision pass for corrections and clarity. You receive the site files. You own them.</p>
         </div>
       </div>
     </section>
 
-    <section id="process" class="section">
-      <h2>Process</h2>
-      <p class="muted">
-        Clearframe stays tight so delivery stays predictable. The goal is speed without sloppiness.
-      </p>
-
-      <ol class="steps">
-        <li><strong>Intake</strong> — <span>You send: business name, what you do, service area (if local), and contact info. Links and photos if you have them.</span></li>
-        <li><strong>Structure</strong> — <span>We apply the right one-page frame and organize content in the correct reading order.</span></li>
-        <li><strong>Build</strong> — <span>We implement the site with clean HTML/CSS: fast, mobile-ready, and minimal.</span></li>
-        <li><strong>Review</strong> — <span>One short revision pass for factual corrections and clarity improvements.</span></li>
-        <li><strong>Handoff</strong> — <span>You receive the site files. You own them. Deploy to your host of choice.</span></li>
-      </ol>
-    </section>
-
-    <section id="deliverables" class="section">
+    <section class="section" id="deliverables">
       <h2>Deliverables</h2>
-
       <div class="grid-2">
         <div class="card">
-          <h3>Standard one-page site includes</h3>
-          <ul class="bullets">
+          <h3>Standard one-page includes</h3>
+          <ul>
             <li>Hero section with clear positioning</li>
-            <li>Services / offerings (organized for easy reading)</li>
-            <li>Credibility / proof (reviews, credentials, brief “why trust us”)</li>
+            <li>Services / offerings (organized for reading)</li>
+            <li>Credibility / proof (reviews, credentials, “why trust us”)</li>
             <li>Service area / hours (if relevant)</li>
             <li>Contact block (email + optional phone)</li>
-            <li>Optional: gallery / featured work / small FAQ</li>
           </ul>
         </div>
-
         <div class="card">
           <h3>Technical basics included</h3>
-          <ul class="bullets">
+          <ul>
             <li>Fast static HTML + CSS</li>
             <li>Mobile responsive layout</li>
             <li>SEO basics (title/description + headings)</li>
@@ -171,90 +200,55 @@
           </ul>
         </div>
       </div>
-
-      
-      <div class="card note">
-        <h3>Domain & publishing</h3>
-        <p>
-          If you want a custom domain (yourname.com), we can handle the setup and point it at your site.
-          The domain itself is purchased through a registrar and is typically a low annual cost. You pay that directly.
-        </p>
-        <p class="muted small">
-          This adds a small setup step, but it reduces friction: your site is live under a clean address without you
-          needing to learn hosting details.
-        </p>
-      </div>
-<p class="muted small">
-        Multi-page builds and advanced features can be scoped separately. Clearframe stays minimal by default.
-      </p>
     </section>
 
-    <section id="faq" class="section">
-      <h2>FAQ</h2>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>Do you use WordPress / Wix / Squarespace?</h3>
-          <p>
-            By default, no. Clearframe sites are static so they load fast and cost little to host.
-            If you need a CMS, we can scope it—but we won’t force tools you don’t need.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Can you write the copy?</h3>
-          <p>
-            Yes—within scope. We can tighten what you already have, or draft clean homepage copy based on intake.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Can you use stock photos?</h3>
-          <p>
-            Yes. If you have real photos, those are best. If not, we can use stock imagery to keep the site professional.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>How do revisions work?</h3>
-          <p>
-            One short revision pass is included for corrections and clarity improvements. Additional changes can be scoped.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>If you want a clean site built quickly, email:</p>
-      <p class="contact"><a href="mailto:paynottamichael@gmail.com">paynottamichael@gmail.com</a></p>
-      <p class="muted small">Include: name, what you do, service area (if local), and any existing links/assets you have.</p>
-    </section>
-
-    <section id="examples" class="section">
+    <section class="section examples" id="examples">
       <h2>Examples</h2>
-      <p class="muted">
-        Three common Clearframe builds. These examples also represent the “end state” of a rework.
-      </p>
+      <p class="muted">Three common Clearframe builds. These examples also represent the “end state” of a rework.</p>
 
-      <div class="grid-3">
-        <a class="card linkcard" href="examples/local-service/">
-          <h3>Local service</h3>
-          <p>Contractors, trades, and local businesses.</p>
-          <span class="link">View example →</span>
+      <div class="grid-3" style="margin-top:14px;">
+        <a class="card ex-card" href="examples/local-service/">
+          <div class="ex-head">
+            <img class="ex-logo" src="assets/img/clearframe-logo.png" alt="" aria-hidden="true" />
+            <div>
+              <h3 class="ex-title">Local service</h3>
+              <p class="ex-kicker">Contractors, trades, and local businesses.</p>
+            </div>
+          </div>
+          <span class="ex-link">View example →</span>
         </a>
 
-        <a class="card linkcard" href="examples/creator-portfolio/">
-          <h3>Creator / portfolio</h3>
-          <p>Writers, freelancers, and independent creators.</p>
-          <span class="link">View example →</span>
+        <a class="card ex-card" href="examples/creator-portfolio/">
+          <div class="ex-head">
+            <img class="ex-logo" src="assets/img/vale-editorial-logo.png" alt="" aria-hidden="true" />
+            <div>
+              <h3 class="ex-title">Creator / portfolio</h3>
+              <p class="ex-kicker">Writers, freelancers, and independent creators.</p>
+            </div>
+          </div>
+          <span class="ex-link">View example →</span>
         </a>
 
-        <a class="card linkcard" href="examples/company-page/">
-          <h3>Company page</h3>
-          <p>Small teams, products, and service brands.</p>
-          <span class="link">View example →</span>
+        <a class="card ex-card" href="examples/company-page/">
+          <div class="ex-head">
+            <img class="ex-logo" src="assets/img/northline-studio-logo.png" alt="" aria-hidden="true" />
+            <div>
+              <h3 class="ex-title">Company page</h3>
+              <p class="ex-kicker">Small teams, products, and service brands.</p>
+            </div>
+          </div>
+          <span class="ex-link">View example →</span>
         </a>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="card note">
+        <img class="card-decor" src="assets/img/decor-feather.png" alt="" aria-hidden="true" />
+        <p>If you want a clean site built quickly, email:</p>
+        <p><a href="mailto:paynottamichael@gmail.com">paynottamichael@gmail.com</a></p>
+        <p class="muted small">Include: name, what you do, service area (if local), and any existing links/assets you have.</p>
       </div>
     </section>
 
