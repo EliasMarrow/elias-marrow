@@ -68,3 +68,142 @@ p{
   font-size: 13px;
   opacity: 0.8;
 }
+/* ==============================
+   Clearframe Example Card System
+   (Riverbend-standard surfaces)
+   Paste at END of styles.css
+   ============================== */
+
+:root{
+  --cf-bg: #070a10;
+  --cf-surface: rgba(255,255,255,.045);
+  --cf-surface-2: rgba(255,255,255,.03);
+  --cf-border: rgba(255,255,255,.10);
+  --cf-border-2: rgba(255,255,255,.075);
+  --cf-text: rgba(232,237,246,.96);
+  --cf-muted: rgba(169,180,198,.92);
+  --cf-shadow: 0 18px 50px rgba(0,0,0,.55);
+  --cf-shadow-soft: 0 10px 30px rgba(0,0,0,.38);
+  --cf-radius: 18px;
+}
+
+/* Ensure the example pages feel like the render (not flat black) */
+body{
+  background:
+    radial-gradient(1100px 700px at 50% 0%, rgba(43,211,200,.14), transparent 55%),
+    radial-gradient(900px 600px at 12% 32%, rgba(43,99,211,.16), transparent 56%),
+    radial-gradient(900px 600px at 88% 36%, rgba(43,99,211,.10), transparent 60%),
+    var(--cf-bg);
+  color: var(--cf-text);
+}
+
+/* Core card */
+.card{
+  position: relative;
+  border-radius: var(--cf-radius);
+  border: 1px solid var(--cf-border-2);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.03));
+  box-shadow: var(--cf-shadow-soft);
+  overflow: hidden;
+  padding: 22px;
+}
+
+/* Render-like inner glow + depth */
+.card::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+  background:
+    radial-gradient(700px 260px at 18% 20%, rgba(43,211,200,.08), transparent 55%),
+    radial-gradient(600px 260px at 85% 30%, rgba(43,99,211,.09), transparent 58%);
+  opacity: .9;
+  pointer-events:none;
+}
+
+/* Consistent “watermark” treatment (not random decoration) */
+.card .card-decor{
+  position: absolute;
+  right: -22px;
+  top: -22px;
+  width: 320px;
+  height: auto;
+  opacity: .10;
+  pointer-events: none;
+  user-select: none;
+  filter: saturate(1.15) contrast(1.05);
+  transform: rotate(-6deg);
+}
+
+.card .card-decor.low{
+  top: auto;
+  bottom: -34px;
+  transform: rotate(6deg);
+}
+
+.card .card-decor.left{
+  right: auto;
+  left: -26px;
+}
+
+/* Typography inside cards */
+.card h3{
+  margin: 0 0 10px;
+  letter-spacing: .2px;
+}
+
+.card p{
+  margin: 0 0 10px;
+  color: var(--cf-muted);
+  line-height: 1.55;
+}
+
+.card p:last-child{ margin-bottom: 0; }
+
+.card ul{
+  margin: 10px 0 0 18px;
+  color: var(--cf-muted);
+}
+
+.card li{ margin: 6px 0; }
+
+/* Section headings spacing so it reads like a layout, not a dump */
+.section-title{
+  margin: 30px 0 12px;
+  letter-spacing: .3px;
+}
+
+/* Button + link polish to match render */
+a{ color: rgba(232,237,246,.95); }
+a:hover{ opacity: .92; }
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding: 11px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
+  text-decoration:none;
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+
+.btn.primary{
+  border-color: rgba(43,211,200,.35);
+  background:
+    linear-gradient(135deg, rgba(43,211,200,.24), rgba(43,99,211,.22));
+}
+
+/* Grid spacing like the render */
+.grid-2{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+@media (max-width: 860px){
+  .grid-2{ grid-template-columns: 1fr; }
+}
+/* TRIPWIRE: if you don't see a purple border around the page, the site is not loading this CSS */
+.wrap { outline: 6px solid #7c3aed !important; outline-offset: 8px !important; }
