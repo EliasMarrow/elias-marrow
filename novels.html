@@ -68,7 +68,7 @@
       const id = (book && book.id) ? book.id : '';
 
       card.innerHTML = `
-        <a href="read-me.html?type=book&id=${encodeURIComponent(id)}">
+        <a href="./read-me.html?type=book&id=${encodeURIComponent(id)}">
           <h3 class="ill-title">${title}</h3>
           ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
         </a>
@@ -83,7 +83,7 @@
         return;
       }
 
-      const url = 'content.json?v=' + Date.now(); // cache bust
+      const url = 'content.json?v=' + Date.now();
       fetch(url, { cache: 'no-store' })
         .then(r => {
           if (!r.ok) throw new Error("HTTP " + r.status);
