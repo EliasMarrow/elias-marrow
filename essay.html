@@ -102,7 +102,7 @@
       }
 
       card.innerHTML = `
-        <a href="${essay.file}" target="_blank" rel="noopener">
+        <a href="read-me.html?type=essay&id=${essay.id}" rel="noopener">
           <h3 class="ill-title">${essay.title}</h3>
           ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
         </a>
@@ -117,7 +117,7 @@
       "effort-was-held-constant"
     ];
 
-    fetch('/content.json')
+    fetch('content.json')
       .then(r => r.json())
       .then(data => {
         if (!data || !Array.isArray(data.essays)) return;

@@ -147,7 +147,34 @@
       "file": "assets/essays/complicit-by-silence.pdf",
       "cover": "assets/essays/covers/complicit-by-silence.png",
       "tags": ["silence", "ethics", "complicity"]
-    }
+    },
+    {
+  "id": "the-honest-game",
+  "title": "The Honest Game",
+  "subtitle": "",
+  "author": "Elias Marrow",
+  "date": "2026-01-24",
+  "summary": "",
+  "category": "Notes",
+  "format": "pdf",
+  "file": "assets/essays/the-honest-game.pdf",
+  "cover": "assets/essays/covers/the-honest-game.png",
+  "tags": []
+},
+{
+  "id": "the-illusion-of-progress",
+  "title": "The Illusion of Progress",
+  "subtitle": "",
+  "author": "Elias Marrow",
+  "date": "2026-01-24",
+  "summary": "",
+  "category": "Notes",
+  "format": "pdf",
+  "file": "assets/essays/the-illusion-of-progress.pdf",
+  "cover": "assets/essays/covers/the-illusion-of-progress.png",
+  "tags": []
+}
+
   ],
   "books": [
 {
