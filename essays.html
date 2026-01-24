@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Essays — Elias Marrow</title>
   <link rel="stylesheet" href="styles.css"/>
+
+  <style>
+    /* Local-only layout for Essays landing page (does not touch global CSS) */
+    .essays-layout{
+      display:grid;
+      grid-template-columns: 300px 1fr;
+      gap:14px;
+      align-items:start;
+      margin-top: 8px;
+    }
+    @media (max-width: 900px){
+      .essays-layout{ grid-template-columns: 1fr; }
+    }
+
+    /* Compact grid for A–Z essay covers */
+    .mini-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:10px;
+      margin-top:12px;
+    }
+    .mini-grid .ill-card{ min-height: 92px; border-radius: 14px; }
+    .mini-grid .ill-card a{ padding: 10px 10px; }
+    .mini-grid .ill-title{ font-size: 12px; line-height: 1.2; }
+    .mini-grid .ill-meta{ display:none; }
+  </style>
 </head>
 
 <body class="page-essays">
@@ -25,57 +51,70 @@
 
     <div class="panel soft">
       <h2>Essays</h2>
-      <p class="muted">
-        Evergreen work. Updated deliberately, not frequently.
-      </p>
+      <p class="muted">Evergreen work. Updated deliberately, not frequently.</p>
 
-      <!-- FEATURED ESSAYS -->
-      <div class="section-card">
-        <div class="section-title">Featured Essays</div>
-        <div class="muted">Start here</div>
-        <div id="featured-essays" class="cover-grid"></div>
-      </div>
+      <div class="essays-layout">
 
-      <!-- RECENT ESSAYS -->
-      <div class="section-card">
-        <div class="section-title">Recent Essays</div>
-        <div class="muted">Last 3 publications</div>
-        <div id="recent-essays" class="cover-grid"></div>
-      </div>
+        <!-- LEFT: ALL ESSAYS A–Z -->
+        <div class="section-card">
+          <div class="section-title">All Essays (A–Z)</div>
+          <div class="muted">Complete archive</div>
+          <div id="az-essays" class="mini-grid"></div>
+        </div>
 
-      <!-- ESSAY INDEX -->
-      <div class="section-card">
-        <div class="section-title">Essay Index</div>
-        <div class="muted">Browse by category</div>
+        <!-- RIGHT: EXISTING SECTIONS (UNCHANGED CONTENT) -->
+        <div>
 
-        <div class="cover-grid">
-          <div class="ill-card" style="--bgimg:url('assets/category-pillars.jpg')">
-            <a href="essays-pillars.html">
-              <h3 class="ill-title">Pillars</h3>
-              <p class="ill-meta">Foundational essays</p>
-            </a>
+          <!-- FEATURED ESSAYS -->
+          <div class="section-card">
+            <div class="section-title">Featured Essays</div>
+            <div class="muted">Start here</div>
+            <div id="featured-essays" class="cover-grid"></div>
           </div>
 
-          <div class="ill-card" style="--bgimg:url('assets/category-mechanisms.jpg')">
-            <a href="essays-mechanisms.html">
-              <h3 class="ill-title">Mechanisms</h3>
-              <p class="ill-meta">Incentives, extraction, enforcement</p>
-            </a>
+          <!-- RECENT ESSAYS -->
+          <div class="section-card">
+            <div class="section-title">Recent Essays</div>
+            <div class="muted">Last 3 publications</div>
+            <div id="recent-essays" class="cover-grid"></div>
           </div>
 
-          <div class="ill-card" style="--bgimg:url('assets/category-applied.jpg')">
-            <a href="essays-applied.html">
-              <h3 class="ill-title">Applied Analysis</h3>
-              <p class="ill-meta">Case-based essays</p>
-            </a>
+          <!-- ESSAY INDEX -->
+          <div class="section-card">
+            <div class="section-title">Essay Index</div>
+            <div class="muted">Browse by category</div>
+
+            <div class="cover-grid">
+              <div class="ill-card" style="--bgimg:url('assets/category-pillars.jpg')">
+                <a href="essays-pillars.html">
+                  <h3 class="ill-title">Pillars</h3>
+                  <p class="ill-meta">Foundational essays</p>
+                </a>
+              </div>
+
+              <div class="ill-card" style="--bgimg:url('assets/category-mechanisms.jpg')">
+                <a href="essays-mechanisms.html">
+                  <h3 class="ill-title">Mechanisms</h3>
+                  <p class="ill-meta">Incentives, extraction, enforcement</p>
+                </a>
+              </div>
+
+              <div class="ill-card" style="--bgimg:url('assets/category-applied.jpg')">
+                <a href="essays-applied.html">
+                  <h3 class="ill-title">Applied Analysis</h3>
+                  <p class="ill-meta">Case-based essays</p>
+                </a>
+              </div>
+
+              <div class="ill-card" style="--bgimg:url('assets/category-notes.jpg')">
+                <a href="essays-notes.html">
+                  <h3 class="ill-title">Notes</h3>
+                  <p class="ill-meta">Fragments & short-form</p>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="ill-card" style="--bgimg:url('assets/category-notes.jpg')">
-            <a href="essays-notes.html">
-              <h3 class="ill-title">Notes</h3>
-              <p class="ill-meta">Fragments & short-form</p>
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -87,7 +126,6 @@
 
   </div>
 
-  <!-- FEATURED + RECENT ESSAYS SCRIPT -->
   <script>
     function parseDate(d){
       return d ? new Date(d + 'T00:00:00') : new Date(0);
@@ -101,6 +139,7 @@
         card.style.setProperty('--bgimg', `url("${essay.cover}")`);
       }
 
+      // Existing behavior preserved: Featured/Recent go directly to PDF
       card.innerHTML = `
         <a href="${essay.file}" target="_blank" rel="noopener">
           <h3 class="ill-title">${essay.title}</h3>
@@ -110,20 +149,50 @@
       return card;
     }
 
-    // FIXED: IDs now match content.json exactly
+    function renderAZCard(essay){
+      const card = document.createElement('div');
+      card.className = 'ill-card';
+
+      if (essay.cover){
+        card.style.setProperty('--bgimg', `url("${essay.cover}")`);
+      }
+
+      // All-essays section uses the reader (consistent with your established framework)
+      card.innerHTML = `
+        <a href="read-me.html?type=essay&id=${encodeURIComponent(essay.id)}">
+          <h3 class="ill-title">${essay.title}</h3>
+        </a>
+      `;
+      return card;
+    }
+
     const FEATURED_IDS = [
       "the-lens-we-use",
       "the-environment-turned-against-us",
       "effort-was-held-constant"
     ];
 
-    fetch('/content.json')
+    // Compatibility fix: match the cache-busting pattern already used elsewhere on your site
+    const url = 'content.json?v=' + Date.now();
+
+    fetch(url, { cache: 'no-store' })
       .then(r => r.json())
       .then(data => {
         if (!data || !Array.isArray(data.essays)) return;
 
-        const byId = new Map(data.essays.map(e => [e.id, e]));
+        const essays = data.essays.slice();
+        const byId = new Map(essays.map(e => [e.id, e]));
 
+        // LEFT: All essays A–Z
+        const azWrap = document.getElementById('az-essays');
+        if (azWrap){
+          essays
+            .slice()
+            .sort((a,b) => (a.title || "").localeCompare((b.title || ""), undefined, { sensitivity: "base" }))
+            .forEach(e => azWrap.appendChild(renderAZCard(e)));
+        }
+
+        // RIGHT: Featured
         const featuredWrap = document.getElementById('featured-essays');
         if (featuredWrap){
           FEATURED_IDS
@@ -132,9 +201,10 @@
             .forEach(e => featuredWrap.appendChild(renderCoverCard(e)));
         }
 
+        // RIGHT: Recent (excluding featured)
         const recentWrap = document.getElementById('recent-essays');
         if (recentWrap){
-          data.essays
+          essays
             .filter(e => !FEATURED_IDS.includes(e.id))
             .sort((a,b) => parseDate(b.date) - parseDate(a.date))
             .slice(0,3)
