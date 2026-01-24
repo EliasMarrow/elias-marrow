@@ -154,10 +154,14 @@
   "id": "what-was-required",
   "title": "What Was Required",
   "subtitle": "Archive edition",
+  "author": "Elias Marrow",
+  "date": "2026-01-23",
+  "summary": "Archive edition. A completed sequence examining pressure, legitimacy, and the moment restraint fails.",
+  "format": "pdf",
+  "file": "assets/novels/what-was-required/what-was-required.pdf",
   "cover": "assets/novels/what-was-required/what-was-required.png",
-  "pdf": "assets/novels/what-was-required/what-was-required.pdf"
+  "tags": ["novel", "archive", "systems", "power"]
 },
-    
     {
       "id": "constraints_not_choices",
       "title": "Constraints, Not Choices",
