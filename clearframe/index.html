@@ -49,35 +49,16 @@
       gap: 10px;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 18px auto 0;
+      margin-top: 16px;
     }
 
     .pill {
-      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 7px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      font-size: 13px;
-      opacity: .95;
-    }
-
-    .section { margin-top: 26px; }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    @media (max-width: 820px) {
-      .grid-2,
-      .grid-3 { grid-template-columns: 1fr; }
+      font-size: 0.92rem;
+      opacity: 0.92;
+      background: rgba(255,255,255,0.04);
     }
 
     .card {
@@ -183,21 +164,19 @@
           <img class="card-decor" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
           <h3>Best fit</h3>
           <ul>
-            <li>Local services: contractors, trades, home services</li>
-            <li>Small businesses that need a credible web presence</li>
-            <li>Creators, freelancers, consultants, portfolios</li>
-            <li>Simple company pages for small teams</li>
+            <li>Local services: contractors, plumbing, landscaping, trades</li>
+            <li>Creators: writers, artists, independent projects</li>
+            <li>Small brands that need credibility + contact</li>
           </ul>
         </div>
 
         <div class="card">
-          <img class="card-decor low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>Not the point</h3>
+          <img class="card-decor left low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
+          <h3>Not ideal</h3>
           <ul>
-            <li>Funnels, heavy marketing automation, “growth hacks”</li>
-            <li>Complex apps or feature-heavy platforms</li>
-            <li>Endless redesign cycles</li>
-            <li>Overbuilt multi-page sites unless explicitly scoped</li>
+            <li>Huge multi-page sites with complex navigation</li>
+            <li>Heavy apps, logins, dashboards, portals</li>
+            <li>Big e-commerce catalogs</li>
           </ul>
         </div>
       </div>
@@ -205,121 +184,81 @@
 
     <!-- PROCESS -->
     <section class="section" id="process">
-      <h2>Process</h2>
-
-      <div class="grid-3">
-        <div class="card">
-          <img class="card-decor" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>1) Intake</h3>
-          <p>You send: business name, what you do, service area (if local), and contact info. Links and assets if you have them.</p>
-        </div>
-
-        <div class="card">
-          <img class="card-decor" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
-          <h3>2) Build</h3>
-          <p>We apply the Clearframe structure and build a fast, readable page with clean sections and proper hierarchy.</p>
-        </div>
-
-        <div class="card">
-          <img class="card-decor low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>3) Review</h3>
-          <p>One revision pass for corrections and clarity. Then we ship the final files and publish (or hand off).</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- DELIVERABLES -->
-    <section class="section" id="deliverables">
-      <h2>What you get</h2>
+      <h2>How it works</h2>
 
       <div class="grid-2">
         <div class="card">
           <img class="card-decor" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>Homepage structure that works</h3>
-          <ul>
-            <li>Clear “what you do” in the first screen</li>
-            <li>Services/offers organized for scanning</li>
-            <li>Credibility/proof section (reviews, credentials, facts)</li>
-            <li>Simple contact block with zero friction</li>
-          </ul>
+          <h3>1) Intake</h3>
+          <p>We get your essentials: what you do, what you offer, who it’s for, proof of credibility, contact method.</p>
         </div>
 
         <div class="card">
           <img class="card-decor low" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
-          <h3>Technical basics included</h3>
-          <ul>
-            <li>Fast static build (HTML/CSS)</li>
-            <li>Mobile-friendly layout</li>
-            <li>SEO basics (title/description, headings)</li>
-            <li>You own the files (no platform lock-in)</li>
-          </ul>
+          <h3>2) Build</h3>
+          <p>We build the page, structure the copy for clarity, and add proof points so a stranger can understand you fast.</p>
         </div>
-      </div>
 
-      <div class="card note" style="margin-top:14px;">
-        <img class="card-decor left" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
-        <h3>Domain + publishing</h3>
-        <p>
-          If you need help connecting a domain and publishing, we can handle it or walk you through it.
-          Clearframe stays simple by default: cheap hosting, fast load, minimal moving parts.
-        </p>
+        <div class="card">
+          <img class="card-decor left" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
+          <h3>3) Review</h3>
+          <p>You review and request adjustments. We tighten until it reads clean and feels trustworthy.</p>
+        </div>
+
+        <div class="card">
+          <img class="card-decor left low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
+          <h3>4) Deploy</h3>
+          <p>We publish it on a cheap hosting setup. You own the files and can move it any time.</p>
+        </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <h2>FAQ</h2>
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <h2>Pricing</h2>
 
       <div class="grid-2">
         <div class="card">
-          <h3>Do you use Wix / Squarespace / WordPress?</h3>
-          <p>No by default. Clearframe is static so it loads fast and costs little to host. If you need a CMS, it can be scoped separately.</p>
+          <img class="card-decor" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
+          <h3>One-page build</h3>
+          <p class="muted">Simple and complete.</p>
+          <p>Includes structure, copy tightening, mobile-first layout, and deployment help.</p>
         </div>
 
         <div class="card">
-          <h3>Can you write the copy?</h3>
-          <p>Yes. We can tighten what you already have or draft clean homepage copy from your intake.</p>
+          <img class="card-decor low" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
+          <h3>Rework</h3>
+          <p class="muted">Fix what’s there.</p>
+          <p>We reorganize, simplify, and tighten the message without rebuilding from scratch.</p>
         </div>
+      </div>
 
-        <div class="card">
-          <h3>Do you need photos?</h3>
-          <p>Not required. If you have real photos, we use them. If you don’t, we keep it clean with layout, typography, and intentional design elements—no generic stock visuals by default.</p>
-        </div>
-
-        <div class="card">
-          <h3>How many revisions?</h3>
-          <p>One revision pass for clarity/corrections is included. Additional changes can be scoped if needed.</p>
-        </div>
+      <div class="card" style="margin-top:14px;">
+        <img class="card-decor left low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
+        <h3>Notes</h3>
+        <p>Hosting is cheap. You can host on GitHub Pages or similar. One pass for clarity/corrections is included. Additional changes can be scoped if needed.</p>
       </div>
     </section>
 
     <!-- EXAMPLES -->
     <section class="section examples" id="examples">
       <h2>Examples</h2>
-      <p class="muted">These represent the final state of a Clearframe build or rework.</p>
+      <p class="muted">Two real examples. Clear, simple, finished.</p>
 
-      <div class="grid-3" style="margin-top:14px;">
+      <div class="grid-2" style="margin-top:14px;">
 
-        <a class="card ex-card" href="/clearframe/examples/local-service/">
+        <a class="card ex-card" href="https://eliasmarrow.org/">
           <div class="ex-head">
-            <h3>Local service</h3>
-            <p class="muted">Contractors and trades.</p>
+            <h3>Elias Marrow</h3>
+            <p class="muted">Author site / essays.</p>
           </div>
           <span class="ex-link">View example →</span>
         </a>
 
-        <a class="card ex-card" href="/clearframe/examples/creator-portfolio/">
+        <a class="card ex-card" href="/proximity-design/">
           <div class="ex-head">
-            <h3>Creator / portfolio</h3>
-            <p class="muted">Writers and independent creators.</p>
-          </div>
-          <span class="ex-link">View example →</span>
-        </a>
-
-        <a class="card ex-card" href="/clearframe/examples/company-page/">
-          <div class="ex-head">
-            <h3>Company page</h3>
-            <p class="muted">Small teams and service brands.</p>
+            <h3>Proximity Landscape Design</h3>
+            <p class="muted">Service landing page.</p>
           </div>
           <span class="ex-link">View example →</span>
         </a>
@@ -330,16 +269,25 @@
     <!-- CONTACT -->
     <section class="section" id="contact">
       <h2>Contact</h2>
-      <div class="card note">
-        <p>Email: <a href="mailto:paynottamichael@gmail.com">paynottamichael@gmail.com</a></p>
-        <p class="muted small">Include what you do and whether this is a new site or a rework.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <img class="card-decor" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
+          <h3>Get a site</h3>
+          <p>Send what you do, your name/brand, and how people should contact you. We’ll reply with next steps.</p>
+        </div>
+
+        <div class="card">
+          <img class="card-decor low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
+          <h3>Email</h3>
+          <p><a href="mailto:paynottamichael@gmail.com">paynottamichael@gmail.com</a></p>
+        </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <p class="quiet"><a href="/">Back to eliasmarrow.org</a></p>
-    </footer>
-
+    <div class="footer">
+      <p class="muted">© Clearframe</p>
+    </div>
   </main>
 </body>
 </html>
