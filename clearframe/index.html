@@ -21,8 +21,8 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="/clearframe/" aria-label="Clearframe home">
-        <!-- You said you already replaced this image in-place, same name -->
-        <img class="brand-mark" src="/clearframe/assets/img/clearframe-logo.png" alt="Clearframe" />
+        <!-- cache-bust so your replaced logo shows -->
+        <img class="brand-mark" src="/clearframe/assets/img/clearframe-logo.png?v=2" alt="Clearframe" />
       </a>
 
       <nav class="nav">
@@ -66,9 +66,9 @@
             </div>
           </div>
 
-          <!-- Centered logo in color (your white logo will show on white; that’s okay since it’s in a bordered area) -->
+          <!-- cache-bust so your replaced logo shows -->
           <div class="hero-icon-center" aria-hidden="true">
-            <img src="/clearframe/assets/img/clearframe-logo.png" alt="" />
+            <img src="/clearframe/assets/img/clearframe-logo.png?v=2" alt="" />
           </div>
         </aside>
       </div>
@@ -211,7 +211,8 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <div class="footer-left">
-        <img src="/clearframe/assets/img/clearframe-logo.png" class="footer-icon" alt="" />
+        <!-- cache-bust so your replaced logo shows -->
+        <img src="/clearframe/assets/img/clearframe-logo.png?v=2" class="footer-icon" alt="" />
         <div>
           <div class="footer-title">Clearframe</div>
           <div class="footer-sub">Fast, clean websites built to be understood.</div>
