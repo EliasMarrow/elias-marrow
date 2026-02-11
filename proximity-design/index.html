@@ -4,7 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Proximity Landscape Design</title>
-  <meta name="description" content="See the finished result before you spend money building it. Proximity creates realistic landscape design visuals from your real property photos." />
+
+  <meta name="description"
+        content="See the finished result before you spend money building it. Proximity creates realistic landscape design visuals from your real property photos." />
+
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -30,6 +33,7 @@
       <div class="wrap hero-inner">
         <div class="hero-copy">
           <h1>See the finished result before you spend money building it.</h1>
+
           <p class="lead">
             We create realistic landscape design visuals from photos of your real property,
             so you can decide if you like the outcome <strong>before</strong> contractors, quotes, or installation.
@@ -49,13 +53,16 @@
 
         <aside class="hero-card" aria-label="Outcome clarity first">
           <div class="hero-card-top">
-            <img class="hero-icon" src="./assets/proximity-icon.png" alt="" />
             <div>
               <div class="hero-card-title">Outcome clarity first</div>
               <div class="hero-card-sub">Know what you’re paying for before the project grows.</div>
             </div>
           </div>
-          <div class="hero-card-watermark" aria-hidden="true"></div>
+
+          <!-- Centered, full-color icon -->
+          <div class="hero-icon-center" aria-hidden="true">
+            <img src="./assets/proximity-icon.png" alt="" />
+          </div>
         </aside>
       </div>
     </section>
@@ -83,26 +90,28 @@
       </div>
     </section>
 
-    <!-- EXAMPLES -->
+    <!-- EXAMPLES (clickable to full image) -->
     <section class="section" id="examples">
       <div class="wrap">
         <div class="section-head">
           <h2>What this looks like</h2>
-          <p class="muted">Two examples. Before/after pairs. No guessing.</p>
+          <p class="muted">Click any image to view it full size.</p>
         </div>
 
         <div class="examples-grid">
+
           <!-- Example 01 -->
           <div class="card example-card">
             <div class="pair">
-              <figure class="shot">
+              <a class="shot shot-link" href="./assets/example-01-before.jpg" target="_blank" rel="noopener">
                 <img src="./assets/example-01-before.jpg" alt="Example 1 before" />
-                <figcaption class="tag">Before</figcaption>
-              </figure>
-              <figure class="shot">
+                <span class="tag">Before</span>
+              </a>
+
+              <a class="shot shot-link" href="./assets/example-01-after.png" target="_blank" rel="noopener">
                 <img src="./assets/example-01-after.png" alt="Example 1 after" />
-                <figcaption class="tag">After</figcaption>
-              </figure>
+                <span class="tag">After</span>
+              </a>
             </div>
             <div class="example-note">Outcome preview before spending money.</div>
           </div>
@@ -110,17 +119,19 @@
           <!-- Example 02 -->
           <div class="card example-card">
             <div class="pair">
-              <figure class="shot">
+              <a class="shot shot-link" href="./assets/example-02-before.png" target="_blank" rel="noopener">
                 <img src="./assets/example-02-before.png" alt="Example 2 before" />
-                <figcaption class="tag">Before</figcaption>
-              </figure>
-              <figure class="shot">
+                <span class="tag">Before</span>
+              </a>
+
+              <a class="shot shot-link" href="./assets/example-02-after.png" target="_blank" rel="noopener">
                 <img src="./assets/example-02-after.png" alt="Example 2 after" />
-                <figcaption class="tag">After</figcaption>
-              </figure>
+                <span class="tag">After</span>
+              </a>
             </div>
             <div class="example-note">Same space, redesigned landscape.</div>
           </div>
+
         </div>
 
         <p class="caption">
@@ -221,7 +232,10 @@
                href="mailto:paynottamichael@gmail.com?subject=Proximity%20Landscape%20Design%20Request">
               Email a request
             </a>
-            <span class="micro">Design only. No installation. No obligation.</span>
+            <a class="btn"
+               href="mailto:paynottamichael@gmail.com?subject=Proximity%20Landscape%20Design%20Request">
+              paynottamichael@gmail.com
+            </a>
           </div>
 
           <p class="small">Proximity is design only. No material sales. No installation.</p>
