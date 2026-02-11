@@ -18,7 +18,7 @@ body{
   line-height: 1.5;
 }
 
-/* ✅ Hard kill for any ghost watermark (in case an older rule still exists) */
+/* Hard kill for any ghost watermark */
 body::before{ content:none !important; background:none !important; }
 body::after{
   content:"";
@@ -197,7 +197,7 @@ p{ margin: 0 0 10px 0; }
 
 .bullets li{ margin: 7px 0; }
 
-/* Buttons (less “cheesy”) */
+/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -223,15 +223,22 @@ p{ margin: 0 0 10px 0; }
 .btn:hover{ opacity:0.93; }
 button.btn{ cursor:pointer; }
 
-/* Hero right card */
+/* ✅ HERO CARD — FIX CENTERING */
 .hero-card{
   position: relative;
   overflow: hidden;
-  min-height: 240px;
+  min-height: 260px;
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 10px;
+  /* remove any “space-between” effect */
+  justify-content: flex-start;
+}
+
+.hero-card-top{
+  display:flex;
+  gap: 12px;
+  align-items: flex-start;
 }
 
 .hero-card-title{ font-weight: 900; }
@@ -242,17 +249,20 @@ button.btn{ cursor:pointer; }
   margin-top: 2px;
 }
 
-/* ✅ Icon sizing: never crop, never huge */
+/* ✅ Icon area takes remaining space and centers perfectly */
 .hero-icon-center{
-  display:grid;
-  place-items:center;
+  flex: 1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   padding: 10px 0 6px 0;
 }
 
 .hero-icon-center img{
-  width: min(210px, 65%);
+  width: min(210px, 60%);
   height: auto;
   display:block;
+  margin: 0 auto;
 }
 
 /* Examples */
