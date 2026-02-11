@@ -18,9 +18,8 @@ body{
   line-height: 1.5;
 }
 
-/* ✅ Removed the big ghosted icon (was body::before) */
-
-/* Soft background wash only */
+/* ✅ Hard kill for any ghost watermark (in case an older rule still exists) */
+body::before{ content:none !important; background:none !important; }
 body::after{
   content:"";
   position: fixed;
@@ -37,9 +36,7 @@ body::after{
   margin: 0 auto;
 }
 
-.page{
-  padding: 18px 0 34px 0;
-}
+.page{ padding: 18px 0 34px 0; }
 
 /* Header */
 .site-header{
@@ -117,7 +114,7 @@ h1{
 
 .hero-actions{
   display:flex;
-  gap:14px;
+  gap:10px;
   align-items:center;
   flex-wrap:wrap;
   margin-bottom: 10px;
@@ -189,10 +186,7 @@ p{ margin: 0 0 10px 0; }
   color: var(--muted);
 }
 
-.muted{
-  color: var(--muted);
-  margin: 0;
-}
+.muted{ color: var(--muted); margin:0; }
 
 /* Bullets */
 .bullets{
@@ -203,29 +197,31 @@ p{ margin: 0 0 10px 0; }
 
 .bullets li{ margin: 7px 0; }
 
-/* Buttons */
+/* Buttons (less “cheesy”) */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding: 12px 14px;
-  border-radius: 14px;
+  padding: 11px 13px;
+  border-radius: 12px;
   border: 1px solid var(--border);
   font-weight: 800;
   font-size: 14px;
   text-decoration:none !important;
   background: rgba(255,255,255,0.92);
-  box-shadow: var(--shadow2);
   color: rgba(11,19,32,0.92);
+  box-shadow: none;
 }
 
 .btn.primary{
   background: #0b1320;
   color:#fff;
   border-color: rgba(0,0,0,0.20);
+  box-shadow: var(--shadow2);
 }
 
 .btn:hover{ opacity:0.93; }
+button.btn{ cursor:pointer; }
 
 /* Hero right card */
 .hero-card{
@@ -238,15 +234,7 @@ p{ margin: 0 0 10px 0; }
   gap: 10px;
 }
 
-.hero-card-top{
-  display:flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.hero-card-title{
-  font-weight: 900;
-}
+.hero-card-title{ font-weight: 900; }
 
 .hero-card-sub{
   font-size: 14px;
@@ -254,15 +242,15 @@ p{ margin: 0 0 10px 0; }
   margin-top: 2px;
 }
 
-/* ✅ Centered full-color icon */
+/* ✅ Icon sizing: never crop, never huge */
 .hero-icon-center{
   display:grid;
   place-items:center;
-  padding: 10px 0 4px 0;
+  padding: 10px 0 6px 0;
 }
 
 .hero-icon-center img{
-  width: min(280px, 70%);
+  width: min(210px, 65%);
   height: auto;
   display:block;
 }
@@ -284,7 +272,6 @@ p{ margin: 0 0 10px 0; }
 
 .shot{
   position:relative;
-  margin:0;
   border-radius: 14px;
   overflow:hidden;
   border: 1px solid var(--border);
@@ -298,7 +285,6 @@ p{ margin: 0 0 10px 0; }
   object-fit: cover;
 }
 
-/* clickable image */
 .shot-link{
   display:block;
   cursor: zoom-in;
@@ -315,7 +301,6 @@ p{ margin: 0 0 10px 0; }
   position:absolute;
   left: 10px;
   top: 10px;
-  margin:0;
   padding: 7px 10px;
   border-radius: 999px;
   font-weight: 900;
@@ -365,7 +350,7 @@ p{ margin: 0 0 10px 0; }
 /* CTA */
 .start-actions{
   display:flex;
-  gap: 14px;
+  gap: 10px;
   align-items:center;
   flex-wrap:wrap;
   margin-top: 8px;
@@ -410,5 +395,5 @@ p{ margin: 0 0 10px 0; }
 @media (max-width: 560px){
   .pair{ grid-template-columns: 1fr; }
   .shot img{ height: 230px; }
-  .hero-icon-center img{ width: min(260px, 80%); }
+  .hero-icon-center img{ width: min(200px, 72%); }
 }
