@@ -3,9 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Proximity Landscape Design</title>
   <meta name="description" content="See the finished result before you spend money building it. Proximity creates realistic landscape design visuals from your real property photos." />
-  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- ✅ Open Graph (Facebook link preview) -->
+  <meta property="og:title" content="Proximity Landscape Design" />
+  <meta property="og:description" content="See the finished result before you spend money building it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://eliasmarrow.org/proximity-design/" />
+  <meta property="og:image" content="https://eliasmarrow.org/proximity-design/assets/og-proximity.png" />
+  <meta property="og:image:secure_url" content="https://eliasmarrow.org/proximity-design/assets/og-proximity.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="./styles.css?v=4" />
 </head>
 
 <body>
@@ -30,6 +44,7 @@
       <div class="wrap hero-inner">
         <div class="hero-copy">
           <h1>See the finished result before you spend money building it.</h1>
+
           <p class="lead">
             We create realistic landscape design visuals from photos of your real property,
             so you can decide if you like the outcome <strong>before</strong> contractors, quotes, or installation.
@@ -41,7 +56,7 @@
               Email a request
             </a>
 
-            <button class="btn" type="button" id="copyEmailBtn" data-email="paynottamichael@gmail.com">
+            <button class="btn" type="button" id="copyEmailBtn">
               Copy email
             </button>
 
@@ -63,7 +78,6 @@
             </div>
           </div>
 
-          <!-- Icon (sized to never crop) -->
           <div class="hero-icon-center" aria-hidden="true">
             <img src="./assets/proximity-icon.png" alt="" />
           </div>
@@ -140,29 +154,7 @@
       </div>
     </section>
 
-    <!-- WHY / EXPERIENCE -->
-    <section class="section">
-      <div class="wrap grid-2">
-        <div class="card">
-          <h2>Why this helps</h2>
-          <p>
-            Most landscape regret comes from uncertainty, not bad work.
-            Seeing the finished idea first changes how decisions get made.
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>Experience from both sides</h2>
-          <p>Before Proximity, we ran a landscape design and installation business.</p>
-          <p>
-            When design and install are tied together, scope grows and timelines tighten.
-            Proximity stays separate so decisions can be made without pressure.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
+    <!-- HOW -->
     <section class="section" id="how">
       <div class="wrap">
         <div class="section-head">
@@ -232,9 +224,7 @@
                href="mailto:paynottamichael@gmail.com?subject=Proximity%20Landscape%20Design%20Request">
               Email a request
             </a>
-            <button class="btn" type="button" id="copyEmailBtn2" data-email="paynottamichael@gmail.com">
-              Copy email
-            </button>
+            <button class="btn" type="button" id="copyEmailBtn2">Copy email</button>
           </div>
 
           <p class="small">Proximity is design only. No material sales. No installation.</p>
@@ -259,30 +249,38 @@
     (function () {
       const email = "paynottamichael@gmail.com";
 
-      function bindCopy(btnId, hintId) {
-        const btn = document.getElementById(btnId);
-        if (!btn) return;
-
-        btn.addEventListener("click", async () => {
-          try {
-            await navigator.clipboard.writeText(email);
-            if (hintId) {
-              const hint = document.getElementById(hintId);
-              if (hint) hint.textContent = "Copied to clipboard.";
-              setTimeout(() => { if (hint) hint.textContent = "Design only. No installation. No pressure."; }, 1600);
-            } else {
-              btn.textContent = "Copied";
-              setTimeout(() => { btn.textContent = "Copy email"; }, 1400);
-            }
-          } catch (e) {
-            // Fallback if clipboard is blocked
-            window.location.href = "mailto:" + email + "?subject=Proximity%20Landscape%20Design%20Request";
-          }
-        });
+      async function copyEmail() {
+        try {
+          await navigator.clipboard.writeText(email);
+          return true;
+        } catch (e) {
+          return false;
+        }
       }
 
-      bindCopy("copyEmailBtn", "copyHint");
-      bindCopy("copyEmailBtn2", null);
+      const b1 = document.getElementById("copyEmailBtn");
+      const b2 = document.getElementById("copyEmailBtn2");
+      const hint = document.getElementById("copyHint");
+
+      if (b1) b1.addEventListener("click", async () => {
+        const ok = await copyEmail();
+        if (ok && hint) {
+          hint.textContent = "Copied to clipboard.";
+          setTimeout(() => hint.textContent = "Design only. No installation. No pressure.", 1400);
+        } else {
+          window.location.href = "mailto:" + email + "?subject=Proximity%20Landscape%20Design%20Request";
+        }
+      });
+
+      if (b2) b2.addEventListener("click", async () => {
+        const ok = await copyEmail();
+        if (ok) {
+          b2.textContent = "Copied";
+          setTimeout(() => b2.textContent = "Copy email", 1200);
+        } else {
+          window.location.href = "mailto:" + email + "?subject=Proximity%20Landscape%20Design%20Request";
+        }
+      });
     })();
   </script>
 </body>

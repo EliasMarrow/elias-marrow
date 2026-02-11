@@ -4,7 +4,6 @@
   --border: rgba(11, 19, 32, 0.10);
   --shadow: 0 16px 40px rgba(11, 19, 32, 0.08);
   --shadow2: 0 10px 24px rgba(11, 19, 32, 0.10);
-  --accent: #0b1320;
 }
 
 *{ box-sizing:border-box; }
@@ -18,7 +17,6 @@ body{
   line-height: 1.5;
 }
 
-/* Soft background wash only */
 body::after{
   content:"";
   position: fixed;
@@ -35,9 +33,7 @@ body::after{
   margin: 0 auto;
 }
 
-.page{
-  padding: 18px 0 34px 0;
-}
+.page{ padding: 18px 0 34px 0; }
 
 /* Header */
 .site-header{
@@ -121,10 +117,7 @@ h1{
   margin-bottom: 10px;
 }
 
-.micro{
-  font-size: 13px;
-  color: var(--muted);
-}
+.micro{ font-size: 13px; color: var(--muted); }
 
 /* Checks list */
 .checks{
@@ -174,11 +167,7 @@ h2{
   letter-spacing:-0.01em;
 }
 
-h3{
-  margin:0 0 6px 0;
-  font-size: 16px;
-}
-
+h3{ margin:0 0 6px 0; font-size: 16px; }
 p{ margin: 0 0 10px 0; }
 
 .small{
@@ -187,18 +176,13 @@ p{ margin: 0 0 10px 0; }
   color: var(--muted);
 }
 
-.muted{
-  color: var(--muted);
-  margin: 0;
-}
+.muted{ color: var(--muted); margin:0; }
 
-/* Bullets */
 .bullets{
   margin: 10px 0 0 0;
   padding-left: 18px;
   color: rgba(11, 19, 32, 0.72);
 }
-
 .bullets li{ margin: 7px 0; }
 
 /* Buttons */
@@ -242,9 +226,7 @@ p{ margin: 0 0 10px 0; }
   align-items: center;
 }
 
-.hero-card-title{
-  font-weight: 900;
-}
+.hero-card-title{ font-weight: 900; }
 
 .hero-card-sub{
   font-size: 14px;
@@ -252,7 +234,6 @@ p{ margin: 0 0 10px 0; }
   margin-top: 2px;
 }
 
-/* Centered logo inside hero card */
 .hero-icon-center{
   display:grid;
   place-items:center;
@@ -265,7 +246,7 @@ p{ margin: 0 0 10px 0; }
   display:block;
 }
 
-/* Examples (two cards) */
+/* Examples */
 .examples-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -346,7 +327,6 @@ p{ margin: 0 0 10px 0; }
 .footer-title{ font-weight: 900; }
 .footer-sub{ font-size: 13px; color: var(--muted); }
 
-/* Responsive */
 @media (max-width: 980px){
   .hero-inner{ grid-template-columns: 1fr; }
   .grid-2{ grid-template-columns: 1fr; }
