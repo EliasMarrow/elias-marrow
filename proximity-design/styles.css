@@ -200,6 +200,7 @@ button.btn{ cursor:pointer; }
 
 .btn:hover{ opacity:0.93; }
 
+/* HERO right card */
 .hero-card{
   position: relative;
   overflow: hidden;
@@ -211,28 +212,28 @@ button.btn{ cursor:pointer; }
 }
 
 .hero-card-title{ font-weight: 900; }
-
 .hero-card-sub{
   font-size: 14px;
   color: rgba(11, 19, 32, 0.68);
   margin-top: 2px;
 }
 
-.hero-icon-center{
+/* ✅ centered wordmark */
+.hero-logo-center{
   flex: 1;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding: 10px 0 6px 0;
+  padding: 12px 0 8px 0;
 }
 
-.hero-icon-center img{
-  width: min(210px, 60%);
+.hero-logo-center img{
+  width: min(420px, 92%);
   height: auto;
   display:block;
-  margin: 0 auto;
 }
 
+/* Examples */
 .examples-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -295,6 +296,7 @@ button.btn{ cursor:pointer; }
   color: rgba(11, 19, 32, 0.62);
 }
 
+/* Steps */
 .steps{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -314,6 +316,7 @@ button.btn{ cursor:pointer; }
   border: 1px solid rgba(31,107,58,0.18);
 }
 
+/* CTA */
 .start-actions{
   display:flex;
   gap: 10px;
@@ -322,6 +325,7 @@ button.btn{ cursor:pointer; }
   margin-top: 8px;
 }
 
+/* Footer */
 .footer{
   padding: 18px 0 26px 0;
   border-top: 1px solid rgba(11, 19, 32, 0.08);
@@ -356,5 +360,5 @@ button.btn{ cursor:pointer; }
 @media (max-width: 560px){
   .pair{ grid-template-columns: 1fr; }
   .shot img{ height: 230px; }
-  .hero-icon-center img{ width: min(200px, 72%); }
+  .hero-logo-center img{ width: min(360px, 95%); }
 }
