@@ -4,290 +4,220 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
-<meta property="og:title" content="Clearframe" />
-<meta property="og:description" content="Fast, clean websites built to be understood." />
-<meta property="og:image" content="https://eliasmarrow.org/clearframe/assets/img/og-preview.png" />
-<meta property="og:url" content="https://eliasmarrow.org/clearframe/" />
-<meta property="og:type" content="website" />
 
   <title>Clearframe</title>
-  <meta name="description" content="Clean, fast one-page websites built for clarity and speed." />
-  <meta name="theme-color" content="#0a0d12" />
+  <meta name="description" content="Fast, clean websites built to be understood." />
 
-  <link rel="stylesheet" href="/clearframe/css/styles.css?v=999" />
+  <meta property="og:title" content="Clearframe" />
+  <meta property="og:description" content="Fast, clean websites built to be understood." />
+  <meta property="og:image" content="https://eliasmarrow.org/clearframe/assets/img/og-preview.png" />
+  <meta property="og:url" content="https://eliasmarrow.org/clearframe/" />
+  <meta property="og:type" content="website" />
 
-  <style>
-    .hero {
-      text-align: center;
-      padding-top: 6px;
-    }
-
-    .hero-logo {
-      display: block;
-      margin: 0 auto 18px;
-      max-width: 420px;
-      width: 100%;
-      height: auto;
-    }
-
-    .sublead {
-      max-width: 70ch;
-      margin: 0.65rem auto 0;
-      opacity: 0.92;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    .pill-row {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 16px;
-    }
-
-    .pill {
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 7px 10px;
-      border-radius: 999px;
-      font-size: 0.92rem;
-      opacity: 0.92;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-decor {
-      position: absolute;
-      right: -26px;
-      top: -26px;
-      width: 210px;
-      opacity: .12;
-      pointer-events: none;
-      user-select: none;
-    }
-
-    .card-decor.left {
-      right: auto;
-      left: -26px;
-    }
-
-    .card-decor.low {
-      top: auto;
-      bottom: -30px;
-    }
-
-    .examples .ex-card {
-      display: block;
-      text-decoration: none;
-    }
-
-    .ex-head {
-      display: block;
-    }
-
-    .ex-link {
-      margin-top: 10px;
-      display: inline-block;
-      opacity: .92;
-    }
-
-    .footer {
-      margin-top: 22px;
-      text-align: center;
-      opacity: .9;
-    }
-  </style>
+  <link rel="stylesheet" href="/clearframe/css/styles.css?v=1000" />
 </head>
 
 <body>
-  <main class="wrap">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/clearframe/" aria-label="Clearframe home">
+        <!-- You said you already replaced this image in-place, same name -->
+        <img class="brand-mark" src="/clearframe/assets/img/clearframe-logo.png" alt="Clearframe" />
+      </a>
 
-    <header class="hero">
-      <img class="hero-logo" src="/clearframe/assets/img/clearframe-logo.png" alt="Clearframe logo" />
+      <nav class="nav">
+        <a href="#examples">Examples</a>
+        <a href="#how">How it works</a>
+        <a href="#fit">Good fit</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-      <h1>Clearframe</h1>
-      <p class="lead">Fast, clean websites built to be understood.</p>
+  <main class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <h1>Fast, clean websites built to be understood.</h1>
 
-      <p class="sublead">
-        Clearframe builds professional one-page websites for people who need a real web presence
-        without complexity. Clear explanation, visible credibility, and frictionless contact.
-      </p>
+          <p class="lead">
+            Clearframe builds one-page websites that explain what you do in plain language,
+            load fast, and make it easy for people to contact you.
+          </p>
 
-      <div class="cta-row">
-        <a class="btn primary" href="#contact">Get a site</a>
-        <a class="btn" href="#examples">See examples</a>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Get a site</a>
+            <span class="micro">Simple structure. Clear message. Real credibility.</span>
+          </div>
+
+          <ul class="checks">
+            <li>Mobile-first and fast to load</li>
+            <li>Clear hierarchy (no clutter)</li>
+            <li>You own the files</li>
+          </ul>
+        </div>
+
+        <aside class="hero-card" aria-label="Clearframe summary">
+          <div class="hero-card-top">
+            <div>
+              <div class="hero-card-title">Clarity first</div>
+              <div class="hero-card-sub">If a stranger can’t understand you fast, they leave.</div>
+            </div>
+          </div>
+
+          <!-- Centered logo in color (your white logo will show on white; that’s okay since it’s in a bordered area) -->
+          <div class="hero-icon-center" aria-hidden="true">
+            <img src="/clearframe/assets/img/clearframe-logo.png" alt="" />
+          </div>
+        </aside>
       </div>
-
-      <div class="pill-row">
-        <span class="pill">Mobile-first</span>
-        <span class="pill">Loads fast</span>
-        <span class="pill">You own the files</span>
-        <span class="pill">Cheap to host</span>
-      </div>
-    </header>
+    </section>
 
     <!-- OFFER -->
     <section class="section" id="offer">
-      <h2>What we offer</h2>
-
-      <div class="grid-2">
+      <div class="wrap grid-2">
         <div class="card">
-          <img class="card-decor" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>New site</h3>
-          <p>We build a complete one-page site from scratch using a proven structure that explains what you do clearly and quickly.</p>
+          <h2>What we build</h2>
+          <p>
+            A complete one-page site with a clean structure: headline, proof, services, examples,
+            and contact. Built to read well and convert without tricks.
+          </p>
         </div>
 
         <div class="card">
-          <img class="card-decor low" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
-          <h3>Rework</h3>
-          <p>We tighten and restructure an existing site: clearer hierarchy, less noise, stronger first impression.</p>
+          <h2>What we fix</h2>
+          <p>
+            If you already have a site, we can restructure it: simplify, tighten the copy,
+            and make the first impression stronger.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLES -->
+    <section class="section" id="examples">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Examples</h2>
+          <p class="muted">Two real pages. Click to view.</p>
+        </div>
+
+        <div class="examples-grid">
+
+          <a class="card ex-card" href="https://eliasmarrow.org/" target="_blank" rel="noopener">
+            <div class="ex-head">
+              <h3>Elias Marrow</h3>
+              <p class="muted">Author site / essays.</p>
+            </div>
+            <span class="ex-link">View example →</span>
+          </a>
+
+          <a class="card ex-card" href="https://eliasmarrow.org/proximity-design/" target="_blank" rel="noopener">
+            <div class="ex-head">
+              <h3>Proximity Landscape Design</h3>
+              <p class="muted">Service landing page.</p>
+            </div>
+            <span class="ex-link">View example →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p class="muted">Simple. Linear. Low-friction.</p>
+        </div>
+
+        <div class="steps">
+          <div class="card step">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Intake</h3>
+              <p>What you do, who it’s for, proof, and how people should contact you.</p>
+            </div>
+          </div>
+
+          <div class="card step">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Build</h3>
+              <p>We structure the page for clarity and speed. No clutter.</p>
+            </div>
+          </div>
+
+          <div class="card step">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Publish</h3>
+              <p>We deploy it. You own the files and can move it anytime.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- FIT -->
     <section class="section" id="fit">
-      <h2>Who it’s for</h2>
-
-      <div class="grid-2">
+      <div class="wrap grid-2">
         <div class="card">
-          <img class="card-decor" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
-          <h3>Best fit</h3>
-          <ul>
-            <li>Local services: contractors, plumbing, landscaping, trades</li>
-            <li>Creators: writers, artists, independent projects</li>
-            <li>Small brands that need credibility + contact</li>
+          <h2>A good fit if you</h2>
+          <ul class="bullets">
+            <li>Need a clean professional presence</li>
+            <li>Want people to understand you fast</li>
+            <li>Prefer simple sites that load quickly</li>
           </ul>
         </div>
 
         <div class="card">
-          <img class="card-decor left low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>Not ideal</h3>
-          <ul>
-            <li>Huge multi-page sites with complex navigation</li>
-            <li>Heavy apps, logins, dashboards, portals</li>
-            <li>Big e-commerce catalogs</li>
+          <h2>Not a good fit if you</h2>
+          <ul class="bullets">
+            <li>Need a large multi-page website</li>
+            <li>Need logins, dashboards, portals</li>
+            <li>Need big e-commerce catalogs</li>
           </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="section" id="process">
-      <h2>How it works</h2>
-
-      <div class="grid-2">
-        <div class="card">
-          <img class="card-decor" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>1) Intake</h3>
-          <p>We get your essentials: what you do, what you offer, who it’s for, proof of credibility, contact method.</p>
-        </div>
-
-        <div class="card">
-          <img class="card-decor low" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
-          <h3>2) Build</h3>
-          <p>We build the page, structure the copy for clarity, and add proof points so a stranger can understand you fast.</p>
-        </div>
-
-        <div class="card">
-          <img class="card-decor left" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
-          <h3>3) Review</h3>
-          <p>You review and request adjustments. We tighten until it reads clean and feels trustworthy.</p>
-        </div>
-
-        <div class="card">
-          <img class="card-decor left low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>4) Deploy</h3>
-          <p>We publish it on a cheap hosting setup. You own the files and can move it any time.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="section" id="pricing">
-      <h2>Pricing</h2>
-
-      <div class="grid-2">
-        <div class="card">
-          <img class="card-decor" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>One-page build</h3>
-          <p class="muted">Simple and complete.</p>
-          <p>Includes structure, copy tightening, mobile-first layout, and deployment help.</p>
-        </div>
-
-        <div class="card">
-          <img class="card-decor low" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
-          <h3>Rework</h3>
-          <p class="muted">Fix what’s there.</p>
-          <p>We reorganize, simplify, and tighten the message without rebuilding from scratch.</p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px;">
-        <img class="card-decor left low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-        <h3>Notes</h3>
-        <p>Hosting is cheap. You can host on GitHub Pages or similar. One pass for clarity/corrections is included. Additional changes can be scoped if needed.</p>
-      </div>
-    </section>
-
-    <!-- EXAMPLES -->
-    <section class="section examples" id="examples">
-      <h2>Examples</h2>
-      <p class="muted">Two real examples. Clear, simple, finished.</p>
-
-      <div class="grid-2" style="margin-top:14px;">
-
-        <a class="card ex-card" href="https://eliasmarrow.org/">
-          <div class="ex-head">
-            <h3>Elias Marrow</h3>
-            <p class="muted">Author site / essays.</p>
-          </div>
-          <span class="ex-link">View example →</span>
-        </a>
-
-        <a class="card ex-card" href="/proximity-design/">
-          <div class="ex-head">
-            <h3>Proximity Landscape Design</h3>
-            <p class="muted">Service landing page.</p>
-          </div>
-          <span class="ex-link">View example →</span>
-        </a>
-
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="section" id="contact">
-      <h2>Contact</h2>
+      <div class="wrap">
+        <div class="card start">
+          <h2>Contact</h2>
+          <p class="muted">Send what you do and what you need. We’ll reply with next steps.</p>
 
-      <div class="grid-2">
-        <div class="card">
-          <img class="card-decor" src="/clearframe/assets/img/decor-feather.png" alt="" aria-hidden="true" />
-          <h3>Get a site</h3>
-          <p>Send what you do, your name/brand, and how people should contact you. We’ll reply with next steps.</p>
-        </div>
+          <div class="start-actions">
+            <a class="btn primary"
+               href="mailto:paynottamichael@gmail.com?subject=Clearframe%20Website%20Request">
+              Email a request
+            </a>
+            <a class="btn"
+               href="mailto:paynottamichael@gmail.com?subject=Clearframe%20Website%20Request">
+              paynottamichael@gmail.com
+            </a>
+          </div>
 
-        <div class="card">
-          <img class="card-decor low" src="/clearframe/assets/img/decor-grid.png" alt="" aria-hidden="true" />
-          <h3>Email</h3>
-          <p><a href="mailto:paynottamichael@gmail.com">paynottamichael@gmail.com</a></p>
+          <p class="small">Clearframe builds simple, fast sites built around clarity.</p>
         </div>
       </div>
     </section>
-
-    <div class="footer">
-      <p class="muted">© Clearframe</p>
-    </div>
   </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <img src="/clearframe/assets/img/clearframe-logo.png" class="footer-icon" alt="" />
+        <div>
+          <div class="footer-title">Clearframe</div>
+          <div class="footer-sub">Fast, clean websites built to be understood.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
