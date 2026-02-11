@@ -18,27 +18,15 @@ body{
   line-height: 1.5;
 }
 
-/* Large colored icon watermark behind the whole page */
-body::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  background-image: url("./assets/proximity-icon.png");
-  background-repeat: no-repeat;
-  background-position: right -180px top 110px;
-  background-size: 820px auto;
-  opacity: 0.10;             /* controls how loud the color watermark is */
-  pointer-events: none;
-  z-index: -1;
-}
+/* ✅ Removed the big ghosted icon (was body::before) */
 
-/* Soft top-left wash so it doesn't feel empty */
+/* Soft background wash only */
 body::after{
   content:"";
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(900px 420px at 15% 10%, rgba(31,107,58,0.08), transparent 60%),
+    radial-gradient(900px 420px at 15% 10%, rgba(31,107,58,0.07), transparent 60%),
     radial-gradient(700px 360px at 70% 0%, rgba(11,79,120,0.06), transparent 60%);
   pointer-events: none;
   z-index: -1;
@@ -226,35 +214,34 @@ p{ margin: 0 0 10px 0; }
   font-weight: 800;
   font-size: 14px;
   text-decoration:none !important;
+  background: rgba(255,255,255,0.92);
+  box-shadow: var(--shadow2);
+  color: rgba(11,19,32,0.92);
 }
 
 .btn.primary{
   background: #0b1320;
   color:#fff;
   border-color: rgba(0,0,0,0.20);
-  box-shadow: var(--shadow2);
 }
 
-.btn.primary:hover{ opacity:0.92; }
+.btn:hover{ opacity:0.93; }
 
 /* Hero right card */
 .hero-card{
   position: relative;
   overflow: hidden;
+  min-height: 240px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .hero-card-top{
   display:flex;
   gap: 12px;
   align-items: center;
-}
-
-.hero-icon{
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: #fff;
 }
 
 .hero-card-title{
@@ -267,15 +254,17 @@ p{ margin: 0 0 10px 0; }
   margin-top: 2px;
 }
 
-.hero-card-watermark{
-  position: absolute;
-  inset: 0;
-  background-image: url("./assets/proximity-icon.png");
-  background-repeat: no-repeat;
-  background-position: right -40px bottom -40px;
-  background-size: 360px auto;
-  opacity: 0.14; /* watermark inside the hero card */
-  pointer-events: none;
+/* ✅ Centered full-color icon */
+.hero-icon-center{
+  display:grid;
+  place-items:center;
+  padding: 10px 0 4px 0;
+}
+
+.hero-icon-center img{
+  width: min(280px, 70%);
+  height: auto;
+  display:block;
 }
 
 /* Examples */
@@ -307,6 +296,19 @@ p{ margin: 0 0 10px 0; }
   width:100%;
   height: 260px;
   object-fit: cover;
+}
+
+/* clickable image */
+.shot-link{
+  display:block;
+  cursor: zoom-in;
+  text-decoration:none;
+  color: inherit;
+}
+
+.shot-link:focus{
+  outline: 3px solid rgba(31,107,58,0.25);
+  outline-offset: 3px;
 }
 
 .tag{
@@ -403,11 +405,10 @@ p{ margin: 0 0 10px 0; }
   .grid-2{ grid-template-columns: 1fr; }
   .steps{ grid-template-columns: 1fr; }
   .examples-grid{ grid-template-columns: 1fr; }
-  body::before{ background-position: right -240px top 140px; background-size: 760px auto; }
 }
 
 @media (max-width: 560px){
   .pair{ grid-template-columns: 1fr; }
   .shot img{ height: 230px; }
-  body::before{ background-position: right -280px top 120px; background-size: 680px auto; }
+  .hero-icon-center img{ width: min(260px, 80%); }
 }
