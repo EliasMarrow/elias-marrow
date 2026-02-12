@@ -29,7 +29,7 @@ body{
   background:var(--bg);
 }
 
-/* IMPORTANT: no global image background. Each page sets its own. */
+/* No global image background */
 body::before,
 body::after{
   content:"";
@@ -66,13 +66,11 @@ body.page-home::before{
     linear-gradient(to bottom, #f8fafc, #eef2f6);
 }
 
+/* remove global watermark; we put it behind the brand block instead */
 body.page-home::after{
   z-index:-1;
   background:
-    radial-gradient(600px 600px at 50% 38%, rgba(15,23,42,0.05), transparent 70%),
-    url("./assets/clarity-logo.png") center / 560px auto no-repeat;
-  opacity:0.06;
-  filter: grayscale(1) contrast(1.05);
+    radial-gradient(600px 600px at 50% 38%, rgba(15,23,42,0.05), transparent 70%);
 }
 
 /* =======================
@@ -153,6 +151,28 @@ body.page-author .brand .sigil{
   font-size:14px;
   color:var(--muted);
   max-width:60ch;
+}
+
+/* ✅ Watermark behind the brand block (HOME only) */
+body.page-home .brandmark{
+  position:relative;
+  padding:10px 12px;
+  border-radius:14px;
+}
+
+body.page-home .brandmark::before{
+  content:"";
+  position:absolute;
+  inset:-14px -18px -14px -18px;
+  background: url("./assets/clarity-logo.png") left center / 280px auto no-repeat;
+  opacity:0.12;                 /* increase visibility */
+  filter: grayscale(1) contrast(1.2);
+  pointer-events:none;
+}
+
+body.page-home .brandmark > *{
+  position:relative;
+  z-index:1;
 }
 
 /* Nav pills */
