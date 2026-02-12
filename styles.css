@@ -86,40 +86,42 @@ a:hover{ text-decoration:underline; }
   padding:28px 18px 64px;
 }
 
-/* HOME: center the whole stack vertically (but allow scroll if long) */
+/* HOME: center the whole stack vertically + horizontally */
 body.page-home .container{
   min-height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
+  align-items:center;
 }
 
-/* HUB brand block */
+/* HUB brand block (logo + tagline) */
 body.page-home .hub-brand{
-  margin: 0 auto 12px;
+  margin: 0 auto 18px;
   text-align:center;
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:10px;
+  gap:14px;
 }
 
-/* HOME logo size */
+/* HOME logo size — place it in the “big X” space */
 body.page-home .hub-logo{
-  height:170px;   /* BIG */
+  height:260px;            /* BIG */
   width:auto;
   display:block;
 }
 
+/* Tagline under logo */
 body.page-home .hub-tagline{
   font-size:14px;
   color: var(--muted);
-  max-width: 70ch;
+  max-width: 60ch;
 }
 
-/* make the hero the first “content” block under centered brand */
+/* Hero card should sit directly under the logo */
 body.page-home .hub-hero{
-  margin-top:18px;
+  margin-top:0;
 }
 
 /* =======================
@@ -549,7 +551,8 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 @media (max-width:560px){
   h1{ font-size:30px; }
-  body.page-home .hub-logo{ height:120px; }
+  body.page-home .hub-logo{ height:170px; } /* keep logo readable on mobile */
+  body.page-home .container{ padding:22px 14px 44px; }
   .panel{ padding:18px; }
   .article{ padding:20px 18px; }
   .topbar{ align-items:flex-start; }
