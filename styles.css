@@ -2,13 +2,14 @@
   --radius:18px;
   --max:920px;
 
-  /* Defaults for author/dark */
+  /* Defaults (dark) — used by author + legacy pages */
   --bg:#121417;
   --ink:#e8edf6;
   --muted:#a9b4c6;
   --line:rgba(232,237,246,0.14);
 
   --panel:rgba(18,20,23,0.62);
+  --panel-soft:rgba(18,20,23,0.48);
   --card:rgba(18,20,23,0.40);
 
   --shadow:0 16px 40px rgba(0,0,0,0.45);
@@ -29,7 +30,7 @@ body{
   background:var(--bg);
 }
 
-/* No global image background */
+/* No global background imagery */
 body::before,
 body::after{
   content:"";
@@ -41,54 +42,31 @@ body::after{
 }
 
 /* =======================
-   HOME (LIGHT) THEME
+   HOME (CLEAN WHITE)
    ======================= */
 body.page-home{
-  --bg:#f4f6f9;
+  --bg:#ffffff;
   --ink:#0f172a;
-  --muted:#475569;
+  --muted:#64748b;
   --line:rgba(15,23,42,0.12);
 
-  --panel:rgba(255,255,255,0.88);
-  --card:rgba(255,255,255,0.92);
+  --panel:#ffffff;
+  --panel-soft:#ffffff;
+  --card:#ffffff;
 
-  --shadow:0 18px 44px rgba(15,23,42,0.10);
+  --shadow:0 10px 24px rgba(15,23,42,0.06);
 
   --link:#0f172a;
   --pill-bg:rgba(15,23,42,0.04);
   --pill-hover:rgba(15,23,42,0.07);
 }
 
-body.page-home .brandmark::before{
-  content:"";
-  position:absolute;
-  inset:-16px -18px -16px -18px;
-  background: url("./assets/clarity-logo.png") left center / 280px auto no-repeat;
-  opacity:0.85;        /* strong but not overwhelming */
-  filter:none;         /* full color */
-  pointer-events:none;
-}
-
-
-/* remove global watermark; we put it behind the brand block instead */
-body.page-home::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-1;
-  pointer-events:none;
-
-  background:
-    radial-gradient(800px 600px at 50% 40%, rgba(0,0,0,0.06), transparent 70%),
-    url("./assets/clarity-logo.png") center 42% / 520px auto no-repeat;
-
-  opacity:0.95;     /* nearly full visibility */
-  filter: none;     /* full color */
-}
-
+/* absolutely no background image/gradient for home */
+body.page-home::before{ background:none; }
+body.page-home::after{ background:none; }
 
 /* =======================
-   AUTHOR (CANDLE) THEME
+   AUTHOR (CANDLE DARK)
    ======================= */
 body.page-author{
   --bg:#121417;
@@ -97,6 +75,7 @@ body.page-author{
   --line:rgba(232,237,246,0.14);
 
   --panel:rgba(18,20,23,0.62);
+  --panel-soft:rgba(18,20,23,0.48);
   --card:rgba(18,20,23,0.40);
 
   --shadow:0 16px 40px rgba(0,0,0,0.45);
@@ -120,11 +99,15 @@ body.page-author::after{
     radial-gradient(900px 600px at 50% 18%, transparent 38%, rgba(0,0,0,0.52) 100%);
 }
 
-/* Links */
+/* =======================
+   LINKS
+   ======================= */
 a{ color:var(--link); text-decoration:none; }
 a:hover{ text-decoration:underline; }
 
-/* Layout */
+/* =======================
+   LAYOUT
+   ======================= */
 .container{
   max-width:var(--max);
   margin:0 auto;
@@ -144,7 +127,7 @@ a:hover{ text-decoration:underline; }
 .brand{
   display:flex;
   flex-direction:column;
-  gap:6px;
+  gap:8px;
   min-width:220px;
 }
 
@@ -154,7 +137,7 @@ a:hover{ text-decoration:underline; }
   text-transform:uppercase;
   font-weight:700;
   font-size:12px;
-  color:rgba(15,23,42,0.62);
+  color:rgba(15,23,42,0.70);
 }
 
 body.page-author .brand .sigil{
@@ -165,28 +148,6 @@ body.page-author .brand .sigil{
   font-size:14px;
   color:var(--muted);
   max-width:60ch;
-}
-
-/* ✅ Watermark behind the brand block (HOME only) */
-body.page-home .brandmark{
-  position:relative;
-  padding:10px 12px;
-  border-radius:14px;
-}
-
-body.page-home .brandmark::before{
-  content:"";
-  position:absolute;
-  inset:-14px -18px -14px -18px;
-  background: url("./assets/clarity-logo.png") left center / 280px auto no-repeat;
-  opacity:0.12;                 /* increase visibility */
-  filter: grayscale(1) contrast(1.2);
-  pointer-events:none;
-}
-
-body.page-home .brandmark > *{
-  position:relative;
-  z-index:1;
 }
 
 /* Nav pills */
@@ -224,7 +185,7 @@ h2{ font-size:18px; }
 
 p{
   margin:0 0 14px;
-  color:rgba(15,23,42,0.82);
+  color:rgba(15,23,42,0.84);
 }
 body.page-author p{
   color:rgba(232,237,246,0.88);
@@ -317,7 +278,7 @@ body.page-author .btn.primary{
   border:1px solid var(--line);
   border-radius:16px;
   background:var(--card);
-  box-shadow: 0 10px 24px rgba(15,23,42,0.08);
+  box-shadow: 0 10px 24px rgba(15,23,42,0.06);
   text-decoration:none;
 }
 
@@ -363,6 +324,28 @@ body.page-author .path-desc{ color:rgba(232,237,246,0.78); }
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   font-size:13px;
 }
+
+/* Panels (used on author, essays, etc.) */
+.panel{
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--panel);
+  box-shadow: var(--shadow);
+}
+.panel.soft{
+  background:var(--panel-soft);
+  box-shadow:none;
+}
+
+.stack{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+
+ul{ margin:10px 0 0 18px; padding:0; }
+li{ margin:6px 0; }
 
 /* Footer */
 .footer{
