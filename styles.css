@@ -76,7 +76,7 @@ body.page-home::before{
 }
 body.page-home::after{ background:none; }
 
-/* HUB — centered brand header + nav row only */
+/* HUB — centered brand header */
 body.page-home .hub-topbar{
   padding-top:0;
   border-bottom:none;
@@ -92,11 +92,30 @@ body.page-home .hub-brand{
   gap:10px;
 }
 
-body.page-home .hub-brand .hub-logo{
-  height:110px;   /* A LOT bigger */
-  width:auto;
-  display:block;
+/* NEW: Embedded bracket wordmark */
+body.page-home .hub-wordmark{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  line-height:1;
+  margin: 4px 0 2px;
+}
 
+body.page-home .hub-wordmark .hub-word{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight:600;         /* semi-bold (B) */
+  font-size:72px;          /* big */
+  color: var(--ink);       /* #0f172a */
+  letter-spacing:0;        /* normal (A) */
+}
+
+body.page-home .hub-wordmark .hub-bracket{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight:500;         /* slightly thinner than word (B) */
+  font-size:96px;          /* taller than word */
+  color: var(--ink);
+  transform: translateY(-2px); /* optical alignment */
 }
 
 body.page-home .hub-tagline{
@@ -225,7 +244,7 @@ body.page-home .brand .sigil{
   max-width:60ch;
 }
 
-/* Optional hub logo image class (used in brand blocks elsewhere) */
+/* Optional hub logo image class (used elsewhere) */
 .hub-logo{
   height:42px;
   width:auto;
@@ -555,6 +574,8 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 @media (max-width:560px){
   h1{ font-size:30px; }
+  body.page-home .hub-wordmark .hub-word{ font-size:56px; }
+  body.page-home .hub-wordmark .hub-bracket{ font-size:74px; }
   .panel{ padding:18px; }
   .article{ padding:20px 18px; }
   .topbar{ align-items:flex-start; }
