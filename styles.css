@@ -96,7 +96,7 @@ body.page-home .container{
 
 /* HUB brand block */
 body.page-home .hub-brand{
-  margin: 0 auto 12px;
+  margin: 0 auto 14px;
   text-align:center;
   display:flex;
   flex-direction:column;
@@ -104,15 +104,16 @@ body.page-home .hub-brand{
   gap:10px;
 }
 
-/* HOME logo: stays in the “big X” zone and never overflows */
+/* ✅ FIX: lock logo to the center column and prevent overflow/right-drift */
 body.page-home .hub-logo{
   display:block;
-  width:min(760px, 92%);
-  height:auto;
-  max-height:160px;    /* keeps it from swallowing the hero */
-  margin:0 auto;
+  width: min(560px, 86vw);  /* responsive, never wider than the page */
+  max-width: 560px;
+  height:auto;              /* preserve aspect */
+  margin: 0 auto;           /* hard center */
 }
 
+/* Tagline under logo */
 body.page-home .hub-tagline{
   font-size:14px;
   color: var(--muted);
@@ -158,6 +159,7 @@ body.page-author::after{
 
 /* =======================
    DEFAULT for other pages (essays/novels/about)
+   Subtle dark gradient, no candle
    ======================= */
 body:not(.page-home):not(.page-author):not(.page-essays)::before{
   background:
@@ -366,7 +368,7 @@ body.page-home .btn.primary{
   text-decoration:none;
 }
 body.page-home .path-card{
-  box-shadow: 0 10px 24px rgba(15 Fuj? rgba(15,23,42,0.06);
+  box-shadow: 0 10px 24px rgba(15,23,42,0.06);
 }
 
 .path-card:hover{
@@ -550,10 +552,13 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 @media (max-width:560px){
   h1{ font-size:30px; }
+
+  /* Keep logo big but safe on phones */
   body.page-home .hub-logo{
-    width:min(520px, 92%);
-    max-height:120px;
+    width: min(420px, 92vw);
+    max-width: 420px;
   }
+
   .panel{ padding:18px; }
   .article{ padding:20px 18px; }
   .topbar{ align-items:flex-start; }
