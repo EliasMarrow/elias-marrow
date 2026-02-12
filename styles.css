@@ -1,23 +1,21 @@
 :root{
-  /* Default (author / dark) */
+  --radius:18px;
+  --max:920px;
+
+  /* Defaults for author/dark */
   --bg:#121417;
   --ink:#e8edf6;
   --muted:#a9b4c6;
   --line:rgba(232,237,246,0.14);
 
   --panel:rgba(18,20,23,0.62);
-  --panel-soft:rgba(18,20,23,0.48);
   --card:rgba(18,20,23,0.40);
 
-  --radius:18px;
-  --max:920px;
   --shadow:0 16px 40px rgba(0,0,0,0.45);
 
   --link:#d7e6ff;
-  --link-strong:#d7e6ff;
-
-  --btn-bg:rgba(255,255,255,0.03);
-  --btn-hover:rgba(255,255,255,0.07);
+  --pill-bg:rgba(255,255,255,0.03);
+  --pill-hover:rgba(255,255,255,0.07);
 }
 
 *{ box-sizing:border-box; }
@@ -31,34 +29,37 @@ body{
   background:var(--bg);
 }
 
-/* =======================
-   BACKGROUNDS BY PAGE
-   ======================= */
+/* IMPORTANT: no global image background. Each page sets its own. */
+body::before,
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:none;
+}
 
-/* Hub: light, professional, watermark logo */
+/* =======================
+   HOME (LIGHT) THEME
+   ======================= */
 body.page-home{
   --bg:#f4f6f9;
-  --ink:#121826;
+  --ink:#0f172a;
   --muted:#475569;
   --line:rgba(15,23,42,0.12);
 
   --panel:rgba(255,255,255,0.88);
-  --panel-soft:rgba(255,255,255,0.70);
   --card:rgba(255,255,255,0.92);
 
   --shadow:0 18px 44px rgba(15,23,42,0.10);
 
   --link:#0f172a;
-  --link-strong:#0f172a;
-
-  --btn-bg:rgba(15,23,42,0.04);
-  --btn-hover:rgba(15,23,42,0.07);
+  --pill-bg:rgba(15,23,42,0.04);
+  --pill-hover:rgba(15,23,42,0.07);
 }
 
 body.page-home::before{
-  content:"";
-  position:fixed;
-  inset:0;
   z-index:-2;
   background:
     radial-gradient(900px 600px at 50% 10%, rgba(15,23,42,0.06), transparent 60%),
@@ -66,11 +67,7 @@ body.page-home::before{
 }
 
 body.page-home::after{
-  content:"";
-  position:fixed;
-  inset:0;
   z-index:-1;
-  pointer-events:none;
   background:
     radial-gradient(600px 600px at 50% 38%, rgba(15,23,42,0.05), transparent 70%),
     url("./assets/clarity-logo.png") center / 560px auto no-repeat;
@@ -78,11 +75,26 @@ body.page-home::after{
   filter: grayscale(1) contrast(1.05);
 }
 
-/* Author: candle (kept) */
+/* =======================
+   AUTHOR (CANDLE) THEME
+   ======================= */
+body.page-author{
+  --bg:#121417;
+  --ink:#e8edf6;
+  --muted:#a9b4c6;
+  --line:rgba(232,237,246,0.14);
+
+  --panel:rgba(18,20,23,0.62);
+  --card:rgba(18,20,23,0.40);
+
+  --shadow:0 16px 40px rgba(0,0,0,0.45);
+
+  --link:#d7e6ff;
+  --pill-bg:rgba(255,255,255,0.03);
+  --pill-hover:rgba(255,255,255,0.07);
+}
+
 body.page-author::before{
-  content:"";
-  position:fixed;
-  inset:0;
   z-index:-2;
   background:
     linear-gradient(to bottom, rgba(18,20,23,0.58), rgba(18,20,23,0.88)),
@@ -91,40 +103,9 @@ body.page-author::before{
 }
 
 body.page-author::after{
-  content:"";
-  position:fixed;
-  inset:0;
   z-index:-1;
-  pointer-events:none;
   background:
     radial-gradient(900px 600px at 50% 18%, transparent 38%, rgba(0,0,0,0.52) 100%);
-}
-
-/* If other pages don’t set a class, keep neutral dark (no image) */
-body:not(.page-home):not(.page-author)::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-2;
-  background:
-    radial-gradient(900px 600px at 50% 18%, rgba(255,255,255,0.06), transparent 60%),
-    linear-gradient(to bottom, rgba(18,20,23,0.34), rgba(18,20,23,0.78)),
-    linear-gradient(135deg,
-      rgba(120,140,255,0.12),
-      rgba(255,210,180,0.06),
-      rgba(120,255,210,0.05)
-    );
-  filter: contrast(1.02) brightness(1.06) saturate(1.06);
-}
-
-body:not(.page-home):not(.page-author)::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-1;
-  pointer-events:none;
-  background:
-    radial-gradient(900px 600px at 50% 18%, transparent 38%, rgba(0,0,0,0.40) 100%);
 }
 
 /* Links */
@@ -161,7 +142,7 @@ a:hover{ text-decoration:underline; }
   text-transform:uppercase;
   font-weight:700;
   font-size:12px;
-  color:rgba(0,0,0,0.62);
+  color:rgba(15,23,42,0.62);
 }
 
 body.page-author .brand .sigil{
@@ -174,7 +155,7 @@ body.page-author .brand .sigil{
   max-width:60ch;
 }
 
-/* Nav */
+/* Nav pills */
 .nav{
   display:flex;
   gap:10px;
@@ -188,13 +169,13 @@ body.page-author .brand .sigil{
   padding:8px 12px;
   border:1px solid var(--line);
   border-radius:999px;
-  background:var(--btn-bg);
+  background:var(--pill-bg);
   text-decoration:none;
   line-height:1;
 }
 
 .nav a:hover{
-  background:var(--btn-hover);
+  background:var(--pill-hover);
   text-decoration:none;
 }
 
@@ -209,7 +190,7 @@ h2{ font-size:18px; }
 
 p{
   margin:0 0 14px;
-  color:rgba(0,0,0,0.82);
+  color:rgba(15,23,42,0.82);
 }
 body.page-author p{
   color:rgba(232,237,246,0.88);
@@ -246,7 +227,6 @@ body.page-author .section-title{
   border:1px solid var(--line);
   border-radius:var(--radius);
   background:var(--panel);
-  backdrop-filter: blur(2px);
   box-shadow: var(--shadow);
   text-align:center;
 }
@@ -272,6 +252,7 @@ body.page-author .section-title{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   font-size:13px;
   line-height:1;
+  background:var(--pill-bg);
 }
 
 .btn.primary{
@@ -284,21 +265,8 @@ body.page-author .btn.primary{
   border-color: rgba(215,230,255,0.28);
 }
 
-.btn.primary:hover{
-  background:rgba(15,23,42,0.09);
-  text-decoration:none;
-}
-
-body.page-author .btn.primary:hover{
-  background:rgba(215,230,255,0.14);
-}
-
-.btn.ghost{
-  background:var(--btn-bg);
-}
-
-.btn.ghost:hover{
-  background:var(--btn-hover);
+.btn:hover{
+  background:var(--pill-hover);
   text-decoration:none;
 }
 
@@ -340,10 +308,7 @@ body.page-author .path-card:hover{
   color:rgba(15,23,42,0.60);
   margin-bottom:8px;
 }
-
-body.page-author .path-kicker{
-  color:rgba(232,237,246,0.68);
-}
+body.page-author .path-kicker{ color:rgba(232,237,246,0.68); }
 
 .path-title{
   font-size:16px;
@@ -351,48 +316,19 @@ body.page-author .path-kicker{
   margin-bottom:8px;
   color:rgba(15,23,42,0.92);
 }
-
-body.page-author .path-title{
-  color:rgba(232,237,246,0.92);
-}
+body.page-author .path-title{ color:rgba(232,237,246,0.92); }
 
 .path-desc{
   font-size:14px;
   color:rgba(15,23,42,0.72);
   margin-bottom:10px;
 }
-
-body.page-author .path-desc{
-  color:rgba(232,237,246,0.78);
-}
+body.page-author .path-desc{ color:rgba(232,237,246,0.78); }
 
 .path-link{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   font-size:13px;
-  color:var(--link-strong);
 }
-
-/* Panels */
-.panel{
-  padding:22px;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:var(--panel);
-  box-shadow: var(--shadow);
-}
-.panel.soft{
-  background:var(--panel-soft);
-  box-shadow:none;
-}
-
-.stack{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:14px;
-}
-
-ul{ margin:10px 0 0 18px; padding:0; }
-li{ margin:6px 0; }
 
 /* Footer */
 .footer{
@@ -418,7 +354,6 @@ li{ margin:6px 0; }
 
 @media (max-width:560px){
   h1{ font-size:30px; }
-  .panel{ padding:18px; }
   .topbar{ align-items:flex-start; }
   .nav{ justify-content:flex-start; }
 }
