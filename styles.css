@@ -93,9 +93,10 @@ body.page-home .hub-brand{
 }
 
 body.page-home .hub-brand .hub-logo{
-  height:56px; /* bigger + clear */
+  height:110px;   /* A LOT bigger */
   width:auto;
   display:block;
+
 }
 
 body.page-home .hub-tagline{
