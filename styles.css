@@ -1,8 +1,8 @@
 :root{
   --radius:18px;
-  --max:920px;
+  --max:960px;
 
-  /* Defaults (dark) — used by author + legacy pages */
+  /* Defaults (dark) */
   --bg:#121417;
   --ink:#e8edf6;
   --muted:#a9b4c6;
@@ -30,9 +30,8 @@ body{
   background:var(--bg);
 }
 
-/* No global background imagery */
-body::before,
-body::after{
+/* Background system */
+body::before{
   content:"";
   position:fixed;
   inset:0;
@@ -40,33 +39,45 @@ body::after{
   pointer-events:none;
   background:none;
 }
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:none;
+}
 
 /* =======================
-   HOME (CLEAN WHITE)
+   HOME (HUB) — light, structured
+   No images. No watermark.
    ======================= */
 body.page-home{
-  --bg:#ffffff;
+  --bg:#f6f7fb;
   --ink:#0f172a;
-  --muted:#64748b;
+  --muted:#52637a;
   --line:rgba(15,23,42,0.12);
 
   --panel:#ffffff;
   --panel-soft:#ffffff;
   --card:#ffffff;
 
-  --shadow:0 10px 24px rgba(15,23,42,0.06);
+  --shadow:0 14px 34px rgba(15,23,42,0.08);
 
   --link:#0f172a;
-  --pill-bg:rgba(15,23,42,0.04);
-  --pill-hover:rgba(15,23,42,0.07);
+  --pill-bg:rgba(15,23,42,0.05);
+  --pill-hover:rgba(15,23,42,0.08);
 }
 
-/* absolutely no background image/gradient for home */
-body.page-home::before{ background:none; }
+body.page-home::before{
+  background:
+    radial-gradient(900px 600px at 50% 10%, rgba(15,23,42,0.06), transparent 62%),
+    linear-gradient(to bottom, #fbfcff, #f3f5fb);
+}
 body.page-home::after{ background:none; }
 
 /* =======================
-   AUTHOR (CANDLE DARK)
+   AUTHOR — candle dark
    ======================= */
 body.page-author{
   --bg:#121417;
@@ -86,7 +97,6 @@ body.page-author{
 }
 
 body.page-author::before{
-  z-index:-2;
   background:
     linear-gradient(to bottom, rgba(18,20,23,0.58), rgba(18,20,23,0.88)),
     url("./assets/candle.jpg") center / cover no-repeat;
@@ -94,20 +104,52 @@ body.page-author::before{
 }
 
 body.page-author::after{
-  z-index:-1;
   background:
     radial-gradient(900px 600px at 50% 18%, transparent 38%, rgba(0,0,0,0.52) 100%);
 }
 
 /* =======================
-   LINKS
+   DEFAULT for other pages (essays/novels/about)
+   Subtle dark gradient, no candle
    ======================= */
+body:not(.page-home):not(.page-author):not(.page-essays)::before{
+  background:
+    radial-gradient(900px 600px at 50% 18%, rgba(255,255,255,0.06), transparent 60%),
+    linear-gradient(to bottom, rgba(18,20,23,0.34), rgba(18,20,23,0.78)),
+    linear-gradient(135deg,
+      rgba(120,140,255,0.12),
+      rgba(255,210,180,0.06),
+      rgba(120,255,210,0.05)
+    );
+  filter: contrast(1.02) brightness(1.06) saturate(1.06);
+}
+body:not(.page-home):not(.page-author):not(.page-essays)::after{
+  background:
+    radial-gradient(900px 600px at 50% 18%, transparent 38%, rgba(0,0,0,0.40) 100%);
+}
+
+/* Essays alternate backdrop (kept from your earlier system) */
+body.page-essays::before{
+  background:
+    radial-gradient(900px 600px at 50% 18%, rgba(255,255,255,0.08), transparent 60%),
+    linear-gradient(to bottom, rgba(18,20,23,0.32), rgba(18,20,23,0.78)),
+    linear-gradient(135deg,
+      rgba(120,140,255,0.14),
+      rgba(255,210,180,0.08),
+      rgba(120,255,210,0.06)
+    );
+  filter: contrast(1.02) brightness(1.08) saturate(1.06);
+}
+body.page-essays::after{
+  background:
+    radial-gradient(900px 600px at 50% 18%, transparent 38%, rgba(0,0,0,0.40) 100%);
+}
+
+/* Links */
 a{ color:var(--link); text-decoration:none; }
 a:hover{ text-decoration:underline; }
 
-/* =======================
-   LAYOUT
-   ======================= */
+/* Layout */
 .container{
   max-width:var(--max);
   margin:0 auto;
@@ -137,11 +179,10 @@ a:hover{ text-decoration:underline; }
   text-transform:uppercase;
   font-weight:700;
   font-size:12px;
-  color:rgba(15,23,42,0.70);
-}
-
-body.page-author .brand .sigil{
   color:rgba(232,237,246,0.86);
+}
+body.page-home .brand .sigil{
+  color:rgba(15,23,42,0.70);
 }
 
 .brand .motto{
@@ -150,7 +191,14 @@ body.page-author .brand .sigil{
   max-width:60ch;
 }
 
-/* Nav pills */
+/* Optional hub logo image class */
+.hub-logo{
+  height:42px;
+  width:auto;
+  display:block;
+}
+
+/* Nav */
 .nav{
   display:flex;
   gap:10px;
@@ -185,10 +233,10 @@ h2{ font-size:18px; }
 
 p{
   margin:0 0 14px;
-  color:rgba(15,23,42,0.84);
-}
-body.page-author p{
   color:rgba(232,237,246,0.88);
+}
+body.page-home p{
+  color:rgba(15,23,42,0.84);
 }
 
 .muted{ color:var(--muted); }
@@ -208,10 +256,10 @@ body.page-author p{
   letter-spacing:0.16em;
   text-transform:uppercase;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  color:rgba(15,23,42,0.62);
-}
-body.page-author .section-title{
   color:rgba(232,237,246,0.74);
+}
+body.page-home .section-title{
+  color:rgba(15,23,42,0.62);
 }
 
 /* Hero */
@@ -251,13 +299,12 @@ body.page-author .section-title{
 }
 
 .btn.primary{
-  background:rgba(15,23,42,0.06);
-  border-color: rgba(15,23,42,0.18);
-}
-
-body.page-author .btn.primary{
   background:rgba(215,230,255,0.10);
   border-color: rgba(215,230,255,0.28);
+}
+body.page-home .btn.primary{
+  background:rgba(15,23,42,0.06);
+  border-color: rgba(15,23,42,0.18);
 }
 
 .btn:hover{
@@ -278,21 +325,20 @@ body.page-author .btn.primary{
   border:1px solid var(--line);
   border-radius:16px;
   background:var(--card);
-  box-shadow: 0 10px 24px rgba(15,23,42,0.06);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
   text-decoration:none;
 }
-
-body.page-author .path-card{
-  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+body.page-home .path-card{
+  box-shadow: 0 10px 24px rgba(15,23,42,0.06);
 }
 
 .path-card:hover{
-  border-color: rgba(15,23,42,0.22);
+  border-color: rgba(232,237,246,0.22);
   text-decoration:none;
 }
-
-body.page-author .path-card:hover{
-  border-color: rgba(232,237,246,0.22);
+body.page-home .path-card:hover{
+  border-color: rgba(15,23,42,0.22);
 }
 
 .path-kicker{
@@ -300,32 +346,132 @@ body.page-author .path-card:hover{
   font-size:12px;
   letter-spacing:0.14em;
   text-transform:uppercase;
-  color:rgba(15,23,42,0.60);
+  color:rgba(232,237,246,0.68);
   margin-bottom:8px;
 }
-body.page-author .path-kicker{ color:rgba(232,237,246,0.68); }
+body.page-home .path-kicker{ color:rgba(15,23,42,0.60); }
 
 .path-title{
   font-size:16px;
   font-weight:700;
   margin-bottom:8px;
-  color:rgba(15,23,42,0.92);
+  color:rgba(232,237,246,0.92);
 }
-body.page-author .path-title{ color:rgba(232,237,246,0.92); }
+body.page-home .path-title{ color:rgba(15,23,42,0.92); }
 
 .path-desc{
   font-size:14px;
-  color:rgba(15,23,42,0.72);
+  color:rgba(232,237,246,0.78);
   margin-bottom:10px;
 }
-body.page-author .path-desc{ color:rgba(232,237,246,0.78); }
+body.page-home .path-desc{ color:rgba(15,23,42,0.72); }
 
 .path-link{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   font-size:13px;
 }
 
-/* Panels (used on author, essays, etc.) */
+/* ======= RESTORED SYSTEM: cards/grids/ill-cards ======= */
+
+/* Simple list cards */
+.cards{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin-top:14px;
+}
+
+.card{
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--card);
+  backdrop-filter: blur(2px);
+}
+
+.card .title{ margin:0; font-size:16px; font-weight:700; }
+
+.card .meta{
+  margin-top:4px;
+  font-size:13px;
+  color:var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+.card .desc{ margin-top:10px; color:rgba(232,237,246,0.80); }
+
+/* Two-column grid (novels etc.) */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:12px;
+  margin-top:14px;
+}
+
+/* Illustration-backed cards (covers) using --bgimg */
+.ill-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:14px;
+  min-height:170px;
+  background:rgba(18,20,23,0.34);
+  backdrop-filter: blur(2px);
+}
+
+.ill-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to bottom, rgba(18,20,23,0.30), rgba(18,20,23,0.90)),
+    var(--bgimg) center / cover no-repeat;
+  filter: contrast(1.06) brightness(0.94);
+}
+
+.ill-card > *{ position:relative; z-index:1; }
+
+.ill-card a{
+  display:block;
+  height:100%;
+  padding:14px 16px;
+  text-decoration:none;
+  color:var(--ink);
+}
+
+.ill-title{ margin:0; font-size:16px; font-weight:700; }
+
+.ill-meta{
+  margin-top:6px;
+  font-size:13px;
+  color:rgba(232,237,246,0.74);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+.ill-desc{ margin-top:10px; color:rgba(232,237,246,0.80); }
+
+.ill-card:hover{ border-color: rgba(232,237,246,0.22); }
+.ill-card:hover::before{ filter: contrast(1.08) brightness(0.99); }
+
+/* Article pages */
+.article{
+  margin-top:20px;
+  padding:26px 24px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--panel);
+  backdrop-filter: blur(2px);
+  box-shadow:var(--shadow);
+}
+
+.byline{
+  margin:0 0 18px;
+  font-size:13px;
+  color:var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+/* Panels */
 .panel{
   padding:22px;
   border:1px solid var(--line);
@@ -345,7 +491,7 @@ body.page-author .path-desc{ color:rgba(232,237,246,0.78); }
 }
 
 ul{ margin:10px 0 0 18px; padding:0; }
-li{ margin:6px 0; }
+li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 /* Footer */
 .footer{
@@ -369,8 +515,14 @@ li{ margin:6px 0; }
   .hero-cta{ justify-content:flex-start; }
 }
 
+@media (max-width:700px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
 @media (max-width:560px){
   h1{ font-size:30px; }
+  .panel{ padding:18px; }
+  .article{ padding:20px 18px; }
   .topbar{ align-items:flex-start; }
   .nav{ justify-content:flex-start; }
 }
