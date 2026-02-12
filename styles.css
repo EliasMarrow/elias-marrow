@@ -86,49 +86,42 @@ a:hover{ text-decoration:underline; }
   padding:28px 18px 64px;
 }
 
-/* HOME: center the whole stack vertically (but allow scroll if long) */
+/* HOME: DO NOT vertically center the whole page */
 body.page-home .container{
   min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-
-  /* tighter + more intentional vertical rhythm */
-  padding-top:44px;
-  padding-bottom:44px;
+  display:block;                 /* was flex */
+  padding-top:clamp(56px, 9vh, 140px);
+  padding-bottom:64px;
 }
 
 /* HUB brand block */
 body.page-home .hub-brand{
-  margin: 0 auto 14px;
+  margin: 0 auto 18px;
   text-align:center;
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:10px;
-
-  /* pulls the logo into the “big X” zone */
-  transform: translateY(6px);
 }
 
-/* HOME logo size (bigger + stable) */
+/* HOME logo size + placement (correct “X” zone) */
 body.page-home .hub-logo{
-  height:240px;
-  width:auto;
   display:block;
+  margin:0 auto;
+  width:min(620px, 92%);
+  height:auto;
 }
 
-/* Tagline */
+/* tagline */
 body.page-home .hub-tagline{
   font-size:14px;
   color: var(--muted);
   max-width: 70ch;
-  margin-top:-2px;
 }
 
 /* make the hero the first “content” block under centered brand */
 body.page-home .hub-hero{
-  margin-top:12px;
+  margin-top:10px;
 }
 
 /* =======================
@@ -293,7 +286,7 @@ body.page-home p{
 }
 
 /* Sections */
-.section{ margin-top:22px; } /* tighter */
+.section{ margin-top:26px; }
 .section-title{
   margin:0 0 12px;
   font-size:13px;
@@ -308,8 +301,8 @@ body.page-home .section-title{
 
 /* Hero */
 .hero{
-  margin:16px auto 0; /* was 26 */
-  padding:26px 24px;  /* slightly roomier */
+  margin:26px auto 0;
+  padding:24px 22px;
   max-width:840px;
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -532,7 +525,7 @@ ul{ margin:10px 0 0 18px; padding:0; }
 li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 .footer{
-  margin-top:22px; /* tighter */
+  margin-top:30px;
   padding-top:16px;
   border-top:1px solid var(--line);
   display:flex;
@@ -558,115 +551,9 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 @media (max-width:560px){
   h1{ font-size:30px; }
-
-  /* logo still strong on mobile, but not insane */
-  body.page-home .hub-logo{ height:150px; }
-
+  body.page-home .hub-logo{ width:min(420px, 92%); }
   .panel{ padding:18px; }
   .article{ padding:20px 18px; }
   .topbar{ align-items:flex-start; }
   .nav{ justify-content:flex-start; }
-}
-/* =========================================
-   HOME LOGO POSITION FIX (big X zone)
-   Paste at END of styles.css
-   ========================================= */
-
-/* Make the page-home container a positioning context */
-body.page-home .container{
-  position:relative;
-}
-
-/* Pull the logo out of the flow and place it in the top “X” zone */
-body.page-home .hub-brand{
-  position:absolute;
-  top:34px;                /* move up/down */
-  left:50%;
-  transform:translateX(-50%);
-  margin:0;
-  width:100%;
-  pointer-events:none;     /* prevents weird click selection */
-}
-
-/* Keep the logo centered and clean */
-body.page-home .hub-brand .hub-logo{
-  display:block;
-  margin:0 auto;
-  height:auto;
-  width:min(520px, 86%);   /* scale to the “X” zone */
-}
-
-/* Keep tagline centered under logo */
-body.page-home .hub-brand .hub-tagline{
-  margin:10px auto 0;
-  text-align:center;
-}
-
-/* Add space so the hero card starts below the absolute logo block */
-body.page-home .hub-hero{
-  margin-top:150px;        /* creates the space the logo occupies */
-}
-
-/* Mobile tuning */
-@media (max-width:560px){
-  body.page-home .hub-brand{
-    top:22px;
-  }
-
-  body.page-home .hub-brand .hub-logo{
-    width:min(420px, 92%);
-  }
-
-  body.page-home .hub-hero{
-    margin-top:120px;
-  }
-}
-/* =========================================
-   HOME LOGO: FORCE INTO TOP "X" ZONE
-   Paste at END of styles.css
-   ========================================= */
-
-/* Stop the home container from vertically centering the whole stack */
-body.page-home .container{
-  min-height: 100vh !important;
-  display: block !important;
-  padding-top: 0 !important;
-  position: relative !important;
-}
-
-/* Put the logo block in the "X" zone using viewport space */
-body.page-home .hub-brand{
-  position: relative !important;
-  margin: 0 auto !important;
-  padding-top: clamp(18px, 6vh, 70px) !important;   /* creates that top header zone */
-  text-align: center !important;
-}
-
-/* Make the logo much larger + centered */
-body.page-home .hub-logo{
-  display: block !important;
-  margin: 0 auto !important;
-  width: min(640px, 92vw) !important;              /* BIG, fits the X space */
-  height: auto !important;
-}
-
-/* Tighten tagline spacing */
-body.page-home .hub-tagline{
-  margin-top: 10px !important;
-  text-align: center !important;
-}
-
-/* Pull the hero card upward so the spacing matches your target */
-body.page-home .hub-hero{
-  margin-top: clamp(18px, 4vh, 38px) !important;   /* keeps it close under logo */
-}
-
-/* Mobile tune */
-@media (max-width:560px){
-  body.page-home .hub-brand{
-    padding-top: 24px !important;
-  }
-  body.page-home .hub-logo{
-    width: min(520px, 94vw) !important;
-  }
 }
