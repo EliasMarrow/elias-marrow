@@ -86,42 +86,49 @@ a:hover{ text-decoration:underline; }
   padding:28px 18px 64px;
 }
 
-/* HOME: DO NOT vertically center the whole page */
+/* HOME: top spacing like your “good” screenshot (not full vertical center) */
 body.page-home .container{
   min-height:100vh;
-  display:block;                 /* was flex */
+  display:block;
   padding-top:clamp(56px, 9vh, 140px);
   padding-bottom:64px;
 }
 
-/* HUB brand block */
-body.page-home .hub-brand{
-  margin: 0 auto 18px;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:10px;
+/* =======================
+   HOME HERO LOGO FIX
+   This is the missing piece.
+   Centers the logo in the “X” zone and prevents overflow.
+   ======================= */
+body.page-home .hub-hero-with-logo{
+  position:relative;
+  overflow:hidden;
+  /* reserve space for the big logo so content starts below it */
+  padding-top:clamp(150px, 20vh, 230px);
 }
 
-/* HOME logo size + placement (correct “X” zone) */
-body.page-home .hub-logo{
-  display:block;
-  margin:0 auto;
-  width:min(620px, 92%);
+/* logo container (absolute, centered) */
+body.page-home .hub-hero-with-logo .hub-hero-logo{
+  position:absolute;
+  top:clamp(18px, 4vh, 40px);
+  left:50%;
+  transform:translateX(-50%);
+  width:min(720px, 92%);
+  pointer-events:none;
+}
+
+/* scale image cleanly */
+body.page-home .hub-hero-with-logo .hub-hero-logo img{
+  width:100%;
   height:auto;
+  display:block;
 }
 
-/* tagline */
-body.page-home .hub-tagline{
+/* tagline inside hero */
+body.page-home .hub-hero-with-logo .hub-tagline{
   font-size:14px;
   color: var(--muted);
   max-width: 70ch;
-}
-
-/* make the hero the first “content” block under centered brand */
-body.page-home .hub-hero{
-  margin-top:10px;
+  margin:0 auto 10px;
 }
 
 /* =======================
@@ -551,7 +558,15 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 @media (max-width:560px){
   h1{ font-size:30px; }
-  body.page-home .hub-logo{ width:min(420px, 92%); }
+
+  /* shrink hero logo a bit on small screens */
+  body.page-home .hub-hero-with-logo{
+    padding-top:clamp(120px, 18vh, 180px);
+  }
+  body.page-home .hub-hero-with-logo .hub-hero-logo{
+    width:min(520px, 92%);
+  }
+
   .panel{ padding:18px; }
   .article{ padding:20px 18px; }
   .topbar{ align-items:flex-start; }
