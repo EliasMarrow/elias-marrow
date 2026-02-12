@@ -621,3 +621,52 @@ body.page-home .hub-hero{
     margin-top:120px;
   }
 }
+/* =========================================
+   HOME LOGO: FORCE INTO TOP "X" ZONE
+   Paste at END of styles.css
+   ========================================= */
+
+/* Stop the home container from vertically centering the whole stack */
+body.page-home .container{
+  min-height: 100vh !important;
+  display: block !important;
+  padding-top: 0 !important;
+  position: relative !important;
+}
+
+/* Put the logo block in the "X" zone using viewport space */
+body.page-home .hub-brand{
+  position: relative !important;
+  margin: 0 auto !important;
+  padding-top: clamp(18px, 6vh, 70px) !important;   /* creates that top header zone */
+  text-align: center !important;
+}
+
+/* Make the logo much larger + centered */
+body.page-home .hub-logo{
+  display: block !important;
+  margin: 0 auto !important;
+  width: min(640px, 92vw) !important;              /* BIG, fits the X space */
+  height: auto !important;
+}
+
+/* Tighten tagline spacing */
+body.page-home .hub-tagline{
+  margin-top: 10px !important;
+  text-align: center !important;
+}
+
+/* Pull the hero card upward so the spacing matches your target */
+body.page-home .hub-hero{
+  margin-top: clamp(18px, 4vh, 38px) !important;   /* keeps it close under logo */
+}
+
+/* Mobile tune */
+@media (max-width:560px){
+  body.page-home .hub-brand{
+    padding-top: 24px !important;
+  }
+  body.page-home .hub-logo{
+    width: min(520px, 94vw) !important;
+  }
+}
