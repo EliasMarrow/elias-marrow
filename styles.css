@@ -50,7 +50,6 @@ body::after{
 
 /* =======================
    HOME (HUB) — light, structured
-   No images. No watermark.
    ======================= */
 body.page-home{
   --bg:#f6f7fb;
@@ -76,15 +75,28 @@ body.page-home::before{
 }
 body.page-home::after{ background:none; }
 
-/* HUB — centered brand header */
-body.page-home .hub-topbar{
-  padding-top:0;
-  border-bottom:none;
-  align-items:center;
+/* Links */
+a{ color:var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* Layout */
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:28px 18px 64px;
 }
 
+/* HOME: center the whole stack vertically (but allow scroll if long) */
+body.page-home .container{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* HUB brand block */
 body.page-home .hub-brand{
-  margin: 18px auto 10px;
+  margin: 0 auto 12px;
   text-align:center;
   display:flex;
   flex-direction:column;
@@ -92,30 +104,11 @@ body.page-home .hub-brand{
   gap:10px;
 }
 
-/* NEW: Embedded bracket wordmark */
-body.page-home .hub-wordmark{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:18px;
-  line-height:1;
-  margin: 4px 0 2px;
-}
-
-body.page-home .hub-wordmark .hub-word{
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  font-weight:600;         /* semi-bold (B) */
-  font-size:72px;          /* big */
-  color: var(--ink);       /* #0f172a */
-  letter-spacing:0;        /* normal (A) */
-}
-
-body.page-home .hub-wordmark .hub-bracket{
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  font-weight:500;         /* slightly thinner than word (B) */
-  font-size:96px;          /* taller than word */
-  color: var(--ink);
-  transform: translateY(-2px); /* optical alignment */
+/* HOME logo size */
+body.page-home .hub-logo{
+  height:170px;   /* BIG */
+  width:auto;
+  display:block;
 }
 
 body.page-home .hub-tagline{
@@ -181,7 +174,7 @@ body:not(.page-home):not(.page-author):not(.page-essays)::after{
     radial-gradient(900px 600px at 50% 18%, transparent 38%, rgba(0,0,0,0.40) 100%);
 }
 
-/* Essays alternate backdrop (kept from your earlier system) */
+/* Essays alternate backdrop */
 body.page-essays::before{
   background:
     radial-gradient(900px 600px at 50% 18%, rgba(255,255,255,0.08), transparent 60%),
@@ -196,17 +189,6 @@ body.page-essays::before{
 body.page-essays::after{
   background:
     radial-gradient(900px 600px at 50% 18%, transparent 38%, rgba(0,0,0,0.40) 100%);
-}
-
-/* Links */
-a{ color:var(--link); text-decoration:none; }
-a:hover{ text-decoration:underline; }
-
-/* Layout */
-.container{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:28px 18px 64px;
 }
 
 /* Header */
@@ -425,8 +407,6 @@ body.page-home .path-desc{ color:rgba(15,23,42,0.72); }
 }
 
 /* ======= RESTORED SYSTEM: cards/grids/ill-cards ======= */
-
-/* Simple list cards */
 .cards{
   display:grid;
   grid-template-columns:1fr;
@@ -453,7 +433,6 @@ body.page-home .path-desc{ color:rgba(15,23,42,0.72); }
 
 .card .desc{ margin-top:10px; color:rgba(232,237,246,0.80); }
 
-/* Two-column grid (novels etc.) */
 .grid{
   display:grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -461,7 +440,6 @@ body.page-home .path-desc{ color:rgba(15,23,42,0.72); }
   margin-top:14px;
 }
 
-/* Illustration-backed cards (covers) using --bgimg */
 .ill-card{
   position:relative;
   overflow:hidden;
@@ -506,7 +484,6 @@ body.page-home .path-desc{ color:rgba(15,23,42,0.72); }
 .ill-card:hover{ border-color: rgba(232,237,246,0.22); }
 .ill-card:hover::before{ filter: contrast(1.08) brightness(0.99); }
 
-/* Article pages */
 .article{
   margin-top:20px;
   padding:26px 24px;
@@ -524,7 +501,6 @@ body.page-home .path-desc{ color:rgba(15,23,42,0.72); }
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
-/* Panels */
 .panel{
   padding:22px;
   border:1px solid var(--line);
@@ -546,7 +522,6 @@ body.page-home .path-desc{ color:rgba(15,23,42,0.72); }
 ul{ margin:10px 0 0 18px; padding:0; }
 li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
-/* Footer */
 .footer{
   margin-top:30px;
   padding-top:16px;
@@ -574,8 +549,7 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 @media (max-width:560px){
   h1{ font-size:30px; }
-  body.page-home .hub-wordmark .hub-word{ font-size:56px; }
-  body.page-home .hub-wordmark .hub-bracket{ font-size:74px; }
+  body.page-home .hub-logo{ height:120px; }
   .panel{ padding:18px; }
   .article{ padding:20px 18px; }
   .topbar{ align-items:flex-start; }
