@@ -86,42 +86,49 @@ a:hover{ text-decoration:underline; }
   padding:28px 18px 64px;
 }
 
-/* HOME: center the whole stack vertically + horizontally */
+/* HOME: center the whole stack vertically (but allow scroll if long) */
 body.page-home .container{
   min-height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items:center;
+
+  /* tighter + more intentional vertical rhythm */
+  padding-top:44px;
+  padding-bottom:44px;
 }
 
-/* HUB brand block (logo + tagline) */
+/* HUB brand block */
 body.page-home .hub-brand{
-  margin: 0 auto 18px;
+  margin: 0 auto 14px;
   text-align:center;
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:14px;
+  gap:10px;
+
+  /* pulls the logo into the “big X” zone */
+  transform: translateY(6px);
 }
 
-/* HOME logo size — place it in the “big X” space */
+/* HOME logo size (bigger + stable) */
 body.page-home .hub-logo{
-  height:260px;            /* BIG */
+  height:240px;
   width:auto;
   display:block;
 }
 
-/* Tagline under logo */
+/* Tagline */
 body.page-home .hub-tagline{
   font-size:14px;
   color: var(--muted);
-  max-width: 60ch;
+  max-width: 70ch;
+  margin-top:-2px;
 }
 
-/* Hero card should sit directly under the logo */
+/* make the hero the first “content” block under centered brand */
 body.page-home .hub-hero{
-  margin-top:0;
+  margin-top:12px;
 }
 
 /* =======================
@@ -286,7 +293,7 @@ body.page-home p{
 }
 
 /* Sections */
-.section{ margin-top:26px; }
+.section{ margin-top:22px; } /* tighter */
 .section-title{
   margin:0 0 12px;
   font-size:13px;
@@ -301,8 +308,8 @@ body.page-home .section-title{
 
 /* Hero */
 .hero{
-  margin:26px auto 0;
-  padding:24px 22px;
+  margin:16px auto 0; /* was 26 */
+  padding:26px 24px;  /* slightly roomier */
   max-width:840px;
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -525,7 +532,7 @@ ul{ margin:10px 0 0 18px; padding:0; }
 li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 .footer{
-  margin-top:30px;
+  margin-top:22px; /* tighter */
   padding-top:16px;
   border-top:1px solid var(--line);
   display:flex;
@@ -551,8 +558,10 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
 @media (max-width:560px){
   h1{ font-size:30px; }
-  body.page-home .hub-logo{ height:170px; } /* keep logo readable on mobile */
-  body.page-home .container{ padding:22px 14px 44px; }
+
+  /* logo still strong on mobile, but not insane */
+  body.page-home .hub-logo{ height:150px; }
+
   .panel{ padding:18px; }
   .article{ padding:20px 18px; }
   .topbar{ align-items:flex-start; }
