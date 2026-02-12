@@ -76,6 +76,39 @@ body.page-home::before{
 }
 body.page-home::after{ background:none; }
 
+/* HUB — centered brand header + nav row only */
+body.page-home .hub-topbar{
+  padding-top:0;
+  border-bottom:none;
+  align-items:center;
+}
+
+body.page-home .hub-brand{
+  margin: 18px auto 10px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+body.page-home .hub-brand .hub-logo{
+  height:56px; /* bigger + clear */
+  width:auto;
+  display:block;
+}
+
+body.page-home .hub-tagline{
+  font-size:14px;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+/* make the hero the first “content” block under centered brand */
+body.page-home .hub-hero{
+  margin-top:18px;
+}
+
 /* =======================
    AUTHOR — candle dark
    ======================= */
@@ -191,7 +224,7 @@ body.page-home .brand .sigil{
   max-width:60ch;
 }
 
-/* Optional hub logo image class */
+/* Optional hub logo image class (used in brand blocks elsewhere) */
 .hub-logo{
   height:42px;
   width:auto;
