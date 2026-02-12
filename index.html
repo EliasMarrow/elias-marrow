@@ -11,62 +11,23 @@
   <meta property="og:url" content="https://eliasmarrow.org/" />
   <meta property="og:type" content="website" />
 
-  <!-- cache-bust stylesheet (still keep it) -->
-  <link rel="stylesheet" href="styles.css?v=home_logo_4"/>
+  <link rel="stylesheet" href="styles.css?v=clean_white_1"/>
 </head>
 
-<body class="page-home" style="position:relative;">
+<body class="page-home">
 
-  <!-- CENTER WATERMARK (FULL COLOR, VISIBLE) -->
-  <div aria-hidden="true"
-       style="
-        position:fixed;
-        inset:0;
-        z-index:0;
-        pointer-events:none;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        transform: translateY(-30px);
-        ">
-    <img src="assets/clarity-logo.png"
-         alt=""
-         style="
-          width:520px;
-          max-width:72vw;
-          height:auto;
-          opacity:0.95;
-          filter:none;
-         "/>
-  </div>
+  <div class="container">
 
-  <!-- Make all real content sit ABOVE the watermark -->
-  <div class="container" style="position:relative; z-index:1;">
+    <div class="topbar">
 
-    <div class="topbar topbar-home">
-
-      <!-- HEADER BLOCK + HEADER WATERMARK -->
-      <div class="brand brandmark" style="position:relative;">
+      <div class="brand">
         <img src="assets/clarity-logo.png"
-             alt=""
-             aria-hidden="true"
-             style="
-              position:absolute;
-              left:-10px;
-              top:-10px;
-              width:300px;
-              height:auto;
-              opacity:0.85;
-              filter:none;
-              pointer-events:none;
-             "/>
-
-        <div class="sigil" style="position:relative; z-index:1;">ELIAS MARROW</div>
-        <div class="motto" style="position:relative; z-index:1;">Clarity is leverage. Access changes outcomes.</div>
+             alt="Clarity Logo"
+             style="height:42px; width:auto; display:block;">
+        <div class="motto">Clarity is leverage. Access changes outcomes.</div>
       </div>
 
       <div class="nav">
-        <a href="index.html">Home</a>
         <a href="author/">Author</a>
         <a href="essays.html">Essays</a>
         <a href="proximity-design/">Proximity</a>
@@ -127,5 +88,6 @@
     </div>
 
   </div>
+
 </body>
 </html>
