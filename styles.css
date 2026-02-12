@@ -1,21 +1,20 @@
 :root{
-  /* Shift from pure-black to structured charcoal/graphite */
+  /* Structured charcoal / graphite */
   --bg:#121417;
   --ink:#e8edf6;
   --muted:#a9b4c6;
   --line:rgba(232,237,246,0.14);
 
-  /* Glass layers (slightly lighter + more “institutional” contrast) */
+  /* Layers */
   --panel:rgba(18,20,23,0.62);
   --panel-soft:rgba(18,20,23,0.48);
   --card:rgba(18,20,23,0.40);
 
   --radius:18px;
-  --max:900px;
+  --max:920px;
   --shadow:0 16px 40px rgba(0,0,0,0.45);
 }
 
-/* Base */
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
 
@@ -27,7 +26,7 @@ body{
   background:var(--bg);
 }
 
-/* GLOBAL CANDLE BACKDROP (lighter overlay, still dark) */
+/* Candle backdrop */
 body::before{
   content:"";
   position:fixed;
@@ -39,7 +38,7 @@ body::before{
   filter: contrast(1.06) brightness(0.94) saturate(1.02);
 }
 
-/* Vignette (softened) */
+/* Vignette */
 body::after{
   content:"";
   position:fixed;
@@ -50,11 +49,9 @@ body::after{
     radial-gradient(900px 600px at 50% 18%, transparent 38%, rgba(0,0,0,0.52) 100%);
 }
 
-/* Links */
 a{ color:#d7e6ff; text-decoration:none; }
 a:hover{ text-decoration:underline; }
 
-/* Layout */
 .container{
   max-width:var(--max);
   margin:0 auto;
@@ -90,10 +87,9 @@ a:hover{ text-decoration:underline; }
 .brand .motto{
   font-size:14px;
   color:var(--muted);
-  max-width:56ch;
+  max-width:60ch;
 }
 
-/* Nav pills */
 .nav{
   display:flex;
   gap:10px;
@@ -117,11 +113,11 @@ a:hover{ text-decoration:underline; }
   text-decoration:none;
 }
 
-/* Headings & text */
+/* Typography */
 h1,h2,h3{ margin:0 0 10px; }
 h1{
-  font-size:34px;
-  line-height:1.15;
+  font-size:36px;
+  line-height:1.12;
   letter-spacing:-0.02em;
 }
 h2{ font-size:18px; }
@@ -130,22 +126,136 @@ p{
   margin:0 0 14px;
   color:rgba(232,237,246,0.88);
 }
-
 .muted{ color:var(--muted); }
 
-.small{
-  font-size:13px;
-  color:rgba(232,237,246,0.64);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+.lead{
+  font-size:16px;
+  color:rgba(232,237,246,0.92);
+  max-width:72ch;
 }
 
-/* Lists */
-ul{ margin:10px 0 0 18px; padding:0; }
-li{ margin:6px 0; color:rgba(232,237,246,0.84); }
+/* Sections */
+.section{ margin-top:26px; }
+.section-title{
+  margin:0 0 12px;
+  font-size:13px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:rgba(232,237,246,0.74);
+}
 
-/* Panels (used for big blocks on non-home pages) */
+/* CLARITY FRAME HERO */
+.hero{
+  margin:26px auto 0;
+  padding:24px 22px;
+  max-width:840px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:rgba(18,20,23,0.46);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.38);
+  text-align:center;
+}
+
+.hero h1{ margin-bottom:10px; }
+.hero p{ margin-left:auto; margin-right:auto; }
+
+.hero-cta{
+  margin-top:14px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  text-decoration:none;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size:13px;
+  line-height:1;
+}
+
+.btn.primary{
+  background:rgba(215,230,255,0.10);
+  border-color: rgba(215,230,255,0.28);
+}
+
+.btn.primary:hover{
+  background:rgba(215,230,255,0.14);
+  text-decoration:none;
+}
+
+.btn.ghost{
+  background:rgba(255,255,255,0.03);
+}
+
+.btn.ghost:hover{
+  background:rgba(255,255,255,0.07);
+  text-decoration:none;
+}
+
+/* PATH GRID */
+.path-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:14px;
+}
+
+.path-card{
+  display:block;
+  padding:16px 16px 14px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--card);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+  text-decoration:none;
+}
+
+.path-card:hover{
+  border-color: rgba(232,237,246,0.22);
+  text-decoration:none;
+}
+
+.path-kicker{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:rgba(232,237,246,0.68);
+  margin-bottom:8px;
+}
+
+.path-title{
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:8px;
+  color:rgba(232,237,246,0.92);
+}
+
+.path-desc{
+  font-size:14px;
+  color:rgba(232,237,246,0.78);
+  margin-bottom:10px;
+}
+
+.path-link{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size:13px;
+  color:#d7e6ff;
+}
+
+/* Panels used elsewhere */
 .panel{
-  margin-top:20px;
   padding:22px;
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -158,38 +268,17 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
   box-shadow:none;
 }
 
-/* HOMEPAGE: altar card layout */
-.home-layout{
+.stack{
   display:grid;
-  grid-template-columns: 0.95fr 1.25fr 0.85fr;
-  gap:18px;
-
-  max-width:760px;
-  margin:34px auto 0;
-  align-items:start;
+  grid-template-columns:1fr;
+  gap:14px;
 }
 
-/* Home cards (glass slabs) */
-.home-card{
-  padding:16px 18px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:var(--card);
-  backdrop-filter: blur(2px);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.38);
-}
+/* Lists */
+ul{ margin:10px 0 0 18px; padding:0; }
+li{ margin:6px 0; color:rgba(232,237,246,0.84); }
 
-/* Stagger for composition */
-.home-layout .home-card:nth-child(1){ transform: translateY(8px); }
-.home-layout .home-card:nth-child(2){ transform: translateY(-14px); }
-.home-layout .home-card:nth-child(3){ transform: translateY(10px); }
-
-/* Home card typography tweaks */
-.home-card h1{ font-size:32px; margin-bottom:8px; }
-.home-card h2{ margin-bottom:8px; }
-.home-card p{ margin-bottom:12px; }
-
-/* Essay list cards */
+/* Existing card system (essays list etc.) */
 .cards{
   display:grid;
   grid-template-columns:1fr;
@@ -234,16 +323,7 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
-.article blockquote{
-  margin:16px 0;
-  padding:12px 14px;
-  border-left:3px solid rgba(255,225,160,0.35);
-  background:rgba(255,225,160,0.06);
-  border-radius:12px;
-  color:rgba(232,237,246,0.74);
-}
-
-/* Shared grid (Novels + Darkling) */
+/* Shared grid (novels etc.) */
 .grid{
   display:grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -251,11 +331,7 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
   margin-top:14px;
 }
 
-@media (max-width:700px){
-  .grid{ grid-template-columns: 1fr; }
-}
-
-/* Illustration-backed cards (book cover system) */
+/* Illustration-backed cards */
 .ill-card{
   position:relative;
   overflow:hidden;
@@ -295,7 +371,99 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
-.ill-desc{ margin-top:10px; color:rgba(232,237,246,0.80); }
+.ill-desc{ margin-top:10px; color:rgba(232,237,246,
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Elias Marrow</title>
+
+  <meta property="og:title" content="Elias Marrow" />
+  <meta property="og:description" content="Clarity is leverage. Access changes outcomes." />
+  <meta property="og:image" content="https://eliasmarrow.org/assets/candle.jpg" />
+  <meta property="og:url" content="https://eliasmarrow.org/" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body class="page-home">
+  <div class="container">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="sigil">ELIAS MARROW</div>
+        <div class="motto">Clarity is leverage. Access changes outcomes.</div>
+      </div>
+
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="author/">Author</a>
+        <a href="essays.html">Essays</a>
+        <a href="proximity-design/">Proximity</a>
+        <a href="clearframe/">Clearframe</a>
+      </div>
+    </div>
+
+    <!-- CLARITY FRAME: ONE START POINT -->
+    <div class="hero">
+      <h1>A candle in the dark.</h1>
+      <p class="lead">
+        This began as an author site. It grew into a broader hub built around one idea:
+        clarity should not belong only to people with time, money, or insider access.
+      </p>
+      <p class="muted">
+        Confusion is expensive. Clarity reduces waste — time, money, energy, and trust.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn primary" href="author/">Start here: Author →</a>
+        <a class="btn ghost" href="essays.html">Read essays</a>
+      </div>
+    </div>
+
+    <!-- PATHS -->
+    <div class="section">
+      <div class="section-title">Paths</div>
+
+      <div class="path-grid">
+        <a class="path-card" href="author/">
+          <div class="path-kicker">Writing</div>
+          <div class="path-title">Author Archive</div>
+          <div class="path-desc">Essays on constraint, power, incentives, and human outcomes.</div>
+          <div class="path-link">Enter →</div>
+        </a>
+
+        <a class="path-card" href="proximity-design/">
+          <div class="path-kicker">Design</div>
+          <div class="path-title">Proximity</div>
+          <div class="path-desc">See your property clearly before you spend thousands building it.</div>
+          <div class="path-link">View →</div>
+        </a>
+
+        <a class="path-card" href="clearframe/">
+          <div class="path-kicker">Infrastructure</div>
+          <div class="path-title">Clearframe</div>
+          <div class="path-desc">Focused one-page sites that make real work easy to understand and take seriously.</div>
+          <div class="path-link">View →</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© 2026 Elias Marrow</div>
+      <div>
+        <a href="author/">Author</a> ·
+        <a href="essays.html">Essays</a> ·
+        <a href="about.html">About</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+.80); }
 
 .ill-card:hover{ border-color: rgba(232,237,246,0.22); }
 .ill-card:hover::before{ filter: contrast(1.08) brightness(0.99); }
@@ -314,7 +482,7 @@ li{ margin:6px 0; color:rgba(232,237,246,0.84); }
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
-/* ===== Essays page: lighter abstract gradient backdrop ===== */
+/* Essays page alternate backdrop */
 body.page-essays::before{
   background:
     radial-gradient(900px 600px at 50% 18%, rgba(255,255,255,0.08), transparent 60%),
@@ -327,50 +495,22 @@ body.page-essays::before{
   filter: contrast(1.02) brightness(1.08) saturate(1.06);
 }
 
-/* Section headers used on Essays page */
-.section-title{
-  margin-top:22px;
-  margin-bottom:10px;
-  font-size:13px;
-  letter-spacing:0.16em;
-  text-transform:uppercase;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  color:rgba(232,237,246,0.74);
-}
-
-/* Essays: section cards + cover grid */
-.section-card{
-  padding:14px 16px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:var(--card);
-  backdrop-filter: blur(2px);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.26);
-  margin-top:14px;
-}
-
-.cover-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap:12px;
-  margin-top:12px;
+/* Responsive */
+@media (max-width:900px){
+  .path-grid{ grid-template-columns: 1fr; }
+  .hero{ text-align:left; }
+  .hero p{ margin-left:0; margin-right:0; }
+  .hero-cta{ justify-content:flex-start; }
 }
 
 @media (max-width:700px){
-  .cover-grid{ grid-template-columns: 1fr; }
+  .grid{ grid-template-columns: 1fr; }
 }
 
-/* Mobile */
 @media (max-width:560px){
-  h1{ font-size:28px; }
+  h1{ font-size:30px; }
   .panel{ padding:18px; }
   .article{ padding:20px 18px; }
   .topbar{ align-items:flex-start; }
   .nav{ justify-content:flex-start; }
-
-  .home-layout{
-    grid-template-columns:1fr;
-    max-width:520px;
-  }
-  .home-layout .home-card{ transform:none; }
 }
