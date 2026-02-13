@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" href="/clearframe/css/styles.css?v=14" />
+  <link rel="stylesheet" href="/clearframe/css/styles.css?v=16" />
 </head>
 
 <body>
@@ -61,25 +61,16 @@
           </ul>
         </div>
 
-        <aside class="hero-card" aria-label="Clearframe summary">
-
-          <!-- ✅ CHANGED: logo moved ABOVE text and forced centered -->
-          <div class="hero-icon-center" aria-hidden="true">
-            <img
-              src="/clearframe/assets/img/clearframe-logo.png?v=99"
-              alt=""
-              style="display:block;margin:0 auto;max-width:220px;width:100%;height:auto;"
-            />
-          </div>
-
-          <!-- ✅ CHANGED: text moved BELOW logo -->
+        <!-- ✅ PROX-STYLE RIGHT PANEL: text top, logo centered below -->
+        <aside class="card hero-card" aria-label="Clearframe summary">
           <div class="hero-card-top">
-            <div style="text-align:center;">
-              <div class="hero-card-title">Clarity first</div>
-              <div class="hero-card-sub">If a stranger can’t understand you fast, they leave.</div>
-            </div>
+            <div class="hero-card-title">Clarity first</div>
+            <div class="hero-card-sub">If a stranger can’t understand you fast, they leave.</div>
           </div>
 
+          <div class="hero-icon-center" aria-hidden="true">
+            <img src="/clearframe/assets/img/clearframe-logo.png?v=99" alt="" />
+          </div>
         </aside>
       </div>
     </section>
@@ -194,19 +185,16 @@
           <h2>Contact</h2>
           <p class="muted">Send what you do and what you need. We’ll reply with next steps.</p>
 
-          <!-- ✅ Edited: matches Proximity pattern (mailto + copy) -->
           <div class="start-actions">
             <a class="btn primary"
                href="mailto:paynottamichael@gmail.com?subject=Clearframe%20Website%20Request">
               Email a request
             </a>
 
-            <!-- was a mailto link; now copies email like Proximity -->
             <button class="btn" type="button" id="copyEmailBtnCF">
               paynottamichael@gmail.com
             </button>
 
-            <!-- optional micro hint, same behavior style as Proximity -->
             <span class="micro" id="copyHintCF" aria-live="polite">Click to copy email.</span>
           </div>
 
@@ -228,7 +216,6 @@
     </div>
   </footer>
 
-  <!-- ✅ Added: copy-to-clipboard + fallback-to-mailto (same approach as Proximity) -->
   <script>
     (function () {
       const email = "paynottamichael@gmail.com";
@@ -250,7 +237,6 @@
         const ok = await copyEmail();
 
         if (ok) {
-          // quick UI feedback
           if (hint) {
             const original = hint.textContent;
             hint.textContent = "Copied to clipboard.";
@@ -260,7 +246,6 @@
             setTimeout(() => btn.textContent = email, 1200);
           }
         } else {
-          // fallback: open email compose (so the user still gets an action)
           window.location.href = "mailto:" + email + "?subject=" + subject;
         }
       });
@@ -268,5 +253,3 @@
   </script>
 </body>
 </html>
-<link rel="stylesheet" href="/clearframe/css/styles.css?v=15" />
-

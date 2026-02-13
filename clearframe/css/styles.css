@@ -210,42 +210,46 @@ p{ margin: 0 0 10px 0; }
 .btn:hover{ opacity:0.93; }
 
 /* ========================= */
-/* HERO RIGHT CARD FIXED    */
+/* HERO RIGHT CARD (PROX-LIKE) */
 /* ========================= */
 
 .hero-card{
   display:flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
   gap: 18px;
-  text-align: center;
+  text-align: left;
   min-height: 260px;
 }
 
 .hero-card-top{
   width:100%;
-  text-align:left;
 }
 
-.hero-card-title{ font-weight: 900; }
+.hero-card-title{
+  font-weight: 900;
+}
 
 .hero-card-sub{
   font-size: 14px;
   color: rgba(11, 19, 32, 0.68);
   margin-top: 2px;
+  max-width: 42ch;
 }
 
+/* big centered logo under the text (like Proximity) */
 .hero-icon-center{
   display:flex;
   justify-content:center;
   align-items:center;
   width:100%;
-  margin-top: 10px;
+  margin-top: 8px;
+  padding-top: 4px;
 }
 
 .hero-icon-center img{
-  width: min(340px, 85%);
+  width: min(360px, 92%);
   height: auto;
   display:block;
 }
@@ -339,5 +343,5 @@ p{ margin: 0 0 10px 0; }
 }
 
 @media (max-width: 560px){
-  .hero-icon-center img{ width: min(300px, 88%); }
+  .hero-icon-center img{ width: min(320px, 92%); }
 }
