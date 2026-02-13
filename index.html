@@ -7,11 +7,13 @@
 
   <meta property="og:title" content="Elias Marrow" />
   <meta property="og:description" content="Clarity is leverage. Access changes outcomes." />
+  <!-- Use a stable OG image path (no JS fallback for crawlers) -->
   <meta property="og:image" content="https://eliasmarrow.org/assets/clarity-logo-v2.png" />
   <meta property="og:url" content="https://eliasmarrow.org/" />
   <meta property="og:type" content="website" />
 
-  <link rel="stylesheet" href="styles.css?v=hub_clean_5"/>
+  <!-- cache-bust -->
+  <link rel="stylesheet" href="styles.css?v=hub_clean_6"/>
 </head>
 
 <body class="page-home">
@@ -20,8 +22,13 @@
 
     <!-- CENTERED BRAND BLOCK -->
     <div class="hub-brand">
-      <!-- REAL IMAGE LOGO -->
-      <img src="assets/clarity-logo-v2-cropped.png" alt="Clarity" class="hub-logo" />
+      <!-- REAL IMAGE LOGO (with fallback if filename/path is wrong on GitHub Pages) -->
+      <img
+        src="/assets/clarity-logo-v2-cropped.png?v=6"
+        alt="Clarity"
+        class="hub-logo"
+        onerror="this.onerror=null; this.src='/assets/clarity-logo-v2.png?v=6';"
+      />
     </div>
 
     <!-- CORE STATEMENT -->
