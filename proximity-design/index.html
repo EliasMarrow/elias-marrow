@@ -19,14 +19,18 @@
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" href="./styles.css?v=5" />
+  <!-- bump this when you change assets -->
+  <link rel="stylesheet" href="./styles.css?v=6" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="./" aria-label="Proximity home">
-        <img class="brand-mark" src="assets/proximity-wordmark.png" alt="Proximity Landscape Design" />
+        <!-- ✅ Always use ./assets + cache-buster -->
+        <img class="brand-mark"
+             src="./assets/proximity-wordmark.png?v=6"
+             alt="Proximity Landscape Design" />
       </a>
 
       <nav class="nav">
@@ -78,9 +82,9 @@
             </div>
           </div>
 
-          <!-- ✅ Use the wordmark (icon + words) and center it -->
+          <!-- ✅ Center wordmark -->
           <div class="hero-logo-center" aria-hidden="true">
-            <img src="assets/proximity-wordmark.png" alt="" />
+            <img src="./assets/proximity-wordmark.png?v=6" alt="" />
           </div>
         </aside>
       </div>
@@ -120,13 +124,13 @@
         <div class="examples-grid">
           <div class="card example-card">
             <div class="pair">
-              <a class="shot shot-link" href="assets/example-01-before.jpg" target="_blank" rel="noopener">
-                <img src="assets/example-01-before.jpg" alt="Example 1 before" />
+              <a class="shot shot-link" href="./assets/example-01-before.jpg" target="_blank" rel="noopener">
+                <img src="./assets/example-01-before.jpg" alt="Example 1 before" />
                 <span class="tag">Before</span>
               </a>
 
-              <a class="shot shot-link" href="assets/example-01-after.png" target="_blank" rel="noopener">
-                <img src="assets/example-01-after.png" alt="Example 1 after" />
+              <a class="shot shot-link" href="./assets/example-01-after.png" target="_blank" rel="noopener">
+                <img src="./assets/example-01-after.png" alt="Example 1 after" />
                 <span class="tag">After</span>
               </a>
             </div>
@@ -135,13 +139,13 @@
 
           <div class="card example-card">
             <div class="pair">
-              <a class="shot shot-link" href="assets/example-02-before.png" target="_blank" rel="noopener">
-                <img src="assets/example-02-before.png" alt="Example 2 before" />
+              <a class="shot shot-link" href="./assets/example-02-before.png" target="_blank" rel="noopener">
+                <img src="./assets/example-02-before.png" alt="Example 2 before" />
                 <span class="tag">Before</span>
               </a>
 
-              <a class="shot shot-link" href="assets/example-02-after.png" target="_blank" rel="noopener">
-                <img src="assets/example-02-after.png" alt="Example 2 after" />
+              <a class="shot shot-link" href="./assets/example-02-after.png" target="_blank" rel="noopener">
+                <img src="./assets/example-02-after.png" alt="Example 2 after" />
                 <span class="tag">After</span>
               </a>
             </div>
@@ -237,7 +241,8 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <div class="footer-left">
-        <img src="assets/proximity-icon.png" class="footer-icon" alt="" />
+        <!-- ✅ Also harden footer icon path -->
+        <img src="./assets/proximity-icon.png?v=6" class="footer-icon" alt="" />
         <div>
           <div class="footer-title">Proximity Landscape Design</div>
           <div class="footer-sub">Outcome clarity before installation.</div>
