@@ -108,12 +108,12 @@ body.page-home .hub-brand{
 
 /* HOME logo: bigger + centered in its own top space */
 body.page-home .hub-logo{
-  height:190px;              /* +25% */
+  height:210px;                 /* will now actually look bigger */
   width:auto;
-  max-width:min(900px, 94vw); /* give it breathing room */
+  max-width:92vw;
   display:block;
   margin:0 auto;
-  transform: translateX(var(--logo-nudge));
+  transform:none;               /* remove nudge while we finalize */
 }
 
 
