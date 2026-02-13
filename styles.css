@@ -108,13 +108,14 @@ body.page-home .hub-brand{
 
 /* HOME logo: bigger + centered in its own top space */
 body.page-home .hub-logo{
-  height:150px;
+  height:190px;              /* +25% */
   width:auto;
-  max-width:min(760px, 92vw);
+  max-width:min(900px, 94vw); /* give it breathing room */
   display:block;
   margin:0 auto;
   transform: translateX(var(--logo-nudge));
 }
+
 
 /* If a tagline exists in old HTML, kill it. */
 body.page-home .hub-tagline{
