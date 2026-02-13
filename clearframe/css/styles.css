@@ -209,21 +209,23 @@ p{ margin: 0 0 10px 0; }
 
 .btn:hover{ opacity:0.93; }
 
-/* Hero right card */
+/* ========================= */
+/* HERO RIGHT CARD FIXED    */
+/* ========================= */
+
 .hero-card{
-  position: relative;
-  overflow: hidden;
-  min-height: 240px;
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  min-height: 260px;
 }
 
 .hero-card-top{
-  display:flex;
-  gap: 12px;
-  align-items: center;
+  width:100%;
+  text-align:left;
 }
 
 .hero-card-title{ font-weight: 900; }
@@ -235,13 +237,15 @@ p{ margin: 0 0 10px 0; }
 }
 
 .hero-icon-center{
-  display:grid;
-  place-items:center;
-  padding: 10px 0 4px 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  margin-top: 10px;
 }
 
 .hero-icon-center img{
-  width: min(320px, 78%);
+  width: min(340px, 85%);
   height: auto;
   display:block;
 }
