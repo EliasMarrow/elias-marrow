@@ -378,18 +378,21 @@ p{ margin: 0 0 10px 0; }
   width: auto;
   display: block;
 }
-/* ---- Hero logo centering fix ---- */
 
+/* ---- Hero logo centering fix (FINAL OVERRIDE) ---- */
+/* This is the ONLY issue fix: center logo in the remaining card space */
 .hero-icon-center{
+  flex: 1;                 /* fills the dead space */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 16px;
+  margin-top: 0;           /* remove top push */
+  padding-top: 0;
 }
 
 .hero-icon-center img{
-  display: block;
-  max-width: 160px;
+  width: min(360px, 92%);  /* restore proper logo size */
   height: auto;
+  display: block;
 }
