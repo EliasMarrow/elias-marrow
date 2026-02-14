@@ -1,33 +1,37 @@
 :root{
-  --bg: #f7f8fb;
-  --ink: #0b1320;
-  --muted: rgba(11, 19, 32, 0.72);
+  --text: #0b1320;
+  --muted: rgba(11, 19, 32, 0.70);
   --border: rgba(11, 19, 32, 0.10);
-  --card: rgba(255,255,255,0.85);
-  --shadow: 0 14px 34px rgba(11, 19, 32, 0.12);
-  --radius: 20px;
-  --radius-sm: 14px;
-  --accent: #0b1320;
-  --accent2: #2b4de8;
+  --shadow: 0 16px 40px rgba(11, 19, 32, 0.08);
+  --shadow2: 0 10px 24px rgba(11, 19, 32, 0.10);
+  --accent: #1f6b3a;
 }
 
-*{ box-sizing: border-box; }
-html, body{ height: 100%; }
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
 body{
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  color: var(--ink);
-  background:
-    radial-gradient(1200px 700px at 10% -10%, rgba(43,77,232,0.18), transparent 55%),
-    radial-gradient(900px 600px at 95% 0%, rgba(11,19,32,0.16), transparent 50%),
-    linear-gradient(180deg, #ffffff 0%, var(--bg) 70%);
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--text);
+  background: #ffffff;
+  line-height: 1.5;
 }
 
-a{ color: inherit; }
-img{ max-width: 100%; }
+body::before{ content:none !important; background:none !important; }
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(900px 420px at 15% 10%, rgba(31,107,58,0.07), transparent 60%),
+    radial-gradient(700px 360px at 70% 0%, rgba(11,79,120,0.06), transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
 
 .wrap{
-  width: min(1120px, calc(100% - 40px));
+  width: min(1100px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -63,23 +67,22 @@ img{ max-width: 100%; }
 .nav a{
   font-weight: 650;
   font-size: 14px;
-  color: rgba(11,19,32,0.78);
+  color: rgba(11, 19, 32, 0.88);
   text-decoration:none;
   padding: 8px 10px;
   border-radius: 10px;
-  transition: background .15s ease, color .15s ease;
+  transition: background .15s ease;
 }
 
-.nav a:hover{ background: rgba(11,19,32,0.06); color: rgba(11,19,32,0.92); }
+.nav a:hover{ background: rgba(11,19,32,0.06); }
 
 .nav .nav-cta{
-  background: rgba(43,77,232,0.10);
-  border: 1px solid rgba(43,77,232,0.18);
-  color: rgba(11,19,32,0.92);
   font-weight: 800;
+  background: rgba(31,107,58,0.10);
+  border: 1px solid rgba(31,107,58,0.18);
 }
 
-.nav .nav-cta:hover{ background: rgba(43,77,232,0.14); }
+.nav .nav-cta:hover{ background: rgba(31,107,58,0.14); }
 
 .hero{
   padding: 24px 0 12px 0;
@@ -135,8 +138,8 @@ img{ max-width: 100%; }
 .btn:active{ transform: translateY(0px); }
 
 .btn.primary{
-  background: rgba(43,77,232,0.12);
-  border-color: rgba(43,77,232,0.22);
+  background: rgba(31,107,58,0.10);
+  border-color: rgba(31,107,58,0.18);
 }
 
 .micro{
@@ -168,36 +171,35 @@ img{ max-width: 100%; }
   width: 18px;
   height: 18px;
   border-radius: 999px;
-  background: rgba(43,77,232,0.12);
+  background: rgba(31,107,58,0.10);
   color: rgba(11,19,32,0.92);
   font-weight: 950;
   margin-top: 1px;
   flex: 0 0 18px;
 }
 
-.hero-card{
+.card-shell{
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--card);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.72);
   box-shadow: var(--shadow);
-  padding: 14px;
-  display:flex;
-  flex-direction:column;
-  gap: 10px;
+  padding: 18px;
   overflow:hidden;
 }
 
-.hero-card-top{
+.hero-card{
   display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap: 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 18px;
+  text-align: left;
+  min-height: 260px;
 }
 
-.hero-card-title{
-  font-weight: 950;
-  font-size: 15px;
-}
+.hero-card-top{ width:100%; }
+
+.hero-card-title{ font-weight: 900; }
 
 .hero-card-sub{
   font-size: 14px;
@@ -206,29 +208,67 @@ img{ max-width: 100%; }
   max-width: 42ch;
 }
 
-/* ✅ Center wordmark (matched to Clearframe final override behavior) */
+/* =======================================================
+   PROX FIX — Make this behave EXACTLY like Clearframe
+   (centered in dead space, correct size, no extra push)
+   ======================================================= */
 .hero-logo-center{
-  flex: 1;                 /* fills the remaining card space */
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  flex: 1;                 /* fills the dead space like Clearframe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   margin-top: 0;           /* remove top push */
-  padding: 0;              /* keep true centering */
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .hero-logo-center img{
-  width: min(360px, 92%);  /* matched to Clearframe */
+  width: min(360px, 92%);  /* match Clearframe logo size */
   height: auto;
+  display: block;
+}
+
+/* Examples */
+.examples-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.example-card{ padding: 14px; }
+
+.pair{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.shot{
+  position:relative;
+  border-radius: 14px;
+  overflow:hidden;
+  border: 1px solid var(--border);
+  background: rgba(11,19,32,0.02);
+}
+
+.shot img{
   display:block;
+  width:100%;
+  height: 260px;
+  object-fit: cover;
 }
 
-@media (max-width: 560px){
-  .hero-logo-center img{ width: min(320px, 92%); }
+.shot figcaption{
+  font-size: 12px;
+  color: rgba(11,19,32,0.72);
+  padding: 10px 10px 12px 10px;
+  border-top: 1px solid rgba(11,19,32,0.08);
+  background: rgba(255,255,255,0.72);
 }
 
-/* Sections */
 .section{ padding: 18px 0; }
+
 .section h2{
   margin: 0 0 10px 0;
   font-size: 20px;
@@ -244,9 +284,9 @@ img{ max-width: 100%; }
 
 .card{
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--card);
-  box-shadow: 0 12px 26px rgba(11,19,32,0.10);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.72);
+  box-shadow: var(--shadow2);
   padding: 14px;
 }
 
@@ -267,50 +307,6 @@ img{ max-width: 100%; }
 
 .bullets li{ margin: 8px 0; }
 
-/* Examples */
-.examples-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.example-card{ padding: 14px; }
-
-.pair{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.pair figure{
-  margin: 0;
-  border-radius: 16px;
-  overflow:hidden;
-  border: 1px solid rgba(11,19,32,0.12);
-  background: rgba(255,255,255,0.7);
-}
-
-.pair img{
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display:block;
-}
-
-.pair figcaption{
-  padding: 8px 10px;
-  font-size: 12px;
-  color: rgba(11,19,32,0.68);
-  border-top: 1px solid rgba(11,19,32,0.10);
-}
-
-.small{
-  font-size: 12px;
-  color: rgba(11,19,32,0.62);
-  margin-top: 10px;
-}
-
-/* How it works */
 .steps{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -341,7 +337,6 @@ img{ max-width: 100%; }
   font-size: 14px;
 }
 
-/* Fit */
 .fit-grid{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -361,7 +356,6 @@ img{ max-width: 100%; }
   font-size: 14px;
 }
 
-/* Start */
 .start-actions{
   display:flex;
   gap: 14px;
@@ -376,7 +370,6 @@ img{ max-width: 100%; }
   margin: 12px 0;
 }
 
-/* Footer */
 .footer{
   padding: 18px 0 26px 0;
   border-top: 1px solid rgba(11, 19, 32, 0.08);
@@ -399,17 +392,15 @@ img{ max-width: 100%; }
 .footer-title{ font-weight: 900; }
 .footer-sub{ font-size: 13px; color: var(--muted); }
 
-/* Responsive */
 @media (max-width: 980px){
   .hero-inner{ grid-template-columns: 1fr; }
   .grid-2{ grid-template-columns: 1fr; }
   .steps{ grid-template-columns: 1fr; }
   .examples-grid{ grid-template-columns: 1fr; }
-  .fit-grid{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px){
-  .brand-mark{ height: 40px; }
-  .nav a{ padding: 6px 8px; }
-  .pair img{ height: 200px; }
+  .pair{ grid-template-columns: 1fr; }
+  .shot img{ height: 230px; }
+  .hero-logo-center img{ width: min(320px, 92%); } /* match Clearframe mobile */
 }
