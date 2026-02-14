@@ -378,3 +378,18 @@ p{ margin: 0 0 10px 0; }
   width: auto;
   display: block;
 }
+/* ---- Hero logo centering fix ---- */
+
+.hero-icon-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.hero-icon-center img{
+  display: block;
+  max-width: 160px;
+  height: auto;
+}
