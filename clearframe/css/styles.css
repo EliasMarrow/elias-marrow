@@ -345,3 +345,36 @@ p{ margin: 0 0 10px 0; }
 @media (max-width: 560px){
   .hero-icon-center img{ width: min(320px, 92%); }
 }
+/* =========================
+   Clearframe Brand Authority
+   ========================= */
+
+/* Header height */
+.site-header .header-inner{
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/* Top-left logo */
+.brand-mark{
+  height: 56px;        /* was visually tiny */
+  width: auto;
+  display: block;
+}
+
+/* Make nav slightly less dominant */
+.nav a{
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.nav-cta{
+  font-weight: 600;
+}
+
+/* Footer logo */
+.footer-icon{
+  height: 44px;
+  width: auto;
+  display: block;
+}
