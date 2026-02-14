@@ -51,10 +51,14 @@ body::after{
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  padding: 14px 0;
+  padding: 18px 0;
 }
 
-.brand-mark{ height: 44px; width: auto; display:block; }
+.brand-mark{
+  height: 56px;
+  width: auto;
+  display: block;
+}
 
 .nav{
   display:flex;
@@ -345,7 +349,10 @@ button.btn{ cursor:pointer; }
   align-items:center;
 }
 
-.footer-icon{ width: 34px; height: 34px; }
+.footer-icon{
+  height: 44px;
+  width: auto;
+}
 
 .footer-title{ font-weight: 900; }
 .footer-sub{ font-size: 13px; color: var(--muted); }
