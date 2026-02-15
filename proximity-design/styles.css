@@ -208,25 +208,31 @@ body::after{
   max-width: 42ch;
 }
 
-/* =======================================================
-   PROX FIX — Make this behave EXACTLY like Clearframe
-   (centered in dead space, correct size, no extra push)
-   ======================================================= */
+/* ✅ FIX: size wordmark like Clearframe (by height, not width) */
 .hero-logo-center{
-  flex: 1;                 /* fills the dead space like Clearframe */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   width: 100%;
-  margin-top: 0;           /* remove top push */
-  padding-top: 0;
-  padding-bottom: 0;
+  margin: 0;
+  padding: 0;
+  min-height: 110px; /* keeps “dead space” consistent */
 }
 
 .hero-logo-center img{
-  width: min(360px, 92%);  /* match Clearframe logo size */
-  height: auto;
-  display: block;
+  max-height: 64px;   /* <— resize knob */
+  width: auto;        /* preserve ratio */
+  max-width: 86%;     /* avoid edge-to-edge */
+  display:block;
+  object-fit: contain;
+}
+
+@media (max-width: 560px){
+  .hero-logo-center img{
+    max-height: 56px;
+    max-width: 92%;
+  }
 }
 
 /* Examples */
@@ -397,10 +403,4 @@ body::after{
   .grid-2{ grid-template-columns: 1fr; }
   .steps{ grid-template-columns: 1fr; }
   .examples-grid{ grid-template-columns: 1fr; }
-}
-
-@media (max-width: 560px){
-  .pair{ grid-template-columns: 1fr; }
-  .shot img{ height: 230px; }
-  .hero-logo-center img{ width: min(320px, 92%); } /* match Clearframe mobile */
 }
