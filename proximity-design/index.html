@@ -20,16 +20,15 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- bump this when you change assets -->
-  <link rel="stylesheet" href="./styles.css?v=6" />
+  <link rel="stylesheet" href="./styles.css?v=7" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="./" aria-label="Proximity home">
-        <!-- ✅ Always use ./assets + cache-buster -->
         <img class="brand-mark"
-             src="./assets/proximity-wordmark.png?v=6"
+             src="./assets/proximity-wordmark.png?v=7"
              alt="Proximity Landscape Design" />
       </a>
 
@@ -84,7 +83,7 @@
 
           <!-- ✅ Center wordmark -->
           <div class="hero-logo-center" aria-hidden="true">
-            <img src="./assets/proximity-wordmark.png?v=6" alt="" />
+            <img src="./assets/proximity-wordmark.png?v=7" alt="" />
           </div>
         </aside>
       </div>
@@ -241,8 +240,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <div class="footer-left">
-        <!-- ✅ Also harden footer icon path -->
-        <img src="./assets/proximity-icon.png?v=6" class="footer-icon" alt="" />
+        <img src="./assets/proximity-icon.png?v=7" class="footer-icon" alt="" />
         <div>
           <div class="footer-title">Proximity Landscape Design</div>
           <div class="footer-sub">Outcome clarity before installation.</div>
@@ -256,12 +254,8 @@
       const email = "paynottamichael@gmail.com";
 
       async function copyEmail() {
-        try {
-          await navigator.clipboard.writeText(email);
-          return true;
-        } catch (e) {
-          return false;
-        }
+        try { await navigator.clipboard.writeText(email); return true; }
+        catch (e) { return false; }
       }
 
       const b1 = document.getElementById("copyEmailBtn");
