@@ -227,7 +227,7 @@ body::after{
 }
 
 .hero-logo-center img{
-  width: min(360px, 92%);
+  width: min(250px, 70%);
   height: auto;
   display:block;
 }
