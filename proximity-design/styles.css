@@ -208,7 +208,7 @@ body::after{
   max-width: 42ch;
 }
 
-/* ✅ FIX: hero uses ICON sizing (square), not wordmark sizing */
+/* Hero card logo (match Clearframe sizing/placement) */
 .hero-logo-center{
   flex: 1;
   display:flex;
@@ -217,24 +217,19 @@ body::after{
   width: 100%;
   margin: 0;
   padding: 0;
-  min-height: 140px; /* gives the “dead space” a stable slot */
 }
 
 .hero-logo-center img{
-  height: 120px;     /* main size knob */
-  width: 120px;      /* keep square */
-  max-height: 60%;
-  max-width: 60%;
+  width: min(360px, 92%);
+  height: auto;
   display:block;
-  object-fit: contain;
+
 }
 
-@media (max-width: 560px){
-  .hero-logo-center{ min-height: 120px; }
-  .hero-logo-center img{
-    height: 104px;
-    width: 104px;
-  }
+.hero-logo-center img{
+  width: min(360px, 92%);
+  height: auto;
+  display:block;
 }
 
 /* Examples */
@@ -397,6 +392,13 @@ body::after{
   align-items:center;
 }
 
+/* Match Clearframe footer icon size */
+.footer-icon{
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
 .footer-title{ font-weight: 900; }
 .footer-sub{ font-size: 13px; color: var(--muted); }
 
@@ -405,4 +407,26 @@ body::after{
   .grid-2{ grid-template-columns: 1fr; }
   .steps{ grid-template-columns: 1fr; }
   .examples-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px){
+  .hero-logo-center img{ width: min(320px, 92%); }
+}
+
+/* =========================
+   Proximity Brand Authority
+   (keep aligned with Clearframe)
+   ========================= */
+
+/* Header height */
+.site-header .header-inner{
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/* Top-left logo */
+.brand-mark{
+  height: 56px;
+  width: auto;
+  display: block;
 }
