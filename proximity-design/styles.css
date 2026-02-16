@@ -51,10 +51,14 @@ body::after{
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  padding: 14px 0;
+  padding: 18px 0; /* Clearframe match */
 }
 
-.brand-mark{ height: 44px; width: auto; display:block; }
+.brand-mark{
+  height: 56px;      /* Clearframe match */
+  width: auto;
+  display:block;
+}
 
 .nav{
   display:flex;
@@ -220,14 +224,7 @@ body::after{
 }
 
 .hero-logo-center img{
-  width: min(360px, 92%);
-  height: auto;
-  display:block;
-
-}
-
-.hero-logo-center img{
-  width: min(250px, 70%);
+  width: 230px;   /* FINAL: ~30% smaller */
   height: auto;
   display:block;
 }
@@ -409,24 +406,7 @@ body::after{
   .examples-grid{ grid-template-columns: 1fr; }
 }
 
+/* On small screens, let it breathe a bit but keep it controlled */
 @media (max-width: 560px){
-  .hero-logo-center img{ width: min(320px, 92%); }
-}
-
-/* =========================
-   Proximity Brand Authority
-   (keep aligned with Clearframe)
-   ========================= */
-
-/* Header height */
-.site-header .header-inner{
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-
-/* Top-left logo */
-.brand-mark{
-  height: 56px;
-  width: auto;
-  display: block;
+  .hero-logo-center img{ width: 210px; }
 }
