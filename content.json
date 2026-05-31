@@ -196,8 +196,9 @@
       "author": "Elias Marrow",
       "date": "2026-01-23",
       "summary": "Archive edition. A completed sequence examining pressure, legitimacy, and the moment restraint fails.",
-      "format": "pdf",
+      "format": "html",
       "file": "assets/novels/what-was-required/what-was-required.pdf",
+      "landing": "what-was-required.html",
       "cover": "assets/novels/what-was-required/what-was-required.png",
       "tags": ["novel", "archive", "systems", "power"]
     },
