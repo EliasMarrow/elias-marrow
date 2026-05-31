@@ -16,7 +16,12 @@
       "format": "pdf",
       "file": "assets/essays/trump-essay.pdf",
       "cover": "assets/essays/covers/trump-essay.jpg",
-      "tags": ["power", "politics", "incentives", "media"]
+      "tags": [
+        "power",
+        "politics",
+        "incentives",
+        "media"
+      ]
     },
     {
       "id": "biden-essay",
@@ -29,7 +34,12 @@
       "format": "pdf",
       "file": "assets/essays/biden-essay.pdf",
       "cover": "assets/essays/covers/biden-essay.jpg",
-      "tags": ["power", "institutions", "normalcy", "decline"]
+      "tags": [
+        "power",
+        "institutions",
+        "normalcy",
+        "decline"
+      ]
     },
     {
       "id": "constraint-awareness",
@@ -42,7 +52,12 @@
       "format": "pdf",
       "file": "assets/essays/constraint-awareness.pdf",
       "cover": "assets/essays/covers/constraint-awareness.jpg",
-      "tags": ["constraint", "scarcity", "agency", "buffer"]
+      "tags": [
+        "constraint",
+        "scarcity",
+        "agency",
+        "buffer"
+      ]
     },
     {
       "id": "the-empire-that-feared-itself",
@@ -55,7 +70,12 @@
       "format": "pdf",
       "file": "assets/essays/the-empire-that-feared-itself.pdf",
       "cover": "assets/essays/covers/the-empire-that-feared-itself.jpg",
-      "tags": ["fear", "war", "propaganda", "power"]
+      "tags": [
+        "fear",
+        "war",
+        "propaganda",
+        "power"
+      ]
     },
     {
       "id": "the-lens-we-use",
@@ -68,7 +88,12 @@
       "format": "pdf",
       "file": "assets/essays/the-lens-we-use.pdf",
       "cover": "assets/essays/covers/the-lens-we-use.jpg",
-      "tags": ["method", "constraint", "power", "analysis"]
+      "tags": [
+        "method",
+        "constraint",
+        "power",
+        "analysis"
+      ]
     },
     {
       "id": "the-silence-in-the-files",
@@ -81,7 +106,12 @@
       "format": "pdf",
       "file": "assets/essays/the-silence-in-the-files.pdf",
       "cover": "assets/essays/covers/the-silence-in-the-files.jpg",
-      "tags": ["power", "institutions", "records", "silence"]
+      "tags": [
+        "power",
+        "institutions",
+        "records",
+        "silence"
+      ]
     },
     {
       "id": "the-environment-turned-against-us",
@@ -94,7 +124,13 @@
       "format": "pdf",
       "file": "assets/essays/the-environment-turned-against-us.pdf",
       "cover": "assets/essays/covers/the-environment-turned-against-us.jpg",
-      "tags": ["systems", "environment", "industry", "constraint", "survival"]
+      "tags": [
+        "systems",
+        "environment",
+        "industry",
+        "constraint",
+        "survival"
+      ]
     },
     {
       "id": "democracy-is-not-failing",
@@ -107,7 +143,12 @@
       "format": "pdf",
       "file": "assets/essays/democracy-is-not-failing.pdf",
       "cover": "assets/essays/covers/democracy-is-not-failing.jpg",
-      "tags": ["democracy", "power", "institutions", "legitimacy"]
+      "tags": [
+        "democracy",
+        "power",
+        "institutions",
+        "legitimacy"
+      ]
     },
     {
       "id": "effort-was-held-constant",
@@ -120,7 +161,12 @@
       "format": "pdf",
       "file": "assets/essays/effort-was-held-constant.pdf",
       "cover": "assets/essays/covers/effort-was-held-constant.jpg",
-      "tags": ["effort", "constraint", "scarcity", "outcomes"]
+      "tags": [
+        "effort",
+        "constraint",
+        "scarcity",
+        "outcomes"
+      ]
     },
     {
       "id": "when-poverty-becomes-functional",
@@ -133,7 +179,12 @@
       "format": "pdf",
       "file": "assets/essays/when-poverty-becomes-functional.pdf",
       "cover": "assets/essays/covers/when-poverty-becomes-functional.jpg",
-      "tags": ["poverty", "simulation", "constraint", "systems"]
+      "tags": [
+        "poverty",
+        "simulation",
+        "constraint",
+        "systems"
+      ]
     },
     {
       "id": "complicit-by-silence",
@@ -146,49 +197,57 @@
       "format": "pdf",
       "file": "assets/essays/complicit-by-silence.pdf",
       "cover": "assets/essays/covers/complicit-by-silence.png",
-      "tags": ["silence", "ethics", "complicity"]
+      "tags": [
+        "silence",
+        "ethics",
+        "complicity"
+      ]
     },
     {
-  "id": "the-honest-game",
-  "title": "The Honest Game",
-  "subtitle": "",
-  "author": "Elias Marrow",
-  "date": "2026-01-24",
-  "summary": "",
-  "category": "Notes",
-  "format": "pdf",
-  "file": "assets/essays/the-honest-game.pdf",
-  "cover": "assets/essays/covers/the-honest-game.png",
-  "tags": []
-},
-{
-  "id": "the-illusion-of-progress",
-  "title": "The Illusion of Progress",
-  "subtitle": "",
-  "author": "Elias Marrow",
-  "date": "2026-01-24",
-  "summary": "",
-  "category": "Notes",
-  "format": "pdf",
-  "file": "assets/essays/the-illusion-of-progress.pdf",
-  "cover": "assets/essays/covers/the-illusion-of-progress.png",
-  "tags": []
-}
-
+      "id": "the-honest-game",
+      "title": "The Honest Game",
+      "subtitle": "",
+      "author": "Elias Marrow",
+      "date": "2026-01-24",
+      "summary": "",
+      "category": "Notes",
+      "format": "pdf",
+      "file": "assets/essays/the-honest-game.pdf",
+      "cover": "assets/essays/covers/the-honest-game.png",
+      "tags": []
+    },
+    {
+      "id": "the-illusion-of-progress",
+      "title": "The Illusion of Progress",
+      "subtitle": "",
+      "author": "Elias Marrow",
+      "date": "2026-01-24",
+      "summary": "",
+      "category": "Notes",
+      "format": "pdf",
+      "file": "assets/essays/the-illusion-of-progress.pdf",
+      "cover": "assets/essays/covers/the-illusion-of-progress.png",
+      "tags": []
+    }
   ],
   "books": [
-{
-  "id": "what-was-required",
-  "title": "What Was Required",
-  "subtitle": "Archive edition",
-  "author": "Elias Marrow",
-  "date": "2026-01-23",
-  "summary": "Archive edition. A completed sequence examining pressure, legitimacy, and the moment restraint fails.",
-  "format": "pdf",
-  "file": "assets/novels/what-was-required/what-was-required.pdf",
-  "cover": "assets/novels/what-was-required/what-was-required.png",
-  "tags": ["novel", "archive", "systems", "power"]
-},
+    {
+      "id": "what-was-required",
+      "title": "What Was Required",
+      "subtitle": "Archive edition",
+      "author": "Elias Marrow",
+      "date": "2026-01-23",
+      "summary": "Archive edition. A completed sequence examining pressure, legitimacy, and the moment restraint fails.",
+      "format": "pdf",
+      "file": "assets/novels/what-was-required/what-was-required.pdf",
+      "cover": "assets/novels/what-was-required/what-was-required.png",
+      "tags": [
+        "novel",
+        "archive",
+        "systems",
+        "power"
+      ]
+    },
     {
       "id": "constraints_not_choices",
       "title": "Constraints, Not Choices",
@@ -199,19 +258,30 @@
       "format": "pdf",
       "file": "assets/novels/constraints_not_choices/constraints_not_choices.pdf",
       "cover": "assets/novels/constraints_not_choices/constraints_not_choices.jpg",
-      "tags": ["constraint", "scarcity", "systems", "agency"]
+      "tags": [
+        "constraint",
+        "scarcity",
+        "systems",
+        "agency"
+      ]
     },
     {
       "id": "darkling",
       "title": "Darkling — Book I",
-      "subtitle": "A novel",
+      "subtitle": "Book I: Everterra",
       "author": "Elias Marrow",
-      "date": "2026-01-21",
-      "summary": "Book I archive edition. Chapters and supporting material are published as they are finalized.",
-      "format": "pdf",
-      "file": "assets/novels/darkling/darkling.pdf",
+      "date": "2026-05-31",
+      "summary": "A fantasy world where survival and morality slowly drift apart, and people are forced to decide what they are willing to become to protect what they love.",
+      "format": "html",
+      "file": "darkling.html",
       "cover": "assets/novels/darkling/darkling.jpg",
-      "tags": ["novel", "fantasy", "darkling", "everterra"]
+      "tags": [
+        "novel",
+        "fantasy",
+        "darkling",
+        "everterra"
+      ],
+      "landing": "darkling.html"
     },
     {
       "id": "the_weight_of_knowing",
@@ -223,7 +293,12 @@
       "format": "pdf",
       "file": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.pdf",
       "cover": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.jpg",
-      "tags": ["novel", "systems", "gothic", "power"]
+      "tags": [
+        "novel",
+        "systems",
+        "gothic",
+        "power"
+      ]
     }
   ]
 }

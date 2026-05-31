@@ -1,0 +1,830 @@
+DARKLING
+
+Book I: Everterra
+
+An up-to-date working draft prepared from the provided Prologue through Chapter 3 source files.
+
+
+
+Prologue
+
+Everterra is a land shaped by possibility and ruin in equal measure.
+
+Its vastness resists comprehension, reaching from restless seas and ancient forests to sun-scoured deserts and places deliberately erased from memory. Across its long history, civilizations have risen, fractured, and vanished, leaving behind ruins half-buried by time and stories worn thin by retelling.
+
+Our story begins in an age not yet forgotten.
+
+It is called the Age of Men.
+
+Once, the peoples of Everterra lived without great war. Conflict existed, as it always does, but it was contained - border skirmishes, rival claims, ambitions checked by balance rather than conquest. The races of the land lived alongside one another in uneasy tolerance, bound by custom, distance, and necessity.
+
+That balance ended with the rise of a human king.
+
+His name was Canaan.
+
+At first, his ascent drew little notice. He emerged quietly, consolidating control over the southeastern reaches of Everterra through favors, bargains, and the convenient removal of those who resisted him. Many believed his rivals died by chance or misfortune. No proof ever surfaced to suggest otherwise.
+
+By the time his intentions became visible, it was already too late.
+
+Canaan ruled from Mount Canaan, a fortified metropolis that became both symbol and engine of his authority. In public, he was measured, charismatic, generous in speech. Behind closed doors, he ruled with precision and cruelty, reshaping the land through forceful diplomacy, bribery, and fear.
+
+Lords who pledged allegiance were rewarded with titles, protection, and status. Those who did not vanished. Armies followed, not always by loyalty, but by necessity. Rank was offered freely to any able-bodied man willing to fight beneath his banner. Wealth was promised. Order was enforced.
+
+Within five years, the South-Eastern Domain fell.
+
+Within thirty, the majority of human civilization stood beneath his rule.
+
+Canaan did not immediately wage war on the elder races. He did not need to. His power spread through infrastructure rather than invasion - fortresses raised at strategic crossings, castles converted into labor camps, cities transformed into supply chains feeding his war machine.
+
+Prisoners were not executed.
+
+They were repurposed.
+
+Among the many compounds erected during this expansion, one inspired fear beyond all others.
+
+The Ninth Gate.
+
+Built against the northern edge of the Dark Forest, pressed close to the impassable icebound mountains that marked the end of Everterra, the Ninth Gate was both prison and warning. It housed political dissidents, criminals, and the inconvenient - those who could not be allowed to exist freely but were still useful.
+
+The Ninth Gate was never meant to be lived in.
+
+It was meant to be endured.
+
+And it is there that our story truly begins.
+
+
+Chapter 1 - The Fire
+
+The Ninth Gate was never meant to be lived in.
+
+Seraph knew that before the guards ever touched him.
+
+“No.”
+
+The word was barely sound - more breath than defiance - but it was enough.
+
+“Move.”
+
+The command came without heat or haste, spoken the way one spoke to doors or animals. Hands seized the back of Seraph’s robe and wrenched him forward. He resisted instinctively, boots scraping against stone, fingers clawing for purchase as the open doorway yawned before him. The air beyond it felt wrong - colder, heavier - as if the fortress exhaled only inward.
+
+“Please,” he said, voice thin, fraying. “Anywhere else. I’ll clean anywhere else.”
+
+The blow came from the side. A fist drove into his ribs, sharp and precise.
+
+Pain flared - bright, familiar, survivable.
+
+Seraph folded but did not let go. His fingers dug into the threshold, nails scraping stone raw, as if the doorway itself might offer mercy. He had learned, over years, which pains passed and which did not. Beatings passed. Interiors lingered.
+
+“Inside,” a guard growled. “You know the rules.”
+
+They peeled his hands loose one at a time.
+
+The pain was manageable.
+
+What waited beyond was not.
+
+They threw him.
+
+Seraph struck the stone on his hands and knees, the impact jarring his bones. Cold dampness soaked instantly into his palms and sleeves. Behind him, the guards laughed - not loudly, not cruelly, just mildly entertained, as men were when violence required no effort.
+
+“Always this one,” someone said. “Acts like the walls are going to eat him.”
+
+“Give it time,” another replied. “They usually do.”
+
+The door slammed shut.
+
+Silence followed.
+
+Not empty silence. Not peace.
+
+A pressure. A presence.
+
+Seraph remained where he had fallen, forehead hovering just above the stone, breath shallow and uneven. His ribs burned where they’d struck him. His hands trembled - not from pain, but from knowing where he was. The Ninth Gate did not merely contain rooms; it collected them. It remembered.
+
+He had been beaten before.
+
+Beatings passed.
+
+The interior of the Ninth Gate did not.
+
+The chamber around him was vast, its ceiling lost to shadow far above. Water dripped steadily from unseen cracks, each drop echoing too long, as if the room were counting time. The air was cold and wet, heavy with mold, rot, and something older - something that had soaked into the stone and refused to leave.
+
+Then hands touched him.
+
+Firm. Certain.
+
+“Easy,” a voice said close to his ear. Calm. Grounded. “I’ve got you.”
+
+Seraph didn’t rise.
+
+He was lifted.
+
+Strong arms drew him upright before his legs could fail him, steadying him as the world stopped spinning.
+
+“You’re shaking,” the voice said.
+
+“I’m fine,” Seraph murmured automatically.
+
+“You always say that,” the voice replied.
+
+When Seraph opened his eyes, there were three of them in the room.
+
+Hugo stood closest - a broad, solid presence carved from endurance. Though shorter than most dwarves, his build carried unmistakable density: thick shoulders, powerful arms, weight that did not waste itself. His red hair hung long and bound into a single braid, his beard worn the same way, threaded with early gray. His clothes were sackcloth and rags, but he stood like a wall, positioned subtly between Seraph and the dark.
+
+Behind them stood Garr.
+
+Silent. Still.
+
+The orc’s presence was different - less weight, more balance. His frame was lean but powerful, muscle drawn tight beneath scarred skin. His movements were economical, deliberate. Long black hair fell loose down his back, untouched by ornament. His eyes were calm, observant, unreadable.
+
+Seraph himself was pale even by Darkling standards - white skin stark against the gloom, black eyes reflecting torchlight like polished stone. Lavender horns curved smoothly from his brow, dulled by years of grime. A tear in his robe revealed the slow movement of a double tail, twitching with nerves he could not still.
+
+Three figures.
+
+Three breaths.
+
+Together.
+
+Seraph closed his eyes for a moment longer than necessary.
+
+He had tried not to come this deep into the Gate. He always did. And the guards always made sure he paid for trying.
+
+But he was not alone.
+
+He never was.
+
+The chamber they had been assigned was enormous, far larger than any task demanded of it. Once, it had likely hosted feasts or councils - stone laid to impress, to intimidate, to endure. Now it stood hollow and stripped, its purpose reduced to neglect. The walls wept constantly, thin streams of water tracing paths into slick pools along the floor. Debris lay scattered everywhere: broken furniture, shattered stone, rusted iron warped by age.
+
+They began to clean.
+
+Brooms scraped. Stone shifted. Old things were moved and burned. Work in the Ninth Gate was less about progress than obedience - proof that bodies could still be directed.
+
+“We’ve been here for years, Seraph,” Hugo said, watching Garr move through controlled martial strikes against splintered furniture set upright like training foes. “And you still complain as if it will change our circumstances.”
+
+“I don’t complain,” Seraph said quietly. “I hope.”
+
+“That’s what I said,” Hugo replied.
+
+Garr approached a solid oak table left inexplicably intact. He placed his palm against it, drew a slow breath, and struck downward. The table split nearly in half. Garr centered himself again, hands pressed together, breath steady.
+
+By now, both brothers were accustomed to Garr’s silence. He had taken a vow nearly ten years earlier. Not even relentless beatings from the guards had broken it.
+
+The scars along his back and calves told that story without words.
+
+The work continued.
+
+Stone shifted. Ash was gathered. Broken furniture was dragged closer to the fire pit and reduced piece by piece. The rhythm of labor settled back over them, familiar enough that Seraph almost forgot the tightness in his chest.
+
+Almost.
+
+The chamber seemed to answer that thought with stillness. Even the water slowed in his hearing. Somewhere beyond the reach of the fire, stone scraped softly against stone.
+
+Seraph felt it first - an instinctive tightening in his chest, the faint prickle of being watched.
+
+He turned just as something lunged from the shadows.
+
+The rats came all at once.
+
+They were enormous - each the size of a large dog, bodies swollen and corded with muscle, fur patchy and slick with filth. Their eyes burned with fever-bright madness, and their teeth clattered as they moved, too fast for creatures that should have been so heavy.
+
+Seraph raised his hands. Pale light gathered around his fingers, thin at first, then widening into something sharp and desperate. Panic fractured his focus before he could release it cleanly. His first strike went wide, a flare of radiance splashing uselessly against stone.
+
+One of the rats slammed into him, knocking the breath from his lungs. Claws tore fabric and flesh as it snapped for his throat.
+
+Garr moved.
+
+He crossed the chamber in a blur, striking the creature mid-lunge. Bone cracked under the force of the blow. The rat shrieked once before collapsing, lifeless before it finished sliding across the floor.
+
+More poured in.
+
+Hugo stepped forward and became an immovable thing.
+
+He planted his feet wide and met the swarm head-on, shouldering into the first two bodies as they slammed into him. His arm came down like a hammer, crushing skulls, boots stamping with brutal precision. He took the impact without retreat, absorbing blow after blow as if daring the mass to break him.
+
+Another rat slipped past.
+
+Seraph tried again.
+
+Light flared brighter - but panic twisted it. The strike faltered, grazing instead of stopping the charge. Pain exploded across his ribs as teeth sank in.
+
+He cried out and collapsed.
+
+Garr was there instantly.
+
+He interposed himself between Seraph and the snapping jaws, taking the bite meant for Seraph’s throat. Teeth tore deep into Garr’s calf. Blood spilled freely onto the stone.
+
+Garr did not slow.
+
+He twisted, drove his elbow down, and ended the creature with a single precise strike. He flowed immediately into the next motion, ending another rat before it could turn.
+
+Hugo roared - not in rage, but command - and surged forward, holding the remaining rats at bay through sheer strength and refusal to yield. He moved like a wall, absorbing impacts that would have crushed a lesser man.
+
+The last rat tried to flee.
+
+It didn’t make it far.
+
+Silence returned abruptly, broken only by heavy breathing and the slow drip of blood onto stone.
+
+Seraph lay shaking.
+
+He dragged himself across the floor to Garr first, hands glowing faintly as he pressed them to the torn flesh. Healing came slowly, reluctantly, the cost settling deep in his chest. Sweat beaded on his brow.
+
+Hugo knelt beside him next, clutching his own bleeding arm. Seraph healed that too - then turned the light on himself, sealing torn skin with trembling hands.
+
+“Good thing to have a healer as a brother,” Hugo said hoarsely.
+
+Seraph managed a weak smile. “It pays to have protectors.”
+
+As the Father protects us, Seraph thought, but did not say aloud.
+
+Garr prepared the rats without comment. He built the fire low and narrow, coaxing the flame down until it barely breathed. In the Ninth Gate, anything that burned too brightly invited attention, and attention was never given without cost. Meat turned slowly.
+
+“Save some,” Seraph said. “For the others.”
+
+Hugo hesitated, then sighed. “You’re impossible.”
+
+They ate.
+
+When darkness fully settled, they lay close - not for comfort, but for certainty.
+
+Morning would come whether they survived it or not.
+
+Three bodies.
+
+One warmth.
+
+Held.
+
+
+Chapter 2 - The Passage
+
+Morning in the Ninth Gate did not arrive with light.
+
+It arrived with boots.
+
+Seraph woke to pain first - a sharp impact against his ribs that forced the air from his lungs and snapped his eyes open. Stone scraped his cheek as he rolled instinctively, arms curling inward in practiced defense.
+
+“Up.”
+
+The word came flat, without anger or urgency, as one might speak to furniture that needed moving.
+
+Another kick followed, careless this time, delivered out of boredom more than malice.
+
+“On your feet. All of you.”
+
+Hugo was already moving, pushing himself upright with a grunt, positioning his body between Seraph and the guards without making it obvious. Garr rose more slowly, unfolding from the floor with controlled ease, face unreadable.
+
+“Same work as yesterday,” one of the guards said with a yawn. “Different corridor. Don’t get lost.”
+
+A laugh followed. Chains rattled. Keys jingled.
+
+The door opened.
+
+They were herded through the inner passages of the Gate, deeper than before. This corridor was narrower, the stone rougher, the ceiling lower. Moisture clung to the walls in thick patches, and the air smelled stale - untouched, as if even the rot had settled into stillness.
+
+“Feels older,” Hugo muttered.
+
+“Everything here is old,” Seraph replied quietly. “Some things just haven’t been looked at in a while.”
+
+Hugo glanced at him - not disapproval, but concern - then returned his attention forward.
+
+The guards left them there with tools too poor for the labor and a torch too weak for the dark. Its flame bent toward the corridor ahead, though no wind touched it.
+
+They worked in silence at first.
+
+Brooms scraped. Stone shifted. Debris was dragged aside and reduced to ash. Dust rose in choking clouds that clung to skin and lungs. Every sound echoed too long, the walls answering back as if the corridor were listening.
+
+“This place doesn’t like being disturbed,” Seraph murmured, pressing a hand briefly to the wall.
+
+Hugo snorted. “Neither do the guards.”
+
+“That’s not what I mean.”
+
+Hugo let the comment pass. He had learned when Seraph was speaking past him, not to him.
+
+Garr worked methodically, moving broken stone piece by piece. He did not rush. His movements were deliberate, almost reverent, as though he were dismantling something rather than cleaning it.
+
+“This corridor wasn’t meant for work details,” Hugo said under his breath. “Too far in.”
+
+“Or forgotten,” Seraph said.
+
+The word lingered.
+
+That was when Garr stopped.
+
+He crouched near the far wall, fingers brushing stone that did not feel like the rest.
+
+Hugo noticed immediately. Seraph followed a moment later.
+
+“What is it?” Hugo asked.
+
+Garr did not answer. He pressed his palm flat against the wall and leaned his weight forward.
+
+The stone shifted.
+
+Not much. Just enough.
+
+They froze.
+
+Seraph’s heart hammered in his chest. He waited for the shout. The clang of boots. The sound of punishment.
+
+Nothing came.
+
+Carefully, Garr pushed again. A narrow seam revealed itself - stone against stone, disguised beneath centuries of neglect. With effort, the section slid inward just enough to expose darkness beyond.
+
+A passage.
+
+No wider than a man’s shoulders.
+
+No light.
+
+Just stone, air, and the unmistakable scent of places long forgotten.
+
+They stared at it in silence.
+
+“Close it,” Hugo said immediately.
+
+Garr hesitated, then complied, easing the stone back into place.
+
+Seraph’s hands were trembling.
+
+“That wasn’t meant to be there,” Seraph whispered.
+
+“That’s exactly why it is,” Hugo replied.
+
+They did not speak of escape that day.
+
+They cleaned.
+
+They burned.
+
+They returned to their cells as if nothing had changed.
+
+But everything had.
+
+That night, they sat close in the dark of their cell, backs against cold stone. No one spoke at first. The hidden passage lay between them unspoken, heavier than the chains they no longer wore.
+
+“If it exists,” Hugo said finally, “others might know.”
+
+“Or they forgot,” Seraph replied.
+
+“That’s worse.”
+
+Seraph folded his hands together. “It felt untouched.”
+
+Hugo stared at the floor. “If we’re caught - ”
+
+“We won’t be,” Seraph said too quickly.
+
+Hugo looked at him. “Hope doesn’t stop a blade.”
+
+Seraph met his gaze. “Neither does fear.”
+
+Silence returned.
+
+Over the next two days, they began to act without naming intention.
+
+Garr set aside lengths of iron instead of discarding them. Hugo tested broken furniture for balance and weight before feeding it to the fire. Seraph hid scraps of dried meat in cracks in the stone, unsure whether he was preparing or simply afraid not to.
+
+No one said the word escape.
+
+They only prepared.
+
+On the third day, the guards lingered longer than usual - then shorter.
+
+When their footsteps finally faded, the silence that followed was brittle.
+
+Hugo exhaled. “We shouldn’t - ”
+
+Stone shifted.
+
+Garr was already at the wall.
+
+He slid the seam open without looking back.
+
+The choice had been made.
+
+They moved.
+
+The tunnel swallowed light instantly.
+
+“It’s narrow,” Hugo said.
+
+Seraph swallowed. “I’ll go first.”
+
+“You don’t have to - ”
+
+“I can see,” Seraph said. “You can’t. Not like I can.”
+
+Hugo held his gaze for a long moment, then nodded.
+
+Seraph slipped into the passage.
+
+The stone pressed close on all sides. The air was thick and damp, every sound amplified by the walls. He moved by feel at first, then by sight - darkness parting around him as naturally as breath.
+
+Hugo followed.
+
+Then Garr.
+
+They disappeared into the hidden vein of the Gate, leaving the corridor exactly as they had found it.
+
+Behind them, the Ninth Gate remained silent.
+
+
+Chapter 3 - The Cavern
+
+The passage did not open into freedom.
+
+They moved single file for what felt like hours. The tunnel twisted, sloped downward, then leveled out. Moisture increased. The sound of water grew louder until it became constant.
+
+When the tunnel finally opened, it did so suddenly.
+
+The cavern beyond was vast.
+
+Stone rose upward into shadow, jagged and ancient. A river cut through the cavern floor, black water moving steadily over smooth rock. Stalactites hung like teeth above them, dripping steadily into the flow.
+
+They followed the river.
+
+It felt safer than choosing blind paths.
+
+Time blurred. Muscles ached. Seraph lagged behind, breath growing shallow.
+
+At the fork, Hugo stopped.
+
+The river split in two directions - one narrow and fast-moving, the other wider, slower, vanishing into darkness.
+
+Seraph sank down onto a rock before anyone could argue.
+
+“I need a moment,” he said. “Please.”
+
+Hugo opened his mouth, then closed it. Garr watched the tunnel behind them.
+
+Seraph clasped his hands and bowed his head.
+
+“I’ll ask the Father,” he said quietly. “For guidance.”
+
+Hugo turned his back, keeping watch. Garr moved a few paces away, eyes scanning the cavern.
+
+Seraph closed his eyes and tried to make his breathing still enough for prayer.
+
+The cavern was silent except for water.
+
+Then he felt it.
+
+A pressure.
+
+A sense of closeness.
+
+He opened his eyes and looked around.
+
+Nothing.
+
+He exhaled and closed them again.
+
+He had just begun again when something touched his shoulder.
+
+Then another.
+
+Then another.
+
+At first, he thought it was Hugo.
+
+Or Garr.
+
+Then a fourth hand closed around his arm.
+
+Then a fifth.
+
+Seraph froze.
+
+This was not his brothers.
+
+It happened too fast to understand.
+
+Seraph opened his eyes.
+
+Hands were on him.
+
+Not Hugo’s.
+
+Not Garr’s.
+
+Too many.
+
+A sharp pain bloomed between his shoulder blades - sudden, precise - and the world tilted violently. His vision dimmed, sound pulling away as if swallowed by distance. The cavern fell from beneath him, and he felt himself sinking, tumbling into a depth without bottom or form.
+
+Then there was nothing.
+
+Hugo sat at the river’s edge, wiping water from his beard after quenching his thirst. The sound of flowing stone-water filled the cavern, steady and indifferent.
+
+Behind him, Garr knelt, splashing water over his face, methodical as always. When he rose and turned - 
+
+He froze.
+
+Seraph was gone.
+
+No.
+
+There.
+
+Wrapped in silk.
+
+A massive spider clung to the cavern wall above them, its body grotesque and swollen, eight legs anchored effortlessly to stone. Thick strands of webbing cocooned Seraph midair, his limbs pinned tight against his body. His skin, already pale by nature, had taken on a ghostly hue - bloodless, empty. His eyes were half-lidded, unfocused.
+
+Lifeless.
+
+Garr did not speak.
+
+He did not hesitate.
+
+He moved.
+
+His body launched forward at full speed, passing Hugo in a blur. The suddenness of the motion snapped Hugo’s attention toward the wall just in time to see Garr leap, arms outstretched, body parallel to the ground.
+
+The spider reacted too late.
+
+Garr collided with the cocoon, ripping Seraph free in a single motion and landing hard several feet away. The web tore with a wet snap as the spider screeched in fury.
+
+Hugo was already moving.
+
+He seized a makeshift staff - a broom handle reinforced with iron - and sprinted toward his brothers as the spider lunged to reclaim its prey.
+
+“Garr!”
+
+Hugo hurled the staff mid-stride.
+
+Garr caught it effortlessly, spinning it into a ready stance as he centered himself. The spider abandoned Seraph and turned its attention to the two new threats, crouching low, legs tensed.
+
+Garr struck first.
+
+He leapt high, cresting into the air, and brought the staff down with brutal precision toward the spider’s head. The blow landed solidly - 
+
+And barely slowed it.
+
+The spider lashed out, its front legs snapping toward Garr. He rolled aside just in time, stone scraping his back as claws passed where his neck had been.
+
+The exchange lasted seconds.
+
+Hugo roared and charged.
+
+He swung with both hands, slamming his full weight into one of the spider’s side legs. The impact cracked against chitin with a sickening crunch. The spider screeched, retracting the damaged limb.
+
+Seven to go, Hugo thought grimly.
+
+The spider reared, abdomen lifting unnaturally high. Its spinnerets flexed.
+
+Webbing shot forward.
+
+It struck Hugo’s feet, pinning his left leg to the stone in an instant. He staggered but stayed upright, still within striking range.
+
+Garr reacted.
+
+He slammed the base of the staff into the ground, using it like a pole. With a powerful vault, he launched himself upward, catching hold of the spider’s sensory hairs near its head. He clung to it, riding the beast as it thrashed.
+
+The spider twisted violently.
+
+Another stream of webbing lashed out, wrapping around Hugo’s other leg. He was pinned completely now - immobile.
+
+The weapons they had were not enough.
+
+Hugo knew it.
+
+Garr knew it.
+
+The spider began its six-legged stalk toward Hugo, mandibles clicking in anticipation.
+
+Garr stomped down hard, driving his weight into the spider’s head while wrenching backward on the sensory hairs. The spider reared up, shrieking - unprepared for the pain. Its balance faltered.
+
+Hugo strained against the webbing with everything he had.
+
+The bindings tore partially free, but a thick strand still tethered him to the stone behind.
+
+The spider lunged.
+
+Hugo rolled desperately, the web stretching taut as he barely avoided the mandibles. Garr yanked hard to the side, throwing the creature’s trajectory off just enough.
+
+Hugo scrambled to his feet.
+
+An idea sparked.
+
+He locked eyes with Garr.
+
+No words passed between them.
+
+The spider crouched, ready to leap again.
+
+This time, Hugo didn’t move.
+
+The spider launched.
+
+At the apex of its jump, Garr stomped and pulled with all his strength. The spider’s head jerked upward in reflex, exposing the massive underside of its abdomen.
+
+Hugo acted.
+
+He struck the top of the staff with a single, brutal blow, snapping it into a jagged spear. He ducked low as the spider descended.
+
+For a split second, there was darkness.
+
+Weight.
+
+Nothingness.
+
+This is it, Hugo thought. The abyss. Seraph was right. I’ve doomed myself.
+
+Then sensation returned.
+
+The smell of damp stone.
+
+The feel of dirt beneath his hands.
+
+The spider convulsed above him, impaled, its body collapsing inward as viscous ichor spilled onto the cavern floor.
+
+A hand seized Hugo’s forearm and hauled him free.
+
+He emerged gasping into the cavern light.
+
+The spider writhed briefly, then fell still.
+
+Hugo didn’t look back.
+
+He ran.
+
+“Brother!” he shouted.
+
+Seraph lay where Garr had placed him, unmoving. His eyes stared into nothing.
+
+Hugo dropped beside him, pulling Seraph’s head into his lap. He cradled him like a child, hands trembling.
+
+“No. No, no, no - ”
+
+Moments earlier, Hugo had thought himself dead.
+
+Now he wished he were.
+
+Every argument. Every doubt. Every time he’d dismissed Seraph’s faith flooded his mind at once. The Father. The protector. The hope.
+
+Too late.
+
+Seraph was gone.
+
+Hugo’s shoulders shook as he wept, grief breaking through him without restraint.
+
+Garr stood nearby, silent, frozen.
+
+He had never seen Hugo cry.
+
+He had never seen Seraph so still.
+
+Seraph had always been the one who healed. The one who brought life back from the edge. The one protected by his god.
+
+He was not the strongest.
+
+Not the fastest.
+
+But he was the thread that bound them.
+
+Garr’s thoughts drifted backward - to the first place he remembered safety, to shared hunger and shared warmth, to a time before chains and stone.
+
+It was an orphanage.
+
+In his first memories of life, Garr was crouched in the dirt, stacking sticks into what he imagined was a grand castle. The structure rose slowly, uneven and fragile, until it toppled over after only a few layers. He tried again. And again.
+
+Each time it fell.
+
+Frustration welled in his chest, hot and immediate. He hung his head, shoulders sagging under the weight of a failure too large for a child to name.
+
+A small hand touched his back.
+
+“It’s okay,” a voice said.
+
+Garr looked up.
+
+The child standing before him was pale - skin and eyes alike, white as stone bleached by sun. A Darkling child. Despite the lack of color, there was something alive in him, something warm and bright. Though his eyes lacked pupils, they carried an unmistakable presence.
+
+Seraph.
+
+Garr felt a strange relief in that gaze, even as his doubts clung stubbornly to his thoughts.
+
+“I’m stupid,” Garr cried. “That’s what the mistress says. I’ll never be a builder. She says my kind is only good for strength and war.”
+
+This was before his oath of silence.
+
+Seraph stepped around him, knelt, and gathered the fallen sticks.
+
+“You just need support,” Seraph said gently. He pressed the thicker sticks into the dirt, angling them into wide V-shapes at each corner. “Like this. Now they can hold weight.”
+
+He looked up and smiled. “You try.”
+
+Garr followed his instruction. Four sticks. Then more. The structure stood.
+
+It didn’t fall.
+
+Garr smiled for the first time that day, turning back toward those pale eyes, confidence blooming where shame had lived moments before.
+
+Now - 
+
+He was back in the cavern.
+
+And he was looking into those same eyes.
+
+Only now, they were empty.
+
+No warmth. No light. No life.
+
+Garr felt tears well despite himself. His chest tightened, a sound threatening to escape him when another memory surged forward.
+
+He was older then. Years into his oath of silence.
+
+He was walking alone in the forest beyond the village, seeking refuge from voices, from noise. Silence was easier. Honest.
+
+A sound had caught his attention - panicked chirping.
+
+High in the branches, a cardinal was trapped in a spider’s web. A large hunting spider clung nearby, its venom already sunk into the bird’s body. The bird stilled, eyes blank, wings slack.
+
+Dead.
+
+Garr felt the familiar surge of anger and sorrow.
+
+He carefully used a stick to free the bird from the web. The spider retreated into the hollow of a tree.
+
+Cradling the bird, Garr knelt to bury it.
+
+Then - 
+
+A breath.
+
+Faint. Almost imperceptible.
+
+The bird lived.
+
+The venom had not killed it. Only stilled it.
+
+Life had waited.
+
+Garr came back to himself with a gasp.
+
+Hugo was still kneeling, tears dripping onto Seraph’s face.
+
+Garr moved quickly, kneeling beside them. He placed two fingers beneath Seraph’s nose.
+
+Warmth.
+
+Breath.
+
+Life.
+
+Garr grabbed Hugo’s shoulder and shook him hard.
+
+Hugo looked up, rage and grief colliding - until he saw Garr’s face.
+
+The smile.
+
+The tears.
+
+“He’s alive,” Hugo whispered.
+
+Relief broke through him like a flood.
+
+They worked quickly. Hugo tore away the webbing and lifted Seraph with ease, slinging him over his shoulder. The question remained - 
+
+Which way?
+
+The river forked ahead, darkness swallowing both paths.
+
+They stood frozen.
+
+Then - 
+
+A screech.
+
+They spun, weapons raised.
+
+But it wasn’t a spider.
+
+The sound multiplied - high-pitched, frantic. Wings beat the air as a swarm of bats burst from upstream, rushing past them and vanishing down the left passage.
+
+“Night,” Hugo breathed. “They’re feeding.”
+
+Or returning.
+
+Or fleeing.
+
+Either way, Hugo trusted instinct over certainty.
+
+“That way,” he said.
+
+He stepped forward.
+
+Garr grabbed three river stones, heavy enough to break bone. Hugo adjusted Seraph’s weight on his shoulder, club in hand.
+
+They walked.
+
+The silence was heavy - not fearful, but resolute.
+
+It had a voice of its own.
+
+Keep going.
+
+You must.
+
+This is how you save him.

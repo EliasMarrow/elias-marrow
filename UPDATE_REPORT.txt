@@ -1,0 +1,11 @@
+Elias Marrow site update report
+
+Public reader system: HTML pages under /read/darkling/.
+Darkling landing page: /darkling.html.
+Darkling downloads: DOCX/TXT under /assets/novels/darkling/text/.
+Novels routing: content.json now supports a book.landing path; Darkling routes to darkling.html instead of the generic PDF reader.
+CSS: styles.css replaced with the vivid dark reading-room theme.
+
+Static local path check:
+- No missing static href/src paths found.
+- JavaScript template paths in essays.html/novels.html are intentionally dynamic and were ignored after confirming content.json routes.
