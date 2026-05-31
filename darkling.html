@@ -3,80 +3,92 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Darkling — Book I</title>
+  <title>Darkling — Book I: Everterra</title>
+  <meta name="description" content="A fantasy world where survival and morality slowly drift apart, and people are forced to decide what they are willing to become to protect what they love."/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
-<body>
+<body class="page-author page-darkling">
   <div class="container">
 
-    <div class="topbar">
+    <header class="topbar">
       <div class="brand">
         <div class="sigil">DARKLING</div>
-        <div class="motto">Book I — table of contents</div>
+        <div class="motto">Book I: Everterra</div>
       </div>
-      <div class="nav">
+      <nav class="nav" aria-label="Site navigation">
         <a href="index.html">Home</a>
         <a href="novels.html">Novels</a>
         <a href="essays.html">Essays</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <section class="hero darkling-hero">
+      <div class="section-title">Elias Marrow</div>
+      <h1>Darkling</h1>
+      <p class="lead">A fantasy world where survival and morality slowly drift apart, and people are forced to decide what they are willing to become to protect what they love.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="read/darkling/prologue.html">Begin Reading →</a>
+        <a class="btn ghost" href="assets/novels/darkling/text/Darkling_up_to_date_draft.docx">Download DOCX</a>
       </div>
-    </div>
+    </section>
 
-    <div class="panel">
-      <h1>Darkling — Book I</h1>
-      <p class="muted">
-        Chapters are published individually. Each entry links to its current manuscript file.
-      </p>
-      <p class="small">
-        Note: Links can point to DOCX/PDF files now. Later, we can add HTML reading pages without changing the card layout.
-      </p>
-    </div>
-
-    <div class="panel soft">
+    <section class="panel soft toc-panel">
+      <div class="section-title">Book I — Current Draft</div>
       <h2>Prologue & Chapters</h2>
+      <p class="muted">Public reader pages are HTML for clean spacing, mobile readability, and site-safe hierarchy. Editable draft downloads remain available as DOCX/TXT.</p>
 
-      <div class="grid">
-
-        <!-- PROLOGUE (DOCX EXAMPLE LINK) -->
-        <div class="ill-card" style="--bgimg:url('./assets/novels/darkling/prologue.jpg');">
-          <a href="assets/novels/darkling/text/prologue.pdf" target="_blank" rel="noopener">
+      <div class="grid chapter-grid">
+        <article class="ill-card" style="--bgimg:url('./assets/novels/darkling/darkling-cover.jpg');">
+          <a href="read/darkling/prologue.html">
             <p class="ill-title">Prologue</p>
-            <div class="ill-meta">DOCX · opens in new tab</div>
-            <p class="ill-desc">The world before the fracture. Foundations, myth, and quiet violence.</p>
+            <div class="ill-meta">HTML reader</div>
+            <p class="ill-desc">The world before the fracture. Canaan, the Age of Men, and the Ninth Gate.</p>
           </a>
-        </div>
+        </article>
 
-        <!-- CHAPTER 1 -->
-        <div class="ill-card" style="--bgimg:url('./assets/novels/darkling/ch01.jpg');">
-          <a href="assets/novels/darkling/text/Darkling_Book1_Chapter1_The_Fire.pdf" target="_blank" rel="noopener">
+        <article class="ill-card" style="--bgimg:url('./assets/novels/darkling/darkling-cover.jpg');">
+          <a href="read/darkling/chapter-1-the-fire.html">
             <p class="ill-title">Chapter 1 — The Fire</p>
-            <div class="ill-meta">DOCX · opens in new tab</div>
-            <p class="ill-desc">Opening movement. Establishes tone, constraint, and the first fracture.</p>
+            <div class="ill-meta">HTML reader</div>
+            <p class="ill-desc">Seraph, Hugo, and Garr endure the Gate’s work, hunger, and first violence.</p>
           </a>
-        </div>
+        </article>
 
-        <!-- CHAPTER 2 (placeholder) -->
-        <div class="ill-card" style="--bgimg:url('./assets/novels/darkling/ch02.jpg');">
-          <a href="assets/novels/darkling/text/ch02.docx" target="_blank" rel="noopener">
+        <article class="ill-card" style="--bgimg:url('./assets/novels/darkling/darkling-cover.jpg');">
+          <a href="read/darkling/chapter-2-the-passage.html">
             <p class="ill-title">Chapter 2 — The Passage</p>
-            <div class="ill-meta">DOCX · opens in new tab</div>
-            <p class="ill-desc">Placeholder: upload the file and the link becomes live.</p>
+            <div class="ill-meta">HTML reader</div>
+            <p class="ill-desc">A forgotten seam in the stone changes what the brothers are willing to risk.</p>
           </a>
-        </div>
+        </article>
 
-        <!-- Add more chapters by duplicating a card and changing file + image + text -->
-
+        <article class="ill-card" style="--bgimg:url('./assets/novels/darkling/darkling-cover.jpg');">
+          <a href="read/darkling/chapter-3-the-cavern.html">
+            <p class="ill-title">Chapter 3 — The Cavern</p>
+            <div class="ill-meta">HTML reader</div>
+            <p class="ill-desc">The hidden path opens into darkness, water, venom, and the cost of survival.</p>
+          </a>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <div class="footer">
+    <section class="panel download-panel">
+      <div class="section-title">Editable Archive</div>
+      <h2>Draft files</h2>
+      <p class="muted">Use these only for editing or backup. The public reading experience should use the HTML pages above.</p>
+      <div class="hero-cta left">
+        <a class="btn ghost" href="assets/novels/darkling/text/Darkling_up_to_date_draft.docx">Full Draft DOCX</a>
+        <a class="btn ghost" href="assets/novels/darkling/text/Darkling_up_to_date_draft.txt">Full Draft TXT</a>
+      </div>
+    </section>
+
+    <footer class="footer">
       <div>© <span id="year"></span> Elias Marrow</div>
       <div><a href="novels.html">Back to Novels</a></div>
-    </div>
+    </footer>
 
   </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

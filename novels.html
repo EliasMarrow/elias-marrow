@@ -29,7 +29,7 @@
 
       <div class="section-card">
         <div class="section-title">Books</div>
-        <div class="muted">PDF archive editions</div>
+        <div class="muted">Books, archive editions, and active HTML reading pages</div>
         <div id="books-grid" class="cover-grid"></div>
       </div>
 
@@ -66,9 +66,10 @@
       const title = (book && book.title) ? book.title : 'Untitled';
       const subtitle = (book && book.subtitle) ? book.subtitle : '';
       const id = (book && book.id) ? book.id : '';
+      const href = (book && book.landing) ? book.landing : `./read-me.html?type=book&id=${encodeURIComponent(id)}`;
 
       card.innerHTML = `
-        <a href="./read-me.html?type=book&id=${encodeURIComponent(id)}">
+        <a href="${href}">
           <h3 class="ill-title">${title}</h3>
           ${subtitle ? `<p class="ill-meta">${subtitle}</p>` : ``}
         </a>
