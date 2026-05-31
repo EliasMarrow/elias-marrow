@@ -233,8 +233,9 @@
       "author": "Elias Marrow",
       "date": "2026-01-21",
       "summary": "An archive edition. The work publishes in sections as canon is locked.",
-      "format": "pdf",
+      "format": "html",
       "file": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.pdf",
+      "landing": "the-weight-of-knowing.html",
       "cover": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.jpg",
       "tags": ["novel", "systems", "gothic", "power"]
     }
