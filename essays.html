@@ -155,9 +155,9 @@
         card.style.setProperty('--bgimg', `url("${essay.cover}")`);
       }
 
-      // Featured/Recent preserve your existing behavior (open PDF)
+      const href = essay.landing || essay.file;
       card.innerHTML = `
-        <a href="${essay.file}" target="_blank" rel="noopener">
+        <a href="${href}">
           <h3 class="ill-title">${essay.title}</h3>
           ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
         </a>
@@ -173,9 +173,9 @@
         card.style.setProperty('--bgimg', `url("${essay.cover}")`);
       }
 
-      // A–Z rail uses your established reader routing
+      const href = essay.landing || essay.file;
       card.innerHTML = `
-        <a href="read-me.html?type=essay&id=${encodeURIComponent(essay.id)}">
+        <a href="${href}">
           <h3 class="ill-title">${essay.title}</h3>
         </a>
       `;
