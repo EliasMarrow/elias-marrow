@@ -205,14 +205,15 @@
     {
       "id": "constraints_not_choices",
       "title": "Constraints, Not Choices",
-      "subtitle": "A short book",
+      "subtitle": "Expanded Edition",
       "author": "Elias Marrow",
       "date": "2026-01-21",
-      "summary": "A structural argument that outcomes emerge from constrained option sets—not moral failure.",
-      "format": "pdf",
+      "summary": "A structural argument that outcomes emerge from constrained option sets — not moral failure. Six parts, twelve chapters, simulation appendix.",
+      "format": "html",
       "file": "assets/novels/constraints_not_choices/constraints_not_choices.pdf",
+      "landing": "constraints-not-choices.html",
       "cover": "assets/novels/constraints_not_choices/constraints_not_choices.jpg",
-      "tags": ["constraint", "scarcity", "systems", "agency"]
+      "tags": ["constraint", "scarcity", "systems", "agency", "simulation"]
     },
     {
       "id": "darkling",
