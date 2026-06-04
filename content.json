@@ -231,12 +231,12 @@
     {
       "id": "the_weight_of_knowing",
       "title": "The Weight of Knowing",
-      "subtitle": "A novel",
+      "subtitle": "A novella",
       "author": "Elias Marrow",
-      "date": "2026-01-21",
-      "summary": "An archive edition. The work publishes in sections as canon is locked.",
+      "date": "2026-06-03",
+      "summary": "Full HTML edition. Three parts, eleven chapters, and a coda about the burden of understanding too much, too clearly.",
       "format": "html",
-      "file": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.pdf",
+      "file": "assets/novels/the_weight_of_knowing/text/the_weight_of_knowing.docx",
       "landing": "the-weight-of-knowing.html",
       "cover": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.jpg",
       "tags": ["novel", "systems", "gothic", "power"]

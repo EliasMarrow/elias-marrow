@@ -320,6 +320,16 @@ li{margin:6px 0;color:rgba(245,241,232,.84);}
 
 /* Chapter list */
 .chapter-list{display:grid;gap:6px;margin:16px 0;}
+.chapter-group-title{
+  margin:14px 2px 2px;
+  color:var(--accent-2);
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.chapter-group-title:first-child{margin-top:0;}
 .chapter-list a{
   display:block;
   padding:9px 12px;
@@ -388,6 +398,16 @@ li{margin:6px 0;color:rgba(245,241,232,.84);}
   margin-bottom:1.3em;
   color:rgba(245,241,232,.91);
 }
+.reader-pagination{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  margin-top:42px;
+  padding-top:24px;
+  border-top:1px solid var(--line-soft);
+}
+.reader-pagination .btn{min-width:145px;justify-content:center;}
 .reader-kicker{
   margin-bottom:10px;
   font-size:11px;
@@ -439,6 +459,8 @@ li{margin:6px 0;color:rgba(245,241,232,.84);}
   .hero,.panel{padding:22px 18px;}
   .ill-card,.ill-card a{min-height:180px;}
   .reader-article h1{font-size:clamp(28px,7vw,40px);}
+  .reader-pagination{flex-direction:column;align-items:stretch;}
+  .reader-pagination .btn{width:100%;}
 }
 
 /* ── Accessibility: reduced motion ── */
