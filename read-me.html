@@ -258,7 +258,8 @@
           const back = document.getElementById('back-link');
           back.href = (type === 'book') ? 'novels.html' : 'essays.html';
 
-          frame.src = file + '#view=FitH';
+          // HTML files don't use PDF viewer hash; PDFs get #view=FitH
+          frame.src = (file && file.endsWith('.html')) ? file : file + '#view=FitH';
 
           document.getElementById('read-root').style.display = 'grid';
         })
