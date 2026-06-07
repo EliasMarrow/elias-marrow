@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Roanoke Star - Elias Marrow</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .empty-state{
+      margin-top:14px;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:var(--card);
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size:14px;
+    }
+  </style>
+</head>
+
+<body class="page-essays">
+  <div class="container">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="sigil">ELIAS MARROW</div>
+        <div class="motto">Roanoke Star</div>
+      </div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="essays.html">Essays</a>
+        <a href="novels.html">Novels</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+
+    <div class="panel soft">
+      <h2>Roanoke City</h2>
+      <p class="muted">Pieces written for the Roanoke Star.</p>
+
+      <div class="section-card">
+        <div class="section-title">Roanoke Star</div>
+        <div class="muted">Roanoke city-specific writing</div>
+        <div id="roanoke-star-grid" class="cover-grid"></div>
+        <div id="roanoke-star-empty" class="empty-state" style="display:none;">
+          New Roanoke Star pieces will appear here once they are added to the archive.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div><a href="essays.html">Back to Essays</a></div>
+      <div>&copy; <span id="year"></span> Elias Marrow</div>
+    </div>
+
+  </div>
+
+  <script>
+    function renderCoverCard(essay){
+      const card = document.createElement('div');
+      card.className = 'ill-card';
+
+      if (essay.cover){
+        card.style.setProperty('--bgimg', `url("${essay.cover}")`);
+      }
+
+      card.innerHTML = `
+        <a href="read-me.html?type=essay&id=${encodeURIComponent(essay.id)}" rel="noopener">
+          <h3 class="ill-title">${essay.title}</h3>
+          ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
+        </a>
+      `;
+      return card;
+    }
+
+    function isRoanokeStarPiece(essay){
+      const values = [
+        essay.category,
+        essay.publication,
+        essay.publisher,
+        essay.source,
+        essay.section
+      ].filter(Boolean).map(value => String(value).toLowerCase());
+
+      const tags = Array.isArray(essay.tags) ? essay.tags.map(tag => String(tag).toLowerCase()) : [];
+      const haystack = values.concat(tags);
+
+      return haystack.some(value =>
+        value === 'roanoke star' ||
+        value === 'roanoke city' ||
+        value === 'roanoke-star' ||
+        value === 'roanoke-city'
+      );
+    }
+
+    fetch('content.json?v=' + Date.now(), { cache: 'no-store' })
+      .then(r => r.json())
+      .then(data => {
+        if (!data || !Array.isArray(data.essays)) return;
+        const grid = document.getElementById('roanoke-star-grid');
+        const empty = document.getElementById('roanoke-star-empty');
+        if (!grid || !empty) return;
+
+        const pieces = data.essays.filter(isRoanokeStarPiece);
+        pieces.forEach(e => grid.appendChild(renderCoverCard(e)));
+
+        if (!pieces.length){
+          empty.style.display = 'block';
+        }
+      })
+      .catch(() => {
+        const empty = document.getElementById('roanoke-star-empty');
+        if (empty) empty.style.display = 'block';
+      });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
