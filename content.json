@@ -186,6 +186,22 @@
       "landing": "read/essays/the-illusion-of-progress.html",
       "cover": "assets/essays/covers/the-illusion-of-progress.png",
       "tags": ["wages", "extraction", "progress", "housing"]
+    },
+    {
+      "id": "the-machine-comes-to-drink",
+      "title": "The Machine Comes to Drink",
+      "subtitle": "Google, water, and the bargain Botetourt is being asked to understand",
+      "author": "Elias Marrow",
+      "date": "2026-06-07",
+      "summary": "A Roanoke Star essay on Google's planned Botetourt data center campus, water demand, public trust, and the burden of clarity when outside infrastructure enters a local valley.",
+      "category": "Roanoke Star",
+      "publication": "Roanoke Star",
+      "section": "Roanoke City",
+      "format": "html",
+      "file": "read/essays/the-machine-comes-to-drink.html",
+      "landing": "read/essays/the-machine-comes-to-drink.html",
+      "cover": "assets/essays/covers/the-machine-comes-to-drink.png",
+      "tags": ["roanoke star", "roanoke city", "botetourt", "water", "data centers", "google", "legitimacy"]
     }
   ],
   "books": [
