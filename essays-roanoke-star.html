@@ -65,8 +65,10 @@
         card.style.setProperty('--bgimg', `url("${essay.cover}")`);
       }
 
+      const href = essay.landing || essay.file || `read-me.html?type=essay&id=${encodeURIComponent(essay.id)}`;
+
       card.innerHTML = `
-        <a href="read-me.html?type=essay&id=${encodeURIComponent(essay.id)}" rel="noopener">
+        <a href="${href}" rel="noopener">
           <h3 class="ill-title">${essay.title}</h3>
           ${essay.subtitle ? `<p class="ill-meta">${essay.subtitle}</p>` : ``}
         </a>
