@@ -409,3 +409,12 @@ body.page-about .article>*{position:relative;z-index:1;}
   html{scroll-behavior:auto;}
   *,*::before,*::after{transition:none!important;animation:none!important;}
 }
+
+
+/* ── Novel reader: scene breaks + chapter drop cap ── */
+.reader-article .scene-break{ display:block; text-align:center; margin:2.4em 0; height:1em; color:var(--accent); user-select:none; }
+.reader-article .scene-break::before{ content:"º6 º6 º6"; letter-spacing:.5em; font-size:13px; opacity:.7; }
+.page-darkling-reader .reader-article p:first-of-type::first-letter{
+  font-family:var(--display); font-weight:600; float:left; font-size:62px; line-height:.72;
+  padding:8px 12px 0 0; color:var(--accent);
+}
