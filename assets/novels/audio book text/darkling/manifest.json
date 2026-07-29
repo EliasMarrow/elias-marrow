@@ -1,0 +1,130 @@
+{
+  "schema": "elias-marrow/audiobook-text/v1",
+  "title": "Darkling — Book I: Everterra",
+  "spoken_title": "Darkling — Book One: Ever-tare-uh",
+  "author": "Elias Marrow",
+  "source_root": "read/darkling",
+  "pronunciation_file": "pronunciations.json",
+  "pronunciation_check": "pronunciation-check.txt",
+  "complete_output": "darkling-audiobook.txt",
+  "chapters": [
+    {
+      "source": "read/darkling/prologue.html",
+      "output": "01-prologue.txt",
+      "title": "Prologue",
+      "paragraphs": 26,
+      "scene_breaks": 1,
+      "structural_pauses": 27,
+      "tone_pauses": 7,
+      "pauses": 34,
+      "words": 647,
+      "sha256": "80c8ac9b46b24021ff056c73f070f61a21c842762524b856ea9c01329cf5605f"
+    },
+    {
+      "source": "read/darkling/chapter-1-the-fire.html",
+      "output": "02-chapter-1-the-fire.txt",
+      "title": "Chapter One. The Fire.",
+      "paragraphs": 117,
+      "scene_breaks": 4,
+      "structural_pauses": 118,
+      "tone_pauses": 67,
+      "pauses": 185,
+      "words": 3873,
+      "sha256": "675051da841643d6363539a943706ea72f10a59799e9a2d7a8589b8c50d28448"
+    },
+    {
+      "source": "read/darkling/chapter-2-the-passage.html",
+      "output": "03-chapter-2-the-passage.txt",
+      "title": "Chapter Two. The Passage.",
+      "paragraphs": 125,
+      "scene_breaks": 4,
+      "structural_pauses": 126,
+      "tone_pauses": 58,
+      "pauses": 184,
+      "words": 3959,
+      "sha256": "80d1c3e645dd01a60f6405b6ae62245c210324bdf38ff07d39f011f203db4f78"
+    },
+    {
+      "source": "read/darkling/chapter-3-the-cavern.html",
+      "output": "04-chapter-3-the-cavern.txt",
+      "title": "Chapter Three. The Cavern.",
+      "paragraphs": 192,
+      "scene_breaks": 1,
+      "structural_pauses": 193,
+      "tone_pauses": 32,
+      "pauses": 225,
+      "words": 3417,
+      "sha256": "8f8991646a18c4217991a91f72a80c0e29e70ac5ac6e6026d39520f7dc8721d4"
+    },
+    {
+      "source": "read/darkling/chapter-4-the-darkwood.html",
+      "output": "05-chapter-4-the-darkwood.txt",
+      "title": "Chapter Four. The Darkwood.",
+      "paragraphs": 129,
+      "scene_breaks": 7,
+      "structural_pauses": 130,
+      "tone_pauses": 47,
+      "pauses": 177,
+      "words": 3102,
+      "sha256": "00bea01818a4992a75db8c1859fdbc3bc4e0330ae5c171e1b411ecfde578b3fa"
+    },
+    {
+      "source": "read/darkling/chapter-5-idlewood.html",
+      "output": "06-chapter-5-idlewood.txt",
+      "title": "Chapter Five. Idlewood.",
+      "paragraphs": 148,
+      "scene_breaks": 6,
+      "structural_pauses": 149,
+      "tone_pauses": 53,
+      "pauses": 202,
+      "words": 5162,
+      "sha256": "dd8d9b927a808034395582d5d4057447387a05661b50c55d0db130f94ef8eee5"
+    },
+    {
+      "source": "read/darkling/chapter-6-the-reckoning.html",
+      "output": "07-chapter-6-the-reckoning.txt",
+      "title": "Chapter Six. The Reckoning.",
+      "paragraphs": 109,
+      "scene_breaks": 5,
+      "structural_pauses": 110,
+      "tone_pauses": 53,
+      "pauses": 163,
+      "words": 3522,
+      "sha256": "62f246b4b3e9ee4aa9657715a81ed0e1b1c95cfbb9b878251e131a3ace495e47"
+    },
+    {
+      "source": "read/darkling/chapter-7-the-charge.html",
+      "output": "08-chapter-7-the-charge.txt",
+      "title": "Chapter Seven. The Charge.",
+      "paragraphs": 98,
+      "scene_breaks": 4,
+      "structural_pauses": 99,
+      "tone_pauses": 40,
+      "pauses": 139,
+      "words": 3328,
+      "sha256": "5b40b3a3a63b96fc8feabbcb49c5add68cdeb2cd75885ffe084b332819730974"
+    },
+    {
+      "source": "read/darkling/chapter-8-after.html",
+      "output": "09-chapter-8-after.txt",
+      "title": "Chapter Eight. After.",
+      "paragraphs": 111,
+      "scene_breaks": 9,
+      "structural_pauses": 112,
+      "tone_pauses": 36,
+      "pauses": 148,
+      "words": 2831,
+      "sha256": "aa3b516969ad4664b829073df9bc40c911dcde1f94e5e193341ff2ab6b1d8948"
+    }
+  ],
+  "totals": {
+    "chapters": 9,
+    "paragraphs": 1055,
+    "scene_breaks": 41,
+    "structural_pauses": 1067,
+    "tone_pauses": 393,
+    "pauses": 1460,
+    "words": 29850
+  },
+  "sha256": "85821818f823e5b81d7ee087c58d8a6aa3365ec97fb57000bb3af6f08dcfdbc0"
+}

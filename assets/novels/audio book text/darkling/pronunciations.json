@@ -1,0 +1,161 @@
+{
+  "schema": "elias-marrow/audiobook-pronunciations/v1",
+  "terms": [
+    {
+      "written": "Everterra",
+      "spoken": "Ever-tare-uh",
+      "sound": "EVER — TARE — UH",
+      "note": "Author-specified world-name pronunciation; tare/tear as in tearing a shirt."
+    },
+    {
+      "written": "Canaan",
+      "spoken": "Kay-nun",
+      "sound": "KAY-nun"
+    },
+    {
+      "written": "Seraph",
+      "spoken": "Sehr-uff",
+      "sound": "SEHR-uff"
+    },
+    {
+      "written": "Garr",
+      "spoken": "Gar",
+      "sound": "GAR"
+    },
+    {
+      "written": "Daven",
+      "spoken": "Day-ven",
+      "sound": "DAY-ven"
+    },
+    {
+      "written": "Yorrin",
+      "spoken": "Yor-in",
+      "sound": "YOR-in"
+    },
+    {
+      "written": "Maret",
+      "spoken": "Mare-et",
+      "sound": "MARE-et"
+    },
+    {
+      "written": "Edder",
+      "spoken": "Ed-er",
+      "sound": "ED-er"
+    },
+    {
+      "written": "Corvin",
+      "spoken": "Kor-vin",
+      "sound": "KOR-vin"
+    },
+    {
+      "written": "Ossa",
+      "spoken": "Oss-uh",
+      "sound": "OSS-uh"
+    },
+    {
+      "written": "Calla",
+      "spoken": "Cal-uh",
+      "sound": "CAL-uh"
+    },
+    {
+      "written": "Tobren",
+      "spoken": "Toe-bren",
+      "sound": "TOE-bren"
+    },
+    {
+      "written": "Aldric",
+      "spoken": "All-drick",
+      "sound": "ALL-drick"
+    },
+    {
+      "written": "Verres",
+      "spoken": "Vair-ess",
+      "sound": "VAIR-ess"
+    },
+    {
+      "written": "Corren",
+      "spoken": "Kor-en",
+      "sound": "KOR-en"
+    },
+    {
+      "written": "Sera",
+      "spoken": "Sair-uh",
+      "sound": "SAIR-uh"
+    },
+    {
+      "written": "Hugo",
+      "spoken": "Hugo",
+      "sound": "HYOO-go"
+    },
+    {
+      "written": "Pell",
+      "spoken": "Pell",
+      "sound": "PELL"
+    },
+    {
+      "written": "Cobb",
+      "spoken": "Cobb",
+      "sound": "COB"
+    },
+    {
+      "written": "Idlewood",
+      "spoken": "Idlewood",
+      "sound": "EYE-dull-wood"
+    },
+    {
+      "written": "Darkwood",
+      "spoken": "Darkwood",
+      "sound": "DARK-wood"
+    },
+    {
+      "written": "Joss",
+      "spoken": "Joss",
+      "sound": "JOSS"
+    },
+    {
+      "written": "Dett",
+      "spoken": "Dett",
+      "sound": "DET"
+    },
+    {
+      "written": "Finn",
+      "spoken": "Finn",
+      "sound": "FIN"
+    },
+    {
+      "written": "Brask",
+      "spoken": "Brask",
+      "sound": "BRASK"
+    },
+    {
+      "written": "Vance",
+      "spoken": "Vance",
+      "sound": "VANTS"
+    },
+    {
+      "written": "Ferris",
+      "spoken": "Ferris",
+      "sound": "FAIR-iss"
+    },
+    {
+      "written": "Darkling",
+      "spoken": "Darkling",
+      "sound": "DARK-ling"
+    },
+    {
+      "written": "Castellan",
+      "spoken": "Castellan",
+      "sound": "kas-TELL-un"
+    },
+    {
+      "written": "Elias",
+      "spoken": "Elias",
+      "sound": "ih-LYE-us"
+    },
+    {
+      "written": "Marrow",
+      "spoken": "Marrow",
+      "sound": "MARE-oh"
+    }
+  ]
+}

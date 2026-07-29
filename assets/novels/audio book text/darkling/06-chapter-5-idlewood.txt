@@ -1,0 +1,594 @@
+Chapter Five. Idlewood.
+[[pause:1.20]]
+
+The town did not know what to make of them at first.
+
+[[pause:0.58]]
+
+That was fine.
+
+[[pause:0.72]]
+
+They did not know what to make of the town either.
+
+[[pause:0.58]]
+
+Idlewood sat in a shallow valley between two long ridges, the kind of place geography had made useful before anyone decided to settle it — [[pause:0.18]] low enough to catch runoff from both slopes, sheltered enough from the worst of the northern wind, close enough to the eastern road that goods could move without the town ever quite becoming a crossroads itself. Fields stretched outward from the central cluster of buildings in every direction — [[pause:0.18]] wheat mostly, gold-going-brown in the late summer light, some root vegetables in long mounded rows, orchards on the eastern slope that produced more than the town consumed and exactly as much as the crown's requisition orders expected, no more, no less, the arithmetic of survival worked out over generations until it had become instinct rather than calculation. The buildings were old but maintained, timber gone silver-gray with weather, roofs patched in places with newer wood that hadn't yet weathered to match. The roads were dirt but kept, raked free of the worst ruts after each rain, because a wagon stuck to its axle was a half-day lost that the town's margins couldn't absorb. Everything about the place had the quality of something that had learned to survive by being exactly what was required of it and nothing more — [[pause:0.18]] not poor enough to be abandoned, not prosperous enough to attract real attention, useful in the particular unremarkable way that kept a place safe by making it forgettable.
+
+[[pause:0.34]]
+
+They arrived at the edge of it on a morning in early autumn, three men who looked like what they were — [[pause:0.18]] escaped from something, traveled hard, carrying nothing. Sehr-uff walked on his own by then, still pale, still quieter than usual, the venom's last traces working their way out of him slowly, but upright. Hugo moved like a man expecting the ground to shift beneath him, his eyes cataloguing exits and angles out of habit he didn't examine. Gar simply moved, the way he always moved, present without announcing it.
+
+[[pause:0.34]]
+
+The fields they crossed smelled of cut hay and warm dust, a smell so far removed from the Gate's cold stone and the Darkwood's wet rot that for a moment Sehr-uff found himself simply standing still in it, breathing, unable to immediately place what the feeling rising in his chest was. It took him a moment to recognize it as something close to grief — [[pause:0.18]] not for anything lost, but for how long it had been since the world had offered him a smell that didn't carry threat folded into it.
+
+[[pause:0.34]]
+
+The first person to see them was a boy of perhaps ten, sitting on a fence post at the edge of the nearest field, whittling at a stick with the unhurried absorption of a child who has been given a task mainly to keep his hands busy while his eyes do the real work of watching the road.
+
+[[pause:0.34]]
+
+The boy looked at them without fear or welcome.
+
+[[pause:0.58]]
+
+"You're not from here," he said.
+
+[[pause:0.58]]
+
+"No," Sehr-uff agreed.
+
+[[pause:0.72]]
+
+"You running from something?"
+
+[[pause:0.58]]
+
+"We were," Sehr-uff said. "We're done running."
+
+[[pause:0.58]]
+
+The boy considered this with the particular seriousness of children who have grown up in places where the wrong answer to a simple question has consequences — [[pause:0.18]] turning the stick over once in his hands, weighing the three strangers the way he might weigh a stranger's coin before deciding it was true silver.
+
+[[pause:0.34]]
+
+"My father runs the grain store," he said finally. "He knows everyone."
+
+[[pause:0.40]]
+
+His name was Ed-er. His father was a man called Pell — [[pause:0.18]] broad, weathered, the kind of quiet that came from decades of calculating risk before speaking, a man whose hands, Sehr-uff would learn later, had been broken twice in his life and set both times by his own father at this same counter, and who carried that history in the particular careful way he handled anything fragile. Pell looked at the three of them for a long time in the doorway of his grain store without saying anything, wiping flour dust from his hands onto his apron with slow, deliberate strokes that seemed less about cleaning and more about giving himself time to think. His eyes moved from Hugo to Gar to Sehr-uff and back, reading things that weren't being offered — [[pause:0.18]] the particular wariness in how they stood, the way none of them had asked for food first, which told him more than any story would have.
+
+[[pause:0.34]]
+
+"You have a trade?" he said finally.
+
+[[pause:0.58]]
+
+"I can keep accounts," Sehr-uff said. "Ledgers. Correspondence. I can read and write in three languages."
+
+[[pause:0.40]]
+
+Pell looked at him. At the horns. At the tail that moved slowly beneath the hem of his robe.
+
+[[pause:0.46]]
+
+"The farm administrator died two months ago," Pell said. "Nobody's replaced him. The crown sends forms we can't fill out correctly and then fines us for filling them out incorrectly."
+
+[[pause:0.40]]
+
+"I can fill out forms," Sehr-uff said.
+
+[[pause:0.58]]
+
+Pell looked at Hugo.
+
+[[pause:0.72]]
+
+"I work," Hugo said simply.
+
+[[pause:0.58]]
+
+Pell looked at Gar, who looked back at him with the particular stillness of someone who had been looked at his whole life and had stopped explaining himself.
+
+[[pause:0.34]]
+
+"He works harder than anyone you have," Hugo said.
+
+[[pause:0.58]]
+
+Pell was quiet for another long moment, his eyes moving once more across all three of them, weighing something that had nothing to do with trades or ledgers.
+
+[[pause:0.34]]
+
+"There's a storage room above the mill," he said. "Hasn't been used in a while. Needs cleaning."
+
+[[pause:0.40]]
+
+"We're good at cleaning," Sehr-uff said.
+
+[[pause:0.58]]
+
+Something in Pell's face shifted at that — [[pause:0.18]] not quite a smile, but close to one, the particular dry amusement of a man who suspected there was a longer story behind the simple statement and had decided, for now, not to ask for it.
+
+[[pause:1.80]]
+
+They stayed.
+
+[[pause:0.72]]
+
+It happened gradually, the way things that last tend to happen — [[pause:0.18]] not with ceremony or decision but with the accumulation of ordinary days until leaving would have required more intention than staying.
+
+[[pause:0.34]]
+
+Sehr-uff inherited the dead administrator's desk and his chaos. The man's name, Sehr-uff learned eventually from a stray letter, had been Kor-vin, and he had apparently been well liked and poorly organized in roughly equal measure — [[pause:0.18]] the filing system was not a system. It was a record of someone's good intentions repeatedly interrupted by crisis. Forms were misfiled or missing entirely, stuffed into drawers that didn't match their labels, as though Kor-vin had developed, over years, an ever-more-elaborate private logic that made sense only to him and had died with him. Correspondence from the crown's requisition office went back three years with gaps that suggested the previous administrator had hoped certain letters would resolve themselves if ignored long enough.
+
+[[pause:0.34]]
+
+They hadn't.
+
+[[pause:0.72]]
+
+Sehr-uff worked.
+
+[[pause:0.72]]
+
+He worked the way he did everything — [[pause:0.18]] methodically, without complaint, with a quality of attention that made the people who watched him feel that the thing he was attending to mattered. He reorganized the ledgers, his ink-stained fingers moving across page after page in the small cramped office that smelled of dust and old paper and, faintly, of the lamp oil he burned late into the evenings. He answered the correspondence. He submitted the corrected forms and flagged the discrepancies and wrote careful, precise letters to the requisition office that were not defiant but were extremely clear about what Idlewood could and could not provide, each sentence weighed before it was set to paper, each number checked twice against the ledger before it left his hands.
+
+[[pause:0.34]]
+
+The fines stopped.
+
+[[pause:0.72]]
+
+This was not a small thing.
+
+[[pause:0.58]]
+
+Pell noticed. The town council noticed, insofar as Idlewood had a town council — [[pause:0.18]] three men who met irregularly in the back of the tavern and made decisions by not disagreeing until someone left. They noticed the way you notice when something that has been hurting quietly stops hurting. Without ceremony. With relief.
+
+[[pause:0.34]]
+
+Word moved through the town the way word moved in small places — [[pause:0.18]] through inference and observation rather than announcement. The new man at the administrator's desk. Fills out the forms right. Got the fines cleared. Darkling, but quiet. Keeps to himself.
+
+[[pause:0.34]]
+
+The horns made people uncertain at first.
+
+[[pause:0.58]]
+
+The tail made some people cross the street.
+
+[[pause:0.58]]
+
+There was a woman, early on, who pulled her two children close when Sehr-uff passed in the lane, her face doing the particular tightening that Sehr-uff had learned to recognize without needing to watch for it directly — [[pause:0.18]] not hatred, just the older fear, the fear that had been planted in childhood stories about Darkling and had never quite been weeded out, regardless of how that particular Darkling actually behaved. Sehr-uff nodded to her, the same nod he gave everyone, and kept walking, and said nothing about it to Hugo, because saying something to Hugo about it would have required Hugo to carry something that wasn't his to carry.
+
+[[pause:0.34]]
+
+Then the fines stopped and the ledgers made sense and people recalibrated the way people recalibrate — [[pause:0.18]] slowly, privately, without admitting they were doing it. The same woman, weeks later, left a small loaf of bread on the corner of Sehr-uff's desk without a word, and was gone before he looked up to thank her.
+
+[[pause:1.80]]
+
+Hugo found work the same day he looked for it.
+
+[[pause:0.58]]
+
+The harvest was coming. Idlewood needed bodies and Hugo was a body in the way that certain bodies simply solved problems by existing. He worked from before dawn to after dark without complaint and with a consistency that farm labor valued above almost any other quality. He didn't require instruction after the first day. He didn't need managing. He simply appeared at the edge of a field and worked across it — [[pause:0.18]] his hands finding the rhythm of the scythe within an hour, the particular economy of motion that turned exhausting work into something almost meditative once the body learned it — [[pause:0.18]] and when the field was done he looked for the next one.
+
+[[pause:0.34]]
+
+The farmhands were cautious at first.
+
+[[pause:0.58]]
+
+A half-dwarf with a braid threaded with gray and hands like carved wood, who said almost nothing and worked like he was settling a debt.
+
+[[pause:0.34]]
+
+By the third day they stopped being cautious.
+
+[[pause:0.58]]
+
+By the end of the first week a man named Oss-uh, who had worked Pell's fields for twenty years and was generally considered to have an opinion on everything whether or not anyone had asked for it, told anyone who would listen that the quiet one was the best harvest hand he'd seen in a decade and he didn't care what he was. Oss-uh had a voice that carried across two fields without effort and a laugh that came easily and often, and within a month he had appointed himself, without consultation, as something like Hugo's unofficial translator to the rest of the town — [[pause:0.18]] explaining, to anyone who asked, that no, the big one wasn't simple, he just didn't waste words, which Oss-uh seemed to regard as a moral virtue he himself had never managed to achieve.
+
+[[pause:0.34]]
+
+Hugo ate with the farmhands at the long table outside the grain store, the evening meal a loose communal thing of bread and whatever stew Pell's wife had going, the table crowded with elbows and laughter and the particular companionable noise of tired bodies winding down together. He listened more than he spoke. He laughed occasionally — [[pause:0.18]] not often, but genuinely, when something was actually funny rather than as performance. He drank moderately, nursing the same cup of Oss-uh's homebrew through an entire evening while men around him refilled theirs three and four times. He slept well.
+
+[[pause:0.34]]
+
+He hadn't slept well in years.
+
+[[pause:0.58]]
+
+He didn't think about that directly. He just noticed, in the morning, that the first thing he felt was not threat assessment. That was new. He would lie there for a moment, in the gray light through the storage room's single window, simply registering the absence of the old reflexive alertness, before getting up to start the day.
+
+[[pause:1.80]]
+
+Gar moved through the town like weather.
+
+[[pause:0.58]]
+
+Present. Purposeful. [[pause:0.22]] Not quite belonging to any particular place but not out of place either. He helped where help was needed without being asked and without requiring acknowledgment. He fixed a fence on the north field that had been leaning for a season, resetting the posts with a patience that made the work look easier than it was. He helped a woman named Cal-uh move grain sacks when her regular help didn't come, lifting weights that should have required two men with the same economical effort he'd once spent on dead rats in a Gate corridor. He sat with Ed-er sometimes in the evenings outside the mill while the boy talked about things boys talked about — [[pause:0.18]] animals, weather, the unfairness of specific adults, a complicated ongoing rivalry with another boy over a matter of marbles that Ed-er narrated with the gravity of a war — [[pause:0.18]] and Gar listened and occasionally nodded and Ed-er seemed to find this perfectly satisfying, perhaps the most patient audience he'd ever had.
+
+[[pause:0.34]]
+
+The town learned his silence the way you learn a neighbor's habits. [[pause:0.22]] Not explained. Just known.
+
+[[pause:0.46]]
+
+A few people tried to draw him out in the early weeks. Oss-uh asked him a direct question once, a test of sorts — [[pause:0.18]] something about whether he preferred the scythe or the sickle, an opinion Oss-uh clearly held strongly himself — [[pause:0.18]] and received only a look in return that was not hostile but was complete. Oss-uh nodded and moved on and told people afterward that the big one didn't talk but understood everything and that was its own kind of conversation, and somehow this became, in the retelling, a kind of local wisdom, repeated by others who hadn't actually witnessed the exchange.
+
+[[pause:0.34]]
+
+Cal-uh brought them food sometimes. Left it without announcement — [[pause:0.18]] a covered dish on the storage room's outer step, gone before anyone thanked her for it. The gesture of a woman who had lived long enough to recognize people who had come from hard places without needing to hear the story, who had perhaps come from one herself, though nobody in town spoke of it directly, and who seemed to understand instinctively that the kindest thing she could offer wasn't conversation but its absence.
+
+[[pause:0.34]]
+
+There was an old man, Toe-bren, who tended the town's small chapel — [[pause:0.18]] less a building than a converted barn with a modest altar at one end, used more for funerals and the rare wedding than regular worship, Idlewood not being a particularly devout place in any organized sense. Toe-bren watched Gar once, working in the chapel yard without being asked, clearing fallen branches after a storm, and said nothing to him directly, but mentioned afterward to Pell that he'd never seen a man work like that — [[pause:0.18]] like the work itself was a kind of prayer, though Toe-bren couldn't have said toward what.
+
+[[pause:1.80]]
+
+There was a night, perhaps six weeks in, when the three of them sat outside the mill as the last of the autumn warmth left the air, the sky overhead deepening from orange to a deep bruised purple, the first stars finding their way through.
+
+[[pause:0.34]]
+
+Hugo had a cup of something Oss-uh had pressed on him. Sehr-uff had ink on his hands from working late, smudged along the side of his palm where it always ended up by evening. Gar was simply there, back against the wall, watching the sky do what skies did.
+
+[[pause:0.34]]
+
+Nobody spoke for a long time.
+
+[[pause:0.58]]
+
+"It's quiet," Sehr-uff said eventually.
+
+[[pause:0.58]]
+
+"Yes," Hugo said.
+
+[[pause:0.72]]
+
+Another long silence, comfortable in the way silences had begun to be comfortable between them, after years of silences that had only ever meant danger or exhaustion or grief.
+
+[[pause:0.34]]
+
+"I keep expecting something," Hugo said.
+
+[[pause:0.58]]
+
+"I know," Sehr-uff said.
+
+[[pause:0.72]]
+
+Hugo turned his cup in his hands, watching the liquid catch what little light remained. "Does that stop?"
+
+[[pause:0.50]]
+
+Sehr-uff considered the question with the seriousness he gave all questions.
+
+[[pause:0.46]]
+
+"I think you just get better at sitting with it," he said.
+
+[[pause:0.46]]
+
+Hugo looked at the sky.
+
+[[pause:0.72]]
+
+Gar's eyes moved briefly to Sehr-uff's face. [[pause:0.22]] Then back to the sky.
+
+[[pause:0.46]]
+
+The night settled around them. Somewhere across the valley an animal called once and was answered and then was quiet. A dog barked twice near the tavern and stopped. Lamplight moved behind a few distant windows as the town settled into its evening.
+
+[[pause:0.34]]
+
+Three bodies.
+
+[[pause:0.72]]
+
+One warmth.
+
+[[pause:0.72]]
+
+Still.
+
+[[pause:0.72]]
+
+The crown's men arrived on a Tuesday.
+
+[[pause:0.58]]
+
+There was no announcement, no advance warning — [[pause:0.18]] just the sound of horses on the road from the east, hooves on packed dirt carrying further than they should have in the still morning air, and then four men in the crown's colors riding into the center of Idlewood like they owned it, which in most practical senses they did. The blue and gray of their tabards looked strange against the muted browns and golds of the harvest season, too clean, too deliberate, a color scheme designed for a throne room rather than a farm road.
+
+[[pause:0.34]]
+
+Their leader was a man named All-drick. He was not old and not young, not cruel-looking and not kind. He had the face of someone who had been doing administrative work in the field for long enough that the work had settled into him like weather settles into stone — [[pause:0.18]] a flatness around the eyes that had nothing to do with malice and everything to do with the particular fatigue of a man who had delivered the same kinds of unwelcome numbers to a hundred towns just like this one and had stopped, somewhere along the way, expecting any of them to receive the numbers gladly. He carried a ledger of his own — [[pause:0.18]] thicker than Sehr-uff's, bound in dark leather worn smooth at the corners from handling, filled with numbers that represented Idlewood's obligations to the crown.
+
+[[pause:0.34]]
+
+The numbers had gone up.
+
+[[pause:0.72]]
+
+This was presented not as a demand but as an adjustment. The language was precise, the kind of precision that took the sting out of a thing by refusing to name it directly. Revised assessment. Updated requisition schedule. Anticipated surplus based on projected yield. Each phrase had been built, Sehr-uff understood immediately, by someone whose job was to build exactly such phrases — [[pause:0.18]] to make extraction sound like accounting, to make taking sound like reconciling.
+
+[[pause:0.34]]
+
+Sehr-uff read the document carefully, standing at the rough table that had been dragged into the square for this purpose, the morning light catching the dust motes stirred up by the gathering crowd.
+
+[[pause:0.34]]
+
+Then he read it again.
+
+[[pause:0.72]]
+
+The number they were asking for was not possible. [[pause:0.22]] Not this season, not any season in recent memory. The fields had produced well but not that well. What the crown was calling anticipated surplus was actually the margin that kept Idlewood fed through winter — [[pause:0.18]] the difference between a hungry season and a starving one, calculated down to bushels and measured against the particular harshness of the valley's winters, which arrived early and left late and gave no quarter to a town that had miscalculated its stores.
+
+[[pause:0.34]]
+
+Sehr-uff explained this.
+
+[[pause:0.72]]
+
+Calmly. Precisely. With the ledgers open on the table to show the actual numbers, his finger tracing the columns, the careful sums he and Kor-vin's old records together had built across a year of harvests and shortfalls and the slow accumulation of a town's true capacity, as distinct from what a distant office imagined that capacity to be.
+
+[[pause:0.34]]
+
+All-drick listened. His expression did not change. He had the quality of a man who had heard many careful explanations and had learned to receive them without being moved by them, the particular professional patience of someone reviewing a complaint he had already decided would not alter the outcome, regardless of its merit.
+
+[[pause:0.34]]
+
+"The assessment stands," he said when Sehr-uff finished.
+
+[[pause:0.58]]
+
+"The assessment is based on incorrect projections," Sehr-uff said.
+
+[[pause:0.46]]
+
+"The assessment stands," All-drick said again. Same tone. Same face.
+
+[[pause:0.46]]
+
+Sehr-uff looked at him for a moment.
+
+[[pause:0.58]]
+
+"If we provide what you're asking," Sehr-uff said, "the town will not have enough to eat through winter."
+
+[[pause:0.40]]
+
+"That's not my department," All-drick said.
+
+[[pause:0.58]]
+
+He said it without malice. That was the thing. He said it the way a man says a true thing that he has made his peace with — [[pause:0.18]] not enjoying it, not regretting it, just stating what was so from where he stood, the particular flat honesty of a man who had drawn a line around what was his to decide and had stopped letting anything outside that line trouble him, because troubling himself over things outside the line had never once changed anything inside it.
+
+[[pause:0.34]]
+
+The town was watching from the edges of the square. Pell was there, his hands gripping the doorframe of his grain store hard enough that his knuckles had gone pale. Cal-uh stood near the well, a basket of laundry forgotten at her feet. Oss-uh stood with his arms crossed, his usual easy expression gone entirely, replaced by something tighter, more careful. Ed-er was on his fence post, serious-faced, missing nothing, his stick forgotten in his lap.
+
+[[pause:0.34]]
+
+Hugo stood at the far edge of the square.
+
+[[pause:0.58]]
+
+He had been carrying fence posts from the cart when the riders came in. He set them down when he heard the voices rise. He did not move closer. He watched Sehr-uff at the table with the ledgers and he watched All-drick and he kept his hands at his sides and he breathed, slow and deliberate, the particular discipline of a man who had learned, in the Gate, that the cost of moving too soon was always higher than the cost of waiting.
+
+[[pause:0.34]]
+
+Sehr-uff tried again.
+
+[[pause:0.72]]
+
+He was not reckless. He never was. He offered alternatives — [[pause:0.18]] a partial provision now, the remainder in spring once winter stores were properly assessed and the threat to the town's survival could be weighed against the crown's actual need. He offered documentation. He offered to correspond directly with the requisition office, to provide full accounting, to demonstrate the numbers clearly to whoever above All-drick had set this figure without ever having seen Idlewood's fields, its granary, its actual margin between sufficiency and hunger.
+
+[[pause:0.34]]
+
+All-drick was not interested in alternatives.
+
+[[pause:0.58]]
+
+This was not personal. That was the hardest part to hold onto, the thing Sehr-uff kept returning to even as the conversation soured, even as he felt the room's temperature shift. There was no hatred in this exchange, no particular cruelty in All-drick's face or voice. Just a man with a document and a number and the institutional weight of the crown behind him, and a system that did not require him to care about the difference between what was asked and what was possible, because the system had never once asked him to.
+
+[[pause:0.34]]
+
+The first blow came without warning.
+
+[[pause:0.58]]
+
+Not from All-drick — [[pause:0.18]] from the guard to his left, a broad-shouldered man with a sunburned neck who had been standing in the particular stillness of men waiting for the moment when talking was finished. He struck Sehr-uff across the face with an open hand, hard enough to knock him sideways from the chair, the sound of it cracking flat across the square.
+
+[[pause:0.34]]
+
+The square went silent.
+
+[[pause:0.72]]
+
+Sehr-uff caught himself on the table edge. He did not go down. He straightened slowly, one hand pressed to his jaw, his vision swimming briefly before settling, and looked at All-drick.
+
+[[pause:0.34]]
+
+"The assessment stands," All-drick said.
+
+[[pause:0.58]]
+
+What followed was not swift.
+
+[[pause:0.58]]
+
+It was procedural. That was the word for it — [[pause:0.18]] the thing that made it different from simple violence, that gave it its particular horror. The guards took their time. They were not frenzied. They were doing a job that they had done before and would do again, applying the kind of pressure that institutions applied when explanation failed, with the practiced efficiency of people who understood that the point was not injury but demonstration — [[pause:0.18]] that the town needed to watch this, needed to understand exactly what the cost of further resistance would be, and that understanding required time to land properly.
+
+[[pause:0.34]]
+
+Sehr-uff tried to keep talking through it.
+
+[[pause:0.58]]
+
+That was Sehr-uff.
+
+[[pause:0.72]]
+
+He tried to keep reasoning, keep offering alternatives, keep finding the path through with words because words were what he had and because he believed, against all available evidence accumulating with each blow, that the right arrangement of them could still reach the human being inside the uniform.
+
+[[pause:0.34]]
+
+The town watched from the edges.
+
+[[pause:0.58]]
+
+Nobody moved.
+
+[[pause:0.72]]
+
+Not because they didn't care. Because caring and moving were different calculations and the second one had costs that most of the people in that square had children to feed and winters to survive and the math never came out in favor of moving. Pell's hands had gone white on the doorframe. Cal-uh had both hands pressed to her mouth. Oss-uh's jaw worked silently, his whole body straining forward an inch at a time and then catching itself, over and over.
+
+[[pause:0.34]]
+
+Hugo stood at the far edge and did not move.
+
+[[pause:0.58]]
+
+His hands were fists at his sides, the knuckles already aching from how hard he held them.
+
+[[pause:0.46]]
+
+His jaw was set.
+
+[[pause:0.72]]
+
+He watched Sehr-uff go down to his knees and get back up and the guards push him down again and he stood there and he breathed and he did not move because Sehr-uff was still conscious and still talking and the moment Hugo moved everything in that square would change in a direction it could not come back from.
+
+[[pause:0.34]]
+
+He knew this.
+
+[[pause:0.72]]
+
+Sehr-uff knew this.
+
+[[pause:0.72]]
+
+The beating continued.
+
+[[pause:0.72]]
+
+All-drick watched with the expression of a man reviewing a process rather than witnessing suffering — [[pause:0.18]] checking that the appropriate steps were being followed, that the demonstration was landing with the appropriate audience, that the paperwork of coercion was proceeding correctly, his eyes occasionally moving from Sehr-uff to the crowd and back, gauging effect rather than feeling anything in response to cause.
+
+[[pause:0.34]]
+
+Then the sound changed.
+
+[[pause:0.72]]
+
+Hugo had learned, over years, to read the quality of sounds that bodies made. Which sounds passed and which didn't. The sound that Sehr-uff made when the guard's boot connected with his ribs was a sound Hugo had heard before in places he had spent years trying to leave behind — [[pause:0.18]] not a cry, but something underneath a cry, the sound a body made when something inside it had given way that wasn't meant to give.
+
+[[pause:0.34]]
+
+He moved.
+
+[[pause:1.80]]
+
+The barn was to the left of the square — [[pause:0.18]] Pell's barn, large enough for the season's stored grain, with walls thick enough that what happened inside it was between the people inside it and nobody else, the air inside it thick with the dry sweet smell of stored hay and the particular dust that hung permanently in any working barn's rafters.
+
+[[pause:0.34]]
+
+The guards had not expected resistance. That was their first mistake. Men who do the crown's work in small farm towns rarely encounter it. The machine runs on the understanding that it will not be opposed, and that understanding had held in enough places for long enough that it had become the assumption rather than the calculation — [[pause:0.18]] a kind of institutional muscle memory that no longer questioned itself, because it had never once needed to.
+
+[[pause:0.34]]
+
+Hugo did not give them time to recalculate.
+
+[[pause:0.58]]
+
+He moved through the first two guards the way water moves through a gap — [[pause:0.18]] not with the dramatic force of a man trying to prove something but with the absolute economy of a man doing what was necessary and nothing more. They went down. They stayed down.
+
+[[pause:0.34]]
+
+The third guard was young.
+
+[[pause:0.58]]
+
+Hugo saw it the moment he turned — [[pause:0.18]] the youth of him, the particular fear in his face that was not the practiced wariness of an experienced man but something rawer, more honest, the kind of fear that hadn't yet learned to disguise itself as professional composure. He couldn't have been more than nineteen. His hand went to his blade the way hands went to blades when the body acted before the mind had finished its sentence, the training overriding whatever judgment might have told him this was already lost.
+
+[[pause:0.34]]
+
+Hugo saw the fear.
+
+[[pause:0.72]]
+
+He saw the blade clear its scabbard.
+
+[[pause:0.58]]
+
+He saw the boy's hand shaking.
+
+[[pause:0.58]]
+
+None of it was enough to stop what was already in motion.
+
+[[pause:0.46]]
+
+The struggle was brief and close and ugly in the way that only the ugliest things are — [[pause:0.18]] no distance, no clean lines, just two people in a barn trying to survive the same moment from opposite sides of it. The boy was strong. Scared people often were. He fought with the desperate energy of someone who understood, at the level of the body, that something had gone very wrong and that the training he'd been given was not equal to what was in front of him. He smelled of leather and sweat and, faintly, of something Hugo would only later identify as fear's particular chemical edge — [[pause:0.18]] a smell he'd carried out of the Gate without realizing it, a smell every body that had ever truly been afraid eventually produced.
+
+[[pause:0.34]]
+
+Hugo felt the moment it ended before he understood it.
+
+[[pause:0.58]]
+
+The boy's weight changed. The resistance left him. He slid down against Hugo's chest and Hugo held him without meaning to — [[pause:0.18]] instinct, the body doing what the body did when something was falling — [[pause:0.18]] and for a moment they were just two men in a barn, one of them dying and one of them holding him, and neither of them had chosen this room or this moment or the system that had put them both here, on opposite sides of a blade that had needed only one of them to draw it.
+
+[[pause:0.34]]
+
+The boy's eyes found Hugo's face.
+
+[[pause:0.58]]
+
+There was no hatred in them.
+
+[[pause:0.58]]
+
+Just surprise.
+
+[[pause:0.72]]
+
+And then just absence.
+
+[[pause:0.72]]
+
+Hugo knelt there for a moment longer than made sense, the boy's weight still against him, the barn's dust-filled light falling in long pale columns from the gaps in the boards above, motes turning slowly in the air the way they had no business doing while something this final happened beneath them.
+
+[[pause:0.34]]
+
+Gar's hand came down on his shoulder.
+
+[[pause:0.58]]
+
+The other guards were still — [[pause:0.18]] Gar's work, swift and silent and already finished by the time Hugo's mind caught up to what was happening around him, two more bodies in the straw that Hugo hadn't registered falling. The barn was quiet. Outside, the square was quiet in the way squares went quiet when something had happened that everyone had seen and nobody was going to name.
+
+[[pause:0.34]]
+
+Hugo looked at the boy's face.
+
+[[pause:0.58]]
+
+He filed it away in the place where things that couldn't be put down were filed.
+
+[[pause:0.46]]
+
+He stood.
+
+[[pause:0.72]]
+
+"We have to move," Gar said. Or rather — [[pause:0.18]] Gar said nothing, but his hand on Hugo's shoulder said it, and Hugo heard it, and stood.
+
+[[pause:0.34]]
+
+They moved.
+
+[[pause:1.80]]
