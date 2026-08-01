@@ -567,3 +567,186 @@ body.page-about .article>*{position:relative;z-index:1;}
   .form-card strong{margin-top:52px;}
   .featured-story,.featured-story a{min-height:480px;}
 }
+
+/* Homepage v5 — editorial spread */
+.visually-hidden{
+  position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;
+  overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;
+}
+
+.page-home-author{
+  animation:none;
+  background:
+    radial-gradient(800px 500px at 91% 17%,rgba(201,168,97,.055),transparent 68%),
+    radial-gradient(700px 500px at 2% 68%,rgba(132,151,189,.045),transparent 70%),
+    #08090c;
+}
+.page-home-author::before{background:none;}
+.page-home-author .home-archive{max-width:1440px;padding:0 34px 72px;}
+.editorial-topbar{max-width:1280px;margin:0 auto;padding:24px 0 22px;border-color:rgba(236,230,216,.14);}
+.editorial-topbar .brand{color:var(--ink);}
+.editorial-topbar .nav a{border-radius:0;padding:8px 12px;}
+.editorial-topbar .nav a[aria-current="page"]{background:transparent;color:var(--gold-bright);}
+
+.editorial-home{max-width:1280px;margin:0 auto;}
+.editorial-masthead{
+  position:relative;margin-top:26px;overflow:hidden;border:1px solid rgba(236,230,216,.12);
+  box-shadow:0 38px 110px rgba(0,0,0,.58);
+}
+.editorial-masthead img{display:block;width:100%;height:auto;aspect-ratio:1.75 / 1;object-fit:cover;}
+.mobile-masthead{display:none;}
+
+.editorial-deck{
+  display:grid;grid-template-columns:170px minmax(0,1fr) 260px;gap:44px;align-items:start;
+  padding:42px 0 48px;border-bottom:1px solid var(--rule-strong);
+}
+.editorial-label{
+  margin:4px 0 0;font-family:var(--ui);font-size:10px;font-weight:600;letter-spacing:.23em;
+  line-height:1.5;text-transform:uppercase;color:var(--gold);
+}
+.deck-statement{
+  max-width:740px;margin:0;font-family:var(--display);font-size:clamp(27px,3vw,42px);font-weight:400;
+  line-height:1.17;letter-spacing:-.022em;color:var(--ink);
+}
+.deck-links{display:grid;gap:2px;border-top:1px solid var(--rule-strong);}
+.deck-links a,.editorial-link,.archive-link{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0;
+  border-bottom:1px solid var(--rule);font-family:var(--ui);font-size:12px;letter-spacing:.02em;color:var(--ink-dim);
+  transition:color .18s,padding-left .18s;
+}
+.deck-links a:hover,.editorial-link:hover,.archive-link:hover{color:var(--gold-bright);padding-left:6px;}
+.deck-links a span,.editorial-link span,.archive-link span{color:var(--gold);}
+
+.editorial-feature{
+  display:grid;grid-template-columns:72px minmax(0,1.15fr) minmax(340px,.85fr);min-height:620px;
+  margin-top:130px;border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);
+}
+.feature-rail{
+  display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:24px 0;
+  border-right:1px solid var(--rule);font-family:var(--ui);font-size:9px;letter-spacing:.23em;
+  text-transform:uppercase;color:var(--ink-faint);writing-mode:vertical-rl;
+}
+.feature-art{position:relative;display:block;overflow:hidden;background:#11141b;}
+.feature-art::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(236,230,216,.05);pointer-events:none;}
+.feature-art img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.78) contrast(1.08) brightness(.78);transition:transform .6s,filter .4s;}
+.feature-art:hover img{transform:scale(1.025);filter:saturate(.92) contrast(1.06) brightness(.85);}
+.feature-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(38px,5vw,72px);border-left:1px solid var(--rule);}
+.feature-copy h2{margin:26px 0 22px;max-width:9ch;font-size:clamp(48px,6.4vw,86px);font-weight:500;line-height:.9;letter-spacing:-.045em;}
+.feature-dek{max-width:27ch;margin:0;font-family:var(--display);font-size:clamp(21px,2.2vw,29px);line-height:1.24;color:rgba(236,230,216,.82);}
+.feature-note{max-width:48ch;margin:28px 0 0;font-size:15px;line-height:1.65;color:var(--ink-dim);}
+.feature-copy .editorial-link{max-width:230px;margin-top:38px;}
+
+.editorial-forms{margin-top:140px;}
+.editorial-section-head{display:grid;grid-template-columns:170px 1fr;gap:44px;align-items:end;margin-bottom:38px;}
+.editorial-section-head h2{margin:0;font-size:clamp(42px,5.3vw,72px);font-weight:500;line-height:.95;letter-spacing:-.04em;}
+.form-spreads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);}
+.form-spread{
+  min-height:420px;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 1fr auto;gap:16px;
+  padding:34px;color:var(--ink);transition:background .25s;
+}
+.form-spread:first-child{border-right:1px solid var(--rule-strong);}
+.form-spread:hover{background:rgba(236,230,216,.025);color:var(--ink);}
+.spread-index{font-family:var(--ui);font-size:10px;letter-spacing:.2em;color:var(--gold);}
+.fiction-spread .spread-index,.fiction-spread .spread-arrow{color:var(--slate);}
+.spread-title{grid-column:1 / -1;align-self:end;font-family:var(--display);font-size:clamp(64px,8vw,112px);line-height:.78;letter-spacing:-.055em;color:var(--ink);}
+.spread-copy{align-self:end;max-width:36ch;font-size:16px;line-height:1.55;color:var(--ink-dim);}
+.spread-arrow{align-self:end;font-family:var(--ui);font-size:22px;color:var(--gold);}
+
+.darkling-spread{
+  position:relative;min-height:620px;margin-top:140px;display:flex;align-items:center;overflow:hidden;
+  border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);
+  background:#090b10;
+}
+.darkling-copy{position:relative;z-index:2;width:52%;padding:70px;}
+.darkling-copy h2{margin:34px 0 22px;font-size:clamp(82px,11vw,154px);line-height:.76;letter-spacing:-.06em;}
+.darkling-copy>p:not(.editorial-label){max-width:28ch;font-size:22px;line-height:1.45;color:var(--ink-dim);}
+.darkling-copy .editorial-link{max-width:260px;margin-top:38px;}
+.darkling-art{
+  position:absolute;inset:0 0 0 35%;clip-path:polygon(23% 0,100% 0,100% 100%,0 100%);
+  background:
+    linear-gradient(90deg,rgba(9,11,16,.95) 0%,rgba(9,11,16,.25) 42%,rgba(9,11,16,.36) 100%),
+    url("assets/novels/darkling/darkling-cover.jpg") center / cover no-repeat;
+  filter:saturate(.72) contrast(1.1);
+}
+
+.reading-index{margin-top:140px;}
+.index-heading{margin-bottom:34px;}
+.index-list{border-top:1px solid var(--rule-strong);}
+.index-row{
+  display:grid;grid-template-columns:52px minmax(220px,1.15fr) 110px minmax(260px,1fr) 28px;
+  gap:24px;align-items:center;min-height:106px;padding:20px 10px;border-bottom:1px solid var(--rule);
+  color:var(--ink);transition:background .18s,padding .18s;
+}
+.index-row:hover{padding-left:18px;background:rgba(236,230,216,.025);color:var(--ink);}
+.index-number,.index-kind{font-family:var(--ui);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);}
+.index-row strong{font-family:var(--display);font-size:clamp(23px,2.5vw,34px);font-weight:500;line-height:1.05;}
+.index-desc{font-size:15px;line-height:1.5;color:var(--ink-dim);}
+.index-arrow{font-family:var(--ui);color:var(--gold);}
+.archive-link{width:280px;margin:26px 0 0 auto;}
+
+.editorial-coda{
+  display:grid;grid-template-columns:170px minmax(0,1.4fr) minmax(280px,.6fr);gap:44px;align-items:start;
+  margin-top:150px;padding:70px 0;border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);
+}
+.editorial-coda h2{margin:0;font-size:clamp(42px,5.6vw,78px);font-weight:500;line-height:.98;letter-spacing:-.045em;}
+.editorial-coda h2 em{color:var(--gold-bright);font-weight:400;}
+.coda-note{padding-top:8px;}
+.coda-note p{font-size:16px;line-height:1.7;color:var(--ink-dim);}
+.coda-note .editorial-link{margin-top:26px;}
+.editorial-footer{max-width:1280px;margin:72px auto 0;padding-bottom:6px;}
+
+@media(max-width:1050px){
+  .editorial-deck{grid-template-columns:130px 1fr;}
+  .deck-links{grid-column:2;max-width:420px;}
+  .editorial-feature{grid-template-columns:50px 1fr;}
+  .feature-copy{grid-column:2;border-left:0;border-top:1px solid var(--rule);}
+  .feature-rail{grid-row:1 / span 2;}
+  .editorial-coda{grid-template-columns:130px 1fr;}
+  .coda-note{grid-column:2;max-width:560px;}
+  .index-row{grid-template-columns:42px minmax(220px,1fr) 90px 1fr 24px;gap:16px;}
+}
+
+@media(max-width:760px){
+  .page-home-author .home-archive{padding:0 18px 52px;}
+  .editorial-topbar{padding-top:20px;}
+  .editorial-masthead{margin-top:18px;min-height:560px;border:0;background:#090a0e;}
+  .editorial-masthead img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:74% center;opacity:.52;filter:saturate(.8) contrast(1.12);}
+  .editorial-masthead::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,9,12,.08),rgba(8,9,12,.92));}
+  .mobile-masthead{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:34px 24px;}
+  .mobile-masthead span{margin-bottom:28px;font-family:var(--ui);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);}
+  .mobile-masthead strong,.mobile-masthead em{display:block;font-family:var(--display);font-size:clamp(43px,13vw,68px);font-weight:500;line-height:.91;letter-spacing:-.04em;color:var(--ink);}
+  .mobile-masthead em{margin-top:12px;color:var(--gold-bright);font-weight:400;}
+  .editorial-deck{grid-template-columns:1fr;gap:24px;padding:32px 0 38px;}
+  .deck-links{grid-column:1;width:100%;}
+  .editorial-feature{grid-template-columns:1fr;margin-top:90px;}
+  .feature-rail{display:none;}
+  .feature-art{height:430px;}
+  .feature-copy{grid-column:1;padding:38px 6px;border-top:1px solid var(--rule);}
+  .feature-copy h2{max-width:10ch;font-size:clamp(50px,14vw,78px);}
+  .editorial-forms,.darkling-spread,.reading-index{margin-top:100px;}
+  .editorial-section-head{grid-template-columns:1fr;gap:20px;}
+  .form-spreads{grid-template-columns:1fr;}
+  .form-spread{min-height:340px;padding:28px 8px;}
+  .form-spread:first-child{border-right:0;border-bottom:1px solid var(--rule-strong);}
+  .spread-title{font-size:clamp(68px,22vw,104px);}
+  .darkling-spread{min-height:650px;align-items:flex-end;}
+  .darkling-copy{width:100%;padding:42px 20px;}
+  .darkling-art{inset:0;clip-path:none;background:
+    linear-gradient(180deg,rgba(9,11,16,.28) 0%,rgba(9,11,16,.96) 75%),
+    url("assets/novels/darkling/darkling-cover.jpg") center / cover no-repeat;}
+  .index-row{grid-template-columns:38px 1fr 24px;gap:12px;min-height:122px;padding:18px 4px;}
+  .index-kind{grid-column:2;grid-row:2;}
+  .index-desc{display:none;}
+  .index-arrow{grid-column:3;grid-row:1 / span 2;}
+  .archive-link{width:100%;}
+  .editorial-coda{grid-template-columns:1fr;gap:28px;margin-top:110px;padding:54px 0;}
+  .coda-note{grid-column:1;}
+}
+
+@media(max-width:480px){
+  .editorial-topbar .nav{gap:0;}
+  .editorial-topbar .nav a{padding:8px 9px;font-size:12px;}
+  .editorial-masthead{min-height:520px;}
+  .feature-art{height:360px;}
+  .darkling-copy h2{font-size:80px;}
+}
