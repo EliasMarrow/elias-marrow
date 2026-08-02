@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Quiet Hours — Elias Marrow</title>
+  <meta name="description" content="Boston, 1883. Detective Edward Mercer trusts the record because the record has never lied to him. A murder mystery by Elias Marrow."/>
+  <meta property="og:title" content="Quiet Hours — Elias Marrow"/>
+  <meta property="og:description" content="A murder mystery. Boston, 1883."/>
+  <meta property="og:image" content="https://eliasmarrow.org/assets/novels/quiet-hours/quiet-hours-cover.png"/>
+  <meta property="og:url" content="https://eliasmarrow.org/quiet-hours.html"/>
+  <meta property="og:type" content="book"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Quiet Hours — Elias Marrow"/>
+  <meta name="twitter:description" content="A murder mystery. Boston, 1883."/>
+  <meta name="twitter:image" content="https://eliasmarrow.org/assets/novels/quiet-hours/quiet-hours-cover.png"/>
+  <link rel="stylesheet" href="/styles.css?v=marrow6"/>
+</head>
+<body class="page-author page-quiet-hours">
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Elias Marrow home">
+        <span class="sigil">ELIAS MARROW</span>
+        <span class="motto">Essays &amp; Fiction</span>
+      </a>
+      <nav class="nav" aria-label="Site navigation">
+        <a href="/">Home</a>
+        <a href="/novels.html">Novels</a>
+        <a href="/essays.html">Essays</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="quiet-hero" aria-labelledby="quiet-title">
+        <div class="quiet-cover">
+          <img src="/assets/novels/quiet-hours/quiet-hours-cover.png" alt="Quiet Hours — a murder mystery set in Boston, 1883" width="1600" height="2400" fetchpriority="high"/>
+        </div>
+        <div class="quiet-copy">
+          <p class="section-title">New novel · Murder mystery</p>
+          <h1 id="quiet-title">Quiet Hours</h1>
+          <p class="quiet-place">Boston, 1883.</p>
+          <p class="lead">Detective Edward Mercer trusts the station books because the books have never lied to him. When a mill girl is murdered and the record begins pointing inward, the method that ordered his life becomes the only thing capable of undoing it.</p>
+          <dl class="quiet-facts">
+            <div><dt>Edition</dt><dd>Complete browser edition</dd></div>
+            <div><dt>Length</dt><dd>34 chapters · 30,441 words</dd></div>
+            <div><dt>Author</dt><dd>Elias Marrow</dd></div>
+          </dl>
+          <div class="hero-cta">
+            <a class="btn primary" href="/read/quiet-hours/?chapter=1">Begin reading →</a>
+            <a class="btn ghost" href="/assets/novels/quiet-hours/quiet-hours.txt" download>Download manuscript</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel soft quiet-contents" aria-labelledby="contents-title">
+        <div>
+          <p class="section-title">The complete novel</p>
+          <h2 id="contents-title">Thirty-four chapters.</h2>
+        </div>
+        <p class="muted">Read in order or return to any chapter. The browser reader keeps the full text on the site without changing the manuscript.</p>
+        <ol class="quiet-chapter-grid" data-chapter-grid></ol>
+        <noscript><p><a class="btn ghost" href="/assets/novels/quiet-hours/quiet-hours.txt">Open the complete manuscript</a></p></noscript>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>&copy; <span id="year"></span> Elias Marrow</div>
+      <div><a href="/novels.html">Back to novels</a></div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const names = [
+        "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
+        "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen",
+        "Eighteen", "Nineteen", "Twenty", "Twenty-One", "Twenty-Two", "Twenty-Three",
+        "Twenty-Four", "Twenty-Five", "Twenty-Six", "Twenty-Seven", "Twenty-Eight",
+        "Twenty-Nine", "Thirty", "Thirty-One", "Thirty-Two", "Thirty-Three", "Thirty-Four"
+      ];
+      const parts = [
+        [1, 9, "Part One · The Order of Things"],
+        [10, 17, "Part Two · Housekeeping"],
+        [18, 26, "Part Three · The Narrowing"],
+        [27, 34, "Part Four · Quiet Hours"]
+      ];
+      const grid = document.querySelector("[data-chapter-grid]");
+      if (grid) {
+        names.forEach(function (name, index) {
+          const number = index + 1;
+          const part = parts.find(function (range) { return number >= range[0] && number <= range[1]; });
+          const item = document.createElement("li");
+          item.innerHTML = '<a href="/read/quiet-hours/?chapter=' + number + '"><span>' + String(number).padStart(2, "0") + '</span><strong>Chapter ' + name + '</strong><small>' + part[2] + '</small><b aria-hidden="true">→</b></a>';
+          grid.appendChild(item);
+        });
+      }
+      document.getElementById("year").textContent = new Date().getFullYear();
+    }());
+  </script>
+</body>
+</html>

@@ -206,6 +206,19 @@
   ],
   "books": [
     {
+      "id": "quiet-hours",
+      "title": "Quiet Hours",
+      "subtitle": "A murder mystery · Boston, 1883",
+      "author": "Elias Marrow",
+      "date": "2026-08-01",
+      "summary": "Detective Edward Mercer trusts the station books because the books have never lied to him. When a mill girl's murder begins pointing inward, the method that ordered his life becomes the only thing capable of undoing it. Thirty-four chapters.",
+      "format": "html",
+      "file": "assets/novels/quiet-hours/quiet-hours.txt",
+      "landing": "quiet-hours.html",
+      "cover": "assets/novels/quiet-hours/quiet-hours-cover.png",
+      "tags": ["novel", "murder mystery", "historical fiction", "boston", "1883"]
+    },
+    {
       "id": "what-was-required",
       "title": "What Was Required",
       "subtitle": "A novel",

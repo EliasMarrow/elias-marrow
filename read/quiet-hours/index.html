@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Quiet Hours — Elias Marrow</title>
+  <meta name="description" content="Read Quiet Hours, a murder mystery by Elias Marrow."/>
+  <link rel="stylesheet" href="/styles.css?v=marrow6"/>
+</head>
+<body class="page-author page-reader page-quiet-reader">
+  <div class="container reader-container">
+    <header class="topbar">
+      <a class="brand" href="/quiet-hours.html">
+        <span class="sigil">QUIET HOURS</span>
+        <span class="motto">A Murder Mystery</span>
+      </a>
+      <nav class="nav" aria-label="Reader navigation">
+        <a href="/">Home</a>
+        <a href="/novels.html">Novels</a>
+        <a href="/quiet-hours.html">Contents</a>
+      </nav>
+    </header>
+
+    <main class="reader-layout">
+      <aside class="reader-sidebar quiet-reader-sidebar">
+        <img src="/assets/novels/quiet-hours/quiet-hours-cover.png" alt="" width="1600" height="2400"/>
+        <div class="section-title">Quiet Hours</div>
+        <h1>A Murder Mystery</h1>
+        <p class="muted">Boston, 1883. Thirty-four chapters.</p>
+        <label class="quiet-picker-label" for="chapter-picker">Chapter</label>
+        <select id="chapter-picker" class="quiet-picker" data-chapter-picker aria-label="Choose a chapter"></select>
+        <a class="btn ghost download-link" href="/assets/novels/quiet-hours/quiet-hours.txt" download>Download manuscript</a>
+      </aside>
+
+      <article class="article reader-article quiet-reader-article" aria-live="polite">
+        <p class="reader-kicker" data-part>Quiet Hours — Elias Marrow</p>
+        <h1 data-chapter-title>Loading chapter…</h1>
+        <div class="reader-rule"></div>
+        <div data-chapter-content><p>Loading the manuscript.</p></div>
+        <div class="reader-bottom-nav">
+          <a class="btn ghost" data-previous hidden>← Previous</a>
+          <a class="btn primary" data-next hidden>Next →</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div>&copy; <span id="year"></span> Elias Marrow</div>
+      <div><a href="/quiet-hours.html">Quiet Hours</a></div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const source = "/assets/novels/quiet-hours/quiet-hours.txt?v=1";
+      const title = document.querySelector("[data-chapter-title]");
+      const part = document.querySelector("[data-part]");
+      const content = document.querySelector("[data-chapter-content]");
+      const picker = document.querySelector("[data-chapter-picker]");
+      const previous = document.querySelector("[data-previous]");
+      const next = document.querySelector("[data-next]");
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, function (character) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character];
+        });
+      }
+
+      function parseManuscript(raw) {
+        const lines = raw.replace(/\r\n/g, "\n").split("\n");
+        const chapters = [];
+        let currentPart = "";
+        let current = null;
+        lines.forEach(function (line) {
+          const clean = line.trim();
+          if (/^PART\s+/i.test(clean)) {
+            currentPart = clean;
+            return;
+          }
+          if (/^Chapter\s+/i.test(clean)) {
+            if (current) chapters.push(current);
+            current = { title: clean, part: currentPart, lines: [] };
+            return;
+          }
+          if (current) current.lines.push(line);
+        });
+        if (current) chapters.push(current);
+        return chapters;
+      }
+
+      function paragraphs(lines) {
+        return lines.join("\n").trim().split(/\n\s*\n/).filter(Boolean).map(function (block) {
+          return "<p>" + escapeHtml(block.replace(/\s*\n\s*/g, " ")) + "</p>";
+        }).join("");
+      }
+
+      function chapterUrl(number) {
+        return "/read/quiet-hours/?chapter=" + number;
+      }
+
+      fetch(source, { cache: "no-store" })
+        .then(function (response) {
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          return response.text();
+        })
+        .then(function (raw) {
+          const chapters = parseManuscript(raw);
+          if (chapters.length !== 34) throw new Error("Expected 34 chapters; found " + chapters.length + ".");
+          const requested = Number(new URLSearchParams(window.location.search).get("chapter") || 1);
+          const number = Math.min(Math.max(Number.isFinite(requested) ? requested : 1, 1), chapters.length);
+          const chapter = chapters[number - 1];
+
+          chapters.forEach(function (entry, index) {
+            const option = document.createElement("option");
+            option.value = String(index + 1);
+            option.textContent = String(index + 1).padStart(2, "0") + " — " + entry.title;
+            option.selected = index + 1 === number;
+            picker.appendChild(option);
+          });
+
+          picker.addEventListener("change", function () {
+            window.location.href = chapterUrl(Number(picker.value));
+          });
+
+          title.textContent = chapter.title;
+          part.textContent = chapter.part + " · Elias Marrow";
+          content.innerHTML = paragraphs(chapter.lines);
+          document.title = chapter.title + " — Quiet Hours";
+
+          if (number > 1) {
+            previous.hidden = false;
+            previous.href = chapterUrl(number - 1);
+            previous.textContent = "← " + chapters[number - 2].title;
+          }
+          if (number < chapters.length) {
+            next.hidden = false;
+            next.href = chapterUrl(number + 1);
+            next.textContent = chapters[number].title + " →";
+          }
+        })
+        .catch(function (error) {
+          console.error(error);
+          title.textContent = "The chapter could not be loaded.";
+          content.innerHTML = '<p><a href="/assets/novels/quiet-hours/quiet-hours.txt">Open the complete manuscript.</a></p>';
+        });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    }());
+  </script>
+</body>
+</html>
