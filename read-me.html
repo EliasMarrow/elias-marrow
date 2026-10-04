@@ -175,7 +175,13 @@
     function showError(msg){
       const box = document.getElementById('read-error');
       box.style.display = 'block';
-      box.innerHTML = '<div class="section-title">Not found</div><p class="muted">' + msg + '</p>';
+      const heading = document.createElement('div');
+      heading.className = 'section-title';
+      heading.textContent = 'Not found';
+      const detail = document.createElement('p');
+      detail.className = 'muted';
+      detail.textContent = String(msg || 'The requested entry is unavailable.');
+      box.replaceChildren(heading, detail);
     }
 
     function parseDate(d){
