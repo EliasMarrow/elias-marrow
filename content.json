@@ -17,7 +17,14 @@
       "file": "assets/essays/trump-essay.pdf",
       "landing": "read/essays/trump-essay.html",
       "cover": "assets/essays/covers/trump-essay.jpg",
-      "tags": ["power", "politics", "incentives", "media"]
+      "tags": [
+        "power",
+        "politics",
+        "incentives",
+        "media"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/trump-essayhtml",
+      "reading_minutes": 2
     },
     {
       "id": "biden-essay",
@@ -31,7 +38,14 @@
       "file": "assets/essays/biden-essay.pdf",
       "landing": "read/essays/biden-essay.html",
       "cover": "assets/essays/covers/biden-essay.jpg",
-      "tags": ["power", "institutions", "normalcy", "decline"]
+      "tags": [
+        "power",
+        "institutions",
+        "normalcy",
+        "decline"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/biden-essayhtml",
+      "reading_minutes": 5
     },
     {
       "id": "constraint-awareness",
@@ -45,7 +59,14 @@
       "file": "assets/essays/constraint-awareness.pdf",
       "landing": "read/essays/constraint-awareness.html",
       "cover": "assets/essays/covers/constraint-awareness.jpg",
-      "tags": ["constraint", "scarcity", "agency", "buffer"]
+      "tags": [
+        "constraint",
+        "scarcity",
+        "agency",
+        "buffer"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/constraint-awarenesshtml",
+      "reading_minutes": 11
     },
     {
       "id": "the-empire-that-feared-itself",
@@ -59,7 +80,14 @@
       "file": "assets/essays/the-empire-that-feared-itself.pdf",
       "landing": "read/essays/the-empire-that-feared-itself.html",
       "cover": "assets/essays/covers/the-empire-that-feared-itself.jpg",
-      "tags": ["fear", "war", "propaganda", "power"]
+      "tags": [
+        "fear",
+        "war",
+        "propaganda",
+        "power"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-empire-that-feared-itselfhtml",
+      "reading_minutes": 2
     },
     {
       "id": "the-lens-we-use",
@@ -73,7 +101,14 @@
       "file": "assets/essays/the-lens-we-use.pdf",
       "landing": "read/essays/the-lens-we-use.html",
       "cover": "assets/essays/covers/the-lens-we-use.jpg",
-      "tags": ["method", "constraint", "power", "analysis"]
+      "tags": [
+        "method",
+        "constraint",
+        "power",
+        "analysis"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-lens-we-use",
+      "reading_minutes": 3
     },
     {
       "id": "the-silence-in-the-files",
@@ -87,7 +122,14 @@
       "file": "assets/essays/the-silence-in-the-files.pdf",
       "landing": "read/essays/the-silence-in-the-files.html",
       "cover": "assets/essays/covers/the-silence-in-the-files.jpg",
-      "tags": ["power", "institutions", "records", "silence"]
+      "tags": [
+        "power",
+        "institutions",
+        "records",
+        "silence"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-silence-in-the-fileshtml",
+      "reading_minutes": 3
     },
     {
       "id": "the-environment-turned-against-us",
@@ -101,7 +143,15 @@
       "file": "assets/essays/the-environment-turned-against-us.pdf",
       "landing": "read/essays/the-environment-turned-against-us.html",
       "cover": "assets/essays/covers/the-environment-turned-against-us.jpg",
-      "tags": ["systems", "environment", "industry", "constraint", "survival"]
+      "tags": [
+        "systems",
+        "environment",
+        "industry",
+        "constraint",
+        "survival"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-environment-turned-against-ushtml",
+      "reading_minutes": 3
     },
     {
       "id": "democracy-is-not-failing",
@@ -115,7 +165,14 @@
       "file": "assets/essays/democracy-is-not-failing.pdf",
       "landing": "read/essays/democracy-is-not-failing.html",
       "cover": "assets/essays/covers/democracy-is-not-failing.jpg",
-      "tags": ["democracy", "power", "institutions", "legitimacy"]
+      "tags": [
+        "democracy",
+        "power",
+        "institutions",
+        "legitimacy"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/democracy-is-not-failinghtml",
+      "reading_minutes": 3
     },
     {
       "id": "effort-was-held-constant",
@@ -129,7 +186,15 @@
       "file": "assets/essays/effort-was-held-constant.pdf",
       "landing": "read/essays/effort-was-held-constant.html",
       "cover": "assets/essays/covers/effort-was-held-constant.jpg",
-      "tags": ["effort", "constraint", "scarcity", "outcomes"]
+      "tags": [
+        "effort",
+        "constraint",
+        "scarcity",
+        "outcomes"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/effort-was-held-constant",
+      "reading_minutes": 2,
+      "alternate_edition": "read/essays/effort-was-held-constant-substack-edition.html"
     },
     {
       "id": "when-poverty-becomes-functional",
@@ -143,7 +208,14 @@
       "file": "assets/essays/when-poverty-becomes-functional.pdf",
       "landing": "read/essays/when-poverty-becomes-functional.html",
       "cover": "assets/essays/covers/when-poverty-becomes-functional.jpg",
-      "tags": ["poverty", "simulation", "constraint", "systems"]
+      "tags": [
+        "poverty",
+        "simulation",
+        "constraint",
+        "systems"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/when-poverty-becomes-functionalhtml",
+      "reading_minutes": 3
     },
     {
       "id": "complicit-by-silence",
@@ -157,7 +229,13 @@
       "file": "assets/essays/complicit-by-silence.pdf",
       "landing": "read/essays/complicit-by-silence.html",
       "cover": "assets/essays/covers/complicit-by-silence.png",
-      "tags": ["silence", "ethics", "complicity"]
+      "tags": [
+        "silence",
+        "ethics",
+        "complicity"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/complicit-by-silencehtml",
+      "reading_minutes": 3
     },
     {
       "id": "the-honest-game",
@@ -171,7 +249,15 @@
       "file": "assets/essays/the-honest-game.pdf",
       "landing": "read/essays/the-honest-game.html",
       "cover": "assets/essays/covers/the-honest-game.png",
-      "tags": ["class", "labor", "systems", "structure"]
+      "tags": [
+        "class",
+        "labor",
+        "systems",
+        "structure"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-honest-game",
+      "reading_minutes": 3,
+      "alternate_edition": "read/essays/the-honest-game-substack-edition.html"
     },
     {
       "id": "the-illusion-of-progress",
@@ -185,7 +271,14 @@
       "file": "assets/essays/the-illusion-of-progress.pdf",
       "landing": "read/essays/the-illusion-of-progress.html",
       "cover": "assets/essays/covers/the-illusion-of-progress.png",
-      "tags": ["wages", "extraction", "progress", "housing"]
+      "tags": [
+        "wages",
+        "extraction",
+        "progress",
+        "housing"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-illusion-of-progresshtml",
+      "reading_minutes": 1
     },
     {
       "id": "the-machine-comes-to-drink",
@@ -201,7 +294,252 @@
       "file": "read/essays/the-machine-comes-to-drink.html",
       "landing": "read/essays/the-machine-comes-to-drink.html",
       "cover": "assets/essays/covers/the-machine-comes-to-drink.png",
-      "tags": ["roanoke star", "roanoke city", "botetourt", "water", "data centers", "google", "legitimacy"]
+      "tags": [
+        "roanoke star",
+        "roanoke city",
+        "botetourt",
+        "water",
+        "data centers",
+        "google",
+        "legitimacy"
+      ],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-machine-comes-to-drinkhtml",
+      "reading_minutes": 6
+    },
+    {
+      "id": "gender-roles-who-really-does-more",
+      "title": "Gender Roles: Who Really Does More?",
+      "subtitle": "The Human Gender Role Exploration",
+      "author": "Elias Marrow",
+      "date": "2026-10-04",
+      "published_at": "2026-10-04T16:44:21.294Z",
+      "summary": "The Human Gender Role Exploration",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/gender-roles-who-really-does-more.html",
+      "landing": "read/essays/gender-roles-who-really-does-more.html",
+      "cover": "assets/essays/substack/gender-roles-who-really-does-more-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/gender-roles-who-really-does-more",
+      "source": "Substack",
+      "reading_minutes": 7
+    },
+    {
+      "id": "homelessness",
+      "title": "Homelessness",
+      "subtitle": "A societal truth.",
+      "author": "Elias Marrow",
+      "date": "2026-02-24",
+      "published_at": "2026-02-24T16:44:59.705Z",
+      "summary": "A societal truth.",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/homelessness.html",
+      "landing": "read/essays/homelessness.html",
+      "cover": "assets/essays/substack/homelessness-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/homelessness",
+      "source": "Substack",
+      "reading_minutes": 5
+    },
+    {
+      "id": "the-species-that-did-not-plateau",
+      "title": "The Species That Did Not Plateau",
+      "subtitle": "Human Evolution",
+      "author": "Elias Marrow",
+      "date": "2026-02-12",
+      "published_at": "2026-02-13T03:57:52.859Z",
+      "summary": "Human Evolution",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/the-species-that-did-not-plateau.html",
+      "landing": "read/essays/the-species-that-did-not-plateau.html",
+      "cover": "assets/essays/substack/the-species-that-did-not-plateau-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-species-that-did-not-plateau",
+      "source": "Substack",
+      "reading_minutes": 5
+    },
+    {
+      "id": "mlk-jr-the-shift",
+      "title": "MLK Jr - The Shift",
+      "subtitle": "From Integration to Transformation",
+      "author": "Elias Marrow",
+      "date": "2026-02-12",
+      "published_at": "2026-02-13T02:33:33.525Z",
+      "summary": "From Integration to Transformation",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/mlk-jr-the-shift.html",
+      "landing": "read/essays/mlk-jr-the-shift.html",
+      "cover": "assets/essays/substack/mlk-jr-the-shift-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/mlk-jr-the-shift",
+      "source": "Substack",
+      "reading_minutes": 3
+    },
+    {
+      "id": "progress-of-mind",
+      "title": "Progress of Mind",
+      "subtitle": "Participation",
+      "author": "Elias Marrow",
+      "date": "2026-02-12",
+      "published_at": "2026-02-12T16:36:51.443Z",
+      "summary": "Participation",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/progress-of-mind.html",
+      "landing": "read/essays/progress-of-mind.html",
+      "cover": "assets/essays/substack/progress-of-mind-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/progress-of-mind",
+      "source": "Substack",
+      "reading_minutes": 1
+    },
+    {
+      "id": "the-ant-hill",
+      "title": "The Ant Hill",
+      "subtitle": "Individuals and Aggregate Outcomes",
+      "author": "Elias Marrow",
+      "date": "2026-02-08",
+      "published_at": "2026-02-08T16:59:21.316Z",
+      "summary": "Individuals and Aggregate Outcomes",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/the-ant-hill.html",
+      "landing": "read/essays/the-ant-hill.html",
+      "cover": "assets/essays/substack/the-ant-hill-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-ant-hill",
+      "source": "Substack",
+      "reading_minutes": 3
+    },
+    {
+      "id": "the-willingness-to-endure",
+      "title": "The Willingness to Endure",
+      "subtitle": "Why endurance is mistaken for consent",
+      "author": "Elias Marrow",
+      "date": "2026-01-27",
+      "published_at": "2026-01-27T13:33:57.980Z",
+      "summary": "Why endurance is mistaken for consent",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/the-willingness-to-endure.html",
+      "landing": "read/essays/the-willingness-to-endure.html",
+      "cover": "assets/essays/substack/the-willingness-to-endure-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-willingness-to-endure",
+      "source": "Substack",
+      "reading_minutes": 3
+    },
+    {
+      "id": "participation",
+      "title": "Participation",
+      "subtitle": "On how engagement becomes legitimacy",
+      "author": "Elias Marrow",
+      "date": "2026-01-25",
+      "published_at": "2026-01-25T20:02:17.965Z",
+      "summary": "On how engagement becomes legitimacy",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/participation.html",
+      "landing": "read/essays/participation.html",
+      "cover": "assets/essays/substack/participation-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/participation",
+      "source": "Substack",
+      "reading_minutes": 2
+    },
+    {
+      "id": "the-silence-between-two-deaths",
+      "title": "The Silence Between Two Deaths",
+      "subtitle": "Stripped of Rhetoric",
+      "author": "Elias Marrow",
+      "date": "2026-01-25",
+      "published_at": "2026-01-25T16:04:13.820Z",
+      "summary": "Stripped of Rhetoric",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/the-silence-between-two-deaths.html",
+      "landing": "read/essays/the-silence-between-two-deaths.html",
+      "cover": "assets/essays/substack/the-silence-between-two-deaths-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-silence-between-two-deaths",
+      "source": "Substack",
+      "reading_minutes": 2
+    },
+    {
+      "id": "the-shape-of-the-fear",
+      "title": "The Shape of the Fear",
+      "subtitle": "A simulation analysis on the trajectory of America",
+      "author": "Elias Marrow",
+      "date": "2026-01-25",
+      "published_at": "2026-01-25T12:42:23.092Z",
+      "summary": "A simulation analysis on the trajectory of America",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/the-shape-of-the-fear.html",
+      "landing": "read/essays/the-shape-of-the-fear.html",
+      "cover": "assets/essays/substack/the-shape-of-the-fear-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/the-shape-of-the-fear",
+      "source": "Substack",
+      "reading_minutes": 4
+    },
+    {
+      "id": "the-harm",
+      "title": "The Harm",
+      "subtitle": "",
+      "author": "Elias Marrow",
+      "date": "2026-01-24",
+      "published_at": "2026-01-25T02:19:44.759Z",
+      "summary": "",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/the-harm.html",
+      "landing": "read/essays/the-harm.html",
+      "cover": "assets/essays/substack/7ac-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/7ac",
+      "source": "Substack",
+      "title_note": "Public Substack title blank; display title taken verbatim from first body heading.",
+      "reading_minutes": 1
+    },
+    {
+      "id": "implied-consent",
+      "title": "Implied Consent",
+      "subtitle": "The Rhetoric",
+      "author": "Elias Marrow",
+      "date": "2026-01-24",
+      "published_at": "2026-01-24T23:29:23.347Z",
+      "summary": "The Rhetoric",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/implied-consent.html",
+      "landing": "read/essays/implied-consent.html",
+      "cover": "assets/essays/substack/implied-consent-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/implied-consent",
+      "source": "Substack",
+      "reading_minutes": 1
+    },
+    {
+      "id": "constraints-binding",
+      "title": "Constraints Binding",
+      "subtitle": "Auto Biography",
+      "author": "Elias Marrow",
+      "date": "2026-01-24",
+      "published_at": "2026-01-24T18:34:02.791Z",
+      "summary": "Auto Biography",
+      "category": "Essays",
+      "format": "html",
+      "file": "read/essays/constraints-binding.html",
+      "landing": "read/essays/constraints-binding.html",
+      "cover": "assets/essays/substack/constraints-binding-1.png",
+      "tags": [],
+      "substack_url": "https://eliasmarrow.substack.com/p/constraints-binding",
+      "source": "Substack",
+      "reading_minutes": 4
     }
   ],
   "books": [
@@ -216,7 +554,13 @@
       "file": "assets/novels/quiet-hours/quiet-hours.txt",
       "landing": "quiet-hours.html",
       "cover": "assets/novels/quiet-hours/quiet-hours-cover.png",
-      "tags": ["novel", "murder mystery", "historical fiction", "boston", "1883"]
+      "tags": [
+        "novel",
+        "murder mystery",
+        "historical fiction",
+        "boston",
+        "1883"
+      ]
     },
     {
       "id": "what-was-required",
@@ -229,7 +573,12 @@
       "file": "assets/novels/what-was-required/what-was-required.pdf",
       "landing": "what-was-required.html",
       "cover": "assets/novels/what-was-required/what-was-required.png",
-      "tags": ["novel", "archive", "systems", "power"]
+      "tags": [
+        "novel",
+        "archive",
+        "systems",
+        "power"
+      ]
     },
     {
       "id": "constraints_not_choices",
@@ -242,7 +591,13 @@
       "file": "assets/novels/constraints_not_choices/constraints_not_choices.pdf",
       "landing": "constraints-not-choices.html",
       "cover": "assets/novels/constraints_not_choices/constraints_not_choices.jpg",
-      "tags": ["constraint", "scarcity", "systems", "agency", "simulation"]
+      "tags": [
+        "constraint",
+        "scarcity",
+        "systems",
+        "agency",
+        "simulation"
+      ]
     },
     {
       "id": "darkling",
@@ -254,7 +609,12 @@
       "format": "html",
       "file": "darkling.html",
       "cover": "assets/novels/darkling/darkling.jpg",
-      "tags": ["novel", "fantasy", "darkling", "everterra"],
+      "tags": [
+        "novel",
+        "fantasy",
+        "darkling",
+        "everterra"
+      ],
       "landing": "darkling.html"
     },
     {
@@ -268,7 +628,12 @@
       "file": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.pdf",
       "landing": "the-weight-of-knowing.html",
       "cover": "assets/novels/the_weight_of_knowing/the_weight_of_knowing.jpg",
-      "tags": ["novel", "systems", "gothic", "power"]
+      "tags": [
+        "novel",
+        "systems",
+        "gothic",
+        "power"
+      ]
     }
   ]
 }
