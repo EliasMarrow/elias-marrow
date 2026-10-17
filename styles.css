@@ -987,3 +987,7 @@ body.page-quiet-reader{
   .quiet-chapter-grid li:nth-child(odd){border-right:0;}
   .quiet-chapter-grid a{padding:16px 10px;}
 }
+
+/* Retain the reader/sidebar presentation while keeping one page H1. */
+.reader-sidebar .reader-context{font-size:28px;letter-spacing:-.02em;line-height:1.05;margin-bottom:8px;font-weight:600;}
+.page-novels .novels-heading{margin-bottom:6px;font-size:clamp(22px,2.6vw,30px);line-height:1.18;letter-spacing:-.02em;font-weight:500;}

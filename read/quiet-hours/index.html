@@ -25,7 +25,7 @@
       <aside class="reader-sidebar quiet-reader-sidebar">
         <img src="/assets/novels/quiet-hours/quiet-hours-cover.png" alt="" width="1600" height="2400"/>
         <div class="section-title">Quiet Hours</div>
-        <h1>A Murder Mystery</h1>
+        <h2 class="reader-context">A Murder Mystery</h2>
         <p class="muted">Boston, 1883. Thirty-four chapters.</p>
         <label class="quiet-picker-label" for="chapter-picker">Chapter</label>
         <select id="chapter-picker" class="quiet-picker" data-chapter-picker aria-label="Choose a chapter"></select>
@@ -126,6 +126,10 @@
           part.textContent = chapter.part + " · Elias Marrow";
           content.innerHTML = paragraphs(chapter.lines);
           document.title = chapter.title + " — Quiet Hours";
+          const canonical = document.querySelector('link[rel="canonical"]') || document.head.appendChild(document.createElement("link"));
+          canonical.rel = "canonical";
+          canonical.href = "https://eliasmarrow.org" + chapterUrl(number);
+          document.querySelector('meta[name="description"]').content = "Read " + chapter.title + " from Quiet Hours by Elias Marrow.";
 
           if (number > 1) {
             previous.hidden = false;
